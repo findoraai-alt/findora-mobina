@@ -42,7 +42,7 @@ export default function PreLoader() {
           initial={{ y: 0 }}
           animate={{ y: isVideoEnded ? "-100%" : 0 }}
           exit={{ y: "-100%", transition: { duration: 0.5 } }}
-          className="h-screen w-full bg-white dark:bg-[#1c2834] fixed inset-0 z-[200] flex justify-center items-center overflow-hidden cursor-none"
+          className="h-screen w-full bg-white dark:bg-[#202938] fixed inset-0 z-[200] flex justify-center items-center overflow-hidden cursor-none"
         >
           <video
             src="/videos/preloader_white.mp4"
