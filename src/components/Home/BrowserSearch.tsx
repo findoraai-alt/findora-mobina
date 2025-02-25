@@ -30,7 +30,7 @@ const BrowserSearch = () => {
 
               <span className=" text-2xl font-bold">Browser Search</span>
             </div>
-            <p>
+            <p className=" lg:text-lg">
               Our free findora Answer Engine allows users to ask questions in
               natural language and receive detailed, accurate responses tailored
               to their specific queries.

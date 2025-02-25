@@ -205,8 +205,8 @@ const ExampleFeature = ({
         <Image
           src={image}
           alt="img"
-          width={500}
-          height={500}
+          width={450}
+          height={450}
           className=" object-center object-cover rounded-xl"
         />
       </div>
@@ -214,7 +214,7 @@ const ExampleFeature = ({
         <h6 className=" text-2xl font-bold" style={{ color: textColor }}>
           {text}
         </h6>
-        <p>{desc}</p>
+        <p className="lg:text-lg">{desc}</p>
         <Link
           href={url}
           style={{ backgroundColor: textColor }}

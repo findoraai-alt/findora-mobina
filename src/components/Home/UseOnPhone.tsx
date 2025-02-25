@@ -29,10 +29,10 @@ const UseOnPhone = () => {
                   <span className=" text-2xl font-bold">ra</span>
                 </div>
               </div>
-              <span className=" text-2xl font-bold">on Your Phone</span>
+              <span className="text-2xl font-bold">on Your Phone</span>
             </div>
 
-            <p>
+            <p className="lg:text-lg">
               findora is available on desktop and mobile. Get the same
               fact-checked search experience wherever you go.
             </p>
