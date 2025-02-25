@@ -12,7 +12,7 @@ import WhyFindora from "@/components/Home/WhyFindora";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <PreLoader />
       <div className=" bg-[#f0f0fc] dark:bg-[#111828]">
         <WhatIsFindora />
@@ -25,6 +25,6 @@ export default function Home() {
       <WhyFindora />
       <BrowserSearch />
       <UseOnPhone />
-    </>
+    </div>
   );
 }
