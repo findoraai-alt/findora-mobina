@@ -200,17 +200,17 @@ const ExampleFeature = ({
     onMouseEnter={() => setIsHovered(true)} // Set hover to true when mouse enters the feature box
     onMouseLeave={() => setIsHovered(false)} // Set hover to false when mouse leaves the feature box
   >
-    <div className="bg-white dark:bg-[#202938] rounded-3xl p-8 flex flex-col lg:flex-row gap-8 items-center">
-      <div className="lg:w-1/2">
+    <div className="bg-white dark:bg-[#202938] rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center">
+      <div className="md:w-1/2">
         <Image
           src={image}
           alt="img"
-          width={450}
-          height={450}
+          width={430}
+          height={430}
           className=" object-center object-cover rounded-xl"
         />
       </div>
-      <div className="lg:w-1/2 flex flex-col gap-4">
+      <div className="md:w-1/2 flex flex-col gap-4">
         <h6 className=" text-2xl font-bold" style={{ color: textColor }}>
           {text}
         </h6>
