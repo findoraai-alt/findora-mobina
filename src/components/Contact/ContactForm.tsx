@@ -52,8 +52,8 @@ const ContactForm = () => {
           </button>
         </div>
       </div>
-      <div className="w-72 h-72 bg-gradient-to-b from-pink-500 to-purple-500 blur-2xl absolute top-40 left-5 opacity-15 rounded-full" />
-      <div className="w-64 h-64 bg-gradient-to-b from-pink-500 to-purple-500 blur-2xl absolute top-[20%] right-[10%] opacity-15 rounded-full" />
+      <div className=" w-40 h-40 md:w-72 md:h-72 bg-gradient-to-b from-pink-500 to-purple-500 blur-2xl absolute top-40 left-5 opacity-15 rounded-full" />
+      <div className=" w-32 h-32 md:w-64 md:h-64 bg-gradient-to-b from-pink-500 to-purple-500 blur-2xl absolute top-[20%] right-[10%] opacity-15 rounded-full" />
     </div>
   );
 };
