@@ -62,7 +62,7 @@ const ContactForm = () => {
           repeatType: "reverse",
           ease: "linear",
         }}
-        className=" w-40 h-40 md:w-72 md:h-72 bg-gradient-to-b from-pink-500 to-purple-500 lg:blur-2xl absolute top-40 left-5 opacity-15 rounded-full"
+        className=" w-40 h-40 md:w-52 md:h-52 lg:w-72 lg:h-72 bg-gradient-to-b from-pink-500 to-purple-500 lg:blur-2xl absolute top-40 left-5 opacity-15 rounded-full"
       />
       <motion.div
         animate={{ translateY: [5, 100] }}
@@ -72,7 +72,7 @@ const ContactForm = () => {
           repeatType: "reverse",
           ease: "linear",
         }}
-        className=" w-32 h-32 md:w-64 md:h-64 bg-gradient-to-b from-pink-500 to-purple-500 lg:blur-2xl absolute top-[20%] right-[10%] opacity-15 rounded-full"
+        className=" w-32 h-32 md:w-44 md:h-44 lg:w-64 lg:h-64 bg-gradient-to-b from-pink-500 to-purple-500 lg:blur-2xl absolute top-[20%] right-[10%] opacity-15 rounded-full"
       />
     </div>
   );
