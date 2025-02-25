@@ -3,7 +3,7 @@ import { IconType } from "react-icons";
 import { BsPeople } from "react-icons/bs";
 import { GiArtificialIntelligence, GiAwareness } from "react-icons/gi";
 import { GrSecure } from "react-icons/gr";
-import { PiTarget } from "react-icons/pi";
+import { TbTargetArrow } from "react-icons/tb";
 
 const WhyFindoraData = [
   {
@@ -27,7 +27,7 @@ const WhyFindoraData = [
   },
   {
     id: 4,
-    icon: PiTarget,
+    icon: TbTargetArrow,
     title: "Media & Research Intelligence",
     desc: "Ensure your content is factually accurate.",
     color: "#0b87b6",

@@ -7,10 +7,10 @@ import { GoArrowLeft, GoArrowRight, GoVideo } from "react-icons/go";
 import Image from "next/image";
 import {
   MdMultipleStop,
+  MdOutlinePrivacyTip,
   MdOutlineVerified,
   MdPeopleOutline,
 } from "react-icons/md";
-import { SlMagnifier } from "react-icons/sl";
 import { GiMaterialsScience } from "react-icons/gi";
 import { CiMedicalCross } from "react-icons/ci";
 
@@ -246,7 +246,7 @@ const FEATURES = [
         image="/images/feature1.jpg"
         text="Verified Answers"
         desc="Get results backed by fact-checking and credible sources."
-        button="Ask Your Question"
+        button="Learn More"
         url="/"
         textColor="#008f7a"
         setIsHovered={setIsHovered} // Pass the hover handler
@@ -267,7 +267,7 @@ const FEATURES = [
         image="/images/feature2.jpg"
         text="Scientific Search"
         desc="Access peer-reviewed research and academic insights."
-        button="Analyze Docs"
+        button="Learn More"
         url="/"
         textColor="#eaba33"
         setIsHovered={setIsHovered} // Pass the hover handler
@@ -287,7 +287,7 @@ const FEATURES = [
         image="/images/feature3.jpg"
         text="Multi-Format Search"
         desc="Analyze URLs, text, and files together for deep insights."
-        button="Create images"
+        button="Learn More"
         url="/"
         textColor="#0b87b6"
         setIsHovered={setIsHovered} // Pass the hover handler
@@ -307,7 +307,7 @@ const FEATURES = [
         image="/images/feature4.jpg"
         text="Video Intelligence"
         desc="Find accurate, fact-based answers from videos."
-        button="Check your grammar"
+        button="Learn More"
         url="/"
         textColor="#7332a1"
         setIsHovered={setIsHovered} // Pass the hover handler
@@ -327,7 +327,7 @@ const FEATURES = [
         image="/images/feature5.jpg"
         text="Medical"
         desc="Get personalized health advice from a doctor."
-        button="Ask Your Question"
+        button="Learn More"
         url="/"
         textColor="#c31069"
         setIsHovered={setIsHovered} // Pass the hover handler
@@ -347,7 +347,7 @@ const FEATURES = [
         image="/images/feature6.jpg"
         text="Enterprise Solutions"
         desc="Businesses can integrate findora’s AI-powered fact-checking into their platforms."
-        button="Ask Your Question"
+        button="Learn More"
         url="/"
         textColor="#c67f48"
         setIsHovered={setIsHovered} // Pass the hover handler
@@ -357,7 +357,7 @@ const FEATURES = [
   {
     title: "Privacy & Trust",
     bgColor: "#3d6a7d",
-    Icon: SlMagnifier,
+    Icon: MdOutlinePrivacyTip,
     Feature: ({
       setIsHovered,
     }: {
@@ -367,7 +367,7 @@ const FEATURES = [
         image="/images/feature7.jpg"
         text="Privacy & Trust"
         desc="Protect your data. Stay anonymous. Verify website credibility."
-        button="Summarize"
+        button="Learn More"
         url="/"
         textColor="#3d6a7d"
         setIsHovered={setIsHovered} // Pass the hover handler

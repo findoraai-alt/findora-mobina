@@ -55,7 +55,7 @@ const UseOnPhone = () => {
               </Link>
             </div>
           </div>
-          <div className=" pt-0 lg:pt-16 px-16 self-end">
+          <div className=" pt-0 md:pt-8 lg:pt-16 px-16 self-end">
             <Image src={phoneImg} width={250} height={250} alt="phone" />
           </div>
         </div>

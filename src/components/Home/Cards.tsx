@@ -41,7 +41,7 @@ const Cards = () => {
         {cardsData.map((card) => (
           <div
             key={card.id}
-            className="bg-[#f3f3fd] dark:bg-[#111828] border-4 border-white rounded-3xl flex justify-start items-center gap-5 p-8"
+            className="bg-[#f3f3fd] dark:bg-[#111828] border-2 border-white rounded-3xl flex flex-col lg:flex-row justify-between lg:justify-start items-center gap-5 p-8"
           >
             <div>
               <card.icon
@@ -51,7 +51,7 @@ const Cards = () => {
               />
             </div>
 
-            <div className="flex flex-col justify-between gap-2">
+            <div className="flex flex-col justify-between gap-2 text-center lg:text-start">
               <h6 className="text-2xl font-bold">{card.title}</h6>
               <p className="lg:text-lg">{card.desc}</p>
             </div>
