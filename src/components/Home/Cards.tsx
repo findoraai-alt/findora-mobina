@@ -7,7 +7,7 @@ const cardsData = [
   {
     id: 1,
     icon: MdFactCheck,
-    title: "Fact-Checked Sources ",
+    title: "Fact-Checked Sources",
     desc: "Highlight how findora ensures credibility.",
     color: "#7332a1",
   },
