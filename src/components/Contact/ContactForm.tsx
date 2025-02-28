@@ -6,7 +6,9 @@ import toast from "react-hot-toast";
 
 const ContactForm: React.FC = () => {
   const form = useRef<HTMLFormElement | null>(null);
+  // @ts-ignore
   const [error, setError] = useState(false);
+  // @ts-ignore
   const [success, setSuccess] = useState(false);
 
   const handleSuccess = () => {
@@ -41,11 +43,13 @@ const ContactForm: React.FC = () => {
         publicKey: "2WqOf4CLqzlGw3bt2",
       })
       .then(
+        // @ts-ignore
         (result) => {
           setSuccess(true);
           (e.target as HTMLFormElement).reset();
           handleSuccess();
         },
+        // @ts-ignore
         (error) => {
           setError(true);
           handleError();
