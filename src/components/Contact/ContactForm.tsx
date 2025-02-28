@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, FormEvent, useState } from "react";
+import React, { useEffect, useRef, FormEvent } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
