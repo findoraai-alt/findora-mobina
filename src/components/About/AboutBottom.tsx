@@ -22,7 +22,7 @@ const AboutBottom = () => {
           security. We implement end-to-end encryption to protect your data and
           ensure a safe, anonymous browsing experience. Our goal is to empower
           individuals, businesses, and organizations with the tools needed to
-          navigate the digital world confidently. Whether it's academic
+          navigate the digital world confidently. Whether {"it's"} academic
           research, medical information, or enterprise solutions, Findora is
           here to enhance your search experience while safeguarding your privacy
           and ensuring the credibility of the answers you receive.
