@@ -60,7 +60,7 @@ export default function EntSticky() {
                       ))}
 
                       <h6 className=" absolute inset-0 w-fit h-fit m-auto text-center px-4 md-px-8 text-xs text-white font-extralight z-10">
-                        Where Privacy Meets Transparency.
+                        Where Privacy Meets Transparency
                       </h6>
                     </motion.div>
                   </div>
