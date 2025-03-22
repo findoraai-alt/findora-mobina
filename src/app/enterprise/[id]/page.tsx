@@ -13,9 +13,8 @@ const getData = (id: number) => {
 };
 
 // Dynamic metadata
-// @ts-expect-error
+// @ts-expect-error: Next.js expects a different type structure for params.
 export async function generateMetadata({ params }: { params: { id: number } }) {
-  // @ts-expect-error
   const post = getData(params.id);
   return {
     title: post.title,
