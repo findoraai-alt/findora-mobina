@@ -117,7 +117,7 @@ const EntCarousel = () => {
                   alt={card.title}
                   width={cardSize}
                   height={cardSize}
-                  className=" hover:scale-125 h-full transition-all duration-500 ease-in-out object-cover object-center"
+                  className="lg:hover:scale-125 h-full transition-all duration-500 ease-in-out object-cover object-center"
                 />
                 <h6 className="absolute top-5 left-5 text-lg mix-blend-difference text-white">
                   {card.title}

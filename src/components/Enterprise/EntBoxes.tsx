@@ -36,7 +36,7 @@ const EntBoxes = () => {
               muted
               playsInline
               loop
-              className="w-[500px] lg:h-[600px] object-cover object-center rounded-t-2xl"
+              className="w-[500px] md:h-[500px] lg:h-[600px] object-cover object-center rounded-t-2xl"
             ></video>
           </div>
         </div>
