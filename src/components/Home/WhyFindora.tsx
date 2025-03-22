@@ -14,8 +14,8 @@ const WhyFindoraData = [
   {
     id: 2,
     icon: BsPeople,
-    title: "Enterprise API",
-    desc: "Integrate findora’s verification system into your business.",
+    title: "Conversational AI Excellence",
+    desc: "AI-powered system for precise, autonomous data extraction.",
     color: "#008f7a",
   },
   {

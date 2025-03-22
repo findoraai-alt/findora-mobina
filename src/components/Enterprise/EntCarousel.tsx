@@ -27,7 +27,7 @@ const cardsData = [
   },
   {
     id: 5,
-    title: "Seamless API Integration",
+    title: "Agentic Document Extraction",
     img: "/images/card5.jpg",
   },
 ];
