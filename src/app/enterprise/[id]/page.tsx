@@ -25,14 +25,14 @@ const CardPage = ({
   params,
 }: {
   params: {
-    id: number;
+    id: string;
     img: string;
     title: string;
     subtitle: string;
     description: string;
   };
 }) => {
-  const data = getData(params.id);
+  const data = getData(Number(params.id));
   return (
     <div className=" py-20 md:py-24 px-4 md:px-8">
       <div
