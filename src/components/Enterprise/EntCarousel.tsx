@@ -73,10 +73,10 @@ const EntCarousel = () => {
       <div className="flex flex-col gap-8">
         {/* Header & Controls */}
         <div className="flex items-center justify-between px-4 md:px-8">
-          <h6 className="text-2xl font-medium">
-            Key Features That Set Findora Apart
+          <h6 className="text-2xl font-medium w-1/2">
+            {"Findora's"} Key Features
           </h6>
-          <div className="flex gap-4">
+          <div className="flex gap-4 w-1/2 justify-end">
             <button
               className={` ${
                 offset < 0 ? "" : "opacity-30 cursor-not-allowed"

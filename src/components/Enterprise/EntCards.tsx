@@ -30,7 +30,7 @@ const EntCards = () => {
             </div>
             <button className=" flex justify-between items-center">
               <span className=" text-lg">Learn more</span>
-              <div className=" lg:group-hover:translate-x-5 transition-all duration-300 ease-in-out text-white group-hover:text-black dark:group-hover:text-white">
+              <div className=" lg:group-hover:translate-x-5 transition-all duration-300 ease-in-out text-black lg:text-white group-hover:text-black dark:group-hover:text-white">
                 <FaArrowRight size={20} />
               </div>
             </button>
