@@ -2,18 +2,24 @@ import { notFound } from "next/navigation";
 import React from "react";
 import { CardsData } from "../../../components/Enterprise/Data";
 
+// Define a proper type for the PageProps expected by Next.js
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+// Function to get data safely
 const getData = (id: string) => {
   const numericId = Number(id);
-
   if (isNaN(numericId) || numericId < 0 || numericId >= CardsData.length) {
-    notFound(); // Triggers a 404 page
+    notFound(); // Trigger a 404 page if id is invalid
   }
-
   return CardsData[numericId];
 };
 
-// Dynamic metadata
-export async function generateMetadata({ params }: { params: { id: string } }) {
+// Dynamic metadata function
+export async function generateMetadata({ params }: PageProps) {
   const post = getData(params.id);
   return {
     title: post?.title || "Default Title",
@@ -21,7 +27,8 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-const CardPage = ({ params }: { params: { id: string } }) => {
+// Main component with correct types
+const CardPage = ({ params }: PageProps) => {
   const data = getData(params.id);
 
   return (
