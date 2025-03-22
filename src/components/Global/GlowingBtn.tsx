@@ -36,7 +36,7 @@ export const GlowingBtn = () => {
           controls.start({ x: e.clientX + 10, y: e.clientY + 10 })
         }
       >
-        <span className="relative z-10">Try Findora</span>
+        <span className="relative z-10">Try findora</span>
         <motion.div
           initial={{ left: 0 }}
           animate={{ left: "-300%" }}

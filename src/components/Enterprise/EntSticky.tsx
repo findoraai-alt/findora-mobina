@@ -40,7 +40,7 @@ export default function EntSticky() {
             {
               <motion.div style={{ scale: scale4 }} className={styles.el}>
                 <div className={styles.imageContainer}>
-                  <div className=" bg-black flex px-4 md:px-8 w-full h-full overflow-hidden">
+                  <div className=" bg-white dark:bg-black flex px-4 md:px-8 w-full h-full overflow-hidden">
                     <motion.div style={{ opacity: opacity }}>
                       {StickyImg.map((image, index) => (
                         <motion.img
@@ -59,7 +59,7 @@ export default function EntSticky() {
                         />
                       ))}
 
-                      <h6 className=" absolute inset-0 w-fit h-fit m-auto text-center px-4 md-px-8 text-xs text-white font-extralight z-10">
+                      <h6 className=" absolute inset-0 w-fit h-fit m-auto text-center px-4 md-px-8 text-xs text-black dark:text-white font-extralight z-10">
                         Where Privacy Meets Transparency
                       </h6>
                     </motion.div>
