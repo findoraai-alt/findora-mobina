@@ -12,10 +12,11 @@ const getData = (id: number) => {
   return notFound();
 };
 
+interface CardPageProps {
+  params: { id: number };
+}
 // Dynamic metadata
-// @ts-expect-error: Next.js expects a different type structure for params.
-export async function generateMetadata({ params }: { params: { id: number } }) {
-  // @ts-expect-error: Next.js expects a different type structure for params.
+export async function generateMetadata({ params }: CardPageProps) {
   const post = getData(params.id);
   return {
     title: post.title,
