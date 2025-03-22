@@ -33,7 +33,7 @@ const EntEnd = () => {
         <h1 className="text-5xl text-center max-w-3xl mx-auto">
           {"Findora’s"} AI Features That Drive Business Innovation
         </h1>
-        <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto">
           {features.map((feature) => (
             <div
               key={feature.id}
