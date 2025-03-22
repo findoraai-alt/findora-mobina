@@ -13,11 +13,11 @@ const getData = (id: number) => {
 };
 
 // Dynamic metadata
-export async function generateMetadata({ params }: { params: { id: number } }) {
-  const post = getData(params.id);
+export async function generateMetadata({ params }: { params: { id: string } }) {
+  const data = getData(Number(params.id));
   return {
-    title: post.title,
-    description: post.subtitle,
+    title: data.title,
+    description: data.subtitle,
   };
 }
 
