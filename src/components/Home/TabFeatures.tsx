@@ -44,12 +44,12 @@ const TabsFeatures = () => {
   }, [selected, isHovered]);
 
   return (
-    <section className="relative px-4 md:px-8 max-w-7xl mx-auto">
+    <section className="relative px-4 md:px-8 max-w-7xl mx-auto pt-20 md:pt-24">
       {/* Left Arrow */}
       {selected > 0 && (
         <button
           onClick={() => setSelected((prev) => prev - 1)}
-          className="absolute left-5 top-1/2 z-50 transform -translate-y-1/2 p-2 rounded-full bg-white dark:bg-[#202938]"
+          className="absolute left-5 top-1/2 z-10 transform -translate-y-1/2 p-2 rounded-full bg-white dark:bg-[#202938] shadow-lg"
         >
           <GoArrowLeft size={24} />
         </button>
@@ -76,7 +76,7 @@ const TabsFeatures = () => {
       {selected < FEATURES.length - 1 && (
         <button
           onClick={() => setSelected((prev) => prev + 1)}
-          className="absolute right-5 top-1/2 z-50 transform -translate-y-1/2 p-2 rounded-full bg-white dark:bg-[#202938]"
+          className="absolute right-5 top-1/2 z-10 transform -translate-y-1/2 p-2 rounded-full bg-white dark:bg-[#202938] shadow-lg"
         >
           <GoArrowRight size={24} />
         </button>
@@ -169,7 +169,7 @@ const Tab = ({
       {selected && (
         <motion.span
           layoutId="tabs-features-underline"
-          className="absolute bottom-0 left-0 right-0 z-10 h-1 bg-[#6a0dad]"
+          className="absolute bottom-0 left-0 right-0 z-10 h-1 bg-purple-500"
         />
       )}
     </div>
@@ -243,7 +243,7 @@ const ExampleFeature = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="bg-white dark:bg-[#202938] rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center">
+      <div className="bg-white dark:bg-[#202938] shadow-lg rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-1/2">
           <Image
             src={image}

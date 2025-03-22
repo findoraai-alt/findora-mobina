@@ -4,8 +4,6 @@ import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle/ThemeToggle";
 import Link from "next/link";
 import NavLink from "./NavLink";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { IoMdClose } from "react-icons/io";
 import LogoBlack from "@/../public/images/findora_logo_black.png";
 import LogoWhite from "@/../public/images/findora_logo_white.png";
 import {
@@ -16,20 +14,22 @@ import Image from "next/image";
 import { FiPhone } from "react-icons/fi";
 import { RiHome2Line } from "react-icons/ri";
 import { GlowingBtn } from "./GlowingBtn";
-import { GoPeople } from "react-icons/go";
+import { GoGear, GoPeople } from "react-icons/go";
+import { BsSearch } from "react-icons/bs";
 
 const Links = [
   { id: 1, title: "Home", icon: RiHome2Line, url: "/" },
-  { id: 2, title: "About", icon: GoPeople, url: "/about" },
-  { id: 3, title: "Contact", icon: FiPhone, url: "/contact" },
+  { id: 2, title: "Discover", icon: BsSearch, url: "/discover" },
+  { id: 3, title: "Enterprise", icon: GoGear, url: "/enterprise" },
+  { id: 4, title: "About", icon: GoPeople, url: "/about" },
+  { id: 5, title: "Contact", icon: FiPhone, url: "/contact" },
 ];
 
 const Navbar = () => {
   const [showDropDown, setShowDropDown] = useState(false);
-  const [showHamMenu, setShowHamMenu] = useState(false);
+
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const hamMenuRef = useRef<HTMLDivElement>(null);
 
   // Find the current page title
   const currentPage = Links.find((link) => link.url === pathname) || {
@@ -40,10 +40,6 @@ const Navbar = () => {
   // Toggle dropdown
   const toggleDropDown = () => {
     setShowDropDown((prev) => !prev);
-  };
-
-  const toggleHamMenu = () => {
-    setShowHamMenu((prev) => !prev);
   };
 
   // Close dropdown when clicking outside
@@ -60,23 +56,6 @@ const Navbar = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutsideHam = (event: MouseEvent) => {
-      if (
-        hamMenuRef.current &&
-        !hamMenuRef.current.contains(event.target as Node)
-      ) {
-        setShowHamMenu(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutsideHam);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutsideHam);
     };
   }, []);
 
@@ -134,51 +113,19 @@ const Navbar = () => {
                 className="hidden dark:block"
               />
             </Link>
-            <GlowingBtn />
           </div>
           <div className="hidden xl:flex items-center bg-[#f0f0fc] dark:bg-[#111828] dark:text-white p-2 border-2 border-[#e7e7f2] shadow-inner rounded-full">
             {Links.map((link) => (
               <NavLink link={link} key={link.id} />
             ))}
           </div>
-          <div className="hidden lg:flex gap-4">
-            <Link href="/" className="hover:underline dark:text-white">
-              Sign Up
-            </Link>
+          <div className="hidden lg:flex items-center gap-4">
+            <GlowingBtn />
             <ThemeToggle />
           </div>
           <div className=" flex flex-col items-center gap-4 lg:hidden relative">
             <ThemeToggle />
-            <div
-              ref={hamMenuRef}
-              className=" bg-[#f9fafc] dark:bg-[#111828] dark:text-white py-3 px-3 rounded-full shadow-md flex justify-center items-center"
-            >
-              <button onClick={toggleHamMenu}>
-                {showHamMenu ? (
-                  <IoMdClose size={25} />
-                ) : (
-                  <RxHamburgerMenu size={25} />
-                )}
-              </button>
-              {showHamMenu && (
-                <div className="flex flex-col gap-2 absolute top-24 right-0 bg-[#f9fafc] dark:bg-[#111828] rounded-2xl shadow-md z-[100]">
-                  <Link
-                    href="/"
-                    className="flex items-center gap-2 px-4 py-2 "
-                    onClick={() => setShowHamMenu(false)}
-                  >
-                    Sign Up
-                  </Link>
-                  <Link
-                    href="/"
-                    className="p-4"
-                    onClick={() => setShowHamMenu(false)}
-                  >
-                    Download App
-                  </Link>
-                </div>
-              )}
-            </div>
+            <GlowingBtn />
           </div>
         </div>
       </div>

@@ -5,13 +5,15 @@ import { motion } from "framer-motion";
 
 const links = [
   { id: 1, title: "Home", href: "/" },
+  { id: 2, title: "Discover", href: "/discover" },
+  { id: 3, title: "Enterprise", href: "/enterprise" },
   {
-    id: 2,
+    id: 4,
     title: "About",
     href: "/about",
   },
   {
-    id: 3,
+    id: 5,
     title: "Contact",
     href: "/contact",
   },
