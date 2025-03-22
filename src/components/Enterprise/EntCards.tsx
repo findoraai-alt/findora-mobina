@@ -15,7 +15,7 @@ const EntCards = () => {
           <Link
             href={`/enterprise/${card.id}`}
             key={card.id}
-            className=" bg-white h-auto w-fit gap-8 dark:bg-[#111828] p-8 rounded-2xl flex flex-col lg:rounded-br-[200px] lg:hover:rounded-br-2xl transition-all duration-300 ease-in-out group"
+            className=" bg-white h-auto gap-8 dark:bg-[#111828] p-8 rounded-2xl flex flex-col lg:rounded-br-[200px] lg:hover:rounded-br-2xl transition-all duration-300 ease-in-out group"
           >
             <div className=" space-y-4">
               <Image

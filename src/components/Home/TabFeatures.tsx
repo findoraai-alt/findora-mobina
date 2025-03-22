@@ -243,7 +243,7 @@ const ExampleFeature = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="bg-white dark:bg-[#202938] shadow-lg rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center">
+      <div className="bg-white dark:bg-[#202938] h-auto shadow-lg rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-1/2">
           <Image
             src={image}
