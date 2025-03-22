@@ -1,14 +1,22 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const TABS = ["Top Headlines", "Business", "Technology", "Health", "Sports"];
-const API_KEY = "cf21d7b1743aa43a41231f44c80c82eb"; // Replace with your GNews API key
+const TABS = [
+  "Top Stories",
+  "Politics",
+  "Business & Economy",
+  "Science & Technology",
+  "Health",
+  "Sports",
+  "Arts & Culture",
+];
+const API_KEY = "cf21d7b1743aa43a41231f44c80c82eb";
 
 type Article = {
   title: string;
   description: string;
   url: string;
-  image?: string; // GNews uses "image" instead of "urlToImage"
+  image?: string;
 };
 
 export default function News() {
@@ -20,11 +28,33 @@ export default function News() {
     const fetchNews = async () => {
       setLoading(true);
       try {
-        const category =
-          activeTab !== "Top Headlines"
-            ? `&topic=${activeTab.toLowerCase()}`
-            : "";
-        const url = `https://gnews.io/api/v4/top-headlines?country=us${category}&token=${API_KEY}`;
+        let category = "";
+        switch (activeTab) {
+          case "Politics":
+            category = "politics";
+            break;
+          case "Business & Economy":
+            category = "business";
+            break;
+          case "Science & Technology":
+            category = "technology";
+            break;
+          case "Health":
+            category = "health";
+            break;
+          case "Sports":
+            category = "sports";
+            break;
+          case "Arts & Culture":
+            category = "entertainment"; // Closest match
+            break;
+          default:
+            category = ""; // Top Stories
+        }
+
+        const url = `https://gnews.io/api/v4/top-headlines?country=us${
+          category ? `&topic=${category}` : ""
+        }&token=${API_KEY}`;
 
         console.log("Fetching:", url);
         const response = await fetch(url);
@@ -51,7 +81,7 @@ export default function News() {
 
   return (
     <div className="px-4 md:px-8 py-20 md:py-24">
-      <div className="flex space-x-4 mb-6 border-b pb-2 overflow-auto">
+      <div className="flex space-x-4 mb-6 border-b pb-2 overflow-auto text-sm lg:text-base">
         {TABS.map((tab) => (
           <button
             key={tab}
