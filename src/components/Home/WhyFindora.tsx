@@ -1,6 +1,6 @@
 import React from "react";
 import { IconType } from "react-icons";
-import { BsPeople } from "react-icons/bs";
+import { IoDocumentOutline } from "react-icons/io5";
 import { GiArtificialIntelligence, GiAwareness } from "react-icons/gi";
 import { GrSecure } from "react-icons/gr";
 import { TbTargetArrow } from "react-icons/tb";
@@ -13,8 +13,8 @@ const WhyFindoraData = [
   },
   {
     id: 2,
-    icon: BsPeople,
-    title: "Conversational AI Excellence",
+    icon: IoDocumentOutline,
+    title: "Agentic Document Extraction",
     desc: "AI-powered system for precise, autonomous data extraction.",
     color: "#008f7a",
   },
