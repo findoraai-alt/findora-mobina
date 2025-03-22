@@ -2,39 +2,27 @@ import { notFound } from "next/navigation";
 import React from "react";
 import { CardsData } from "../../../components/Enterprise/Data";
 
-const getData = (id: number) => {
-  const data = CardsData[id];
+const getData = (id: string) => {
+  const numericId = Number(id);
 
-  if (!data) {
-    notFound(); // Ensure Next.js properly handles 404
+  if (isNaN(numericId) || numericId < 0 || numericId >= CardsData.length) {
+    notFound(); // Triggers a 404 page
   }
 
-  return data;
+  return CardsData[numericId];
 };
 
 // Dynamic metadata
 export async function generateMetadata({ params }: { params: { id: string } }) {
-  const id = Number(params.id);
-  if (isNaN(id)) notFound(); // Handle invalid numbers
-
-  const post = getData(id);
+  const post = getData(params.id);
   return {
     title: post?.title || "Default Title",
     description: post?.subtitle || "Default Description",
   };
 }
 
-const CardPage = ({
-  params,
-}: {
-  params: {
-    id: string;
-  };
-}) => {
-  const id = Number(params.id);
-  if (isNaN(id)) notFound(); // Ensure proper handling
-
-  const data = getData(id);
+const CardPage = ({ params }: { params: { id: string } }) => {
+  const data = getData(params.id);
 
   return (
     <div className="py-20 md:py-24 px-4 md:px-8">
