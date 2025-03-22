@@ -109,7 +109,7 @@ const EntCarousel = () => {
             {cardsData.map((card) => (
               <div
                 key={card.id}
-                className="relative shrink-0 group overflow-hidden rounded-2xl"
+                className=" group relative shrink-0 group overflow-hidden rounded-2xl"
                 style={{ width: cardSize }}
               >
                 <Image
@@ -117,7 +117,7 @@ const EntCarousel = () => {
                   alt={card.title}
                   width={cardSize}
                   height={cardSize}
-                  className="lg:hover:scale-125 h-full transition-all duration-500 ease-in-out object-cover object-center"
+                  className="lg:group-hover:scale-125 h-full transition-all duration-500 ease-in-out object-cover object-center"
                 />
                 <h6 className="absolute top-5 left-5 text-sm md:text-base lg:text-lg mix-blend-difference text-white ">
                   {card.title}
