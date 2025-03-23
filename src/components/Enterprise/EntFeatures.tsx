@@ -26,9 +26,9 @@ const features = [
       "Deploy AI solutions with enterprise-level security, compliance, and the ability to scale as your business grows.",
   },
 ];
-const EntEnd = () => {
+const EntFeatures = () => {
   return (
-    <div className=" py-20 md:py-24 px-4 md:px-8 ">
+    <div className=" pt-20 md:pt-24 px-4 md:px-8 ">
       <div className=" flex flex-col gap-24 justify-center items-center">
         <h1 className="text-5xl text-center max-w-3xl mx-auto">
           {"Findora’s"} AI Features That Drive Business Innovation
@@ -50,4 +50,4 @@ const EntEnd = () => {
   );
 };
 
-export default EntEnd;
+export default EntFeatures;

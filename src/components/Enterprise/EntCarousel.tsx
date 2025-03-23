@@ -69,7 +69,7 @@ const EntCarousel = () => {
   const progress = (Math.abs(offset) / totalScrollableWidth) * 100;
 
   return (
-    <div className="pt-20 md:pt-24" ref={ref}>
+    <div className="py-20 md:py-24" ref={ref}>
       <div className="flex flex-col gap-8">
         {/* Header & Controls */}
         <div className="flex items-center justify-between px-4 md:px-8">
