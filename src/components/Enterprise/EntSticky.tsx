@@ -48,7 +48,7 @@ export default function EntSticky() {
                           initial={{ opacity: 1 }}
                           animate={{ opacity: 0 }}
                           transition={{
-                            duration: 1,
+                            duration: 2,
                             delay: index * 0.5,
                             repeat: Infinity,
                             repeatType: "reverse",
