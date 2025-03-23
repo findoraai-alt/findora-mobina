@@ -55,7 +55,7 @@ export default function EntSticky() {
                           }}
                           src={image.img}
                           alt="..."
-                          className={`${styles.stickyImg} object-cover object-center absolute hidden lg:block`}
+                          className={`${styles.stickyImg} object-cover object-center absolute`}
                         />
                       ))}
 
