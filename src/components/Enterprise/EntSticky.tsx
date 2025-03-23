@@ -52,6 +52,7 @@ export default function EntSticky() {
                             delay: index * 0.5,
                             repeat: Infinity,
                             repeatType: "reverse",
+                            ease: "anticipate",
                           }}
                           src={image.img}
                           alt="..."
