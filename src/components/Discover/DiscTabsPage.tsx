@@ -30,14 +30,17 @@ export default function News() {
       try {
         let category = "";
         switch (activeTab) {
+          case "Top Stories":
+            category = "world";
+            break;
           case "Politics":
-            category = "politics";
+            category = "nation";
             break;
           case "Business & Economy":
             category = "business";
             break;
           case "Science & Technology":
-            category = "technology";
+            category = "science";
             break;
           case "Health":
             category = "health";
