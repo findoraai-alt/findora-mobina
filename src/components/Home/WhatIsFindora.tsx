@@ -7,7 +7,7 @@ import oLogo from "@/../public/images/o.png";
 const WhatIsFindora = () => {
   const [textColor, setTextColor] = useState("#008f7a");
   return (
-    <div className=" px-4 md:px-8 flex flex-col justify-center items-center gap-4 pt-20 md:pt-24 pb-8 max-w-4xl mx-auto">
+    <div className=" px-4 md:px-8 flex flex-col justify-center items-center gap-8 pt-20 md:pt-24 max-w-4xl mx-auto">
       <div
         className="text-4xl lg:text-5xl h-[15vh] md:h-[20vh] font-semibold"
         style={{ color: textColor }}
@@ -52,6 +52,13 @@ const WhatIsFindora = () => {
           className=" object-contain pt-[6px] lg:pt-[12px]"
         />
         <span className="text-4xl font-bold"> ra?</span>
+      </div>
+      <div className=" flex items-center gap-2">
+        <Image src="/images/leaf.png" alt="leaf" width={50} height={50} />
+        <span className=" text-lg lg:text-xl font-semibold">
+          <span className=" text-[#ff0101]"> {"Canada's"}</span> First AI Search
+          Engine
+        </span>
       </div>
       <p className=" text-center lg:text-lg">
         Misinformation is everywhere, but findora delivers facts. Our AI search

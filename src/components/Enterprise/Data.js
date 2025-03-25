@@ -1,66 +1,63 @@
 export const CardsData = [
   {
     id: 0,
-    img: "/images/cards1.jpg",
-    title: "Intelligent AI-Powered Assistance",
-    subtitle: "Transform Business Operations with Smart Automation",
+    img: "/images/dashboard.png",
+    title: "Custom Dashboard Development",
+    subtitle: "AI-Driven Business Intelligence for Smarter Decisions",
     description: (
       <p>
-        {"Findora’s"} AI-powered assistant revolutionizes the way enterprises
-        handle data, automate tasks, and interact with clients. By leveraging
-        advanced natural language processing and deep learning, our system
-        understands context, generates human-like responses, and adapts to user
-        needs seamlessly. Whether {"it’s"} customer support, data analysis, or
-        workflow automation, our AI assistant enhances productivity and reduces
-        manual effort.
+        In {"today's"} data-driven world, integrating business intelligence with
+        AI is key to making smarter, faster decisions. Our team specializes in
+        developing AI-powered dashboards that not only consolidate your key
+        metrics into a single, intuitive interface but also provide predictive
+        insights and automated recommendations.
         <br />
         <br />
-        With continuous learning and real-time adaptation, our AI engine refines
-        responses based on past interactions, ensuring more accurate and
-        personalized outputs over time. Businesses can integrate Findora into
-        their existing systems, enabling employees to access a powerful AI
-        assistant that improves efficiency without disrupting existing
-        workflows.
+        By combining business intelligence with AI, we go beyond static
+        reports—our dashboards analyze patterns, detect anomalies, and forecast
+        trends, helping you stay ahead of the competition. Whether {"you're"}
+        tracking sales, customer behavior, or operational efficiency, our
+        solutions turn raw data into actionable strategies.
         <br />
         <br />
-        Beyond automation, {"Findora’s"} AI understands industry-specific
-        jargon, processes unstructured data, and generates meaningful insights.
-        Whether
-        {"you’re"} optimizing internal operations or enhancing user engagement,
-        our AI-powered solutions ensure that your enterprise stays competitive
-        in the era of intelligent automation.
+        Our process begins with a deep understanding of your business needs,
+        ensuring a tailored dashboard that evolves with your organization. With
+        advanced visualizations and interactive features, we make complex data
+        accessible, allowing you to gain deeper insights with minimal effort.
+        Plus, our ongoing support and AI-driven enhancements ensure that your
+        dashboard remains a valuable tool for continuous growth and strategic
+        planning.
       </p>
     ),
   },
   {
     id: 1,
-    img: "/images/cards2.jpg",
-    title: "Scalable AI for Enterprise Growth",
-    subtitle: "Adapt, Scale, and Innovate with AI-Powered Solutions",
+    img: "/images/search.webp",
+    title: "Interactive Query Resolution",
+    subtitle: " Get Answers Instantly",
     description: (
       <p>
-        Enterprises require AI solutions that grow with their needs, and Findora
-        delivers exactly that. Our scalable AI architecture ensures seamless
-        expansion, allowing businesses to process increasing volumes of data,
-        handle more complex tasks, and integrate AI-driven functionalities
-        without performance bottlenecks. From startups to large-scale
-        enterprises, Findora adapts to your operational demands effortlessly.
+        Navigating through vast amounts of data can be overwhelming, but with
+        our interactive query resolution service, obtaining precise answers
+        becomes effortless. Our platform allows you to pose specific questions
+        and receive accurate responses promptly. By leveraging advanced search
+        algorithms and data processing techniques, we ensure that the
+        information you seek is readily available.
         <br />
         <br />
-        By harnessing cloud-based computing and distributed AI processing,
-        Findora maintains high efficiency and rapid response times, even under
-        heavy workloads. Businesses can deploy AI-driven solutions for a variety
-        of applications, including customer service, predictive analytics, and
-        intelligent automation, without worrying about limitations in computing
-        power or scalability.
+        The user-friendly interface is designed to accommodate both simple
+        inquiries and complex data explorations. Whether {"you're"} looking for
+        detailed reports, statistical analyses, or quick facts, our system
+        processes your queries efficiently, delivering results that are both
+        relevant and reliable. This capability enhances productivity by reducing
+        the time spent sifting through data manually.
         <br />
         <br />
-        Security and compliance are also at the core of {"Findora’s"} AI
-        infrastructure. We provide enterprise-grade encryption and access
-        controls, ensuring that sensitive business data remains protected while
-        leveraging {"AI’s"} full potential. With Findora, businesses can
-        innovate confidently, scaling AI-powered solutions without compromising
-        security or efficiency.
+        Furthermore, our service is continuously updated to incorporate the
+        latest information, ensuring that your queries yield current and
+        accurate results. By integrating this tool into your workflow, you can
+        make data-driven decisions with confidence, knowing that the answers you
+        receive are based on the most up-to-date information available.
       </p>
     ),
   },

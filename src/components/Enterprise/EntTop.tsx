@@ -7,11 +7,10 @@ const EntTop = () => {
         <div>
           <div className=" text-center space-y-8">
             <h3 className=" text-6xl font-medium max-w-3xl mx-auto">
-              Empowering Enterprises with Next-Gen Privacy & Security
+              AI-Powered Enterprise Intelligence & Insights
             </h3>
             <p className="max-w-2xl mx-auto text-xl">
-              Scalable, Transparent, and Privacy-Preserving Solutions for
-              Businesses.
+              Scalable, Transparent, and AI-Driven Solutions for Businesses
             </p>
           </div>
         </div>

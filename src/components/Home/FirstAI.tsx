@@ -9,7 +9,7 @@ const FirstAI = () => {
           <div className=" flex flex-col justify-between gap-8 lg:w-[40%] text-center md:text-left">
             <h3 className=" text-4xl text-black dark:text-white">
               <span className=" text-[#ff0101]">{"Canada's"}</span> First AI
-              Search Engine and Language Model
+              Search Engine
             </h3>
             <h6 className=" text-2xl text-black dark:text-white">
               Empowering Canadian Organizations to Thrive Worldwide

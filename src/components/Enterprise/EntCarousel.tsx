@@ -7,28 +7,38 @@ import useMeasure from "react-use-measure";
 const cardsData = [
   {
     id: 1,
-    title: "Conversational AI Excellence",
+    title: "Healthcare",
     img: "/images/card1.jpg",
   },
   {
     id: 2,
-    title: "AI-Powered Workflow Automation",
+    title: "Government and Public Sector",
     img: "/images/card2.jpg",
   },
   {
     id: 3,
-    title: "Scalable and Adaptive Learning",
+    title: "Financial Services",
     img: "/images/card3.jpg",
   },
   {
     id: 4,
-    title: "Enterprise-Grade Security & Compliance",
+    title: "Retail and E-commerce",
     img: "/images/card4.jpg",
   },
   {
     id: 5,
-    title: "Agentic Document Extraction",
+    title: "Telecommunications",
     img: "/images/card5.jpg",
+  },
+  {
+    id: 6,
+    title: "Energy",
+    img: "/images/card6.jpg",
+  },
+  {
+    id: 7,
+    title: "Manufacturing",
+    img: "/images/card7.jpg",
   },
 ];
 
@@ -74,7 +84,7 @@ const EntCarousel = () => {
         {/* Header & Controls */}
         <div className="flex items-center justify-between px-4 md:px-8">
           <h6 className="text-2xl font-medium w-1/2">
-            {"Findora's"} Key Features
+            AI Solutions for Industry
           </h6>
           <div className="flex gap-4 w-1/2 justify-end">
             <button
