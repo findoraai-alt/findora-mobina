@@ -22,10 +22,10 @@ const EntQCard = () => {
       <div className=" pt-20 md:pt-24">
         <div
           style={{ backgroundImage: "url(/images/enterbg.jpg)" }}
-          className="w-full h-auto flex justify-center items-end pt-16 px-8 bg-cover bg-center"
+          className="w-full h-auto flex justify-center items-end pt-16 px-8 bg-cover bg-center overflow-hidden"
         >
           <div className="bg-white/40 pt-4 px-4 rounded-t-2xl">
-            <div className="bg-white select-none rounded-t-2xl w-[350px] md:w-[450px] h-auto p-4 flex flex-col gap-4">
+            <div className="bg-white select-none rounded-t-2xl w-[330px] md:w-[450px] h-auto p-4 flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <Image
                   src={findoraLogo}
