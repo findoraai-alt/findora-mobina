@@ -40,7 +40,7 @@ const EntQCard = () => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0 }}
+                  transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
                   className="flex gap-2 items-center"
                 >
                   <img
@@ -57,7 +57,7 @@ const EntQCard = () => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 1 }}
+                  transition={{ duration: 0.5, delay: 1, ease: "easeInOut" }}
                   className="flex gap-2 w-[60%] self-end"
                 >
                   <div className="bg-[#f4f4f4] h-auto w-full rounded-lg p-2 flex flex-col justify-center text-black">
@@ -69,7 +69,7 @@ const EntQCard = () => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 2 }}
+                  transition={{ duration: 0.5, delay: 2, ease: "easeInOut" }}
                   className="flex gap-2 w-[60%] self-end"
                 >
                   <div className="bg-[#f4f4f4] w-full h-auto rounded-lg p-2 flex flex-col justify-center text-black">
@@ -85,7 +85,7 @@ const EntQCard = () => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 3 }}
+                  transition={{ duration: 0.5, delay: 3, ease: "easeInOut" }}
                   className="flex gap-2 w-[60%] self-end"
                 >
                   <div className="bg-[#f4f4f4] h-auto w-full rounded-lg p-2 flex flex-col gap-2 justify-center">
