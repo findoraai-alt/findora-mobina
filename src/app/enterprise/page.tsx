@@ -3,7 +3,7 @@ import EntCards from "@/components/Enterprise/EntCards";
 import EntCarousel from "@/components/Enterprise/EntCarousel";
 import EntFeatures from "@/components/Enterprise/EntFeatures";
 import EntImages from "@/components/Enterprise/EntImages";
-import EntSticky from "@/components/Enterprise/EntSticky";
+import EntQCard from "@/components/Enterprise/EntQCard";
 import EntTop from "@/components/Enterprise/EntTop";
 
 import { Metadata } from "next";
@@ -18,7 +18,7 @@ const Enterprise = () => {
   return (
     <div>
       <EntTop />
-      <EntSticky />
+      <EntQCard />
       <EntFeatures />
       <EntImages />
       <EntBoxes />
