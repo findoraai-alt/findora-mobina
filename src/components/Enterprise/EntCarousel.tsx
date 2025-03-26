@@ -3,80 +3,60 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import useMeasure from "react-use-measure";
-
-const cardsData = [
-  {
-    id: 1,
-    title: "Healthcare",
-    img: "/images/card1.jpg",
-  },
-  {
-    id: 2,
-    title: "Government and Public Sector",
-    img: "/images/card2.jpg",
-  },
-  {
-    id: 3,
-    title: "Financial Services",
-    img: "/images/card3.jpg",
-  },
-  {
-    id: 4,
-    title: "Retail and E-commerce",
-    img: "/images/card4.jpg",
-  },
-  {
-    id: 5,
-    title: "Telecommunications",
-    img: "/images/card5.jpg",
-  },
-  {
-    id: 6,
-    title: "Energy",
-    img: "/images/card6.jpg",
-  },
-  {
-    id: 7,
-    title: "Manufacturing",
-    img: "/images/card7.jpg",
-  },
-];
+import { AnimatePresence, motion } from "framer-motion";
+import { carouselData } from "./Data";
 
 const BREAKPOINTS = { sm: 640, md: 768, lg: 1024 };
 
 const EntCarousel = () => {
   const [ref, { width }] = useMeasure();
   const [offset, setOffset] = useState(0);
-  const [cardSize, setCardSize] = useState(300); // Default size for smaller screens
+  const [cardSize, setCardSize] = useState(300);
+  const [selectedCard, setSelectedCard] = useState<Card | null>(null);
 
   useEffect(() => {
-    if (width > BREAKPOINTS.lg) {
-      setCardSize(420);
-    } else if (width > BREAKPOINTS.md) {
-      setCardSize(350);
-    } else {
-      setCardSize(280);
-    }
+    if (width > BREAKPOINTS.lg) setCardSize(420);
+    else if (width > BREAKPOINTS.md) setCardSize(350);
+    else setCardSize(280);
   }, [width]);
+
+  useEffect(() => {
+    if (selectedCard) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [selectedCard]);
 
   const visibleCards =
     width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.md ? 2 : 1;
-  const totalScrollableWidth = cardSize * (cardsData.length - visibleCards);
+  const totalScrollableWidth = cardSize * (carouselData.length - visibleCards);
 
   const shiftLeft = () => {
-    if (offset < 0) {
-      setOffset((prev) => Math.min(prev + cardSize, 0));
-    }
+    if (offset < 0) setOffset((prev) => Math.min(prev + cardSize, 0));
   };
 
   const shiftRight = () => {
-    if (Math.abs(offset) < totalScrollableWidth) {
+    if (Math.abs(offset) < totalScrollableWidth)
       setOffset((prev) => Math.max(prev - cardSize, -totalScrollableWidth));
-    }
   };
 
-  // Progress Bar Calculation
   const progress = (Math.abs(offset) / totalScrollableWidth) * 100;
+
+  interface Card {
+    id: number;
+    title: string;
+    img: string;
+    content: React.ReactNode;
+  }
+
+  const handleModalOpen = (card: Card) => {
+    setSelectedCard(card);
+  };
+
+  const handleModalClose = () => {
+    setSelectedCard(null);
+  };
 
   return (
     <div className="py-20 md:py-24" ref={ref}>
@@ -88,16 +68,14 @@ const EntCarousel = () => {
           </h6>
           <div className="flex gap-4 w-1/2 justify-end">
             <button
-              className={` ${
-                offset < 0 ? "" : "opacity-30 cursor-not-allowed"
-              }`}
+              className={`${offset < 0 ? "" : "opacity-30 cursor-not-allowed"}`}
               disabled={offset >= 0}
               onClick={shiftLeft}
             >
               <FaArrowLeft size={30} />
             </button>
             <button
-              className={` ${
+              className={`${
                 Math.abs(offset) < totalScrollableWidth
                   ? ""
                   : "opacity-30 cursor-not-allowed"
@@ -110,17 +88,18 @@ const EntCarousel = () => {
           </div>
         </div>
 
-        {/* Carousel Container */}
+        {/* Carousel */}
         <div className="relative w-full overflow-hidden">
           <div
             className="flex pl-4 md:pl-8 gap-4 transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(${offset}px)` }}
           >
-            {cardsData.map((card) => (
-              <div
+            {carouselData.map((card) => (
+              <button
                 key={card.id}
-                className=" group relative shrink-0 group overflow-hidden rounded-2xl"
+                className="group relative shrink-0 overflow-hidden rounded-2xl"
                 style={{ width: cardSize }}
+                onClick={() => handleModalOpen(card)}
               >
                 <Image
                   src={card.img}
@@ -129,10 +108,10 @@ const EntCarousel = () => {
                   height={cardSize}
                   className="lg:group-hover:scale-125 h-full transition-all duration-500 ease-in-out object-cover object-center"
                 />
-                <h6 className="absolute top-5 left-5 text-sm md:text-base lg:text-lg mix-blend-difference text-white ">
+                <h6 className="absolute top-5 left-5 text-sm md:text-base lg:text-lg mix-blend-difference text-white">
                   {card.title}
                 </h6>
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -145,7 +124,50 @@ const EntCarousel = () => {
           ></div>
         </div>
       </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedCard && (
+          <Modal card={selectedCard} onClose={handleModalClose} />
+        )}
+      </AnimatePresence>
     </div>
+  );
+};
+
+interface Card {
+  id: number;
+  title: string;
+  img: string;
+  content: React.ReactNode;
+}
+
+interface ModalProps {
+  card: Card;
+  onClose: () => void;
+}
+
+const Modal = ({ card, onClose }: ModalProps) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, clipPath: "inset(50% 50% 50% 50%)" }}
+      animate={{ opacity: 1, clipPath: "inset(0% 0% 0% 0%)" }}
+      exit={{ opacity: 0, clipPath: "inset(50% 50% 50% 50%)" }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+      data-lenis-prevent="true"
+      className="fixed overflow-y-auto top-0 left-0 w-full h-screen backdrop-blur-xl bg-black/50 z-[100] flex flex-col justify-center items-center text-white p-8"
+    >
+      <h2 className=" text-xl lg:text-3xl font-bold mb-4 text-center">
+        {card.title}
+      </h2>
+      <p className=" text-sm lg:text-lg max-w-7xl">{card.content}</p>
+      <button
+        className="absolute top-5 right-5 p-2 text-sm bg-white text-black font-semibold"
+        onClick={onClose}
+      >
+        Close
+      </button>
+    </motion.div>
   );
 };
 

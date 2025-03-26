@@ -1,4 +1,5 @@
 import AboutBottom from "@/components/About/AboutBottom";
+import AboutJoinUs from "@/components/About/AboutJoinUs";
 import AboutScrollingImages from "@/components/About/AboutScrollingImages";
 import AboutTop from "@/components/About/AboutTop";
 import { Metadata } from "next";
@@ -18,6 +19,7 @@ const About = () => {
         <AboutScrollingImages />
       </div>
       <AboutBottom />
+      <AboutJoinUs />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutBottom = () => {
   return (
-    <div className=" px-4 md:px-8 py-20 md:py-24">
+    <div className=" px-4 md:px-8 pt-20 md:pt-24">
       <div className="  space-y-8 text-center">
         <h1 className="text-4xl lg:text-6xl font-semibold max-w-5xl mx-auto">
           Empowering Accurate, Secure, and Transparent Searches

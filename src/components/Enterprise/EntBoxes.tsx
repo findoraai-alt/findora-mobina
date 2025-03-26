@@ -11,10 +11,11 @@ const EntBoxes = () => {
             </h6>
             <p className="text-sm lg:text-base text-white dark:text-black">
               {"Findora’s"} AI-driven document extraction system autonomously
-              processes unstructured data, intelligently identifying,
-              organizing, and extracting key information with precision.
-              Designed for efficiency and adaptability, it enhances data
-              workflows across finance, healthcare, and legal sectors.
+              processes unstructured data from various file types, including
+              images, audio, video, Excel, PDFs, and more. It intelligently
+              identifies, organizes, and extracts key information with
+              precision. Designed for efficiency and adaptability, it enhances
+              data workflows across finance, healthcare, and legal sectors
             </p>
           </div>
           <div className=" h-[350px] rounded-2xl lg:-skew-y-[7deg] relative overflow-hidden">
