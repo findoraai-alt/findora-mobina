@@ -29,7 +29,7 @@ const AboutJoinUs = () => {
             <span className=" bg-[#212121] text-white w-full py-1 px-2 rounded-lg uppercase">
               join us
             </span>
-            <div className=" bg-[#212121] rounded-lg text-white w-[40px] py-1 px-2 flex items-center justify-center group-hover:w-[70px] transition-all duration-300 ease-in-out">
+            <div className=" bg-[#212121] rounded-lg text-white w-[40px] py-1 px-2 flex items-center justify-center lg:group-hover:w-[70px] transition-all duration-300 ease-in-out">
               <RiArrowRightLine />
             </div>
           </button>
