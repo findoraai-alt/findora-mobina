@@ -6,8 +6,11 @@ const EntText = () => {
   return (
     <div className=" pt-20 md:pt-24 px-4 md:px-8">
       <div className=" flex flex-col lg:flex-row gap-8 items-center">
-        <div className=" lg:w-1/2">
-          <p className=" text-lg font-medium">
+        <div className=" lg:w-1/2 flex flex-col gap-8">
+          <h6 className=" text-2xl font-medium ">
+            Customizable AI for Your Use Case
+          </h6>
+          <p className="text-lg">
             • Seamless AI: Effortlessly integrate AI with low-code solutions—no
             expertise needed.
             <br />
@@ -26,7 +29,7 @@ const EntText = () => {
           <Image
             src={FuturisticImg}
             alt="futuristic"
-            className=" object-cover object-center rounded-lg max-h-[180px] md:max-h-[300px]"
+            className=" object-cover object-center rounded-lg max-h-[200px] md:max-h-[350px]"
           />
         </div>
       </div>
