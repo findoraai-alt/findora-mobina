@@ -1,4 +1,4 @@
-import Demo from "@/components/Demo/Demo";
+import Demo from "@/components/Enterprise/Demo";
 import { Metadata } from "next";
 import React from "react";
 

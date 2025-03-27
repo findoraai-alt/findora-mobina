@@ -67,6 +67,7 @@ export const carouselData = [
   {
     id: 1,
     title: "Healthcare",
+    textColor: "white",
     img: "/images/card1.jpg",
     content: (
       <p>
@@ -90,6 +91,7 @@ export const carouselData = [
   {
     id: 2,
     title: "Government and Public Sector",
+    textColor: "black",
     img: "/images/card2.jpg",
     content: (
       <p>
@@ -112,6 +114,7 @@ export const carouselData = [
   {
     id: 3,
     title: "Financial Services",
+    textColor: "white",
     img: "/images/card3.jpg",
     content: (
       <p>
@@ -134,6 +137,7 @@ export const carouselData = [
   {
     id: 4,
     title: "Retail and E-commerce",
+    textColor: "white",
     img: "/images/card4.jpg",
     content: (
       <p>
@@ -154,6 +158,7 @@ export const carouselData = [
   {
     id: 5,
     title: "Telecommunications",
+    textColor: "white",
     img: "/images/card5.jpg",
     content: (
       <p>
@@ -175,6 +180,7 @@ export const carouselData = [
   {
     id: 6,
     title: "Energy",
+    textColor: "white",
     img: "/images/card6.jpg",
     content: (
       <p>
@@ -196,6 +202,7 @@ export const carouselData = [
   {
     id: 7,
     title: "Manufacturing",
+    textColor: "white",
     img: "/images/card7.jpg",
     content: (
       <p>

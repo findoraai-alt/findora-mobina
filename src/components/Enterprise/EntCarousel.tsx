@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import useMeasure from "react-use-measure";
@@ -101,14 +100,16 @@ const EntCarousel = () => {
                 style={{ width: cardSize }}
                 onClick={() => handleModalOpen(card)}
               >
-                <Image
+                <img
                   src={card.img}
                   alt={card.title}
-                  width={cardSize}
-                  height={cardSize}
-                  className="lg:group-hover:scale-125 h-full transition-all duration-500 ease-in-out object-cover object-center"
+                  className="lg:group-hover:scale-125  h-full w-full transition-all duration-500 ease-in-out object-cover object-center"
                 />
-                <h6 className="absolute top-5 left-5 text-sm md:text-base lg:text-lg mix-blend-difference text-white">
+                <div className=" absolute inset-0 bg-black/20" />
+                <h6
+                  className="absolute z-10 top-5 left-5 text-sm md:text-base lg:text-lg"
+                  style={{ color: card.textColor }}
+                >
                   {card.title}
                 </h6>
               </button>
@@ -160,7 +161,9 @@ const Modal = ({ card, onClose }: ModalProps) => {
       <h2 className=" text-xl lg:text-3xl font-bold mb-4 text-center">
         {card.title}
       </h2>
-      <p className=" text-sm lg:text-lg max-w-7xl">{card.content}</p>
+      <p className=" text-sm lg:text-lg max-w-7xl text-justify">
+        {card.content}
+      </p>
       <button
         className="absolute top-5 right-5 p-2 text-sm bg-white text-black font-semibold"
         onClick={onClose}

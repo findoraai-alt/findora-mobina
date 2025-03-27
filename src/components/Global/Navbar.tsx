@@ -121,14 +121,7 @@ const Navbar = () => {
           </div>
           <div className=" flex flex-col-reverse lg:flex-row items-center justify-center gap-4">
             <GlowingBtn />
-            <div className=" flex flex-col items-center gap-4">
-              <ThemeToggle />
-              <Link href="/demo">
-                <button className=" bg-black dark:bg-white text-white dark:text-black font-medium rounded-full px-2 py-2 lg:px-4 lg:py-3 text-xs lg:hover:scale-105 transition-all duration-300 ease-in-out">
-                  Request a demo
-                </button>
-              </Link>
-            </div>
+            <ThemeToggle />
           </div>
         </div>
       </div>

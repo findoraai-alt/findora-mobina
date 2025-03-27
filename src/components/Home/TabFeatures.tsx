@@ -287,7 +287,7 @@ const ExampleFeature = ({
                 >
                   <div className="space-y-8 lg:space-y-16 py-16 px-8 md:px-16 lg:px-28">
                     <h6 className="text-center text-3xl lg:text-4xl">{text}</h6>
-                    <p className="pb-10 lg:text-xl">{longDesc}</p>
+                    <p className="pb-10 lg:text-xl text-justify">{longDesc}</p>
                   </div>
                   <button
                     onClick={() => setIsModalOpen(false)}

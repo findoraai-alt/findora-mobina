@@ -7,22 +7,19 @@ const EntText = () => {
     <div className=" pt-20 md:pt-24 px-4 md:px-8">
       <div className=" flex flex-col lg:flex-row gap-8 items-center">
         <div className=" lg:w-1/2">
-          <p>
-            Seamless integration: Add AI capabilities effortlessly to your
-            workflows with our intuitive low-code solutions—no technical
-            expertise required.
+          <p className=" text-lg font-medium">
+            • Seamless AI: Effortlessly integrate AI with low-code solutions—no
+            expertise needed.
             <br />
             <br />
-            Advanced fine-tuning: Train our models on your proprietary data to
-            enhance accuracy and deliver personalized responses.
+            • Fine-Tuned Accuracy: Train models on your data for personalized
+            results.
             <br />
             <br />
-            Collaborative development: Partner with our experts to create AI
-            solutions tailored to your specific use cases.
+            • Expert Collaboration: Co-create AI solutions with our specialists.
             <br />
-            <br />
-            Secure customization: Build AI-powered experiences within a
-            framework that prioritizes privacy, security, and compliance.
+            <br />• Secure & Compliant: Customize AI within a privacy-first
+            framework.
           </p>
         </div>
         <div className=" lg:w-1/2">

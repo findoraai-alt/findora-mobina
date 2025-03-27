@@ -53,8 +53,8 @@ const WhatIsFindora = () => {
         />
         <span className="text-4xl font-bold"> ra?</span>
       </div>
-      <div className=" flex items-center gap-2">
-        <Image src="/images/leaf.png" alt="leaf" width={50} height={50} />
+      <div className=" flex items-center">
+        <Image src="/images/pin.png" alt="leaf" width={50} height={50} />
         <span className=" text-lg lg:text-xl font-semibold">
           <span className=" text-[#ff0101]"> {"Canada's"}</span> First AI Search
           Engine

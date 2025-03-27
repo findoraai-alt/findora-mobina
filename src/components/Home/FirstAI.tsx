@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 const FirstAI = () => {
@@ -23,7 +22,11 @@ const FirstAI = () => {
           </div>
 
           <div className=" lg:w-1/2 flex justify-end">
-            <Image src="/images/map.png" alt="..." width={500} height={500} />
+            <img
+              src="/images/leaf.png"
+              alt="..."
+              className=" w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] "
+            />
           </div>
         </div>
       </div>
