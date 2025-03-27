@@ -5,7 +5,7 @@ import FuturisticImg from "@/../public/images/futuristic.jpg";
 const EntText = () => {
   return (
     <div className=" pt-20 md:pt-24 px-4 md:px-8">
-      <div className=" flex flex-col lg:flex-row gap-8 items-center">
+      <div className=" flex flex-col lg:flex-row gap-8 items-start">
         <div className=" lg:w-1/2 flex flex-col gap-8">
           <h6 className=" text-2xl font-medium ">
             Customizable AI for Your Use Case
