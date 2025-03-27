@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
     <div className="px-4 md:px-8 py-20 md:py-24 flex justify-center items-center">
       <div className="flex flex-col gap-20 relative z-10">
         <div className="text-center space-y-4">
-          <h6 className="text-4xl font-bold">Contact Us</h6>
+          <h6 className="text-4xl font-medium">Contact Us</h6>
           <p className="text-lg">
             Please enter your information below, and we will respond as soon as
             possible.

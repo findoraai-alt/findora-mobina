@@ -17,7 +17,7 @@ const BrowserSearch = () => {
           <div className="md:w-1/2 flex flex-col gap-4">
             <div className="flex gap-1">
               <div className=" flex">
-                <span className=" text-2xl font-bold">find</span>
+                <span className=" text-2xl font-medium">find</span>
                 <Image
                   src={oLogo}
                   alt="o"
@@ -25,10 +25,10 @@ const BrowserSearch = () => {
                   height={13}
                   className=" object-contain pt-[3px] lg:pt-[6px]"
                 />
-                <span className=" text-2xl font-bold">ra</span>
+                <span className=" text-2xl font-medium">ra</span>
               </div>
 
-              <span className=" text-2xl font-bold">Browser Search</span>
+              <span className=" text-2xl font-medium">Browser Search</span>
             </div>
             <p className=" lg:text-lg">
               Our free findora Answer Engine allows users to ask questions in

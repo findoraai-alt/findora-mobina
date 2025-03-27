@@ -254,7 +254,7 @@ const ExampleFeature = ({
           />
         </div>
         <div className="md:w-1/2 flex flex-col gap-4">
-          <h6 className="text-2xl font-bold" style={{ color: textColor }}>
+          <h6 className="text-2xl font-medium" style={{ color: textColor }}>
             {text}
           </h6>
           <p className="lg:text-lg">{desc}</p>

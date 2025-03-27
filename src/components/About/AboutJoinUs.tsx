@@ -4,7 +4,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 const AboutJoinUs = () => {
   return (
     <div className="py-20 md:py-24">
-      <div className=" w-full h-auto flex flex-col overflow-hidden lg:flex-row items-center justify-center gap-8 bg-purple-500 p-8">
+      <div className=" w-full h-auto flex flex-col overflow-hidden lg:flex-row items-center justify-center gap-8 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600 p-8">
         <div className=" lg:w-[60%]">
           <img
             src="/images/team.jpg"
@@ -13,7 +13,7 @@ const AboutJoinUs = () => {
           />
         </div>
         <div className=" lg:w-[40%] flex flex-col gap-4">
-          <div className=" flex flex-col gap-4 text-black">
+          <div className=" flex flex-col gap-4 text-white">
             <h6 className=" text-xl font-bold">Join Us at Findora</h6>
             <p>
               Be part of a groundbreaking journey where privacy meets

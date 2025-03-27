@@ -77,7 +77,7 @@ const Card = ({ Icon, title, desc, color }: CardProps) => {
     <div className="text-center bg-white dark:bg-[#111828] h-auto first:bg-transparent dark:first:bg-transparent flex flex-col justify-between items-center first:justify-normal gap-4 p-12 first:pt-0 lg:first:pt-12 rounded-2xl">
       {Icon && <Icon size={60} color={color} />}
       {/* Render Icon only if it's provided */}
-      <h6 className=" text-2xl font-bold">{title}</h6>
+      <h6 className=" text-2xl font-medium">{title}</h6>
       <p className="lg:text-lg">{desc}</p>
     </div>
   );

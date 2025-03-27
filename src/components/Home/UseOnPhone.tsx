@@ -16,9 +16,9 @@ const UseOnPhone = () => {
           <div className=" md:w-2/3 flex flex-col gap-4 text-white p-16">
             <div className=" flex flex-col lg:flex-row lg:gap-1">
               <div className="flex gap-1">
-                <span className="text-2xl font-bold">Access</span>
+                <span className="text-2xl font-medium">Access</span>
                 <div className=" flex">
-                  <span className=" text-2xl font-bold">find</span>
+                  <span className=" text-2xl font-medium">find</span>
                   <Image
                     src={oLogo}
                     alt="o"
@@ -26,10 +26,10 @@ const UseOnPhone = () => {
                     height={13}
                     className=" object-contain pt-[3px] lg:pt-[6px]"
                   />
-                  <span className=" text-2xl font-bold">ra</span>
+                  <span className=" text-2xl font-medium">ra</span>
                 </div>
               </div>
-              <span className="text-2xl font-bold">on Your Phone</span>
+              <span className="text-2xl font-medium">on Your Phone</span>
             </div>
 
             <p className="lg:text-lg">

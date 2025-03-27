@@ -52,7 +52,7 @@ const Cards = () => {
             </div>
 
             <div className="flex flex-col justify-between gap-2 text-center lg:text-start">
-              <h6 className="text-2xl font-bold">{card.title}</h6>
+              <h6 className="text-2xl font-medium">{card.title}</h6>
               <p className="lg:text-lg">{card.desc}</p>
             </div>
           </div>

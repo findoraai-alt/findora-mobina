@@ -4,6 +4,7 @@ import EntCarousel from "@/components/Enterprise/EntCarousel";
 import EntFeatures from "@/components/Enterprise/EntFeatures";
 import EntImages from "@/components/Enterprise/EntImages";
 import EntQCard from "@/components/Enterprise/EntQCard";
+import EntText from "@/components/Enterprise/EntText";
 import EntTop from "@/components/Enterprise/EntTop";
 
 import { Metadata } from "next";
@@ -23,6 +24,7 @@ const Enterprise = () => {
       <EntImages />
       <EntBoxes />
       <EntCards />
+      <EntText />
       <EntCarousel />
     </div>
   );

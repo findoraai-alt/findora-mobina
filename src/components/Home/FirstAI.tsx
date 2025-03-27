@@ -7,7 +7,7 @@ const FirstAI = () => {
       <div className="  bg-white dark:bg-black h-auto w-full place-content-center p-8">
         <div className=" flex flex-col-reverse md:flex-row justify-between items-center gap-8">
           <div className=" flex flex-col justify-between gap-8 lg:w-1/2 text-center md:text-left">
-            <h3 className=" text-4xl text-black dark:text-white">
+            <h3 className=" text-4xl font-medium text-black dark:text-white">
               <span className=" text-[#ff0101]">{"Canada's"}</span> First AI
               Search Engine
             </h3>
@@ -23,12 +23,7 @@ const FirstAI = () => {
           </div>
 
           <div className=" lg:w-1/2 flex justify-end">
-            <Image
-              src="/images/beaver.png"
-              alt="..."
-              width={500}
-              height={500}
-            />
+            <Image src="/images/map.png" alt="..." width={500} height={500} />
           </div>
         </div>
       </div>
