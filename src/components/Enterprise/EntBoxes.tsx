@@ -6,7 +6,7 @@ const EntBoxes = () => {
       <div className=" flex flex-col lg:flex-row gap-4 lg:gap-8">
         <div className=" flex flex-col lg:-space-y-8 gap-4 lg:gap-0 lg:w-1/2">
           <div className=" bg-[#2e2e2e] dark:bg-white h-[350px] rounded-2xl overflow-hidden lg:[clip-path:polygon(100%_0,0_0,0_100%,100%_75%)] p-8 space-y-5">
-            <h6 className=" font-semibold text-white dark:text-black text-xl lg:text-2xl">
+            <h6 className=" font-medium text-white dark:text-black text-xl lg:text-2xl">
               Intelligent Agentic Document Extraction
             </h6>
             <p className="text-sm lg:text-base text-white dark:text-black">
