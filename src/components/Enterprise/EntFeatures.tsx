@@ -30,7 +30,7 @@ const EntFeatures = () => {
   return (
     <div className=" pt-20 md:pt-24 px-4 md:px-8 ">
       <div className=" flex flex-col gap-24 justify-center items-center">
-        <h1 className="text-5xl text-center max-w-3xl mx-auto">
+        <h1 className="text-5xl text-center max-w-3xl">
           {"Findora’s"} AI Features That Drive Business Innovation
         </h1>
         <div className="flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto">
