@@ -103,11 +103,11 @@ const EntCarousel = () => {
                 <img
                   src={card.img}
                   alt={card.title}
-                  className="lg:group-hover:scale-125  h-full w-full transition-all duration-500 ease-in-out object-cover object-center"
+                  className="lg:group-hover:scale-125 h-full w-full transition-all duration-500 ease-in-out object-cover object-center"
                 />
                 <div className=" absolute inset-0 bg-black/20" />
                 <h6
-                  className="absolute z-10 top-5 left-5 text-sm md:text-base lg:text-lg"
+                  className="absolute z-10 top-5 left-5 text-sm md:text-base lg:text-lg font-medium"
                   style={{ color: card.textColor }}
                 >
                   {card.title}
