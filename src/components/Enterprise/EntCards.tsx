@@ -26,7 +26,7 @@ const EntCards = () => {
                   height={500}
                   className=" object-cover object-center"
                 />
-                <h6 className=" font-semibold text-lg lg:text-xl">
+                <h6 className=" font-medium text-lg lg:text-xl">
                   {card.title}
                 </h6>
                 <div className=" text-base lg:text-lg line-clamp-2">
