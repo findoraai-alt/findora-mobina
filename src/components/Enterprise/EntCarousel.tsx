@@ -161,9 +161,7 @@ const Modal = ({ card, onClose }: ModalProps) => {
       <h2 className=" text-xl lg:text-3xl font-bold mb-4 text-center">
         {card.title}
       </h2>
-      <p className=" text-sm lg:text-lg max-w-7xl text-justify">
-        {card.content}
-      </p>
+      <p className=" text-sm lg:text-lg max-w-7xl">{card.content}</p>
       <button
         className="absolute top-5 right-5 p-2 text-sm bg-white text-black font-semibold"
         onClick={onClose}
