@@ -4,7 +4,7 @@ import { RiArrowRightLine } from "react-icons/ri";
 const AboutJoinUs = () => {
   return (
     <div className="py-20 md:py-24">
-      <div className=" w-full h-auto flex flex-col overflow-hidden lg:flex-row items-center justify-center gap-8 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600 p-8">
+      <div className=" w-full h-auto flex flex-col overflow-hidden lg:flex-row items-center justify-center gap-8 bg-gradient-to-br from-[#f6921a] via-[#018ae0] to-[#9e00ed] p-8">
         <div className=" lg:w-[60%]">
           <img
             src="/images/team.jpg"
