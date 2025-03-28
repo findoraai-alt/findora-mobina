@@ -15,7 +15,7 @@ const EntBoxes = () => {
               images, audio, video, Excel, PDFs, and more. It intelligently
               identifies, organizes, and extracts key information with
               precision. Designed for efficiency and adaptability, it enhances
-              data workflows across finance, healthcare, and legal sectors
+              data workflows across finance, healthcare, and legal sectors.
             </p>
           </div>
           <div className=" h-[350px] rounded-2xl lg:-skew-y-[7deg] relative overflow-hidden">
