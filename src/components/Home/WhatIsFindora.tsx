@@ -9,7 +9,7 @@ const WhatIsFindora = () => {
   return (
     <div className=" px-4 md:px-8 flex flex-col justify-center items-center gap-8 pt-20 md:pt-24 max-w-4xl mx-auto">
       <div
-        className="text-4xl lg:text-5xl h-[15vh] md:h-[20vh] font-semibold"
+        className="text-4xl lg:text-5xl font-medium pb-12 md:pb-20"
         style={{ color: textColor }}
       >
         <TypeAnimation

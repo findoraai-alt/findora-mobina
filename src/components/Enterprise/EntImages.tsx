@@ -22,16 +22,18 @@ const EntImages = () => {
   const sectionXSpring = useSpring(sectionX);
 
   return (
-    <section ref={targetRef} className="overflow-hidden pt-20 md:pt-24">
-      <motion.div style={{ x: sectionXSpring }} className="flex gap-2">
-        <ImageBar imgSrc="/images/img1.jpg" x={imageXSpring} />
-        <ImageBar imgSrc="/images/img2.jpg" x={imageXSpring} />
-        <ImageBar imgSrc="/images/img3.jpg" x={imageXSpring} />
-        <ImageBar imgSrc="/images/img4.jpg" x={imageXSpring} />
-        <ImageBar imgSrc="/images/img5.jpg" x={imageXSpring} />
-        <ImageBar imgSrc="/images/img6.jpg" x={imageXSpring} />
-      </motion.div>
-    </section>
+    <div className="bg-[#f0f0fc] dark:bg-[#111828]">
+      <section ref={targetRef} className="overflow-hidden py-20 md:py-24">
+        <motion.div style={{ x: sectionXSpring }} className="flex gap-2">
+          <ImageBar imgSrc="/images/img1.jpg" x={imageXSpring} />
+          <ImageBar imgSrc="/images/img2.jpg" x={imageXSpring} />
+          <ImageBar imgSrc="/images/img3.jpg" x={imageXSpring} />
+          <ImageBar imgSrc="/images/img4.jpg" x={imageXSpring} />
+          <ImageBar imgSrc="/images/img5.jpg" x={imageXSpring} />
+          <ImageBar imgSrc="/images/img6.jpg" x={imageXSpring} />
+        </motion.div>
+      </section>
+    </div>
   );
 };
 

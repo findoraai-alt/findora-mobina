@@ -28,22 +28,24 @@ const features = [
 ];
 const EntFeatures = () => {
   return (
-    <div className=" pt-20 md:pt-24 px-4 md:px-8 ">
-      <div className=" flex flex-col gap-24 justify-center items-center">
-        <h1 className="text-4xl font-medium text-center max-w-3xl mx-auto">
-          {"Findora’s"} AI Features That Drive Business Innovation
-        </h1>
-        <div className="flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto">
-          {features.map((feature) => (
-            <div
-              key={feature.id}
-              className=" flex flex-col gap-2 justify-between"
-            >
-              <feature.icon size={40} />
-              <h6 className=" text-2xl font-medium">{feature.title}</h6>
-              <p className=" text-lg">{feature.description}</p>
-            </div>
-          ))}
+    <div className="bg-[#f0f0fc] dark:bg-[#111828]">
+      <div className=" pt-20 md:pt-24 px-4 md:px-8 ">
+        <div className=" flex flex-col gap-24 justify-center items-center">
+          <h1 className="text-4xl font-medium text-center max-w-3xl mx-auto">
+            {"Findora’s"} AI Features That Drive Business Innovation
+          </h1>
+          <div className="flex flex-col lg:flex-row gap-16 max-w-7xl mx-auto">
+            {features.map((feature) => (
+              <div
+                key={feature.id}
+                className=" flex flex-col gap-2 justify-between"
+              >
+                <feature.icon size={40} />
+                <h6 className=" text-2xl font-medium">{feature.title}</h6>
+                <p className=" text-lg">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
