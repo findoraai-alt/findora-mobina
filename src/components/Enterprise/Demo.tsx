@@ -254,7 +254,7 @@ const Demo = () => {
                 <div className="flex items-center justify-between">
                   <span className="text-black dark:text-white">
                     {selected.platforms ||
-                      "What Platform Do You Prefer Using*?"}
+                      "What Platform Do You Prefer Using?*"}
                   </span>
                   {dropdowns.platforms ? (
                     <MdOutlineKeyboardArrowUp />
