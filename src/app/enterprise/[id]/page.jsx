@@ -36,7 +36,7 @@ const CardPage = ({ params }) => {
         <img
           src={data.img}
           alt={data.title}
-          className=" max-h-[150px] lg:max-h-[300px] w-full object-cover object-center"
+          className=" max-h-[150px] lg:max-h-[300px] w-full object-cover object-top"
         />
         <p>{data.description}</p>
       </div>

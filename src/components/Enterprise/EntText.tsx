@@ -7,7 +7,7 @@ const EntText = () => {
     <div className=" pt-20 md:pt-24 px-4 md:px-8">
       <div className=" flex flex-col lg:flex-row gap-8 items-start">
         <div className=" lg:w-1/2 flex flex-col gap-8">
-          <h6 className=" text-2xl font-medium ">
+          <h6 className=" text-3xl font-medium ">
             Customizable AI for Your Use Case
           </h6>
           <p className="text-lg">

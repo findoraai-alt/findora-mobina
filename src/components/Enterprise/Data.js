@@ -32,7 +32,7 @@ export const CardsData = [
   },
   {
     id: 1,
-    img: "/images/ai.jpg",
+    img: "/images/ai.png",
     title: "Interactive Query Resolution",
     subtitle: " Get Answers Instantly",
     description: (
