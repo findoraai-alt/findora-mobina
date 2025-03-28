@@ -101,7 +101,7 @@ const Demo = () => {
 
   return (
     <div className="px-4 md:px-8 py-20 md:py-24">
-      <div className="flex flex-col lg:flex-row items-start gap-8">
+      <div className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-1/2 flex flex-col gap-4">
           <h6 className="text-5xl font-medium">
             Unlock AI-Powered Efficiency with Findora
