@@ -48,17 +48,22 @@ const Demo = () => {
     caseDetails: "",
   });
 
-  const dropdownRef = useRef<HTMLFormElement>(null);
   const [errors, setErrors] = useState<Record<string, boolean>>({});
+
+  const countryRef = useRef<HTMLDivElement>(null);
+  const employeesRef = useRef<HTMLDivElement>(null);
+  const platformsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
+        countryRef.current?.contains(event.target as Node) ||
+        employeesRef.current?.contains(event.target as Node) ||
+        platformsRef.current?.contains(event.target as Node)
       ) {
-        setDropdowns({ country: false, employees: false, platforms: false });
+        return; // If clicked inside any dropdown, do nothing
       }
+      setDropdowns({ country: false, employees: false, platforms: false });
     };
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -128,7 +133,6 @@ const Demo = () => {
           <form
             className="flex flex-col gap-8 bg-white dark:bg-[#111828] h-auto p-8 rounded-2xl"
             action=""
-            ref={dropdownRef}
             onSubmit={handleSubmit}
           >
             <div>
@@ -172,7 +176,7 @@ const Demo = () => {
             </div>
 
             {/* Country Dropdown */}
-            <div className="relative w-full">
+            <div ref={countryRef} className="relative w-full">
               <div
                 onClick={() => toggleDropdown("country")}
                 className="border p-2 cursor-pointer bg-[#f5f5ff] dark:bg-[#202938]"
@@ -207,7 +211,7 @@ const Demo = () => {
             </div>
 
             {/* Employees Dropdown */}
-            <div className="relative z-10 w-full">
+            <div ref={employeesRef} className="relative z-10 w-full">
               <div
                 onClick={() => toggleDropdown("employees")}
                 className="border p-2 cursor-pointer bg-[#f5f5ff] dark:bg-[#202938]"
@@ -242,7 +246,7 @@ const Demo = () => {
             </div>
 
             {/* Platforms Dropdown */}
-            <div className="relative z-0 w-full">
+            <div ref={platformsRef} className="relative z-0 w-full">
               <div
                 onClick={() => toggleDropdown("platforms")}
                 className="border p-2 cursor-pointer bg-[#f5f5ff] dark:bg-[#202938]"
@@ -300,7 +304,7 @@ const Demo = () => {
               </span>
             </div>
 
-            <button className="text-xl bg-purple-500 hover:bg-purple-600 transition-all rounded-full px-4 py-2 text-white">
+            <button className="text-xl bg-purple-500 lg:hover:bg-purple-600 transition-all rounded-full px-4 py-2 text-white">
               Submit
             </button>
           </form>
