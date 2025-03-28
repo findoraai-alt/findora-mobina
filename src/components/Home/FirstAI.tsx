@@ -25,7 +25,7 @@ const FirstAI = () => {
             <img
               src="/images/leaf.png"
               alt="..."
-              className=" w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] "
+              className=" w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] bg-cover bg-center "
             />
           </div>
         </div>
