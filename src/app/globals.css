@@ -5,6 +5,7 @@
 html.lenis,
 html.lenis body {
   height: auto;
+  @apply selection:bg-purple-500;
 }
 
 .lenis.lenis-smooth {
