@@ -20,8 +20,8 @@ import { BsSearch } from "react-icons/bs";
 const Links = [
   { id: 1, title: "Home", icon: RiHome2Line, url: "/" },
   { id: 2, title: "Enterprise", icon: GoGear, url: "/enterprise" },
-  { id: 3, title: "About", icon: GoPeople, url: "/about" },
-  { id: 4, title: "Discover", icon: BsSearch, url: "/discover" },
+  { id: 3, title: "Discover", icon: BsSearch, url: "/discover" },
+  { id: 4, title: "About", icon: GoPeople, url: "/about" },
   { id: 5, title: "Contact", icon: FiPhone, url: "/contact" },
 ];
 
