@@ -3,6 +3,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import oLogo from "@/../public/images/o.png";
+import { PiArrowUpRightBold } from "react-icons/pi";
+import Link from "next/link";
 
 const WhatIsFindora = () => {
   const [textColor, setTextColor] = useState("#008f7a");
@@ -53,17 +55,26 @@ const WhatIsFindora = () => {
         />
         <span className="text-4xl font-bold"> ra?</span>
       </div>
-
       <span className=" text-lg lg:text-xl font-medium">
         <span className=" text-[#ff0101]"> {"Canada's"}</span> First AI Search
         Engine
       </span>
-
       <p className=" text-center lg:text-lg">
         Misinformation is everywhere, but findora delivers facts. Our AI search
         engine fact-checks sources, analyzes content, and provides reliable,
         transparent answers.
       </p>
+      <Link href="/" className=" relative group">
+        <button className=" bg-[#e0e0e0] dark:bg-gray-200 text-black dark:text-black rounded-full px-4 py-3">
+          <div className=" flex items-center gap-1">
+            <span className=" font-medium">Start now</span>
+            <PiArrowUpRightBold className=" lg:group-hover:rotate-45 transition-all duration-300 ease-in-out" />
+          </div>
+        </button>
+        <span className="hidden group-hover:block absolute top-14 w-fit left-6 bg-black text-white dark:bg-white dark:text-black text-center text-xs font-bold rounded-md p-1">
+          coming soon
+        </span>
+      </Link>
     </div>
   );
 };
