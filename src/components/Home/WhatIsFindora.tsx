@@ -67,7 +67,7 @@ const WhatIsFindora = () => {
       <Link href="/" className=" relative group">
         <button className=" bg-[#e0e0e0] dark:bg-gray-200 text-black rounded-full px-4 py-3">
           <div className=" flex items-center gap-1">
-            <span className=" font-medium">Start now</span>
+            <span className="font-medium text-sm lg:text-base">Start now</span>
             <PiArrowUpRightBold className=" lg:group-hover:rotate-45 transition-all duration-300 ease-in-out" />
           </div>
         </button>
