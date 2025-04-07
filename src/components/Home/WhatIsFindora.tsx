@@ -65,7 +65,7 @@ const WhatIsFindora = () => {
         transparent answers.
       </p>
       <Link href="/" className=" relative group">
-        <button className=" bg-[#e0e0e0] dark:bg-gray-200 text-black dark:text-black rounded-full px-4 py-3">
+        <button className=" bg-[#e0e0e0] dark:bg-gray-200 text-black rounded-full px-4 py-3">
           <div className=" flex items-center gap-1">
             <span className=" font-medium">Start now</span>
             <PiArrowUpRightBold className=" lg:group-hover:rotate-45 transition-all duration-300 ease-in-out" />
