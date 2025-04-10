@@ -32,7 +32,7 @@ const DanaHero = () => {
             </span>
           </div>
 
-          <div className="relative h-[115px] lg:h-[215px] w-full overflow-hidden">
+          <div className="relative h-[115px] md:h-[170px] lg:h-[215px] w-full overflow-hidden">
             {images.map((image, index) => (
               <motion.img
                 key={image.url}
@@ -49,7 +49,7 @@ const DanaHero = () => {
             <img
               src="/images/lifeLogo.png"
               alt="overlay"
-              className="absolute z-10 top-0 left-14 right-0 lg:left-24 bottom-0 h-[115px] lg:h-[215px] object-contain object-center"
+              className="absolute z-10 top-0 left-14 right-0 lg:left-24 bottom-0 h-[115px] md:h-[170px] lg:h-[215px] object-contain object-center"
             />
           </div>
 
