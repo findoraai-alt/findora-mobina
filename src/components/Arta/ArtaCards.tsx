@@ -56,7 +56,7 @@ export default function PlayingCards() {
 
   return (
     <div className="py-20 md:py-24 px-4 md:px-8 overflow-hidden">
-      <div className=" space-y-16">
+      <div className=" space-y-8 lg:space-y-16">
         <h3 className=" text-center text-4xl lg:text-5xl font-medium">
           Industry-Leading Protection for All Sectors
         </h3>
