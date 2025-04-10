@@ -50,7 +50,7 @@ const WhyFindoraData = [
 
 const WhyFindora = () => {
   return (
-    <div className=" px-4 md:px-8 grid grid-cols-1 lg:grid-cols-3 gap-4 py-20 md:py-24 max-w-7xl mx-auto">
+    <div className=" px-4 md:px-8 grid grid-cols-1 lg:grid-cols-3 gap-4 pt-20 md:pt-24 max-w-7xl mx-auto">
       {WhyFindoraData.map((data) => {
         return (
           <Card

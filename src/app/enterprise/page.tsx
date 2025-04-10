@@ -12,7 +12,8 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: "Enterprise",
-  description: "Enterprise page",
+  description:
+    "Discover Findora’s enterprise solutions for secure, scalable, and efficient digital transactions, enhancing your business operations with cutting-edge technology.",
 };
 
 const Enterprise = () => {

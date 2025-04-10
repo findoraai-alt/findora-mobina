@@ -7,6 +7,10 @@ html.lenis body {
   height: auto;
 }
 
+.row_reverse:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
 .lenis.lenis-smooth {
   scroll-behavior: auto !important;
 }

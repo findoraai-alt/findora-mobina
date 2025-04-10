@@ -15,13 +15,17 @@ import { FiPhone } from "react-icons/fi";
 import { RiHome2Line } from "react-icons/ri";
 import { GoGear, GoPeople } from "react-icons/go";
 import { BsSearch } from "react-icons/bs";
+import { TbHeartbeat } from "react-icons/tb";
+import { LuCctv } from "react-icons/lu";
 
 const Links = [
   { id: 1, title: "Home", icon: RiHome2Line, url: "/" },
-  { id: 2, title: "Enterprise", icon: GoGear, url: "/enterprise" },
-  { id: 3, title: "Discover", icon: BsSearch, url: "/discover" },
-  { id: 4, title: "About", icon: GoPeople, url: "/about" },
-  { id: 5, title: "Contact", icon: FiPhone, url: "/contact" },
+  { id: 2, title: "Dana", icon: TbHeartbeat, url: "/dana" },
+  { id: 3, title: "Arta", icon: LuCctv, url: "/arta" },
+  { id: 4, title: "Enterprise", icon: GoGear, url: "/enterprise" },
+  { id: 5, title: "Discover", icon: BsSearch, url: "/discover" },
+  { id: 6, title: "About", icon: GoPeople, url: "/about" },
+  { id: 7, title: "Contact", icon: FiPhone, url: "/contact" },
 ];
 
 const Navbar = () => {

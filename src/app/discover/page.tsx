@@ -4,10 +4,10 @@ import React from "react";
 
 export const metadata: Metadata = {
   title: "Discover",
-  description: "Discover latest news and trends",
+  description: "Discover latest news and trends.",
 };
 
-const Discovery = () => {
+const Discover = () => {
   return (
     <div>
       <DiscTabsPage />
@@ -15,4 +15,4 @@ const Discovery = () => {
   );
 };
 
-export default Discovery;
+export default Discover;
