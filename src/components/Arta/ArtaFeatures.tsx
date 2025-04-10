@@ -63,7 +63,7 @@ const Card = ({ card }: { card: cardPrompt }) => {
       <img
         src={card.img}
         alt={card.title}
-        className="  w-[560px] h-[560px] object-cover object-center rounded-2xl"
+        className=" w-full lg:w-[560px] h-[560px] object-cover object-center rounded-2xl"
       />
       <div className=" absolute inset-0 bg-black/30 rounded-2xl" />
       <div className=" absolute lg:top-20 top-10 left-0 text-white p-8 text-center space-y-4">
