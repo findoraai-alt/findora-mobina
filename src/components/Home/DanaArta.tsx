@@ -6,7 +6,7 @@ const DanaArta = () => {
     <div className=" pt-20 md:pt-24">
       <div className=" flex flex-col lg:flex-row">
         <div
-          className=" relative h-[60vh] w-full lg:w-1/2 p-8 lg:hover:w-3/4 bg-cover bg-center lg:transition-all lg:duration-1000 lg:ease-in-out flex items-center justify-center overflow-hidden"
+          className=" relative h-[60vh] md:h-[80vh] lg:h-[60vh] w-full lg:w-1/2 p-8 lg:hover:w-3/4 bg-cover bg-center lg:transition-all lg:duration-1000 lg:ease-in-out flex items-center justify-center overflow-hidden"
           style={{ backgroundImage: "url(/images/danabg.jpg)" }}
         >
           <div className=" absolute inset-0 bg-black/20" />
@@ -27,7 +27,7 @@ const DanaArta = () => {
           </div>
         </div>
         <div
-          className=" relative h-[60vh] w-full lg:w-1/2 p-8 lg:hover:w-3/4 bg-cover bg-center lg:transition-all lg:duration-1000 lg:ease-in-out flex items-center justify-center overflow-hidden"
+          className=" relative h-[60vh] md:h-[80vh] lg:h-[60vh] w-full lg:w-1/2 p-8 lg:hover:w-3/4 bg-cover bg-center lg:transition-all lg:duration-1000 lg:ease-in-out flex items-center justify-center overflow-hidden"
           style={{ backgroundImage: "url(/images/artabg.jpg)" }}
         >
           <div className=" absolute inset-0 bg-black/20" />
