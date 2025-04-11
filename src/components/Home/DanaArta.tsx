@@ -11,7 +11,9 @@ const DanaArta = () => {
         >
           <div className=" absolute inset-0 bg-black/20" />
           <div className=" flex flex-col gap-8 justify-center items-center relative z-10">
-            <h6 className=" text-4xl font-medium text-white">DANA</h6>
+            <h6 className=" text-4xl font-medium text-white tracking-widest">
+              DANA
+            </h6>
             <p className=" text-white">
               Dana is an inclusive wellness platform designed to support
               cognitive and emotional health for people of all ages. With
@@ -32,7 +34,9 @@ const DanaArta = () => {
         >
           <div className=" absolute inset-0 bg-black/20" />
           <div className=" flex flex-col gap-8 justify-center items-center relative z-10">
-            <h6 className=" text-4xl font-medium text-white">ARTA</h6>
+            <h6 className=" text-4xl font-medium text-white tracking-widest">
+              ARTA
+            </h6>
             <p className=" text-white">
               Arta is a creative intelligence platform at the intersection of
               art, AI, and digital identity. Designed for the next wave of
