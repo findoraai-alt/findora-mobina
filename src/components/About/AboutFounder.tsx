@@ -20,14 +20,14 @@ const AboutFounder = () => {
           <img
             src="/images/founder2.jpg"
             alt="img"
-            className="w-full min-h-[200px] lg:min-h-[350px] 2xl:min-h-[550px] max-h-[200px] lg:max-h-[350px] 2xl:max-h-[550px] object-cover object-center"
+            className="w-full min-h-[200px] lg:min-h-[350px] 2xl:min-h-[550px] max-h-[200px] lg:max-h-[350px] 2xl:max-h-[550px] object-cover object-top"
           />
           <motion.img
             src="/images/founder1.jpg"
             alt="img"
             ref={ref}
             style={{ opacity }}
-            className="w-full min-h-[200px] lg:min-h-[350px] 2xl:min-h-[550px] max-h-[200px] lg:max-h-[350px] 2xl:max-h-[550px] object-cover object-center absolute inset-0"
+            className="w-full min-h-[200px] lg:min-h-[350px] 2xl:min-h-[550px] max-h-[200px] lg:max-h-[350px] 2xl:max-h-[550px] object-cover object-top absolute inset-0"
           />
         </div>
         <p className="px-4 md:px-8 text-lg">
