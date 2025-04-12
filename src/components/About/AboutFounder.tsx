@@ -6,30 +6,25 @@ const AboutFounder = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["end end", "start start"],
+    offset: ["end end", "end start"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.6]);
   return (
     <div className=" pt-20 md:pt-24">
       <div className=" space-y-6">
         <h3 className="text-4xl lg:text-6xl font-medium text-center px-4 md:px-8">
           About the Founder
         </h3>
-        <div className=" relative">
-          <img
-            src="/images/founder2.jpg"
-            alt="img"
-            className="w-full min-h-[200px] lg:min-h-[350px] 2xl:min-h-[550px] max-h-[200px] lg:max-h-[350px] 2xl:max-h-[550px] object-cover object-top"
-          />
-          <motion.img
-            src="/images/founder1.jpg"
-            alt="img"
-            ref={ref}
-            style={{ opacity }}
-            className="w-full min-h-[200px] lg:min-h-[350px] 2xl:min-h-[550px] max-h-[200px] lg:max-h-[350px] 2xl:max-h-[550px] object-cover object-top absolute inset-0"
-          />
-        </div>
+
+        <motion.img
+          ref={ref}
+          style={{ scale }}
+          src="/images/founder1.jpg"
+          alt="img"
+          className="w-full min-h-[200px] md:min-h-[250px] lg:min-h-[350px] 2xl:min-h-[550px] max-h-[200px] md:max-h-[250px] lg:max-h-[350px] 2xl:max-h-[550px] object-cover object-top"
+        />
+
         <p className="px-4 md:px-8 text-lg">
           Dr. Naeem Komeilipoor is the founder of Findora, {"Canada’s"} first
           AI-powered search engine focused on delivering clear, trustworthy
