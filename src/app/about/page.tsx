@@ -1,4 +1,5 @@
 import AboutBottom from "@/components/About/AboutBottom";
+import AboutFounder from "@/components/About/AboutFounder";
 import AboutJoinUs from "@/components/About/AboutJoinUs";
 import AboutScrollingImages from "@/components/About/AboutScrollingImages";
 import AboutTop from "@/components/About/AboutTop";
@@ -19,6 +20,7 @@ const About = () => {
         <AboutScrollingImages />
       </div>
       <AboutBottom />
+      <AboutFounder />
       <AboutJoinUs />
     </div>
   );

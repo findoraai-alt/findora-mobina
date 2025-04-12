@@ -4,7 +4,7 @@ const AboutBottom = () => {
   return (
     <div className=" px-4 md:px-8 pt-20 md:pt-24">
       <div className="  space-y-8 text-center">
-        <h1 className="text-4xl lg:text-6xl font-semibold max-w-5xl mx-auto">
+        <h1 className="text-4xl lg:text-6xl font-medium max-w-5xl mx-auto">
           Empowering Accurate, Secure, and Transparent Searches
         </h1>
         <p className=" text-lg max-w-3xl mx-auto">
