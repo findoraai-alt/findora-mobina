@@ -155,14 +155,14 @@ const Navbar = () => {
                   </button>
 
                   {openSolutionsDesktop && (
-                    <div className="absolute top-full left-0 right-0 flex flex-col bg-white dark:bg-[#111828] shadow-lg rounded-md z-50 mt-2">
+                    <div className="absolute top-full left-0 right-0 flex flex-col bg-white dark:bg-gray-800 shadow-lg rounded-md z-50 mt-2">
                       {link.children.map((child) => (
                         <Link
                           key={child.id}
                           href={child.url}
                           className={` ${
                             pathname === child.url &&
-                            "bg-gray-100 dark:bg-gray-800"
+                            "bg-gray-100 dark:bg-gray-900"
                           } px-2 py-2 text-sm hover:bg-gray-200 dark:hover:bg-black first:rounded-t-md last:rounded-b-md flex items-center gap-2`}
                           onClick={() => setOpenSolutionsDesktop(false)}
                         >
