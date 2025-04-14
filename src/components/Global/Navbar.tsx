@@ -160,7 +160,10 @@ const Navbar = () => {
                         <Link
                           key={child.id}
                           href={child.url}
-                          className=" px-2 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 first:rounded-t-md last:rounded-b-md flex items-center gap-2"
+                          className={` ${
+                            pathname === child.url &&
+                            "bg-gray-100 dark:bg-gray-800"
+                          } px-2 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-800 first:rounded-t-md last:rounded-b-md flex items-center gap-2`}
                           onClick={() => setOpenSolutionsDesktop(false)}
                         >
                           <child.icon size={20} />
