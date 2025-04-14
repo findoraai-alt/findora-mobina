@@ -16,7 +16,7 @@ const DanaMovingText = () => {
             style={{ translateX: x }}
             className=" text-5xl lg:text-8xl font-medium whitespace-nowrap flex justify-end uppercase"
           >
-            Dana empowers you to take control of your well-being, offering
+            DANA empowers you to take control of your well-being, offering
             personalized tools to support emotional health, cognitive function,
             and daily routines. With a focus on connection, care, and growth,
             Dana is here to guide you every step of the way, helping you live

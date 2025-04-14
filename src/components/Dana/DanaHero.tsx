@@ -25,7 +25,9 @@ const DanaHero = () => {
       <div className="px-4 md:px-8 pt-20 md:pt-24">
         <div className="flex flex-col gap-16">
           <div className=" flex justify-between items-center gap-4">
-            <span className=" uppercase font-bold text-2xl">Dana</span>
+            <span className=" uppercase font-bold text-base lg:text-xl ">
+              Meet DANA - Your AI Companion
+            </span>
             <hr className="rotate-90 border-black dark:border-white w-[100px]" />
             <span className=" uppercase font-medium text-base lg:text-lg">
               Connect. Support. <br /> Thrive.
@@ -59,13 +61,10 @@ const DanaHero = () => {
               Support
             </span>
             <span className=" font-semibold text-[6px] lg:text-[10px] uppercase lg:w-[20%]">
-              Dana is a wellness platform offering emotional support, reminders,
-              therapy, and health insights for all ages, with a focus on older
-              adults.
-              <br />
-              <br />
-              Dana helps users stay connected and manage their well-being with
-              personalized tools for daily life and mental health.
+              DANA is your trusted AI companion designed to support emotional
+              well-being, mental clarity, and daily life. Whether {"you're"} a
+              senior, a busy parent, or simply seeking guidance, DANA listens,
+              understands, and empowers.
             </span>
             <span className=" text-base lg:text-lg font-medium uppercase">
               Mind <br />

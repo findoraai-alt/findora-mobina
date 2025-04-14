@@ -18,12 +18,12 @@ const DanaBottom = () => {
           viewport={{ once: true }}
           className=" lg:text-2xl font-medium"
         >
-          Dana is dedicated to supporting your well-being with personalized
+          DANA is dedicated to supporting your well-being with personalized
           tools for emotional health, cognitive care, and daily routines.
           Whether {"you're"} managing stress, staying on top of tasks, or
-          seeking medical guidance, Dana offers everything you need to stay
+          seeking medical guidance, DANA offers everything you need to stay
           connected, organized, and empowered. Designed for people of all ages,
-          Dana is here to help you thrive every day with the care and support
+          DANA is here to help you thrive every day with the care and support
           you deserve.
         </motion.p>
       </div>
