@@ -29,13 +29,13 @@ const Links = [
     children: [
       {
         id: "dana",
-        title: "Dana - AI Companion",
+        title: "DANA - AI Companion",
         icon: TbHeartbeat,
         url: "/dana",
       },
       {
         id: "arta",
-        title: "Arta - Deepfake Detection",
+        title: "ARTA - Deepfake Detection",
         icon: LuCctv,
         url: "/arta",
       },
