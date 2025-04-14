@@ -34,7 +34,7 @@ const DanaTop = () => {
       <div className=" flex flex-col gap-28">
         {TopData.map((data) => (
           <div key={data.id} className=" flex row_reverse items-start gap-8">
-            <div className=" w-1/2 flex flex-col gap-4 items-start">
+            <div className=" w-1/2 flex flex-col gap-4 items-start sticky top-5">
               <h6 className=" text-2xl lg:text-4xl font-medium">
                 {data.title}
               </h6>
@@ -99,7 +99,7 @@ const Modal = ({ card, onClose }: ModalProps) => {
         {card.title}
       </h2>
       <span className="relative z-10 mb-4">{card.subTitle}</span>
-      <div className=" text-sm lg:text-lg max-w-7xl relative z-10">
+      <div className=" text-sm lg:text-lg max-w-7xl relative z-10 text-center">
         {card.desc}
       </div>
       <button
