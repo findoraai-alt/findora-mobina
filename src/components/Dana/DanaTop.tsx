@@ -34,7 +34,7 @@ const DanaTop = () => {
       <div className=" flex flex-col gap-28">
         {TopData.map((data) => (
           <div key={data.id} className=" flex row_reverse items-start gap-8">
-            <div className=" w-1/2 flex flex-col gap-4 items-start sticky top-0">
+            <div className=" w-1/2 flex flex-col gap-4 items-start sticky top-2">
               <h6 className=" text-2xl lg:text-4xl font-medium">
                 {data.title}
               </h6>
