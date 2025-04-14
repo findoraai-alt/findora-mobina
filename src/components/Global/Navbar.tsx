@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle/ThemeToggle";
 import Link from "next/link";
-import NavLink from "./NavLink";
 import LogoBlack from "@/../public/images/findora_logo_black.png";
 import LogoWhite from "@/../public/images/findora_logo_white.png";
 import Image from "next/image";
@@ -55,10 +54,21 @@ const Navbar = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const solutionsRef = useRef<HTMLDivElement>(null);
 
-  const currentPage = Links.find((link) => link.url === pathname) || {
-    title: "Menu",
-    icon: TbMenu2,
-  };
+  const currentPage = (() => {
+    if (pathname === "/dana" || pathname === "/arta") {
+      const solutionsLink = Links.find((link) => link.title === "Solutions");
+      return {
+        title: "Solutions",
+        icon: solutionsLink?.icon || TbMenu2,
+      };
+    }
+    return (
+      Links.find((link) => link.url === pathname) || {
+        title: "Menu",
+        icon: TbMenu2,
+      }
+    );
+  })();
 
   const toggleDropDown = () => setShowDropDown((prev) => !prev);
   const toggleDropDownDesktop = () => setOpenSolutionsDesktop((prev) => !prev);
@@ -128,7 +138,11 @@ const Navbar = () => {
               link.children ? (
                 <div className="relative" key={link.id} ref={solutionsRef}>
                   <button
-                    className="flex items-center gap-1 hover:bg-[#f9fafc] dark:hover:bg-[#202938] py-3 px-5 rounded-full"
+                    className={`flex items-center gap-1 py-3 px-5 rounded-full hover:bg-[#f9fafc] dark:hover:bg-[#202938] ${
+                      pathname === "/dana" || pathname === "/arta"
+                        ? "bg-[#f9fafc] dark:bg-[#202938] shadow-md"
+                        : ""
+                    }`}
                     onClick={toggleDropDownDesktop}
                   >
                     <link.icon />
@@ -157,7 +171,17 @@ const Navbar = () => {
                   )}
                 </div>
               ) : (
-                <NavLink link={link} key={link.id} />
+                <Link
+                  key={link.id}
+                  className={`${
+                    pathname === link.url &&
+                    " bg-[#f9fafc] dark:bg-[#202938] shadow-md"
+                  } flex items-center gap-2 hover:bg-[#f9fafc] dark:hover:bg-[#202938] py-3 px-5 rounded-full`}
+                  href={link.url}
+                >
+                  <link.icon size={20} />
+                  {link.title}
+                </Link>
               )
             )}
           </div>
