@@ -55,11 +55,11 @@ const WhatIsFindora = () => {
         />
         <span className="text-4xl font-bold"> ra?</span>
       </div>
-      <span className=" text-lg lg:text-xl font-medium">
+      <span className=" text-lg lg:text-xl font-semibold">
         <span className=" text-[#ff0101]"> {"Canada's"}</span> First AI Search
         Engine
       </span>
-      <p className=" text-center lg:text-lg">
+      <p className=" text-center lg:text-lg font-medium">
         Misinformation is everywhere, but findora delivers facts. Our AI search
         engine fact-checks sources, analyzes content, and provides reliable,
         transparent answers.

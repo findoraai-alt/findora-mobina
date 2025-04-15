@@ -34,7 +34,7 @@ const Prelude = () => {
           <br />
           {"That’s"} why we built more than just an AI search engine. We built
           smart tools that analyze, fact-check, and simplify the truth. Meet
-          ARTA and DANA.
+          DANA and ARTA.
         </p>
       </div>
     </div>

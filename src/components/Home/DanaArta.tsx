@@ -21,7 +21,7 @@ const DanaArta = () => {
               <p className=" text-black text-center">
                 A compassionate AI built to support your mental, emotional, and
                 practical well-being — from therapy to life coaching and
-                reminders
+                reminders.
               </p>
               <Link href="/dana">
                 <button className=" bg-black text-white px-4 py-2 rounded-md text-sm">
