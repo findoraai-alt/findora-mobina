@@ -94,7 +94,7 @@ const TiltShineCard = () => {
         onMouseLeave={handleMouseLeave}
         style={{
           transform,
-          backgroundImage: "url(/images/prelude.png)",
+          backgroundImage: "url(/images/prelude.webp)",
           backgroundSize: "cover",
         }}
         className="relative aspect-[9/13] w-80 overflow-hidden bg-zinc-950 shadow-2xl shadow-zinc-950"
