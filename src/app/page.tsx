@@ -11,6 +11,7 @@ import WhyFindora from "@/components/Home/WhyFindora";
 import { useEffect } from "react";
 import PreLoader from "@/components/Home/PreLoader";
 import DanaArta from "@/components/Home/DanaArta";
+import Prelude from "@/components/Home/Prelude";
 
 export default function Home() {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function Home() {
       <PreLoader />
       <div className=" bg-[#f0f0fc] dark:bg-[#111828]">
         <WhatIsFindora />
+        <Prelude />
         <DanaArta />
         <TabsFeatures />
         <Stats />

@@ -31,16 +31,20 @@ export const TopData = [
   },
   {
     id: 3,
-    title: "Reminder",
-    subTitle: "Never Miss What Matters",
-    img: "/images/dana2.jpg",
+    title: " Life Coach",
+    subTitle: "Guidance for a Better Tomorrow",
+    img: "/images/dana6.jpg",
     desc: (
       <p>
-        Stay on top of important tasks with {"DANA’s"} Reminder feature. From
-        medication schedules to appointments and daily routines, our smart
-        reminders ensure that nothing slips through the cracks. {"It’s"} the
-        perfect tool to help you maintain structure, reduce stress, and stay
-        organized.
+        Set meaningful goals, build lasting healthy habits, and rediscover
+        purpose in your everyday life. {"Lifeora’s"} Life Coach module is more
+        than just a productivity tool — {"it’s"} your personal guide to living
+        with intention. Whether {"you're"} striving for better work-life
+        balance, improving your well-being, or pursuing long-term aspirations,
+        our AI-powered coach helps you stay focused, accountable, and inspired.
+        With personalized insights, progress tracking, and gentle nudges when
+        you need them most, Lifeora empowers you to shape a life that feels
+        fulfilling, authentic, and purpose-driven.
       </p>
     ),
   },
@@ -59,7 +63,6 @@ export const TopData = [
       </p>
     ),
   },
-
   {
     id: 5,
     title: "Medical",
@@ -72,6 +75,21 @@ export const TopData = [
         recommendations, Dana ensures you have the information you need to make
         informed decisions about your well-being. {"It’s"} your go-to resource
         for managing your health with ease and confidence.
+      </p>
+    ),
+  },
+  {
+    id: 6,
+    title: "Reminder",
+    subTitle: "Never Miss What Matters",
+    img: "/images/dana2.jpg",
+    desc: (
+      <p>
+        Stay on top of important tasks with {"DANA’s"} Reminder feature. From
+        medication schedules to appointments and daily routines, our smart
+        reminders ensure that nothing slips through the cracks. {"It’s"} the
+        perfect tool to help you maintain structure, reduce stress, and stay
+        organized.
       </p>
     ),
   },

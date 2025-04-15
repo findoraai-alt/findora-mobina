@@ -49,7 +49,7 @@ const DanaHero = () => {
             ))}
 
             <img
-              src="/images/lifeLogo.png"
+              src="/images/danalogo.png"
               alt="overlay"
               className="absolute z-10 top-0 left-14 right-0 lg:left-24 bottom-0 h-[115px] md:h-[170px] lg:h-[215px] object-contain object-center"
             />
@@ -60,7 +60,7 @@ const DanaHero = () => {
               Care + <br />
               Support
             </span>
-            <span className=" font-semibold text-[6px] lg:text-[10px] uppercase lg:w-[20%]">
+            <span className=" font-semibold uppercase text-xs lg:text-base lg:max-w-xl lg:mx-auto">
               DANA is your trusted AI companion designed to support emotional
               well-being, mental clarity, and daily life. Whether {"you're"} a
               senior, a busy parent, or simply seeking guidance, DANA listens,
