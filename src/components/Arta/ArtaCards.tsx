@@ -81,22 +81,24 @@ interface CardProps {
 
 function Card({ card, index, isMobile }: CardProps) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "0px 0px -10% 0px" }); // detects entry & exit
+  const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
-  const [rotated, setRotated] = useState(false);
 
   useEffect(() => {
-    if (isInView && !rotated) {
-      controls.start({
-        rotateY: 180,
-        transition: { duration: 1, delay: isMobile ? 0 : index * 0.3 },
-      });
-      setRotated(true);
-    } else if (!isInView && rotated) {
-      controls.start({ rotateY: 0 });
-      setRotated(false);
+    if (isInView) {
+      if (isMobile) {
+        controls.start({
+          rotateY: 180,
+          transition: { duration: 1 },
+        });
+      } else {
+        controls.start({
+          rotateY: 180,
+          transition: { duration: 1, delay: index * 0.5 },
+        });
+      }
     }
-  }, [isInView, rotated, controls, index, isMobile]);
+  }, [isInView, isMobile, controls, index]);
 
   return (
     <motion.div
