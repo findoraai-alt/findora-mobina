@@ -15,7 +15,7 @@ import { RiHome2Line } from "react-icons/ri";
 import { GoGear, GoPeople } from "react-icons/go";
 import { BsSearch } from "react-icons/bs";
 import { TbHeartbeat } from "react-icons/tb";
-import { LuCctv } from "react-icons/lu";
+import { SiGooglelens } from "react-icons/si";
 import { FaRegLightbulb } from "react-icons/fa";
 import { TbMenu2 } from "react-icons/tb";
 
@@ -35,7 +35,7 @@ const Links = [
       {
         id: "arta",
         title: "ARTA - Deepfake Detection",
-        icon: LuCctv,
+        icon: SiGooglelens,
         url: "/arta",
       },
     ],
