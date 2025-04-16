@@ -55,7 +55,7 @@ const DanaHero = () => {
             />
           </div>
 
-          <span className=" font-semibold text-base lg:text-2xl">
+          <span className=" font-semibold text-base lg:text-xl">
             DANA is your trusted AI companion designed to support emotional
             well-being, mental clarity, and daily life. Whether {"you're"} a
             senior, a busy parent, or simply seeking guidance, DANA listens,
