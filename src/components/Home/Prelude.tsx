@@ -97,7 +97,7 @@ const TiltShineCard = () => {
           backgroundImage: "url(/images/prelude.webp)",
           backgroundSize: "cover",
         }}
-        className="relative aspect-[9/13] w-80 overflow-hidden bg-zinc-950 shadow-2xl shadow-zinc-950"
+        className="relative aspect-[9/13] w-80 lg:w-96 overflow-hidden bg-zinc-950 shadow-2xl shadow-zinc-950"
       >
         <motion.div
           style={{
