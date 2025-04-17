@@ -51,14 +51,12 @@ export default function Home() {
     <main
       className={`${styles.main} pt-20 md:pt-24 bg-[#f0f0fc] dark:bg-[#111828]`}
     >
-      <div className={styles.spacer}></div>
       <div ref={gallery} className={styles.gallery}>
         <Column images={[images[0], images[1], images[2]]} y={y} />
         <Column images={[images[3], images[4], images[5]]} y={y2} />
         <Column images={[images[6], images[7], images[8]]} y={y3} />
         <Column images={[images[9], images[10], images[11]]} y={y4} />
       </div>
-      <div className={styles.spacer}></div>
     </main>
   );
 }
