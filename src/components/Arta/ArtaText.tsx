@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ArtaText = () => {
   const text =
-    "ARTA scans and protects video, audio, image, and text with unmatched precision and speed. Our enterprise-grade security integrates seamlessly with your stack - validating every interaction while your business moves at full speed.";
+    "ARTA detects and protects against deepfakes in video, audio, image, and text with unmatched speed and accuracy.";
   return (
     <div className="bg-[#f0f0fc] dark:bg-[#111828]">
       <div className=" px-4 md:px-8 py-20 md:py-24 max-w-7xl mx-auto">
