@@ -14,10 +14,10 @@ import { FiPhone } from "react-icons/fi";
 import { RiHome2Line } from "react-icons/ri";
 import { GoGear, GoPeople } from "react-icons/go";
 import { BsSearch } from "react-icons/bs";
-import { TbHeartbeat } from "react-icons/tb";
+import { TbHeartbeat, TbMenu2 } from "react-icons/tb";
 import { SiGooglelens } from "react-icons/si";
 import { FaRegLightbulb } from "react-icons/fa";
-import { TbMenu2 } from "react-icons/tb";
+import { IoNewspaperOutline } from "react-icons/io5";
 
 const Links = [
   { id: 1, title: "Home", icon: RiHome2Line, url: "/" },
@@ -43,7 +43,8 @@ const Links = [
   { id: 3, title: "Enterprise", icon: GoGear, url: "/enterprise" },
   { id: 4, title: "Discover", icon: BsSearch, url: "/discover" },
   { id: 5, title: "About", icon: GoPeople, url: "/about" },
-  { id: 6, title: "Contact", icon: FiPhone, url: "/contact" },
+  { id: 6, title: "Newsroom", icon: IoNewspaperOutline, url: "/newsroom" },
+  { id: 7, title: "Contact", icon: FiPhone, url: "/contact" },
 ];
 
 const Navbar = () => {

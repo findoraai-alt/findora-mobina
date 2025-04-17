@@ -108,7 +108,7 @@ export default function News() {
             news.map((article, index) => (
               <div
                 key={index}
-                className="p-4 border rounded-lg shadow-lg bg-white dark:bg-[#111828]"
+                className="p-4 border rounded-lg shadow-md bg-white dark:bg-[#111828]"
               >
                 <img
                   src={article.image || "https://via.placeholder.com/150"}

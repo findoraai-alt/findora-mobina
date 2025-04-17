@@ -28,6 +28,44 @@ export const Footer = () => {
   return (
     <div className="bg-[#f0f0fc] dark:bg-[#111828] py-8">
       <div className=" px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="-mt-[60px] mb-[60px] bg-[#2065ee] h-auto w-full rounded-2xl">
+          <form className=" p-16 flex flex-col lg:items-center gap-8">
+            <h6 className=" text-white text-3xl lg:text-4xl font-medium text-center">
+              Subscribe to Our Newsletter
+            </h6>
+            <div className=" flex flex-col lg:flex-row gap-4 lg:gap-2">
+              <div className=" flex flex-col  gap-4">
+                <div className=" flex flex-col lg:flex-row gap-4">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    required
+                    className=" bg-white/10 backdrop-blur-md outline-none py-1 px-2 rounded-full border-[1px] text-white placeholder:text-white placeholder:opacity-70 border-white shadow-inner shadow-white/20"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    required
+                    className="bg-white/10 backdrop-blur-md  outline-none py-1 px-2 rounded-full border-[1px] text-white placeholder:text-white placeholder:opacity-70 border-white shadow-inner shadow-white/20"
+                  />
+                </div>
+
+                <input
+                  type="email"
+                  placeholder="Email"
+                  required
+                  className=" w-full bg-white/10 backdrop-blur-md  outline-none py-1 px-2 rounded-full border-[1px] text-white placeholder:text-white placeholder:opacity-70 border-white shadow-inner shadow-white/20"
+                />
+              </div>
+
+              <button className=" bg-white lg:self-end px-6 py-1 rounded-full">
+                <span className=" font-medium text-transparent bg-clip-text bg-[#2065ee] ">
+                  Send
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
         <div className=" flex flex-col justify-between gap-24">
           <div className=" flex justify-between gap-4 lg:gap-8">
             <div className=" flex flex-col justify-between gap-4">
@@ -85,6 +123,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
+          <div></div>
           <div className="overflow-hidden flex justify-center items-center text-8xl md:text-[10rem] lg:text-[16rem] xl:text-[20rem] font-bold">
             {text.split("").map((letter, index) => {
               const colors = [

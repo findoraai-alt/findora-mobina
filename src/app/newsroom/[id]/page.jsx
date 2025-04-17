@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import React from "react";
-import { CardsData } from "../../../components/Enterprise/Data";
+import { newsData } from "../../../components/Newsroom/Data";
 
 const getData = async (id) => {
-  const data = CardsData[id];
+  const data = newsData[id];
 
   if (data) {
     return data;
@@ -39,21 +39,18 @@ const CardPage = async ({ params: paramsPromise }) => {
   }
 
   return (
-    <div className="py-20 md:py-24 px-4 md:px-8">
+    <div className="py-20 md:py-24 px-4 md:px-8 max-w-7xl mx-auto">
       <div
         key={data.id}
         className="w-full h-auto flex flex-col justify-center items-center gap-16"
       >
-        <div className="text-center space-y-8">
-          <h1 className="text-2xl font-medium">{data.title}</h1>
-          <h6 className="text-xl">{data.subtitle}</h6>
-        </div>
+        <h1 className="text-2xl font-medium text-center">{data.title}</h1>
         <img
           src={data.img}
           alt={data.title}
-          className="max-h-[150px] lg:max-h-[300px] w-full object-cover object-top"
+          className="max-h-[1200px] lg:max-h-[700px] w-full object-cover object-top rounded-2xl"
         />
-        <div className=" lg:text-lg">{data.description}</div>
+        <div className="lg:text-lg">{data.description}</div>
       </div>
     </div>
   );

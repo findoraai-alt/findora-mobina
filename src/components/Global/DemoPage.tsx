@@ -31,7 +31,7 @@ const platforms = [
   { id: 5, platform: "IoT" },
 ];
 
-const Demo = () => {
+const DemoPage = () => {
   const [dropdowns, setDropdowns] = useState({
     country: false,
     employees: false,
@@ -314,4 +314,4 @@ const Demo = () => {
   );
 };
 
-export default Demo;
+export default DemoPage;
