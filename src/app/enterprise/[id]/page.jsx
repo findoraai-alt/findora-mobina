@@ -45,7 +45,7 @@ const CardPage = async ({ params: paramsPromise }) => {
         className="w-full h-auto flex flex-col justify-center items-center gap-16"
       >
         <div className="text-center space-y-8">
-          <h1 className="text-2xl font-medium">{data.title}</h1>
+          <h1 className="text-2xl lg:text-4xl font-medium">{data.title}</h1>
           <h6 className="text-xl">{data.subtitle}</h6>
         </div>
         <img

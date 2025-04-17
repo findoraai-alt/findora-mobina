@@ -31,7 +31,9 @@ const NewsroomTop = () => {
               alt="img"
               className=" w-full min-h-[210px] max-h-[210px] object-cover object-center rounded-2xl"
             />
+
             <div className="p-8 space-y-4">
+              <span className=" text-xs">{news.date}</span>
               <h6 className=" text-[#994d7e] font-medium">{news.title}</h6>
               <div className=" line-clamp-4 text-[#5e656f] dark:text-[#ADBDCC] text-sm">
                 {news.description}
