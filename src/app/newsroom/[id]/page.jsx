@@ -1,14 +1,14 @@
 import { notFound } from "next/navigation";
 import React from "react";
 import { newsData } from "../../../components/Newsroom/Data";
-import { FaXTwitter, FaFacebook, FaLinkedin } from "react-icons/fa6"; // Import social icons
+import { FaXTwitter, FaFacebook, FaLinkedin } from "react-icons/fa6";
 
 const getData = async (id) => {
   const data = newsData[id];
   return data || null;
 };
 
-// Dynamic metadata with Open Graph + Twitter cards
+// Metadata with Open Graph + Twitter Card support
 export async function generateMetadata({ params: paramsPromise }) {
   const params = await paramsPromise;
   const post = await getData(params.id);
@@ -20,8 +20,9 @@ export async function generateMetadata({ params: paramsPromise }) {
     };
   }
 
-  const domain = "https://yourdomain.com"; // <-- Change this to your actual domain
+  const domain = "https://yourdomain.com"; // ⬅️ Replace with your real domain
   const url = `${domain}/newsroom/${params.id}`;
+
   const absoluteImage = post.img.startsWith("http")
     ? post.img
     : `${domain}${post.img}`;
@@ -60,7 +61,7 @@ const CardPage = async ({ params: paramsPromise }) => {
     notFound();
   }
 
-  const domain = "https://findora.ai";
+  const domain = "https://yourdomain.com"; // ⬅️ Replace with your real domain
   const currentUrl = `${domain}/newsroom/${params.id}`;
 
   const shareLinks = {
