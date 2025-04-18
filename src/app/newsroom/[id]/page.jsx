@@ -1,14 +1,14 @@
 import { notFound } from "next/navigation";
 import React from "react";
 import { newsData } from "../../../components/Newsroom/Data";
-import { FaXTwitter, FaFacebook, FaLinkedin } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 const getData = async (id) => {
   const data = newsData[id];
   return data || null;
 };
 
-// ✅ Generate metadata including Open Graph and Twitter meta tags
 export async function generateMetadata({ params: paramsPromise }) {
   const params = await paramsPromise;
   const post = await getData(params.id);
@@ -20,10 +20,9 @@ export async function generateMetadata({ params: paramsPromise }) {
     };
   }
 
-  const domain = "https://findora.ai"; // ⬅️ Replace with your real domain!
+  const domain = "https://findora.ai";
   const url = `${domain}/newsroom/${params.id}`;
 
-  // Ensure absolute image URL
   const absoluteImage = post.img.startsWith("http")
     ? post.img
     : `${domain}${post.img}`;
@@ -62,7 +61,7 @@ const CardPage = async ({ params: paramsPromise }) => {
     notFound();
   }
 
-  const domain = "https://findora.ai"; // ⬅️ Replace with your deployed domain
+  const domain = "https://findora.ai";
   const currentUrl = `${domain}/newsroom/${params.id}`;
 
   const shareLinks = {
@@ -89,34 +88,33 @@ const CardPage = async ({ params: paramsPromise }) => {
           {data.title}
         </h1>
 
-        {/* 🔗 Share Buttons */}
-        <div className="flex gap-4 mt-2">
+        <div className="flex items-center gap-4 mt-2">
           <a
             href={shareLinks.twitter}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Share on X"
-            className="text-black hover:text-blue-500"
+            className="bg-purple-600 text-white p-1 lg:p-2 rounded-md lg:hover:bg-purple-700 lg:transition-all lg:duration-300 lg:ease-in-out"
           >
-            <FaXTwitter size={24} />
+            <FaXTwitter size={20} />
           </a>
           <a
             href={shareLinks.facebook}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Share on Facebook"
-            className="text-black hover:text-blue-700"
+            className="bg-purple-600 text-white p-1 lg:p-2 rounded-md lg:hover:bg-purple-700 lg:transition-all lg:duration-300 lg:ease-in-out"
           >
-            <FaFacebook size={24} />
+            <FaFacebookF size={20} />
           </a>
           <a
             href={shareLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Share on LinkedIn"
-            className="text-black hover:text-blue-800"
+            className="bg-purple-600 text-white p-1 lg:p-2 rounded-md lg:hover:bg-purple-700 lg:transition-all lg:duration-300 lg:ease-in-out"
           >
-            <FaLinkedin size={24} />
+            <FaLinkedinIn size={20} />
           </a>
         </div>
 

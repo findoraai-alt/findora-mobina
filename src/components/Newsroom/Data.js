@@ -7,7 +7,7 @@ export const newsData = [
     img: "/images/launch.png",
     title: "Findora Launches Today: A Search Engine You Can Trust",
     description: (
-      <p>
+      <>
         <span className=" font-bold">Montreal, QC — </span>In a digital world
         increasingly flooded with misinformation, AI hallucinations, and paid
         search manipulation, <span className=" font-bold">Findora</span>{" "}
@@ -100,7 +100,7 @@ export const newsData = [
         </span>{" "}
         <br />
         info@findora.ai
-      </p>
+      </>
     ),
   },
 ];
