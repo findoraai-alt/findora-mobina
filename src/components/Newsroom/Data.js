@@ -14,7 +14,7 @@ export const newsData = [
         officially launches today as{" "}
         <span className=" font-bold">
           {" "}
-          {"Canada’s"} first AI-powered <br /> search engine —{" "}
+          {"Canada’s"} first AI-powered search engine —{" "}
         </span>
         a platform built for trust, transparency, and verified answers.
         <br />
