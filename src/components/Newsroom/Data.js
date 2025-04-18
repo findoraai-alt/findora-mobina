@@ -56,20 +56,10 @@ export const newsData = [
         </div>
         <br />
         <br />
-        ⸻
-        <br />
-        <br />
-        “We created Findora to help people rise above the noise and find answers
-        they can actually trust,” says{" "}
-        <span className=" font-bold">
-          Dr. Naeem Komeilipoor, Founder and CEO of Findora.
-        </span>{" "}
-        {"“It’s"} more than a search engine — {"it’s"} a movement toward
-        verified knowledge, privacy, and digital dignity.” Findora integrates a
-        growing ecosystem of intelligent modules that span web search,
-        fact-check validation, URL and document analysis, academic and medical
-        insights, video and multimedia search, and soon, shopping intelligence.
-        In addition, it introduces: <br />{" "}
+        Findora integrates a growing ecosystem of intelligent modules that span
+        web search, fact-check validation, URL and document analysis, academic
+        and medical insights, video and multimedia search, and soon, shopping
+        intelligence. In addition, it introduces: <br />{" "}
         <span className=" font-bold">• DANA,</span> an AI companion focused on
         cognitive support, emotional well-being, and life organization.
         <br />
