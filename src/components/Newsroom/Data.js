@@ -1,3 +1,5 @@
+import { FaQuoteLeft } from "react-icons/fa";
+import { FaQuoteRight } from "react-icons/fa";
 export const newsData = [
   {
     id: 0,
@@ -28,15 +30,27 @@ export const newsData = [
         Findora is designed to elevate truth in every search.
         <br />
         <br />
-        <span className=" italic">
-          “We created Findora to help people rise above the noise and find
-          answers they can actually trust,” says{" "}
-          <span className=" font-bold">
-            Dr. Naeem Komeilipoor, Founder and CEO of Findora.
-          </span>{" "}
-          {"“It’s"} more than a search engine — {"it’s"} a movement toward
-          verified knowledge, privacy, and digital dignity.”
-        </span>
+        <FaQuoteLeft color="#e5eaf0" size={60} />
+        <br />
+        <br />
+        <div className=" flex justify-center">
+          <div className=" w-[60%]">
+            <span className=" italic">
+              “We created Findora to help people rise above the noise and find
+              answers they can actually trust,” says{" "}
+              <span className=" font-bold">
+                Dr. Naeem Komeilipoor, Founder and CEO of Findora.
+              </span>{" "}
+              {"“It’s"} more than a search engine — {"it’s"} a movement toward
+              verified knowledge, privacy, and digital dignity.”
+            </span>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div className=" flex justify-end">
+          <FaQuoteRight color="#e5eaf0" size={60} />
+        </div>
         <br />
         <br />
         ⸻
