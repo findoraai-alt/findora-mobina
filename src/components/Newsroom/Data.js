@@ -36,8 +36,8 @@ export const newsData = [
         <div className=" flex justify-center">
           <div className=" w-[60%] lg:w-[50%]">
             <span className=" italic font-bold text-xl lg:text-2xl">
-              {"“It’s"} more than a search engine — {"it’s"} a movement toward
-              verified knowledge, privacy, and digital dignity.”
+              {"It’s"} more than a search engine — {"it’s"} a movement toward
+              verified knowledge, privacy, and digital dignity.
             </span>
             <br />
             <br />
