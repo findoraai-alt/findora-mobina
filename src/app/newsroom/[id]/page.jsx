@@ -8,7 +8,7 @@ const getData = async (id) => {
   return data || null;
 };
 
-// Metadata with Open Graph + Twitter Card support
+// ✅ Generate metadata including Open Graph and Twitter meta tags
 export async function generateMetadata({ params: paramsPromise }) {
   const params = await paramsPromise;
   const post = await getData(params.id);
@@ -16,23 +16,24 @@ export async function generateMetadata({ params: paramsPromise }) {
   if (!post) {
     return {
       title: "Not Found",
-      description: "The requested page does not exist.",
+      description: "This page does not exist.",
     };
   }
 
-  const domain = "https://yourdomain.com"; // ⬅️ Replace with your real domain
+  const domain = "https://findora.ai"; // ⬅️ Replace with your real domain!
   const url = `${domain}/newsroom/${params.id}`;
 
+  // Ensure absolute image URL
   const absoluteImage = post.img.startsWith("http")
     ? post.img
     : `${domain}${post.img}`;
 
   return {
     title: post.title,
-    description: post.subtitle,
+    description: "Findora Launch Announcement",
     openGraph: {
       title: post.title,
-      description: post.subtitle,
+      description: "Findora is live! Discover how it's changing search.",
       url,
       type: "article",
       images: [
@@ -47,7 +48,7 @@ export async function generateMetadata({ params: paramsPromise }) {
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.subtitle,
+      description: "Findora is live! Discover how it's changing search.",
       images: [absoluteImage],
     },
   };
@@ -61,7 +62,7 @@ const CardPage = async ({ params: paramsPromise }) => {
     notFound();
   }
 
-  const domain = "https://yourdomain.com"; // ⬅️ Replace with your real domain
+  const domain = "https://findora.ai"; // ⬅️ Replace with your deployed domain
   const currentUrl = `${domain}/newsroom/${params.id}`;
 
   const shareLinks = {
@@ -88,14 +89,14 @@ const CardPage = async ({ params: paramsPromise }) => {
           {data.title}
         </h1>
 
-        {/* Share Buttons */}
+        {/* 🔗 Share Buttons */}
         <div className="flex gap-4 mt-2">
           <a
             href={shareLinks.twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black hover:text-blue-500"
             aria-label="Share on X"
+            className="text-black hover:text-blue-500"
           >
             <FaXTwitter size={24} />
           </a>
@@ -103,8 +104,8 @@ const CardPage = async ({ params: paramsPromise }) => {
             href={shareLinks.facebook}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black hover:text-blue-700"
             aria-label="Share on Facebook"
+            className="text-black hover:text-blue-700"
           >
             <FaFacebook size={24} />
           </a>
@@ -112,8 +113,8 @@ const CardPage = async ({ params: paramsPromise }) => {
             href={shareLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black hover:text-blue-800"
             aria-label="Share on LinkedIn"
+            className="text-black hover:text-blue-800"
           >
             <FaLinkedin size={24} />
           </a>
