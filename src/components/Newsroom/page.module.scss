@@ -6,6 +6,8 @@
   box-sizing: border-box;
   overflow: hidden;
   .column {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
     position: relative;
     height: 100%;
     width: 25%;
