@@ -29,7 +29,7 @@ const NewsroomTop = () => {
             <img
               src={news.img}
               alt="img"
-              className=" w-full min-h-[210px] max-h-[210px] object-cover object-center rounded-2xl"
+              className=" w-full min-h-[210px] max-h-[210px] object-cover object-center rounded-t-2xl"
             />
 
             <div className="p-8 space-y-4">
