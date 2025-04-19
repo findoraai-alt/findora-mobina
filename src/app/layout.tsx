@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: "𝙛𝙞𝙣𝙙𝙤𝙧𝙖 – A Search Engine You Can Trust",
     template: "%s - 𝙛𝙞𝙣𝙙𝙤𝙧𝙖 – A Search Engine You Can Trust",
   },
-  description: "Search with Confidence. Discover the Truth",
+  description: "Search with Confidence. Discover the Truth.",
   twitter: {
     card: "summary_large_image",
   },
