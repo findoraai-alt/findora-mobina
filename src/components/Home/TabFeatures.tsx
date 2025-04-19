@@ -49,7 +49,7 @@ const TabsFeatures = () => {
       {selected > 0 && (
         <button
           onClick={() => setSelected((prev) => prev - 1)}
-          className="absolute left-5 top-[60%] z-10 transform -translate-y-1/2 p-2 rounded-full bg-white dark:bg-[#202938] shadow-lg"
+          className="absolute left-5 top-[60%] z-10 transform -translate-y-1/2 p-2 rounded-full bg-white dark:bg-[#202938] shadow-md"
         >
           <GoArrowLeft size={24} />
         </button>
@@ -76,7 +76,7 @@ const TabsFeatures = () => {
       {selected < FEATURES.length - 1 && (
         <button
           onClick={() => setSelected((prev) => prev + 1)}
-          className="absolute right-5 top-[60%] z-10 transform -translate-y-1/2 p-2 rounded-full bg-white dark:bg-[#202938] shadow-lg"
+          className="absolute right-5 top-[60%] z-10 transform -translate-y-1/2 p-2 rounded-full bg-white dark:bg-[#202938] shadow-md"
         >
           <GoArrowRight size={24} />
         </button>
@@ -152,7 +152,7 @@ const Tab = ({
           style={{ backgroundColor: bgColor }}
           className={`rounded-lg p-1 lg:p-3 text-2xl text-white shadow-indigo-400 transition-all duration-300 ${
             selected
-              ? "scale-100 opacity-100 shadow-lg"
+              ? "scale-100 opacity-100 shadow-md"
               : "scale-90 opacity-50 shadow"
           }`}
         >
@@ -243,7 +243,7 @@ const ExampleFeature = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="bg-white dark:bg-[#202938] h-auto shadow-lg rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center">
+      <div className="bg-white dark:bg-[#202938] h-auto shadow-md rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center">
         <div className="md:w-1/2">
           <Image
             src={image}

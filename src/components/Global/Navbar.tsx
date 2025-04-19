@@ -156,7 +156,7 @@ const Navbar = () => {
                   </button>
 
                   {openSolutionsDesktop && (
-                    <div className="absolute top-full left-0 right-0 flex flex-col bg-white dark:bg-gray-800 shadow-lg rounded-md z-50 mt-2">
+                    <div className="absolute top-full left-0 right-0 flex flex-col bg-white dark:bg-gray-800 shadow-md rounded-md z-50 mt-2">
                       {link.children.map((child) => (
                         <Link
                           key={child.id}

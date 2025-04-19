@@ -22,9 +22,9 @@ export const newsData = [
         Accessible now at www.findora.ai, Findora offers a bold alternative to
         traditional search engines by combining{" "}
         <span className=" font-bold">
-          real-time fact-checking, multimodal intelligence, and privacy-first
-          infrastructure.
+          real-time fact-checking, multimodal intelligence,
         </span>{" "}
+        and <span className=" font-bold">privacy-first infrastructure.</span>{" "}
         From medical questions to academic research, from checking the
         authenticity of online content to shopping with data-driven insights —
         Findora is designed to elevate truth in every search.
