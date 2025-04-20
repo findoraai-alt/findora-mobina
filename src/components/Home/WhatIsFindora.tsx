@@ -64,16 +64,13 @@ const WhatIsFindora = () => {
         engine fact-checks sources, analyzes content, and provides reliable,
         transparent answers.
       </p>
-      <Link href="/" className=" relative group">
+      <Link href="https://search.findora.ai/" className="group">
         <button className=" bg-[#e0e0e0] dark:bg-gray-200 text-black rounded-full px-4 py-3">
           <div className=" flex items-center gap-1">
             <span className="font-medium text-sm lg:text-base">Start now</span>
             <PiArrowUpRightBold className=" lg:group-hover:rotate-45 transition-all duration-300 ease-in-out" />
           </div>
         </button>
-        <span className="hidden group-hover:block absolute top-14 w-fit left-6 bg-black text-white dark:bg-white dark:text-black text-center text-xs font-bold rounded-md p-1">
-          coming soon
-        </span>
       </Link>
     </div>
   );
