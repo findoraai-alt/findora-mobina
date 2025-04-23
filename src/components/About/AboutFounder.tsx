@@ -20,7 +20,7 @@ const AboutFounder = () => {
         <motion.img
           ref={ref}
           style={{ scale }}
-          src="/images/founder1.jpg"
+          src="/images/founder.jpg"
           alt="img"
           className="w-full min-h-[250px] md:min-h-[350px] lg:min-h-[550px] 2xl:min-h-[650px] max-h-[250px] md:max-h-[350px] lg:max-h-[550px] 2xl:max-h-[650px] object-cover object-top"
         />
