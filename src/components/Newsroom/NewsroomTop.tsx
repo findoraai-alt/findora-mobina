@@ -22,9 +22,10 @@ const NewsroomTop = () => {
     <div className=" px-4 md:px-8 py-20 md:py-24 max-w-7xl mx-auto">
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center place-items-center">
         {newsData.slice(0, displayedCards).map((news) => (
-          <div
+          <Link
+            href={`newsroom/${news.id}`}
             key={news.id}
-            className=" shadow-md bg-white dark:bg-[#111828] rounded-2xl w-full h-auto"
+            className=" shadow-md bg-white dark:bg-[#111828] rounded-2xl w-full h-auto group"
           >
             <img
               src={news.img}
@@ -38,8 +39,8 @@ const NewsroomTop = () => {
               <div className=" line-clamp-4 text-[#5e656f] dark:text-[#ADBDCC] text-sm">
                 {news.description}
               </div>
-              <Link href={`newsroom/${news.id}`} className=" flex justify-end">
-                <button className=" flex items-center group">
+              <div className=" flex justify-end">
+                <button className=" flex items-center">
                   <span className=" font-medium text-xs">Read more</span>
 
                   <MdOutlineKeyboardArrowRight
@@ -47,9 +48,9 @@ const NewsroomTop = () => {
                     className=" lg:group-hover:translate-x-1 lg:transition-all lg:duration-300 lg:ease-in-out"
                   />
                 </button>
-              </Link>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <div className=" flex justify-center items-center gap-4 mt-8">
