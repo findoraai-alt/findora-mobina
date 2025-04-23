@@ -22,7 +22,7 @@ const AboutFounder = () => {
           style={{ scale }}
           src="/images/founder1.jpg"
           alt="img"
-          className="w-full min-h-[200px] md:min-h-[250px] lg:min-h-[350px] 2xl:min-h-[550px] max-h-[200px] md:max-h-[250px] lg:max-h-[350px] 2xl:max-h-[550px] object-cover object-top"
+          className="w-full min-h-[250px] md:min-h-[350px] lg:min-h-[550px] 2xl:min-h-[650px] max-h-[250px] md:max-h-[350px] lg:max-h-[550px] 2xl:max-h-[650px] object-cover object-top"
         />
 
         <p className="px-4 md:px-8 text-lg">

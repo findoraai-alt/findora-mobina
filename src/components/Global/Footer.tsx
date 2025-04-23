@@ -109,7 +109,7 @@ export const Footer = () => {
                     </Link>
                   ))}
                 </div>
-                <div className=" text-sm">Montréal—Canada</div>
+                <div className=" text-sm">Montréal - Canada</div>
               </div>
               <div className=" flex flex-col justify-between gap-4">
                 <div className=" flex flex-col gap-1 text-sm">
