@@ -114,7 +114,7 @@ const Navbar = () => {
     <div className="border-b-2 border-[#e8e9f3] dark:border-black">
       <div className="px-4 md:px-8 py-3">
         <div className="flex justify-between items-center gap-4">
-          <div className="flex flex-col md:flex-row items-center gap-4">
+          <div>
             <Link href="/">
               <Image
                 src={LogoBlack}
@@ -134,7 +134,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className=" hidden lg:flex items-center bg-[#f0f0fc] dark:bg-[#111828] dark:text-white p-2 border-2 border-[#e7e7f2] shadow-inner rounded-full">
+          <div className=" hidden xl:flex items-center bg-[#f0f0fc] dark:bg-[#111828] dark:text-white p-2 border-2 border-[#e7e7f2] shadow-inner rounded-full">
             {Links.map((link) =>
               link.children ? (
                 <div className="relative" key={link.id} ref={solutionsRef}>
@@ -191,7 +191,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Dropdown */}
-          <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col-reverse xl:flex-row items-center justify-center gap-4">
             <div
               className="relative block xl:hidden bg-[#f9fafc] dark:bg-[#111828] py-3 px-3 rounded-full shadow-md"
               ref={dropdownRef}
