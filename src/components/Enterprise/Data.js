@@ -1,7 +1,7 @@
 export const CardsData = [
   {
     id: 0,
-    img: "/images/dashboard.png",
+    img: "/images/dashboard.webp",
     title: "Custom Dashboard Development",
     subtitle: "AI-Driven Business Intelligence for Smarter Decisions",
     description: (
@@ -32,7 +32,7 @@ export const CardsData = [
   },
   {
     id: 1,
-    img: "/images/ai.png",
+    img: "/images/ai.webp",
     title: "Interactive Query Resolution",
     subtitle: " Get Answers Instantly",
     description: (
