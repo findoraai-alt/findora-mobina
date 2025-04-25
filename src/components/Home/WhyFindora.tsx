@@ -9,7 +9,7 @@ const WhyFindoraData = [
   {
     id: 1,
     title: "Why Choose findora?",
-    desc: "Powerful Fact-Checking & Search Solutions for Enterprises",
+    desc: "Powerful Fact-Checking & Search Solutions for Enterprises.",
   },
   {
     id: 2,
