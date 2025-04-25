@@ -6,10 +6,10 @@ const DanaArta = () => {
     <div className=" pt-20 md:pt-24">
       <div className=" space-y-8">
         <div className=" px-4 md:px-8 flex flex-col gap-4 text-center ">
-          <h3 className=" text-3xl lg:text-4xl font-medium">
+          <h3 className=" text-2xl font-medium">
             Beyond Search: Solutions by Findora
           </h3>
-          <span className=" text-lg lg:text-xl">
+          <span className=" lg:text-lg">
             Explore our AI-powered tools designed to support truth, mental
             well-being, and media integrity
           </span>
@@ -21,7 +21,7 @@ const DanaArta = () => {
           >
             <div className=" absolute inset-0 bg-white/20" />
             <div className=" flex flex-col gap-8 justify-center items-center relative z-10">
-              <h6 className=" text-2xl lg:text-3xl font-medium text-black tracking-widest text-center">
+              <h6 className=" text-2xl  font-medium text-black tracking-widest text-center">
                 DANA - Your AI Companion
               </h6>
               <p className=" text-black text-center">
@@ -42,7 +42,7 @@ const DanaArta = () => {
           >
             <div className=" absolute inset-0 bg-black/20" />
             <div className=" flex flex-col gap-8 justify-center items-center relative z-10">
-              <h6 className="text-2xl lg:text-3xl  font-medium text-white tracking-widest text-center">
+              <h6 className="text-2xl font-medium text-white tracking-widest text-center">
                 ARTA - Deepfake Detection
               </h6>
               <p className=" text-white text-center">
