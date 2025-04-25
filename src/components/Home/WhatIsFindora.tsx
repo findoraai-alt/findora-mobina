@@ -55,7 +55,7 @@ const WhatIsFindora = () => {
         />
         <span className="text-4xl font-bold"> ra?</span>
       </div>
-      <span className="text-xl lg:text-2xl font-semibold">
+      <span className="text-xl lg:text-2xl font-semibold text-center">
         <span className=" text-[#ff0101]"> {"Canada's"}</span> First AI Search
         Engine
       </span>
