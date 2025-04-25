@@ -6,14 +6,14 @@ const FirstAI = () => {
       <div className="  bg-white dark:bg-black h-auto w-full place-content-center p-8">
         <div className=" flex flex-col-reverse md:flex-row justify-between items-center gap-8">
           <div className=" flex flex-col justify-between gap-8 md:w-1/2 text-center md:text-left">
-            <h3 className=" text-4xl font-medium text-black dark:text-white">
+            <h3 className=" text-2xl lg:text-4xl font-medium text-black dark:text-white">
               <span className=" text-[#ff0101]">{"Canada's"}</span> First AI
               Search Engine
             </h3>
-            <h6 className=" text-2xl text-black dark:text-white">
+            <h6 className=" text-xl lg:text-2xl text-black dark:text-white">
               Empowering Canadian Organizations to Thrive Worldwide
             </h6>
-            <p className=" text-lg text-black dark:text-white">
+            <p className=" lg:text-lg text-black dark:text-white">
               Built and hosted in Canada while remaining competitive on a world
               stage. Findora prioritizes data sovereignty, privacy, and
               compliance. Our fully bilingual AI ensures seamless adoption
