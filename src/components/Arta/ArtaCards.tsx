@@ -122,7 +122,7 @@ function Card({ card, index, isMobile }: CardProps) {
         }}
       >
         <div className="text-2xl font-medium mb-3">{card.title}</div>
-        <div className="text-sm">{card.desc}</div>
+        <div className="text-sm lg:text-base">{card.desc}</div>
       </div>
     </motion.div>
   );

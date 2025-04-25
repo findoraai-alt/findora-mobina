@@ -36,8 +36,8 @@ const artaFeaturesData = [
 const ArtaFeatures = () => {
   return (
     <div className=" px-4 md:px-8 pt-20 md:pt-24 max-w-7xl mx-auto">
-      <div className=" flex items-start gap-4">
-        <h1 className=" hidden lg:block lg:text-5xl font-medium sticky top-5 w-1/2">
+      <div className=" flex flex-col gap-8 lg:flex-row justify-start items-center lg:items-start lg:gap-4">
+        <h1 className=" text-4xl lg:text-5xl font-medium flex lg:sticky lg:top-5 lg:w-1/2 text-center lg:text-left">
           Powerful Protection, Seamless Integration
         </h1>
         <div className=" grid grid-cols-1 place-items-center gap-4 lg:w-1/2 w-full">
@@ -67,8 +67,8 @@ const Card = ({ card }: { card: cardPrompt }) => {
       />
       <div className=" absolute inset-0 bg-black/30 rounded-2xl" />
       <div className=" absolute lg:top-20 top-10 left-0 text-white p-8 text-center space-y-4">
-        <h6 className=" text-xl font-medium">{card.title}</h6>
-        <p className="font-medium">{card.description}</p>
+        <h6 className=" text-xl lg:text-2xl font-medium">{card.title}</h6>
+        <p className=" lg:text-lg">{card.description}</p>
       </div>
       <motion.div
         className=" absolute inset-0 backdrop-blur-xl rounded-2xl"
