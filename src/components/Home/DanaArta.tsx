@@ -9,7 +9,7 @@ const DanaArta = () => {
           <h3 className=" text-2xl font-medium">
             Beyond Search: Solutions by Findora
           </h3>
-          <span className=" lg:text-lg">
+          <span className="lg:text-lg">
             Explore our AI-powered tools designed to support truth, mental
             well-being, and media integrity
           </span>
@@ -21,7 +21,7 @@ const DanaArta = () => {
           >
             <div className=" absolute inset-0 bg-white/20" />
             <div className=" flex flex-col gap-8 justify-center items-center relative z-10">
-              <h6 className=" text-2xl  font-medium text-black tracking-widest text-center">
+              <h6 className=" text-xl font-medium text-black tracking-widest text-center">
                 DANA - Your AI Companion
               </h6>
               <p className=" text-black text-center">
@@ -42,7 +42,7 @@ const DanaArta = () => {
           >
             <div className=" absolute inset-0 bg-black/20" />
             <div className=" flex flex-col gap-8 justify-center items-center relative z-10">
-              <h6 className="text-2xl font-medium text-white tracking-widest text-center">
+              <h6 className="text-xl font-medium text-white tracking-widest text-center">
                 ARTA - Deepfake Detection
               </h6>
               <p className=" text-white text-center">
