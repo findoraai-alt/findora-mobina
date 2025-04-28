@@ -5,7 +5,7 @@ const EntTop = () => {
   return (
     <div className="bg-[#f0f0fc] dark:bg-[#111828]">
       <div className=" px-4 md:px-8 pt-20 md:pt-24">
-        <div className=" text-center flex flex-col gap-8">
+        <div className=" text-center flex flex-col items-center gap-8">
           <div className=" flex flex-col gap-4">
             <h3 className=" text-6xl font-medium max-w-3xl mx-auto">
               AI-Powered Enterprise Intelligence & Insights
@@ -14,7 +14,7 @@ const EntTop = () => {
               Scalable, Transparent, and AI-Driven Solutions for Businesses
             </p>
           </div>
-          <Link href="/demo" className=" w-fit self-center">
+          <Link href="/demo" className=" w-fit">
             <button className=" bg-black dark:bg-white text-white dark:text-black font-medium rounded-full px-4 py-3 lg:hover:scale-105 transition-all duration-300 ease-in-out">
               Request a demo
             </button>
