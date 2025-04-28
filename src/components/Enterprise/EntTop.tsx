@@ -14,7 +14,7 @@ const EntTop = () => {
               Scalable, Transparent, and AI-Driven Solutions for Businesses
             </p>
           </div>
-          <Link href="/demo">
+          <Link href="/demo" className=" w-fit self-center">
             <button className=" bg-black dark:bg-white text-white dark:text-black font-medium rounded-full px-4 py-3 lg:hover:scale-105 transition-all duration-300 ease-in-out">
               Request a demo
             </button>
