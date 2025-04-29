@@ -5,7 +5,8 @@ export const newsData = [
     id: 0,
     date: "May 1st, 2025",
     img: "/images/launch.png",
-    title: "FINDORA LAUNCHES CANADA’S FIRST AI SEARCH ENGINE -BUILT FOR TRUST.",
+    title:
+      "FINDORA LAUNCHES CANADA’S FIRST AI SEARCH ENGINE - BUILT FOR TRUST.",
     description: (
       <>
         <span className=" font-bold">Montreal, QC,</span>{" "}
