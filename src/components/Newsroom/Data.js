@@ -3,6 +3,7 @@ import { FaQuoteRight } from "react-icons/fa";
 export const newsData = [
   {
     id: 0,
+    slug: "launch",
     date: "May 1st, 2025",
     img: "/images/launch.png",
     title:

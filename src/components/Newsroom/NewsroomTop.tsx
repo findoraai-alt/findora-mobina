@@ -23,7 +23,7 @@ const NewsroomTop = () => {
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-content-center place-items-center">
         {newsData.slice(0, displayedCards).map((news) => (
           <Link
-            href={`newsroom/${news.id}`}
+            href={`newsroom/${news.slug}`}
             key={news.id}
             className=" shadow-md bg-white dark:bg-[#111828] rounded-2xl w-full h-auto group"
           >

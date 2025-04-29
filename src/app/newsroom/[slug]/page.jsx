@@ -4,14 +4,14 @@ import { newsData } from "../../../components/Newsroom/Data";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
-const getData = async (id) => {
-  const data = newsData[id];
+const getData = async (slug) => {
+  const data = newsData.find((item) => item.slug === slug);
   return data || null;
 };
 
 export async function generateMetadata({ params: paramsPromise }) {
   const params = await paramsPromise;
-  const post = await getData(params.id);
+  const post = await getData(params.slug);
 
   if (!post) {
     return {
@@ -21,7 +21,7 @@ export async function generateMetadata({ params: paramsPromise }) {
   }
 
   const domain = "https://findora.ai";
-  const url = `${domain}/newsroom/${params.id}`;
+  const url = `${domain}/newsroom/${params.slug}`;
 
   const absoluteImage = post.img.startsWith("http")
     ? post.img
@@ -55,14 +55,14 @@ export async function generateMetadata({ params: paramsPromise }) {
 
 const CardPage = async ({ params: paramsPromise }) => {
   const params = await paramsPromise;
-  const data = await getData(params.id);
+  const data = await getData(params.slug);
 
   if (!data) {
     notFound();
   }
 
   const domain = "https://findora.ai";
-  const currentUrl = `${domain}/newsroom/${params.id}`;
+  const currentUrl = `${domain}/newsroom/${params.slug}`;
 
   const shareLinks = {
     twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(
