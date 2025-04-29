@@ -34,7 +34,7 @@ export const newsData = [
         combining{" "}
         <span className=" font-bold">
           {" "}
-          real-time fact-checking,multimodal intelligence, and privacy-first
+          real-time fact-checking, multimodal intelligence, and privacy-first
           infrastructure.
         </span>{" "}
         From medical questions to academic research, from checking the
