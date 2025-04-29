@@ -14,7 +14,7 @@ const EntCards = () => {
         <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 w-fit h-full">
           {CardsData.map((card) => (
             <Link
-              href={`/enterprise/${card.id}`}
+              href={`/enterprise/${card.slug}`}
               key={card.id}
               className=" bg-white h-auto w-full gap-8 dark:bg-[#111828] p-4 lg:p-8 rounded-2xl flex flex-col justify-between lg:rounded-br-[200px] lg:hover:rounded-br-2xl transition-all duration-300 ease-in-out group"
             >

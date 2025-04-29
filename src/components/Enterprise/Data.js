@@ -1,3 +1,5 @@
+import slugify from "slugify";
+
 export const CardsData = [
   {
     id: 0,
@@ -61,7 +63,10 @@ export const CardsData = [
       </p>
     ),
   },
-];
+].map((item) => ({
+  ...item,
+  slug: slugify(item.title, { lower: true, strict: true }),
+}));
 
 export const carouselData = [
   {

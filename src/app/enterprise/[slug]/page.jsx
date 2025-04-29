@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import React from "react";
 import { CardsData } from "../../../components/Enterprise/Data";
 
-const getData = async (id) => {
-  const data = CardsData[id];
+const getData = async (slug) => {
+  const data = CardsData.find((item) => item.slug === slug);
 
   if (data) {
     return data;
@@ -15,7 +15,7 @@ const getData = async (id) => {
 // Dynamic metadata
 export async function generateMetadata({ params: paramsPromise }) {
   const params = await paramsPromise; // Await params before using it
-  const post = await getData(params.id);
+  const post = await getData(params.slug);
 
   if (!post) {
     return {
@@ -32,7 +32,7 @@ export async function generateMetadata({ params: paramsPromise }) {
 
 const CardPage = async ({ params: paramsPromise }) => {
   const params = await paramsPromise; // Await params before using it
-  const data = await getData(params.id);
+  const data = await getData(params.slug);
 
   if (!data) {
     notFound();
