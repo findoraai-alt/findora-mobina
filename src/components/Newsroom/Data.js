@@ -5,29 +5,48 @@ export const newsData = [
     id: 0,
     date: "May 1st, 2025",
     img: "/images/launch.png",
-    title: "Findora Launches Today: A Search Engine You Can Trust",
+    title: "FINDORA LAUNCHES CANADA’S FIRST AI SEARCH ENGINE -BUILT FOR TRUST.",
     description: (
       <>
-        <span className=" font-bold">Montreal, QC — </span>In a digital world
-        increasingly flooded with misinformation, AI hallucinations, and paid
-        search manipulation, <span className=" font-bold">Findora</span>{" "}
-        officially launches today as{" "}
+        <span className=" font-bold">Montreal, QC,</span>{" "}
+        <span>May 1st 2025</span>
+        <br />
+        <br />
+        <span>
+          In a digital world increasingly flooded with misinformation, AI
+          hallucinations, and paid search manipulation, a new Canadian venture
+          is flipping the script.{" "}
+          <span className=" font-bold">
+            Findora, {"Canada’s"} first AI-powered search engine,
+          </span>{" "}
+          launches today - engineered to deliver knowledge with transparency,
+          verified answers, and trust at its core.
+        </span>
+        <br />
+        <br />
+        Accessible now at{" "}
+        <a href="https://www.findora.ai/" className=" text-blue-600">
+          www.findora.ai
+        </a>
+        , Findora offers a bold alternative totraditional search engines by
+        combining{" "}
         <span className=" font-bold">
           {" "}
-          {"Canada’s"} first AI-powered search engine —{" "}
-        </span>
-        a platform built for trust, transparency, and verified answers.
-        <br />
-        <br />
-        Accessible now at www.findora.ai, Findora offers a bold alternative to
-        traditional search engines by combining{" "}
-        <span className=" font-bold">
-          real-time fact-checking, multimodal intelligence,
+          real-time fact-checking,multimodal intelligence, and privacy-first
+          infrastructure.
         </span>{" "}
-        and <span className=" font-bold">privacy-first infrastructure.</span>{" "}
-        From medical questions to academic research, from checking the
-        authenticity of online content to shopping with data-driven insights —
-        Findora is designed to elevate truth in every search.
+        From medicalquestions to academic research, from checking the
+        authenticity of onlinecontent to shopping with data-driven insights,
+        Findora is designed to surfacetruth in every search.
+        <br />
+        <br />
+        <iframe
+          width="100%"
+          className=" h-[250px] sm:h-[350px] md:h-[400px] 2xl:h-[600px]"
+          src="https://www.youtube.com/embed/FkSDkjWQplI?si=0Bv-Xx8o-XRAt8yF"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
         <br />
         <br />
         <FaQuoteLeft color="#e5eaf0" size={60} />
@@ -56,23 +75,30 @@ export const newsData = [
         </div>
         <br />
         <br />
-        “We created Findora to help people rise above the noise and find answers
-        they can actually trust,” says{" "}
-        <span className=" font-bold">
-          Dr. Naeem Komeilipoor, Founder and CEO of Findora.
-        </span>{" "}
-        {"“It’s"} more than a search engine — {"it’s"} a movement toward
-        verified knowledge, privacy, and digital dignity.” <br /> <br /> Findora
-        integrates a growing ecosystem of intelligent modules that span web
-        search, fact-check validation, URL and document analysis, academic and
-        medical insights, video and multimedia search, and soon, shopping
-        intelligence. In addition, it introduces: <br />{" "}
+        Findora integrates a{" "}
+        <span className=" font-bold">growing ecosystem</span> of intelligent
+        modules that span web search, fact-check validation, URL and document
+        analysis, academic and medical insights, video and multimedia search,
+        and soon, shopping intelligence. In addition, it introduces: <br />
+        <span className=" font-bold">• ARTA,</span> a real-time deepfake
+        detection system for verifying the authenticityof audio and video
+        content. <br />
         <span className=" font-bold">• DANA,</span> an AI companion focused on
         cognitive support, emotional well-being, and life organization.
         <br />
-        <span className=" font-bold"> • ARTA,</span> a real-time deepfake
-        detection system for verifying the authenticity of audio and video
-        content.
+        <br />
+        According to Statistic Canada, in 2023{" "}
+        <span className=" font-bold">59% of Canadians</span> reported being{" "}
+        <span className=" font-bold">very concerned</span> about misinformation
+        on the internet. Moreover, 43% felt that it had become harder to discern
+        truth from falsehood compared to{" "}
+        <span className=" font-bold">just three years</span> prior.
+        <br />
+        <br />
+        “We created Findora to help people rise above the noise and find answers
+        they can actually trust,” says Dr. Naeem Komeilipoor, Founder and CEO of
+        Findora. “{"It’s"} more than a search engine. {"It’s"} a movement toward
+        verified knowledge, privacy, and digital dignity.”
         <br />
         <br />
         Built and hosted entirely in Canada, Findora reflects Canadian values of
@@ -93,7 +119,7 @@ export const newsData = [
         <br />
         <br />
         As part of its long-term vision, Findora is currently training its own
-        proprietary <span className=" font-bold">language model</span> to
+        <span className=" font-bold"> proprietary language model</span> to
         enhance contextual understanding, reduce hallucinations, and deliver
         even deeper domain-specific knowledge.
         <br />
@@ -106,7 +132,9 @@ export const newsData = [
           Naeem Komeilipoor <br /> Founder & CEO, Findora
         </span>{" "}
         <br />
-        info@findora.ai
+        <a href="mailto:info@findora.ai" className=" text-blue-600">
+          info@findora.ai
+        </a>
       </>
     ),
   },

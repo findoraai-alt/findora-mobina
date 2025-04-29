@@ -121,7 +121,7 @@ const CardPage = async ({ params: paramsPromise }) => {
         <img
           src={data.img}
           alt={data.title}
-          className="max-h-[1200px] lg:max-h-[700px] w-full object-cover object-top rounded-2xl"
+          className=" w-full object-cover object-center rounded-2xl"
         />
 
         <div className="lg:text-lg">{data.description}</div>
