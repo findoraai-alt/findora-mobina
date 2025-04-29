@@ -30,16 +30,16 @@ export const newsData = [
         <a href="https://www.findora.ai/" className=" text-blue-600">
           www.findora.ai
         </a>
-        , Findora offers a bold alternative totraditional search engines by
+        , Findora offers a bold alternative to traditional search engines by
         combining{" "}
         <span className=" font-bold">
           {" "}
           real-time fact-checking,multimodal intelligence, and privacy-first
           infrastructure.
         </span>{" "}
-        From medicalquestions to academic research, from checking the
-        authenticity of onlinecontent to shopping with data-driven insights,
-        Findora is designed to surfacetruth in every search.
+        From medical questions to academic research, from checking the
+        authenticity of online content to shopping with data-driven insights,
+        Findora is designed to surface truth in every search.
         <br />
         <br />
         <iframe
@@ -83,7 +83,7 @@ export const newsData = [
         analysis, academic and medical insights, video and multimedia search,
         and soon, shopping intelligence. In addition, it introduces: <br />
         <span className=" font-bold">• ARTA,</span> a real-time deepfake
-        detection system for verifying the authenticityof audio and video
+        detection system for verifying the authenticity of audio and video
         content. <br />
         <span className=" font-bold">• DANA,</span> an AI companion focused on
         cognitive support, emotional well-being, and life organization.
