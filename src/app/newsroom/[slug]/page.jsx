@@ -28,7 +28,7 @@ export async function generateMetadata({ params: paramsPromise }) {
     : `${domain}${post.img}`;
 
   return {
-    title: post.title,
+    title: post.title.toUpperCase(),
     description: "Findora Launch Announcement",
     openGraph: {
       title: post.title,
@@ -85,7 +85,7 @@ const CardPage = async ({ params: paramsPromise }) => {
         <span className="lg:text-lg">{data.date}</span>
 
         <h1 className="text-2xl lg:text-4xl font-medium text-center">
-          {data.title}
+          {data.title.toUpperCase()}
         </h1>
 
         <div className="flex items-center gap-4 mt-2">
