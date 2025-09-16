@@ -216,7 +216,7 @@ export const newsData = [
     The system demonstrated strength across face swaps, lip-syncs, reenactments,
     and AI-generated avatars, with particularly high performance on the widely
     used{" "}
-    <span className=" font-bold">FaceForensics++ (FF++) dataset</span>. Tested
+    <span className="">FaceForensics++ (FF++) dataset</span>. Tested
     even against the most advanced and realistic deepfakes such as Veo 3, ARTA
     delivered astonishing results, confirming its robustness against the latest
     generation of synthetic media.
@@ -284,10 +284,6 @@ export const newsData = [
     <a href="https://arta.findora.ai" className=" text-blue-600">
       arta.findora.ai
     </a>{" "}
-    or{" "}
-    <a href="https://www.findora.ai" className=" text-blue-600">
-      www.findora.ai
-    </a>
     .
     <br />
     <br />
