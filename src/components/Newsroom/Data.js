@@ -190,6 +190,7 @@ export const newsData = [
     </span>
     <br />
     <br />
+
     Accessible now at{" "}
     <a href="https://arta.findora.ai" className=" text-blue-600">
       arta.findora.ai
@@ -221,7 +222,14 @@ export const newsData = [
     generation of synthetic media.
     <br />
     <br />
-    The need spans every sector where trust is essential:
+
+    <iframe
+          width="100%"
+          className=" h-[250px] sm:h-[350px] md:h-[400px] 2xl:h-[600px]"
+          src="https://youtu.be/KPRTwzfhWnc?si=-iU4e05sabLt18zh"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+      ></iframe>
     <br />
     <span className=" font-bold">• Finance and cybersecurity:</span> preventing
     synthetic fraud and identity attacks <br />
