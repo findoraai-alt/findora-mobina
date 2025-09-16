@@ -226,7 +226,7 @@ export const newsData = [
     <iframe
           width="100%"
           className=" h-[250px] sm:h-[350px] md:h-[400px] 2xl:h-[600px]"
-          src="https://youtu.be/KPRTwzfhWnc?si=-iU4e05sabLt18zh"
+          src="https://youtu.be/KPRTwzfhWnc?si=wn7hxlKrwmaC9xo1"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
       ></iframe>
