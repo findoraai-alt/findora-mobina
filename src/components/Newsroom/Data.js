@@ -54,15 +54,15 @@ export const newsData = [
         <FaQuoteLeft color="#e5eaf0" size={60} />
         <br />
         <br />
-        <div className=" flex justify-center">
-          <div className=" w-[60%] lg:w-[50%]">
-            <span className=" italic font-bold text-xl lg:text-2xl">
+        <div className="flex justify-center">
+          <div className="w-[60%] lg:w-[50%]">
+            <span className="italic font-bold text-xl lg:text-2xl">
               {"It’s"} more than a search engine — {"it’s"} a movement toward
               verified knowledge, privacy, and digital dignity.
             </span>
             <br />
             <br />
-            <div className=" flex flex-col items-end font-bold">
+            <div className="flex flex-col items-end font-bold">
               <span>— Naeem Komeilipoor</span>
               <br />
 
@@ -72,7 +72,7 @@ export const newsData = [
         </div>
         <br />
         <br />
-        <div className=" flex justify-end">
+        <div className="flex justify-end">
           <FaQuoteRight color="#e5eaf0" size={60} />
         </div>
         <br />
@@ -224,12 +224,12 @@ export const newsData = [
     <br />
 
     <iframe
-          width="100%"
-          className=" h-[250px] sm:h-[350px] md:h-[400px] 2xl:h-[600px]"
-          src="https://www.youtube.com/embed/watch?v=KPRTwzfhWnc"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-      ></iframe>
+      width="100%"
+      className="h-[250px] sm:h-[350px] md:h-[400px] 2xl:h-[600px]"
+      src="https://www.youtube.com/embed/KPRTwzfhWnc"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+  ></iframe>
     <br />
     <span className=" font-bold">• Finance and cybersecurity:</span> preventing
     synthetic fraud and identity attacks <br />
@@ -307,4 +307,3 @@ export const newsData = [
 
   }
 ];
-
