@@ -212,11 +212,11 @@ export const newsData = [
     <br />
     <br />
     Across leading global benchmarks,{" "}
-    <span className=" font-bold">ARTA achieved results near 90% accuracy.</span>{" "}
+    <span className=" font-bold">ARTA achieved results over 90% accuracy.</span>{" "}
     The system demonstrated strength across face swaps, lip-syncs, reenactments,
     and AI-generated avatars, with particularly high performance on the widely
     used{" "}
-    <span className=" font-bold">FaceForensics++ (FF++) dataset</span>. Tested
+    <span className="">FaceForensics++ (FF++) dataset</span>. Tested
     even against the most advanced and realistic deepfakes such as Veo 3, ARTA
     delivered astonishing results, confirming its robustness against the latest
     generation of synthetic media.
@@ -281,12 +281,10 @@ export const newsData = [
     <br />
     <br />
     For more information, visit{" "}
+    
+    or{" "}
     <a href="https://arta.findora.ai" className=" text-blue-600">
       arta.findora.ai
-    </a>{" "}
-    or{" "}
-    <a href="https://www.findora.ai" className=" text-blue-600">
-      www.findora.ai
     </a>
     .
     <br />
@@ -294,14 +292,31 @@ export const newsData = [
     ⸻
     <br />
     <br />
-    Contact <br />
-    <span className=" font-bold">
-      Dr. Naeem Komeilipoor <br /> Founder & CEO, Findora
-    </span>
-    <br />
-    <a href="mailto:info@findora.ai" className=" text-blue-600">
-      info@findora.ai
-    </a>
+    Media Contact: <br />{" "}
+        <span className=" font-bold">
+          Naeem Komeilipoor <br /> Founder & CEO, Findora
+        </span>{" "}
+        <br />
+        <a href="mailto:info@findora.ai" className=" text-blue-600">
+          info@findora.ai
+        </a>
+        <br />
+        <br />
+        To try the platform, visit:
+        <a href="https://arta.findora.ai/" className=" text-blue-600">
+          {" "}
+          arta.findora.ai
+        </a>
+        <br />
+        To access the media kit, follow this
+        <a
+          href="https://workdrive.zohoexternal.ca/external/e5732f7640be15255e824278d3a542c4907a350b8956bd3855d875d16d9764ad?layout=list"
+          className=" text-blue-600"
+          target="_blank"
+        >
+          {" "}
+          link
+        </a>
   </>
 )
 
