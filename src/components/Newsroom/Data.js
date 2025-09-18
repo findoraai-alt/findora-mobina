@@ -161,7 +161,7 @@ export const newsData = [
     id : 1,
     slug : "arta",
     date: "Sep 23rd, 2025",
-    img : "/images/arta-launch.jpg",
+    img : "/images/arta-launch.png",
     title : "Findora Unveils ARTA, A Landmark in the Global Fight Against Deepfakes",
     description : (
   <>
@@ -216,7 +216,7 @@ export const newsData = [
     The system demonstrated strength across face swaps, lip-syncs, reenactments,
     and AI-generated avatars, with particularly high performance on the widely
     used{" "}
-    <span className="">FaceForensics++ (FF++) dataset</span>. Tested
+    <span className=" font-bold">FaceForensics++ (FF++) dataset</span>. Tested
     even against the most advanced and realistic deepfakes such as Veo 3, ARTA
     delivered astonishing results, confirming its robustness against the latest
     generation of synthetic media.
@@ -226,7 +226,7 @@ export const newsData = [
     <iframe
           width="100%"
           className=" h-[250px] sm:h-[350px] md:h-[400px] 2xl:h-[600px]"
-          src="https://youtu.be/KPRTwzfhWnc?si=f3sOLGPyjLCzd-zO"
+          src="https://www.youtube.com/embed/watch?v=KPRTwzfhWnc"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
       ></iframe>
@@ -284,6 +284,10 @@ export const newsData = [
     <a href="https://arta.findora.ai" className=" text-blue-600">
       arta.findora.ai
     </a>{" "}
+    or{" "}
+    <a href="https://www.findora.ai" className=" text-blue-600">
+      www.findora.ai
+    </a>
     .
     <br />
     <br />
@@ -303,3 +307,4 @@ export const newsData = [
 
   }
 ];
+
