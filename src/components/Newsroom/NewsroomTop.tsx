@@ -35,7 +35,7 @@ const NewsroomTop = () => {
 
             <div className="p-8 space-y-4">
               <span className=" text-xs">{news.date}</span>
-              <h6 className=" text-[#994d7e] font-medium">{news.title}</h6>
+              <h6 className=" text-[#994d7e] font-medium">{news.title.toUpperCase()}</h6>
               <div className=" line-clamp-4 text-[#5e656f] dark:text-[#ADBDCC] text-sm">
                 {news.description}
               </div>
