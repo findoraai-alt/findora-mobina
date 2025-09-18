@@ -282,7 +282,6 @@ export const newsData = [
     <br />
     For more information, visit{" "}
     
-    or{" "}
     <a href="https://arta.findora.ai" className=" text-blue-600">
       arta.findora.ai
     </a>
