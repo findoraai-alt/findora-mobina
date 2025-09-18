@@ -1,5 +1,5 @@
+
 import { notFound } from "next/navigation";
-import React from "react";
 import { newsData } from "../../../components/Newsroom/Data";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
