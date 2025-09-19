@@ -42,6 +42,7 @@ export const newsData = [
         Findora is designed to surface truth in every search.
         <br />
         <br />
+        <br/>
         <iframe
           width="100%"
           className=" h-[250px] sm:h-[350px] md:h-[400px] 2xl:h-[600px]"
@@ -49,6 +50,7 @@ export const newsData = [
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
+        <br/>
         <br />
         <br />
         <FaQuoteLeft color="#e5eaf0" size={60} />
@@ -223,13 +225,14 @@ export const newsData = [
     <br />
     <br />
 
-    <iframe
-      width="100%"
-      className="h-[250px] sm:h-[350px] md:h-[400px] 2xl:h-[600px]"
-      src="https://www.youtube.com/embed/KPRTwzfhWnc"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-  ></iframe>
+    <div className="w-full aspect-video">
+      <iframe
+        className="w-full h-full"
+        src="https://www.youtube.com/embed/KPRTwzfhWnc"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    </div>
     <br />
     <span className=" font-bold">• Finance and cybersecurity:</span> preventing
     synthetic fraud and identity attacks <br />
@@ -282,6 +285,7 @@ export const newsData = [
     <br />
     For more information, visit{" "}
     
+    or{" "}
     <a href="https://arta.findora.ai" className=" text-blue-600">
       arta.findora.ai
     </a>
