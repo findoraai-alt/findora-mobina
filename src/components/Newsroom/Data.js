@@ -230,7 +230,7 @@ export const newsData = [
         ></iframe>
       </div>
       <br />
-      <h3 className="font-bold text-[22px] pb-4">Then need spans every sector where trust is essential</h3>
+      <h3 className="font-bold text-[22px] pb-4">The need spans every sector where trust is essential</h3>
       <span className="font-semibold">• Finance and cybersecurity:</span> preventing
       synthetic fraud and identity attacks <br />
       <span className="font-semibold">• Government and defense:</span> protecting
