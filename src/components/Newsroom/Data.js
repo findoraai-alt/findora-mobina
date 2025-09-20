@@ -160,168 +160,165 @@ export const newsData = [
     ),
   },
   {
-    id : 1,
-    slug : "arta",
-    date: "Sep 23rd, 2025",
-    img : "/images/arta-launch.png",
-    title : "Findora Unveils ARTA, A Landmark in the Global Fight Against Deepfakes",
-    description : (
-  <>
-    <span className=" font-bold">Findora Unveils ARTA,</span>{" "}
-    A Landmark in the Global Fight Against Deepfakes
-    <br />
-    <br />
-    <span className=" font-bold">Montreal, Quebec, Canada,</span>{" "}
-    <span>Sep 23rd, 2025</span>
-    <br />
-    <br />
-    <span>
-      Just a few months ago,{" "}
-      <span className=" font-bold">Findora</span> launched{" "}
-      <a href="https://www.findora.ai" className=" text-blue-600">
-        www.findora.ai
+  id: 1,
+  slug: "arta",
+  date: "Sep 23rd, 2025",
+  img: "/images/arta-launch.png",
+  title: "Findora Unveils ARTA, A Landmark in the Global Fight Against Deepfakes",
+  description: (
+    <>
+      <span className="font-bold">Findora Unveils ARTA,</span>{" "}
+      A Landmark in the Global Fight Against Deepfakes
+      <br />
+      <br />
+      <span className="font-bold">Montreal, Quebec, Canada,</span>{" "}
+      <span>Sep 23rd, 2025</span>
+      <br />
+      <br />
+      <span>
+        Just a few months ago, <span className="font-bold">Findora</span> launched{" "}
+        <a href="https://www.findora.ai" className="text-blue-600">
+          www.findora.ai
+        </a>
+        , Canada's first AI-powered search engine engineered to deliver{" "}
+        <span className="font-bold">
+          verified knowledge with real-time fact-checking, multimodal intelligence,
+          and privacy-first infrastructure.
+        </span>{" "}
+        Today, the company announces the release of{" "}
+        <span className="font-bold">ARTA</span>, a breakthrough deepfake detection
+        engine that sets a new global benchmark for accuracy and accessibility.
+      </span>
+      <br />
+      <br />
+      Accessible now at{" "}
+      <a href="https://arta.findora.ai" className="text-blue-600">
+        arta.findora.ai
       </a>
-      , {"Canada’s"} first AI-powered search engine engineered to deliver{" "}
-      <span className=" font-bold">
-        verified knowledge with real-time fact-checking, multimodal intelligence, 
-        and privacy-first infrastructure.
-      </span>{" "}
-      Today, the company announces the release of{" "}
-      <span className=" font-bold">ARTA</span>, a breakthrough deepfake detection
-      engine that sets a new global benchmark for accuracy and accessibility.
-    </span>
-    <br />
-    <br />
-
-    Accessible now at{" "}
-    <a href="https://arta.findora.ai" className=" text-blue-600">
-      arta.findora.ai
-    </a>
-    , ARTA enables anyone to verify videos and audios by uploading files or
-    pasting links from platforms such as YouTube and Instagram. For enterprises
-    and governments, ARTA is offered as a{" "}
-    <span className=" font-bold">lightweight API</span>, efficient enough to run
-    privately on the edge and designed to integrate directly into secure
-    environments.
-    <br />
-    <br />
-    At the core of ARTA is{" "}
-    <span className=" font-bold">Findora’s proprietary technology</span>, which
-    detects deepfakes with high accuracy by extracting subtle biometric features
-    specific to humans that are nearly impossible for synthetic models to
-    replicate. This unique approach has enabled ARTA to outperform traditional
-    detection methods across a wide range of tests.
-    <br />
-    <br />
-    Across leading global benchmarks,{" "}
-    <span className=" font-bold">ARTA achieved results over 90% accuracy.</span>{" "}
-    The system demonstrated strength across face swaps, lip-syncs, reenactments,
-    and AI-generated avatars, with particularly high performance on the widely
-    used{" "}
-    <span className="">FaceForensics++ (FF++) dataset</span>. Tested
-    even against the most advanced and realistic deepfakes such as Veo 3, ARTA
-    delivered astonishing results, confirming its robustness against the latest
-    generation of synthetic media.
-    <br />
-    <br />
-
-    <div className="w-full aspect-video">
-      <iframe
-        className="w-full h-full"
-        src="https://www.youtube.com/embed/KPRTwzfhWnc"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    </div>
-    <br />
-    <span className=" font-bold">• Finance and cybersecurity:</span> preventing
-    synthetic fraud and identity attacks <br />
-    <span className=" font-bold">• Government and defense:</span> protecting
-    critical intelligence and communications <br />
-    <span className=" font-bold">• Media and journalism:</span> preserving
-    integrity in an age of misinformation <br />
-    <span className=" font-bold">• Healthcare, education, and research:</span>{" "}
-    ensuring authenticity of sensitive data <br />
-    <span className=" font-bold">• Entertainment and social platforms:</span>{" "}
-    filtering manipulated content before it spreads
-    <br />
-    <br />
-    <FaQuoteLeft color="#e5eaf0" size={60} />
-    <br />
-    <br />
-    <div className=" flex justify-center">
-      <div className=" w-[70%] lg:w-[55%]">
-        <span className=" italic font-bold text-xl lg:text-2xl">
-          “Trust is the foundation of human connection, and deepfakes are its
-          most urgent modern threat. With ARTA, we are giving the world a way to
-          see clearly again. This is not just a technology. It is a safeguard
-          for truth and a step toward responsible AI governance.”
-        </span>
-        <br />
-        <br />
-        <div className=" flex flex-col items-end font-bold">
-          <span>— Dr. Naeem Komeilipoor</span>
+      , ARTA enables anyone to verify videos and audios by uploading files or
+      pasting links from platforms such as YouTube and Instagram. For enterprises
+      and governments, ARTA is offered as a{" "}
+      <span className="font-bold">lightweight API</span>, efficient enough to run
+      privately on the edge and designed to integrate directly into secure
+      environments.
+      <br />
+      <br />
+      At the core of ARTA is{" "}
+      <span className="font-bold">Findora’s proprietary technology</span>, which
+      detects deepfakes with high accuracy by extracting subtle biometric features
+      specific to humans that are nearly impossible for synthetic models to
+      replicate. This unique approach has enabled ARTA to outperform traditional
+      detection methods across a wide range of tests.
+      <br />
+      <br />
+      Across leading global benchmarks,{" "}
+      <span className="font-bold">ARTA achieved results with over 90% accuracy.</span>{" "}
+      The system demonstrated strength across face swaps, lip-syncs, reenactments,
+      and AI-generated avatars, with particularly high performance on the widely
+      used <span>FaceForensics++ (FF++) dataset</span>. Tested even against the most
+      advanced and realistic deepfakes such as Veo 3, ARTA delivered astonishing
+      results, confirming its robustness against the latest generation of synthetic
+      media.
+      <br />
+      <br />
+      <div className="w-full aspect-video">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/KPRTwzfhWnc"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <br />
+      <h3 className="font-bold text-[22px] pb-4">Then need spans every sector where trust is essential</h3>
+      <span className="font-semibold">• Finance and cybersecurity:</span> preventing
+      synthetic fraud and identity attacks <br />
+      <span className="font-semibold">• Government and defense:</span> protecting
+      critical intelligence and communications <br />
+      <span className="font-semibold">• Media and journalism:</span> preserving
+      integrity in an age of misinformation <br />
+      <span className="font-semibold">• Healthcare, education, and research:</span>{" "}
+      ensuring authenticity of sensitive data <br />
+      <span className="font-semibold">• Entertainment and social platforms:</span>{" "}
+      filtering manipulated content before it spreads
+      <br />
+      <br />
+      <FaQuoteLeft color="#e5eaf0" size={60} />
+      <br />
+      <br />
+      <div className="flex justify-center">
+        <div className="w-[70%] lg:w-[55%]">
+          <span className="italic font-bold text-xl lg:text-2xl">
+            “Trust is the foundation of human connection, and deepfakes are its
+            most urgent modern threat. With ARTA, we are giving the world a way to
+            see clearly again. This is not just a technology. It is a safeguard
+            for truth and a step toward responsible AI governance.”
+          </span>
           <br />
-          <span>Founder and CEO of Findora</span>
+          <br />
+          <div className="flex flex-col items-end font-bold">
+            <span>— Dr. Naeem Komeilipoor</span>
+            <br />
+            <span>Founder and CEO of Findora</span>
+          </div>
         </div>
       </div>
-    </div>
-    <br />
-    <div className=" flex justify-end">
-      <FaQuoteRight color="#e5eaf0" size={60} />
-    </div>
-    <br />
-    <br />
-    The launch of ARTA reflects{" "}
-    <span className=" font-bold">Findora’s mission</span> to build private,
-    verifiable, and enterprise-ready AI solutions. Alongside its public search
-    engine, Findora develops advanced platforms such as{" "}
-    <span className=" font-bold">DANA</span>, an intelligent voice-based agent
-    for healthcare, accessibility, and mental wellness. Together, these
-    technologies form a{" "}
-    <span className=" font-bold">growing ecosystem</span> committed to ensuring
-    AI serves society with integrity.
-    <br />
-    <br />
-    For more information, visit{" "}
-    
-    or{" "}
-    <a href="https://arta.findora.ai" className=" text-blue-600">
-      arta.findora.ai
-    </a>
-    .
-    <br />
-    <br />
-    ⸻
-    <br />
-    <br />
-    Media Contact: <br />{" "}
-        <span className=" font-bold">
-          Naeem Komeilipoor <br /> Founder & CEO, Findora
-        </span>{" "}
-        <br />
-        <a href="mailto:info@findora.ai" className=" text-blue-600">
-          info@findora.ai
-        </a>
-        <br />
-        <br />
-        To try the platform, visit:
-        <a href="https://arta.findora.ai/" className=" text-blue-600">
-          {" "}
-          arta.findora.ai
-        </a>
-        <br />
-        To access the media kit, follow this
-        <a
-          href="https://workdrive.zohoexternal.ca/external/e5732f7640be15255e824278d3a542c4907a350b8956bd3855d875d16d9764ad?layout=list"
-          className=" text-blue-600"
-          target="_blank"
-        >
-          {" "}
-          link
-        </a>
-  </>
-)
+      <br />
+      <div className="flex justify-end">
+        <FaQuoteRight color="#e5eaf0" size={60} />
+      </div>
+      <br />
+      <br />
+      The launch of ARTA reflects{" "}
+      <span className="font-bold">Findora’s mission</span> to build private,
+      verifiable, and enterprise-ready AI solutions. Alongside its public search
+      engine, Findora develops advanced platforms such as{" "}
+      <span className="font-bold">DANA</span>, an intelligent voice-based agent
+      for healthcare, accessibility, and mental wellness. Together, these
+      technologies form a{" "}
+      <span className="font-bold">growing ecosystem</span> committed to ensuring
+      AI serves society with integrity.
+      <br />
+      <br />
+      For more information, visit{" "}
+      <a href="https://www.findora.ai" className="text-blue-600">
+        www.findora.ai
+      </a>{" "}
+      or{" "}
+      <a href="https://arta.findora.ai" className="text-blue-600">
+        arta.findora.ai
+      </a>
+      .
+      <br />
+      <br />
+      ⸻
+      <br />
+      <br />
+      Media Contact: <br />{" "}
+      <span className="font-bold">
+        Naeem Komeilipoor <br /> Founder & CEO, Findora
+      </span>{" "}
+      <br />
+      <a href="mailto:info@findora.ai" className="text-blue-600">
+        info@findora.ai
+      </a>
+      <br />
+      <br />
+      To try the platform, visit:{" "}
+      <a href="https://arta.findora.ai/" className="text-blue-600">
+        arta.findora.ai
+      </a>
+      <br />
+      To access the media kit, follow this{" "}
+      <a
+        href="https://workdrive.zohoexternal.ca/external/e5732f7640be15255e824278d3a542c4907a350b8956bd3855d875d16d9764ad?layout=list"
+        className="text-blue-600"
+        target="_blank"
+      >
+        link
+      </a>
+    </>
+  ),
+}
 
-  }
 ];
