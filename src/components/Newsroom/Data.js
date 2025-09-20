@@ -180,7 +180,7 @@ export const newsData = [
         <a href="https://www.findora.ai" className="text-blue-600">
           www.findora.ai
         </a>
-        , Canada's first AI-powered search engine engineered to deliver{" "}
+        ,<p>Canada&apos;s first AI-powered search engine</p>{" "}
         <span className="font-bold">
           verified knowledge with real-time fact-checking, multimodal intelligence,
           and privacy-first infrastructure.
