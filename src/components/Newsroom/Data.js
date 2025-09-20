@@ -176,11 +176,10 @@ export const newsData = [
       <br />
       <br />
       <span>
-        Just a few months ago, <span className="font-bold">Findora</span> launched{" "}
+        Just a few months ago, <span className="font-bold">Findora</span> launched Canada&apos;s first AI-powered search engine{" "}
         <a href="https://www.findora.ai" className="text-blue-600">
           www.findora.ai
-        </a>
-        ,<p>Canada&apos;s first AI-powered search engine</p>{" "}
+        </a>,{" "}
         <span className="font-bold">
           verified knowledge with real-time fact-checking, multimodal intelligence,
           and privacy-first infrastructure.
@@ -230,7 +229,7 @@ export const newsData = [
         ></iframe>
       </div>
       <br />
-      <h3 className="font-bold text-[22px] pb-4">The need spans every sector where trust is essential</h3>
+      <h3 className="font-bold pb-2">The need spans every sector where trust is essential:</h3>
       <span className="font-semibold">• Finance and cybersecurity:</span> preventing
       synthetic fraud and identity attacks <br />
       <span className="font-semibold">• Government and defense:</span> protecting
