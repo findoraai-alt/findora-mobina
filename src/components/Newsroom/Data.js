@@ -287,44 +287,24 @@ export const newsData = [
       <a href="https://arta.findora.ai" className="text-blue-600">
         arta.findora.ai
       </a>
-
-      <br/>
-      <br/>
-
-      To try the platform, visit:{" "}
-      <a href="https://arta.findora.ai/" className="text-blue-600">
-        arta.findora.ai
-      </a>
-
       .
-      <br />
-      <br />
-      ⸻
-      {/* <br />
-      <br />
-      Media Contact: <br />{" "}
-      <span className="font-bold">
-        Naeem Komeilipoor <br /> Founder & CEO, Findora
-      </span>{" "}
-      <br />
-      <a href="mailto:info@findora.ai" className="text-blue-600">
-        info@findora.ai
-      </a>
       <br/>
-      To try the platform, visit:{" "}
-      <a href="https://arta.findora.ai/" className="text-blue-600">
-        arta.findora.ai
-      </a>
-      <br /> */}
-      {/* To access the media kit, follow this{" "}
+  
+      To access the media kit, follow this 
+      {" "}
       <a
-        href="https://workdrive.zohoexternal.ca/external/e5732f7640be15255e824278d3a542c4907a350b8956bd3855d875d16d9764ad?layout=list"
+        href="https://workdrive.zohoexternal.ca/folder/c3pny11578a85a971423cab42fd86be190a7b?layout=list"
         className="text-blue-600"
         target="_blank"
       >
         link
-      </a> */}
+      </a>
 
+      <br/>
+      <br/>
+
+      _____
+      
       <br/>
       <br/>
 
