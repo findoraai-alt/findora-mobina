@@ -14,11 +14,11 @@ const ArtaHero = () => {
               Detects deepfakes in real time with over 90% accuracy — no matter
               the media format
             </p>
-            <Link href="/demo" className=" lg:w-1/3 flex justify-end">
+            <a href="https://arta.findora.ai" className=" lg:w-1/3 flex justify-end">
               <button className=" bg-black dark:bg-white text-white dark:text-black text-sm font-medium rounded-full px-4 py-3 lg:hover:bg-blue-700 lg:dark:hover:text-white transition-all duration-300 ease-in-out">
-                Request a demo
+                Try Now
               </button>
-            </Link>
+            </a >
           </div>
 
           <video
