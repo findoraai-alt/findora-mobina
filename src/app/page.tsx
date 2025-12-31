@@ -11,11 +11,16 @@ import WhyFindora from "@/components/Home/WhyFindora";
 import { useEffect } from "react";
 import PreLoader from "@/components/Home/PreLoader";
 import DanaArta from "@/components/Home/DanaArta";
+import ChatbotWidget from "@/components/Global/ChatbotWidget";
 
 export default function Home() {
+
   useEffect(() => {
-    window.scrollTo(0, 0); // Reset scroll position on navigation
+    window.scrollTo(0, 0);
+    localStorage.removeItem("session_id")
   }, []);
+
+
   return (
     <div>
       <PreLoader />
@@ -31,6 +36,7 @@ export default function Home() {
       <WhyFindora />
       <BrowserSearch />
       <UseOnPhone />
+      <ChatbotWidget/>
     </div>
   );
 }
