@@ -13,6 +13,7 @@ import PreLoader from "@/components/Home/PreLoader";
 import DanaArta from "@/components/Home/DanaArta";
 import ChatbotWidget from "@/components/Global/ChatbotWidget";
 import WorksAcross from "@/components/Home/worksAcross"
+import Capabilities from "@/components/Home/Capabilities";
 
 export default function Home() {
 
@@ -28,6 +29,7 @@ export default function Home() {
       <div className=" bg-[#f0f0fc] dark:bg-[#111828]">
         <WhatIsFindora />
         {/* <DanaArta /> */}
+        <Capabilities />
         <WorksAcross />
         <TabsFeatures />
         <Stats />
