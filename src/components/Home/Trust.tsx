@@ -12,7 +12,7 @@ const TrustData: TrustItem[] = [
   {
     id: 1,
     title: "Policy Enforcement",
-    image: "/trust/policy.png",
+    image: "/trust/policy.jpg",
   },
   {
     id: 2,

@@ -15,6 +15,7 @@ import ChatbotWidget from "@/components/Global/ChatbotWidget";
 import WorksAcross from "@/components/Home/worksAcross"
 import Capabilities from "@/components/Home/Capabilities";
 import Trust from "@/components/Home/Trust";
+import Deployment from "@/components/Home/Deployment";
 
 export default function Home() {
 
@@ -32,6 +33,7 @@ export default function Home() {
         {/* <DanaArta /> */}
         <Capabilities />
         <WorksAcross />
+        <Deployment />
         <Trust />
         <TabsFeatures />
         <Stats />
