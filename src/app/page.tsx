@@ -16,6 +16,7 @@ import WorksAcross from "@/components/Home/worksAcross"
 import Capabilities from "@/components/Home/Capabilities";
 import Trust from "@/components/Home/Trust";
 import Deployment from "@/components/Home/Deployment";
+import Traction from "@/components/Home/Traction";
 
 export default function Home() {
 
@@ -35,6 +36,7 @@ export default function Home() {
         <WorksAcross />
         <Deployment />
         <Trust />
+        <Traction />
         <TabsFeatures />
         <Stats />
         <MovingBoxes />
