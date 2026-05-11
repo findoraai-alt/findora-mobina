@@ -56,18 +56,16 @@ const WhatIsFindora = () => {
         <span className="text-4xl font-bold"> ra?</span>
       </div>
       <span className="text-xl lg:text-2xl font-semibold text-center">
-        <span className=" text-[#ff0101]"> {"Canada's"}</span> First AI Search
-        Engine
+        <span className=" text-[#ff0101]"> {"Canada's"}</span> First Trusted AI Infrastructure
       </span>
       <p className=" text-center lg:text-lg font-medium">
-        Misinformation is everywhere, but findora delivers facts. Our AI search
-        engine fact-checks sources, analyzes content, and provides reliable,
-        transparent answers.
+       Findora verifies AI outputs with hallucination detection, fact‑checking, and governance controls,
+        enabling reliable and secure AI for enterprise and government environments.
       </p>
       <Link href="https://search.findora.ai/" className="group">
         <button className=" bg-[#e0e0e0] dark:bg-gray-200 text-black rounded-full px-4 py-3">
           <div className=" flex items-center gap-1">
-            <span className="font-medium text-sm lg:text-base">Start now</span>
+            <span className="font-medium text-sm lg:text-base">See Live Verification</span>
             <PiArrowUpRightBold className=" lg:group-hover:rotate-45 transition-all duration-300 ease-in-out" />
           </div>
         </button>
