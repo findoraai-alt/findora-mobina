@@ -1,46 +1,68 @@
+"use client";
 
-export default function WorkeAcross() {
-  const items = [
+export default function worksAcross() {
+  const steps = [
+    { label: "User Query", desc: "User submits a prompt or request." },
+    { label: "LLM / AI Agent", desc: "Model or agent processes the query." },
     {
-      title: "LLMs",
-      desc: "Large language models for text reasoning and generation."
+      label: "Findora Verification Layer",
+      desc: "Findora verifies reasoning, sources, and execution.",
+      highlight: true,
     },
-    {
-      title: "VLMs",
-      desc: "Vision-language models that understand images and text together."
-    },
-    {
-      title: "Agentic AI",
-      desc: "Autonomous agents capable of planning and executing tasks."
-    }
+    { label: "Trusted Output", desc: "Reliable and verifiable result delivered." },
   ];
 
   return (
-    <section className="w-full py-24 bg-white text-gray-900">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+    <section className="w-full py-24 bg-[#f0f0fc] dark:bg-[#111828]">
+      <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6">
-          Multimodal. Model‑Agnostic.
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4">
+          How it works
         </h2>
 
-        <p className="text-gray-600 max-w-2xl mx-auto mb-16 leading-relaxed">
-          Findora works across <strong>LLMs</strong>, <strong>VLMs</strong>, and 
-          <strong> agentic AI systems</strong>, showing that the platform is 
-          truly multimodal and compatible with any model architecture.
+        <p className="text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-16">
+          Findora sits between AI systems and users, ensuring every output is
+          verifiable and trustworthy.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {items.map((item, i) => (
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+
+          {steps.map((step, index) => (
             <div
-              key={i}
-              className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition"
+              key={index}
+              className={`relative flex-1 rounded-xl border p-6 text-center transition
+                ${
+                  step.highlight
+                    ? "border-indigo-500 bg-indigo-50 dark:bg-indigo-500/10"
+                    : "border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0f172a]"
+                }
+              `}
             >
-              <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-500">{item.desc}</p>
+              <h3 className="text-lg font-medium mb-2">
+                {step.label}
+              </h3>
+
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                {step.desc}
+              </p>
+
+              {/* Arrow (desktop) */}
+              {index !== steps.length - 1 && (
+                <div className="hidden md:block absolute -right-5 top-1/2 -translate-y-1/2 text-gray-400">
+                  →
+                </div>
+              )}
+
+              {/* Arrow (mobile) */}
+              {index !== steps.length - 1 && (
+                <div className="md:hidden mt-4 text-gray-400">
+                  ↓
+                </div>
+              )}
             </div>
           ))}
-        </div>
 
+        </div>
       </div>
     </section>
   );
