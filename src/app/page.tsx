@@ -30,23 +30,23 @@ export default function Home() {
     <div>
       <PreLoader />
       <div className=" bg-[#f0f0fc] dark:bg-[#111828]">
-        <WhatIsFindora />
+      { /* <WhatIsFindora />*/}
         {/* <DanaArta /> */}
-        <Capabilities />
-        <WorksAcross />
-        <Deployment />
-        <Trust />
-        <Traction />
+        {/* <Capabilities /> */}
+        {/* <WorksAcross /> */}
+        {/* <Deployment />
+        <Trust /> */}
+        {/* <Traction />
         <TabsFeatures />
         <Stats />
         <MovingBoxes />
         <Cards />
-        <FirstAI />
+        <FirstAI /> */}
       </div>
-      <WhyFindora />
+      {/* <WhyFindora />
       <BrowserSearch />
       <UseOnPhone />
-      <ChatbotWidget/>
+      <ChatbotWidget/> */}
     </div>
   );
 }

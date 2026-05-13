@@ -104,6 +104,7 @@ export default function WorksAcross() {
 
   return (
     <section className="w-full py-20">
+        
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
           {steps.map((step, i) => (
