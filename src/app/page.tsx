@@ -36,7 +36,7 @@ export default function Home() {
       <WhyFindora />
       <BrowserSearch />
       <UseOnPhone />
-      <ChatbotWidget/>
+      {/* <ChatbotWidget/> */}
     </div>
   );
 }
