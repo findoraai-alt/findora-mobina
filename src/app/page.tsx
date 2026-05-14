@@ -17,6 +17,7 @@ import Capabilities from "@/components/Home/Capabilities";
 import Trust from "@/components/Home/Trust";
 import Deployment from "@/components/Home/Deployment";
 import Traction from "@/components/Home/Traction";
+import Introduction from "@/components/Home/Introduction";
 
 export default function Home() {
 
@@ -30,6 +31,7 @@ export default function Home() {
     <div>
       <PreLoader />
       <div className=" bg-[#f0f0fc] dark:bg-[#111828]">
+        <Introduction />
       { /* <WhatIsFindora />*/}
         {/* <DanaArta /> */}
         {/* <Capabilities /> */}
