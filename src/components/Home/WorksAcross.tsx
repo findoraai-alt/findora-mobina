@@ -1,132 +1,105 @@
 "use client";
 
-export default function WorksAcross() {
-  const steps = [
-    {
-      label: "User Query",
-      color: "#008f7a",
-      icon: (
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M4 5.5C4 4.67 4.67 4 5.5 4h13c.83 0 1.5.67 1.5 1.5v8c0 .83-.67 1.5-1.5 1.5H10l-4.5 4v-4H5.5C4.67 15 4 14.33 4 13.5v-8z" />
-          <path d="M8 8h8" />
-          <path d="M8 11h5" />
-        </svg>
-      ),
-    },
-    {
-      label: "LLM / AI Agent Processing",
-      color: "#c31069",
-      icon: (
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M9 3.5a3 3 0 0 0-3 3v1a2.5 2.5 0 0 0-2 2.5 2.5 2.5 0 0 0 2 2.5v1a3 3 0 0 0 3 3" />
-          <path d="M15 3.5a3 3 0 0 1 3 3v1a2.5 2.5 0 0 1 2 2.5 2.5 2.5 0 0 1-2 2.5v1a3 3 0 0 1-3 3" />
-          <path d="M9 7h6" />
-          <path d="M9 12h6" />
-          <path d="M12 7v10" />
-        </svg>
-      ),
-    },
-    {
-      label: "Findora Verification Layer",
-      color: "#0b87b6",
-      icon: (
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-3z" />
-          <path d="M9 12l2 2 4-4" />
-        </svg>
-      ),
-    },
-    {
-      label: "Trusted & Verifiable Output",
-      color: "#7332a1",
-      icon: (
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M8 3h6l5 5v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
-          <path d="M14 3v5h5" />
-          <path d="M9 14l2 2 4-4" />
-        </svg>
-      ),
-    },
-  ];
+import { motion } from "framer-motion";
 
-  const Arrow = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#9ca3af"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="rotate-90 md:rotate-0"
-    >
-      <path d="M5 12h14" />
-      <path d="M13 5l7 7-7 7" />
-    </svg>
-  );
+const steps = [
+  {
+    title: "AI Input",
+    desc: "The model produces an output that enters the trust pipeline.",
+  },
+  {
+    title: "Verification Layer",
+    desc: "Fact-checking and validation mechanisms activate.",
+  },
+  {
+    title: "Source Cross‑Check",
+    desc: "Sources are compared, ranked, and measured.",
+  },
+  {
+    title: "Trust Score",
+    desc: "A confidence and credibility score is calculated.",
+  },
+  {
+    title: "Trusted Output",
+    desc: "The final refined and verified answer is delivered.",
+  },
+];
 
+export default function WorksTimeline() {
   return (
-    <section className="w-full py-20">
-        
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
-          {steps.map((step, i) => (
-            <div
-              key={i}
-              className="flex flex-col md:flex-row items-center gap-3 md:gap-4"
-            >
-              <div
-                className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-white bg-white/30 text-sm font-medium backdrop-blur-sm w-full md:w-auto min-w-[260px]"
-                style={{ color: step.color }}
-              >
-                {step.icon}
-                <span className="whitespace-nowrap">{step.label}</span>
-              </div>
+    <section className="py-10 md:py-20 bg-white dark:bg-[#202938] transition-colors duration-300">
+      <div className="max-w-3xl mx-auto px-4 md:px-6">
 
-              {i !== steps.length - 1 && (
-                <div className="flex items-center justify-center">
-                  <Arrow />
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="mb-16 text-center"
+        >
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-gray-900 dark:text-white leading-[1.1]">
+            How Findora Works
+          </h2>
+          <p className="mt-4 text-gray-600 dark:text-white/50 text-sm md:text-base leading-relaxed">
+            A transparent pipeline that turns raw AI output into trusted information.
+          </p>
+        </motion.div>
+
+        {/* Timeline */}
+        <div className="relative pl-10">
+
+          {/* Vertical Line */}
+          <div className="absolute left-5 top-0 h-full w-[2px] bg-gray-200 dark:bg-white/10 rounded-full"></div>
+
+          <div className="flex flex-col gap-10">
+            {steps.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: i * 0.1,
+                }}
+                viewport={{ once: true }}
+                className="relative flex items-start gap-6"
+              >
+                {/* Step Circle */}
+                <div className="absolute -left-[2.5rem] flex items-center justify-center">
+                  <div
+                    className="
+                      w-6 h-6 rounded-full border-[3px]
+                      transition-all duration-300
+                      border-indigo-500
+                      bg-white dark:bg-[#202938]
+                    "
+                  ></div>
                 </div>
-              )}
-            </div>
-          ))}
+
+                {/* Content Card */}
+                <div
+                  className="
+                    p-5 rounded-xl border
+                    bg-white dark:bg-white/[0.03]
+                    border-gray-200 dark:border-white/10
+                    backdrop-blur-xl shadow-sm
+
+                    hover:bg-indigo-50
+                    dark:hover:bg-white/[0.06]
+                    transition-all duration-300 cursor-default
+                  "
+                >
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    {step.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-600 dark:text-white/50 leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

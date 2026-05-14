@@ -35,7 +35,7 @@ export default function Home() {
         <WhatIsFindora />
         {/* <DanaArta /> */}
         {/* <Capabilities /> */}
-        {/* <WorksAcross /> */}
+        <WorksAcross />
         {/* <Deployment />
         <Trust /> */}
         {/* <Traction />

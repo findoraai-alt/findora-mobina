@@ -42,7 +42,7 @@ export default function WhatisFindora() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="bg-white dark:bg-[#202938] pt-10 pb-28 transition-colors duration-500 overflow-hidden">
+    <section className="bg-white dark:bg-[#202938] pt-10 pb-19 transition-colors duration-500 overflow-hidden">
       <motion.div
         className="mx-auto max-w-6xl px-6"
         initial="hidden"
