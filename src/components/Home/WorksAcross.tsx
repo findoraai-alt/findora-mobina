@@ -78,7 +78,7 @@ export default function WorksTimeline() {
 
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-black dark:text-white">
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-black dark:text-white">
             How Findora Works?
           </h2>
 
@@ -135,8 +135,10 @@ export default function WorksTimeline() {
                     p-6
                     rounded-2xl
                     border-2 border-black/60
+                    dark: border-none
+                    dark: hover:border-white/[0.04]
                     bg-white
-                    dark:bg-white/[0.04]
+                    dark:bg-white/80
                     backdrop-blur-xl
                     transition-all
                     duration-300
@@ -150,7 +152,7 @@ export default function WorksTimeline() {
                       {step.title}
                     </h3>
 
-                    <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/60">
+                    <p className="mt-2 text-sm leading-relaxed text-black/90 dark:text-black/80 font-semibold">
                       {step.desc}
                     </p>
                   </div>
