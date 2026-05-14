@@ -86,7 +86,7 @@ export default function WhatisFindora() {
               mt-5
               text-base
               leading-relaxed
-              text-black/60
+              text-black/80
               dark:text-white/60
             "
             initial={{ opacity: 0, y: 14 }}
@@ -155,7 +155,7 @@ export default function WhatisFindora() {
                   p-8 md:p-9
 
                   border-2
-                  border-black/15
+                  border-black/60
                   dark:border-white/80
 
                   bg-transparent
@@ -168,7 +168,7 @@ export default function WhatisFindora() {
                   transition-all
                   duration-300
 
-                  hover:border-black/40
+                  hover:border-black/80
                   dark:hover:border-white
 
                   overflow-hidden
@@ -208,7 +208,7 @@ export default function WhatisFindora() {
                     relative z-10
                     mt-6
                     text-lg
-                    font-semibold
+                    font-bold
                   "
                   style={{ color: feature.color }}
                 >
@@ -223,8 +223,9 @@ export default function WhatisFindora() {
                     text-sm
                     leading-relaxed
 
-                    text-black/75
-                    dark:text-black/70
+                    text-black/90
+                    font-semibold
+                    dark:text-black/90
                   "
                 >
                   {feature.text}
