@@ -1,77 +1,112 @@
 "use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import { TypeAnimation } from "react-type-animation";
-import oLogo from "@/../public/images/o.png";
-import { PiArrowUpRightBold } from "react-icons/pi";
-import Link from "next/link";
 
-const WhatIsFindora = () => {
-  const [textColor, setTextColor] = useState("#008f7a");
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  ShieldCheck,
+  Brain,
+  SearchCheck,
+  Scale,
+} from "lucide-react";
+
+export default function WhatisFindora() {
+  const features = [
+    {
+      title: "AI Verification",
+      text: "Ensure every AI output is validated before reaching users.",
+      icon: ShieldCheck,
+      color: "#008f7a",
+    },
+    {
+      title: "Hallucination Detection",
+      text: "Detect unreliable or fabricated AI responses in real time.",
+      icon: Brain,
+      color: "#eaba33",
+    },
+    {
+      title: "Source Validation",
+      text: "Trace and confirm the underlying data behind AI answers.",
+      icon: SearchCheck,
+      color: "#0b87b6",
+    },
+    {
+      title: "Governance & Control",
+      text: "Monitor and enforce AI policies across systems.",
+      icon: Scale,
+      color: "#7332a1",
+    },
+  ];
+
+  const [hovered, setHovered] = useState<number | null>(null);
+
   return (
-    <div className=" px-4 md:px-8 flex flex-col justify-center items-center gap-8 pt-20 md:pt-24 max-w-4xl mx-auto">
-      <div
-        className="text-4xl lg:text-5xl font-medium pb-12 md:pb-20"
-        style={{ color: textColor }}
-      >
-        <TypeAnimation
-          sequence={[
-            "Accurate",
-            1000,
-            () => setTextColor("#008f7a"),
-            "Transparent",
-            1000,
-            () => setTextColor("#eaba33"),
-            "Intelligent",
-            1000,
-            () => setTextColor("#0b87b6"),
-            "Trustworthy",
-            1000,
-            () => setTextColor("#7332a1"),
-            "Reliable",
-            1000,
-            () => setTextColor("#c31069"),
-            "Scientific",
-            1000,
-            () => setTextColor("#c67f48"),
-            "Unbiased",
-            1000,
-            () => setTextColor("#3d6a7d"),
-          ]}
-          wrapper="span"
-          speed={40}
-          deletionSpeed={95}
-          repeat={Infinity}
-        />
-      </div>
-      <div className=" flex">
-        <span className="text-4xl font-bold">What is find</span>
-        <Image
-          src={oLogo}
-          alt="o"
-          width={19}
-          height={19}
-          className=" object-contain pt-[6px] lg:pt-[12px]"
-        />
-        <span className="text-4xl font-bold"> ra?</span>
-      </div>
-      <span className="text-xl lg:text-2xl font-semibold text-center">
-        <span className=" text-[#ff0101]"> {"Canada's"}</span> First Trusted AI Infrastructure
-      </span>
-      <p className=" text-center lg:text-lg font-medium">
-       Findora verifies AI outputs with hallucination detection, fact‑checking, and governance controls,
-        enabling reliable and secure AI for enterprise and government environments.
-      </p>
-      <Link href="https://search.findora.ai/" className="group">
-        <button className=" bg-[#e0e0e0] dark:bg-gray-200 text-black rounded-full px-4 py-3">
-          <div className=" flex items-center gap-1">
-            <span className="font-medium text-sm lg:text-base">See Live Verification</span>
-            <PiArrowUpRightBold className=" lg:group-hover:rotate-45 transition-all duration-300 ease-in-out" />
-          </div>
-        </button>
-      </Link>
-    </div>
-  );
-};
+    <section className="bg-white pt-36 pb-28">
+      <div className="mx-auto max-w-6xl px-6">
 
-export default WhatIsFindora;
+        {/* Title */}
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-semibold text-black">
+            What Findora Does?
+          </h2>
+
+          <p className="mt-4 text-black/60 leading-relaxed">
+            Verification, validation, and governance for enterprise AI systems,
+            designed for accuracy, transparency, and real trust.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          {features.map((feature, i) => {
+            const Icon = feature.icon;
+            const isHovered = hovered === i;
+
+            return (
+              <motion.div
+                key={i}
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+                animate={{
+                  scale: isHovered ? 1.08 : 1,
+                  y: isHovered ? -16 : 0,
+                  opacity: hovered === null || isHovered ? 1 : 0.55,
+                }}
+                transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                className="
+                  relative rounded-3xl
+                  border border-black/80
+                  bg-transparent
+                  p-7 backdrop-blur-0
+                  cursor-pointer
+                  transition-all
+                "
+              >
+                {/* Icon */}
+                <Icon
+                  size={32}
+                  strokeWidth={1.6}
+                  style={{ color: feature.color }}
+                />
+
+                {/* Title */}
+                <h3
+                  className="mt-5 text-lg font-semibold"
+                  style={{ color: feature.color }}
+                >
+                  {feature.title}
+                </h3>
+
+                {/* Text */}
+                <p className="mt-2 text-sm text-black/80 leading-relaxed">
+                  {feature.text}
+                </p>
+              </motion.div>
+            );
+          })}
+
+        </div>
+      </div>
+    </section>
+  );
+}
