@@ -175,7 +175,7 @@ export default function WorksTimeline() {
               <div className="relative rounded-[32px] overflow-hidden w-full h-[420px] md:h-[520px] shadow-2xl">
 
                 <Image
-                  src="/image.png"
+                  src="/Images/worksAcross.jpg"
                   alt="Findora"
                   fill
                   sizes="(max-width:1024px) 100vw, 50vw"
@@ -187,7 +187,7 @@ export default function WorksTimeline() {
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
 
                   <h3 className="text-white text-2xl md:text-2xl font-semibold tracking-tight">
-                    Experienced Varified AI
+                    Experience Varified AI
                   </h3>
 
                   {/* GLOSSY BUTTON */}
