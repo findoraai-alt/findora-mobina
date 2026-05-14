@@ -13,15 +13,15 @@ export default function Introduction() {
         transition={{ duration: 1 }}
         className="absolute inset-0 flex items-center justify-center"
       >
-        <div className="relative w-[1400px] max-w-none opacity-70">
+        <div className="relative w-full max-w-none opacity-70">
           <img
             src="/Images/Introduction.jpg"
             alt="AI Infrastructure"
-            className="w-full rounded-[40px] object-cover blur-[1px]"
+            className="w-full  object-cover blur-[1px]"
           />
 
           {/* soft white overlay */}
-          <div className="absolute inset-0 bg-white/55 rounded-[40px]" />
+          <div className="absolute inset-0 bg-white/55 " />
         </div>
       </motion.div>
 
