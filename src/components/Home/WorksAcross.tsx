@@ -1,106 +1,166 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const steps = [
+type Step = {
+  title: string;
+  desc: string;
+};
+
+const colors = [
+  "#C31069",
+  "#EABA33",
+  "#008F7A",
+  "#C44900",
+  "#7332A1",
+];
+
+const steps: Step[] = [
   {
     title: "AI Input",
-    desc: "The model produces an output that enters the trust pipeline.",
+    desc: "Raw model output enters the trust pipeline.",
   },
   {
     title: "Verification Layer",
-    desc: "Fact-checking and validation mechanisms activate.",
+    desc: "Outputs are validated against trust criteria.",
   },
   {
     title: "Source Cross‑Check",
-    desc: "Sources are compared, ranked, and measured.",
+    desc: "Multiple sources are compared and verified.",
   },
   {
     title: "Trust Score",
-    desc: "A confidence and credibility score is calculated.",
+    desc: "A transparent confidence score is calculated.",
   },
   {
     title: "Trusted Output",
-    desc: "The final refined and verified answer is delivered.",
+    desc: "Users receive verified and refined AI responses.",
   },
 ];
 
 export default function WorksTimeline() {
-  return (
-    <section className="py-10 md:py-20 bg-white dark:bg-[#202938] transition-colors duration-300">
-      <div className="max-w-3xl mx-auto px-4 md:px-6">
+  const refs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeIndex, setActiveIndex] = useState(-1);
 
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="mb-16 text-center"
-        >
-          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-gray-900 dark:text-white leading-[1.1]">
-            How Findora Works
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    refs.current.forEach((ref, index) => {
+      if (!ref) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveIndex(index);
+          } else if (entry.boundingClientRect.top > 0) {
+            setActiveIndex((prev) => Math.min(prev, index - 1));
+          }
+        },
+        {
+          threshold: 0.6,
+        }
+      );
+
+      observer.observe(ref);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
+  return (
+    <section className="py-24 md:py-32 bg-white dark:bg-[#202938] transition-colors">
+
+      <div className="max-w-2xl mx-auto px-6">
+
+        {/* Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-black dark:text-white">
+            How Findora Works?
           </h2>
-          <p className="mt-4 text-gray-600 dark:text-white/50 text-sm md:text-base leading-relaxed">
-            A transparent pipeline that turns raw AI output into trusted information.
+
+          <p className="mt-4 text-sm md:text-base text-gray-600 dark:text-white/50">
+            A transparent pipeline transforming AI into trusted intelligence.
           </p>
-        </motion.div>
+        </div>
 
         {/* Timeline */}
         <div className="relative pl-10">
 
-          {/* Vertical Line */}
-          <div className="absolute left-5 top-0 h-full w-[2px] bg-gray-200 dark:bg-white/10 rounded-full"></div>
+          {/* base line */}
+          <div className="absolute left-0 top-0 w-[2px] h-full bg-black/10 dark:bg-white/10 rounded-full overflow-hidden">
 
-          <div className="flex flex-col gap-10">
-            {steps.map((step, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: i * 0.1,
-                }}
-                viewport={{ once: true }}
-                className="relative flex items-start gap-6"
-              >
-                {/* Step Circle */}
-                <div className="absolute -left-[2.5rem] flex items-center justify-center">
+            {/* progress */}
+            <motion.div
+              className="absolute top-0 left-0 w-full bg-black dark:bg-white"
+              animate={{
+                height:
+                  activeIndex >= 0
+                    ? `${((activeIndex + 1) / steps.length) * 100}%`
+                    : "0%",
+              }}
+              transition={{
+                duration: 0.6,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            />
+          </div>
+
+          <div className="flex flex-col gap-14">
+
+            {steps.map((step, i) => {
+              const passed = i < activeIndex;
+
+              return (
+                <motion.div
+                  key={i}
+                  ref={(el) => {
+                    refs.current[i] = el;
+                  }}
+                  animate={{
+                    scaleX: passed ? 0.9 : 1,
+                    opacity: passed ? 0.6 : 1,
+                  }}
+                  transition={{
+                    duration: 0.45,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="origin-left"
+                >
                   <div
                     className="
-                      w-6 h-6 rounded-full border-[3px]
-                      transition-all duration-300
-                      border-indigo-500
-                      bg-white dark:bg-[#202938]
-                    "
-                  ></div>
-                </div>
-
-                {/* Content Card */}
-                <div
-                  className="
-                    p-5 rounded-xl border
-                    bg-white dark:bg-white/[0.03]
-                    border-black/80 dark:border-white/10
-                    backdrop-blur-xl shadow-sm
-
-                    hover:bg-indigo-50
-                    dark:hover:bg-white/[0.06]
-                    transition-all duration-300 cursor-default
+                    p-6
+                    rounded-2xl
+                    border-2 border-black/60
+                    bg-white
+                    dark:bg-white/[0.04]
+                    backdrop-blur-xl
+                    transition-all
+                    duration-300
+                    hover:border-black
                   "
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    {step.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-600 dark:text-white/50 leading-relaxed">
-                    {step.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                  >
+                    <h3
+                      className="text-lg md:text-xl font-bold"
+                      style={{ color: colors[i % colors.length] }}
+                    >
+                      {step.title}
+                    </h3>
+
+                    <p className="mt-2 text-sm leading-relaxed text-gray-700 dark:text-white/60">
+                      {step.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+
           </div>
         </div>
+
       </div>
     </section>
   );
