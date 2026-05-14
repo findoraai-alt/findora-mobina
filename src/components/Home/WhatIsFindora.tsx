@@ -42,7 +42,7 @@ export default function WhatisFindora() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="bg-white dark:bg-[#202938] pt-36 pb-28 transition-colors duration-500 overflow-hidden">
+    <section className="bg-white dark:bg-[#202938] pt-10 pb-28 transition-colors duration-500 overflow-hidden">
       <motion.div
         className="mx-auto max-w-6xl px-6"
         initial="hidden"
@@ -111,7 +111,7 @@ export default function WhatisFindora() {
             visible: {
               transition: {
                 delayChildren: title.length * 0.05 + 0.6,
-                staggerChildren: 0.15,
+                staggerChildren: 0.1,
               },
             },
           }}
@@ -154,12 +154,12 @@ export default function WhatisFindora() {
 
                   p-8 md:p-9
 
-                  border
+                  border-2
                   border-black/15
                   dark:border-white/80
 
                   bg-transparent
-                  dark:bg-white/80
+                  dark:bg-white/90
 
                   backdrop-blur-md
 
