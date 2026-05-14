@@ -42,18 +42,24 @@ export default function WhatisFindora() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="bg-white pt-36 pb-28">
+    <section className="bg-white dark:bg-[#202938] pt-36 pb-28 transition-colors duration-500 overflow-hidden">
       <motion.div
         className="mx-auto max-w-6xl px-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        {/* Title (Typing) */}
-        <div className="text-center max-w-2xl mx-auto">
+        {/* Heading */}
+        <div className="mx-auto max-w-2xl text-center">
           <motion.h2
-            className="text-4xl md:text-5xl font-semibold text-black"
+            className="
+              text-4xl md:text-5xl
+              font-semibold
+              tracking-tight
+              text-black dark:text-white
+            "
             variants={{
+              hidden: {},
               visible: {
                 transition: {
                   staggerChildren: 0.05,
@@ -74,11 +80,18 @@ export default function WhatisFindora() {
             ))}
           </motion.h2>
 
-          {/* Paragraph */}
+          {/* Description */}
           <motion.p
-            className="mt-4 text-black/60 leading-relaxed"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
+            className="
+              mt-5
+              text-base
+              leading-relaxed
+              text-black/60
+              dark:text-white/60
+            "
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{
               delay: title.length * 0.05 + 0.2,
               duration: 0.6,
@@ -92,10 +105,9 @@ export default function WhatisFindora() {
 
         {/* Cards */}
         <motion.div
-          className="mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-          initial="hidden"
-          animate="visible"
+          className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4"
           variants={{
+            hidden: {},
             visible: {
               transition: {
                 delayChildren: title.length * 0.05 + 0.6,
@@ -114,39 +126,107 @@ export default function WhatisFindora() {
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
                 variants={{
-                  hidden: { opacity: 0, y: 24 },
-                  visible: { opacity: 1, y: 0 },
+                  hidden: {
+                    opacity: 0,
+                    y: 24,
+                  },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                  },
                 }}
                 whileHover={{
-                  scale: 1.08,
-                  y: -16,
+                  scale: 1.06,
+                  y: -14,
                 }}
-                transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                }}
                 animate={{
-                  opacity: hovered === null || isHovered ? 1 : 0.55,
+                  opacity:
+                    hovered === null || isHovered ? 1 : 0.45,
                 }}
                 className="
-                  relative rounded-3xl
-                  border border-black/80
+                  relative
+                  rounded-3xl
+
+                  p-8 md:p-9
+
+                  border
+                  border-black/15
+                  dark:border-white/80
+
                   bg-transparent
-                  p-7
+                  dark:bg-white/80
+
+                  backdrop-blur-md
+
                   cursor-pointer
+
+                  transition-all
+                  duration-300
+
+                  hover:border-black/40
+                  dark:hover:border-white
+
+                  overflow-hidden
                 "
               >
-                <Icon
-                  size={32}
-                  strokeWidth={1.6}
-                  style={{ color: feature.color }}
+                {/* Subtle Hover Glow */}
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    rounded-3xl
+
+                    opacity-0
+                    hover:opacity-100
+
+                    transition-opacity
+                    duration-300
+
+                    pointer-events-none
+
+                    dark:bg-white/[0.03]
+                  "
                 />
 
+                {/* Icon */}
+                <div className="relative z-10">
+                  <Icon
+                    size={34}
+                    strokeWidth={1.7}
+                    style={{ color: feature.color }}
+                  />
+                </div>
+
+                {/* Title */}
                 <h3
-                  className="mt-5 text-lg font-semibold"
+                  className="
+                    relative z-10
+                    mt-6
+                    text-lg
+                    font-semibold
+                  "
                   style={{ color: feature.color }}
                 >
                   {feature.title}
                 </h3>
 
-                <p className="mt-2 text-sm text-black/80 leading-relaxed">
+                {/* Text */}
+                <p
+                  className="
+                    relative z-10
+                    mt-3
+                    text-sm
+                    leading-relaxed
+
+                    text-black/75
+                    dark:text-black/70
+                  "
+                >
                   {feature.text}
                 </p>
               </motion.div>
