@@ -17,11 +17,11 @@ export default function Introduction() {
           <img
             src="/Images/Introduction.jpg"
             alt="AI Infrastructure"
-            className="w-full  object-cover blur-[1px]"
+            className="w-full object-cover blur-[1px]"
           />
 
           {/* soft white overlay */}
-          <div className="absolute inset-0 bg-white/55 " />
+          <div className="absolute inset-0 bg-white/55" />
         </div>
       </motion.div>
 
@@ -48,6 +48,36 @@ export default function Introduction() {
           Verify AI outputs before they reach users with hallucination
           detection, fact-checking, governance, and private deployment.
         </motion.p>
+
+        {/* BUTTON */}
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="mt-10"
+        >
+          <button
+            className="
+              rounded-full
+              bg-black
+              px-8
+              py-4
+              text-sm
+              font-regular
+              tracking-wide
+              text-white
+              border
+              border-black
+              transition-all
+              duration-300
+              hover:bg-transparent
+              hover:text-black
+              hover:border-black/80
+            "
+          >
+            LIVE PUBLIC AI SEARCH DEMONSTRATION
+          </button>
+        </motion.div>
 
       </div>
     </section>
