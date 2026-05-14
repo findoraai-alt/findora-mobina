@@ -82,7 +82,7 @@ export default function WorksTimeline() {
                   className="
                     p-5 rounded-xl border
                     bg-white dark:bg-white/[0.03]
-                    border-gray-200 dark:border-white/10
+                    border-black/80 dark:border-white/10
                     backdrop-blur-xl shadow-sm
 
                     hover:bg-indigo-50
