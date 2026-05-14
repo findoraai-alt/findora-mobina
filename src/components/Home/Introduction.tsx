@@ -48,7 +48,7 @@ export default function Introduction() {
           className="
             text-3xl
             font-semibold
-            leading-tight
+            leading-relaxed
             tracking-tight
             text-black
             sm:text-4xl
