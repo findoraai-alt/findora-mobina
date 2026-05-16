@@ -48,7 +48,7 @@ export default function FindoraDiagram() {
               text={labels[0].text}
               color={labels[0].color}
               className="
-                left-2 top-0
+                left-2 top-[-30]
                 sm:-left-44
               "
             />
@@ -57,7 +57,7 @@ export default function FindoraDiagram() {
               text={labels[1].text}
               color={labels[1].color}
               className="
-                right-2 top-14
+                right-[-30] top-1
                 sm:-right-52
               "
             />
@@ -66,7 +66,7 @@ export default function FindoraDiagram() {
               text={labels[2].text}
               color={labels[2].color}
               className="
-                left-3 bottom-7
+                left-[-30] bottom-2
                 sm:-left-56
                 sm:bottom-10
               "
@@ -77,8 +77,9 @@ export default function FindoraDiagram() {
               text={labels[3].text}
               color={labels[3].color}
               className="
-                right-2 bottom-0
+                right-[-30] bottom-[-60]
                 sm:-right-48
+
 
                 translate-y-2
                 sm:translate-y-0
@@ -201,14 +202,14 @@ function FloatingLabel({
           sm:px-6 sm:py-3
         "
         style={{
-          backgroundColor: color, // ✅ always colored background
+          backgroundColor: color, 
           boxShadow: `0 12px 30px ${color}35`,
         }}
       >
         <p
           className="
-            whitespace-nowrap font-extrabold tracking-tight
-            text-sm text-white
+            whitespace-nowrap font-bold tracking-tight
+            text-xl text-white
             sm:text-base md:text-lg
           "
         >

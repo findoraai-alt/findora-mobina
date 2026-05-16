@@ -20,6 +20,7 @@ import Traction from "@/components/Home/Traction";
 import Introduction from "@/components/Home/Introduction";
 import Diagram from "@/components/Home/Diagram"
 import Problem from "@/components/Home/Problem";
+import Solution from "@/components/Home/Solution";
 export default function Home() {
 
   useEffect(() => {
@@ -36,6 +37,7 @@ export default function Home() {
         <Introduction />
         <Diagram />
         <Problem />
+        <Solution />
         {/* <WhatIsFindora /> */}
         {/* <DanaArta /> */}
         {/* <Capabilities /> */}
