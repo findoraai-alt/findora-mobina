@@ -31,6 +31,7 @@ export default function Home() {
     <div>
       <PreLoader />
       <div className=" bg-[#f0f0fc] dark:bg-[#111828]">
+       
         <Introduction />
         <WhatIsFindora />
         {/* <DanaArta /> */}

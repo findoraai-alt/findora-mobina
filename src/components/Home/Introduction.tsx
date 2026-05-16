@@ -1,172 +1,125 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
-export default function Introduction() {
-  const [collapsed, setCollapsed] = useState(false);
-
-  useEffect(() => {
-    // فقط موبایل
-    if (window.innerWidth < 768) {
-      const timer = setTimeout(() => {
-        setCollapsed(true);
-      }, 5500); 
-
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
+export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#FAFBFC] py-16 md:py-28">
+    <section className="relative overflow-hidden bg-[#FAFBFC] py-24 pb-40 md:py-36 md:pb-36">
 
-      {/* BACKGROUND */}
-      <motion.div
-        initial={{ opacity: 0, scale: 1.02 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-        className="absolute inset-0"
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#FAFBFC] to-[#F3F4F6]" />
+
+      {/* Rectangles */}
+      <div
+        className="
+        pointer-events-none
+        absolute
+        right-0
+        bottom-10
+        md:top-1/2
+        md:bottom-auto
+        z-0
+        flex
+        md:-translate-y-1/2
+        flex-col
+        items-end
+        gap-4
+        md:gap-6
+      "
       >
-        <img
-          src="/Images/Introduction.jpg"
-          alt="AI Infrastructure"
-          className="h-full w-full object-cover"
+
+        {/* Yellow */}
+        <motion.div
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{
+            duration: 4,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 0.2
+          }}
+          className="
+          origin-right
+          h-8 w-20
+          md:h-12 md:w-32
+          rounded-l-full rounded-r-none
+          bg-[#DDBB00]
+        "
         />
 
-        <div className="absolute inset-0 bg-white/55" />
-      </motion.div>
+        {/* Blue */}
+        <motion.div
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{
+            duration: 4.2,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 0.8
+          }}
+          className="
+          origin-right
+          h-8 w-44
+          md:h-12 md:w-72
+          rounded-l-full rounded-r-none
+          bg-[#0078D4]
+        "
+        />
 
-      {/* CONTENT */}
+        {/* Pink */}
+        <motion.div
+          initial={{ scaleX: 0, opacity: 0 }}
+          animate={{ scaleX: 1, opacity: 1 }}
+          transition={{
+            duration: 4.4,
+            ease: [0.22, 1, 0.36, 1],
+            delay: 1.4
+          }}
+          className="
+          origin-right
+          h-8 w-36
+          md:h-12 md:w-60
+          rounded-l-full rounded-r-none
+          bg-[#D6006C]
+        "
+        />
+
+      </div>
+
+      {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
 
-        {/* TITLE */}
         <motion.h1
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="
-            text-3xl
-            font-semibold
-            leading-relaxed
-            tracking-tight
-            text-black
-            sm:text-4xl
-            md:text-6xl
-          "
+          transition={{ duration: 1 }}
+          className="text-4xl font-semibold tracking-tight text-black sm:text-5xl md:text-6xl"
         >
           Trusted AI Infrastructure
-          <br />
-          for Enterprise & Government
         </motion.h1>
 
-        {/* DESCRIPTION */}
         <motion.p
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="
-            mx-auto
-            mt-5
-            max-w-xl
-            text-sm
-            leading-relaxed
-            text-black/70
-            sm:text-base
-            md:text-lg
-          "
+          transition={{ delay: 0.4, duration: 1 }}
+          className="mx-auto mt-6 max-w-2xl text-base text-black/70 md:text-lg font-semibold"
         >
-          Verify AI outputs before they reach users with hallucination
-          detection, fact-checking, governance, and private deployment.
+          Verification and governance layer for enterprise AI systems.
         </motion.p>
 
-        {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mt-8 flex justify-center"
+          transition={{ delay: 0.8, duration: 1 }}
+          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <motion.button
-            onHoverStart={() => setCollapsed(false)}
-            onHoverEnd={() => {
-              if (window.innerWidth < 768) {
-                setCollapsed(true);
-              }
-            }}
-            animate={{
-              width: collapsed ? 54 : 290,
-            }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="
-              relative
-              flex
-              h-[54px]
-              items-center
-              justify-center
-              overflow-hidden
-              rounded-full
-              border
-              border-black
-              bg-black
-              text-white
-              transition-colors
-              duration-300
-              hover:bg-transparent
-              hover:text-black
-            "
-          >
+          <button className="flex items-center gap-2 rounded-full bg-black px-7 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800">
+            Book Demo
+          </button>
 
-            {/* TEXT */}
-            <motion.div
-              animate={{
-                opacity: collapsed ? 0 : 1,
-                x: collapsed ? -8 : 0,
-              }}
-              transition={{
-                duration: 0.35,
-              }}
-              className="
-                absolute
-                flex
-                items-center
-                gap-2
-                text-[11px]
-                sm:text-xs
-                font-medium
-                tracking-wide
-                whitespace-nowrap
-              "
-            >
-              <span>LIVE PUBLIC AI SEARCH DEMONSTRATION</span>
-
-              <ArrowUpRight
-                size={18}
-                strokeWidth={2.2}
-              />
-            </motion.div>
-
-            {/* COLLAPSED ICON */}
-            <motion.div
-              animate={{
-                opacity: collapsed ? 1 : 0,
-                scale: collapsed ? 1 : 0.7,
-              }}
-              transition={{
-                duration: 0.35,
-              }}
-              className="flex items-center justify-center"
-            >
-              <ArrowUpRight
-                size={20}
-                strokeWidth={2.4}
-              />
-            </motion.div>
-
-          </motion.button>
+          <button className="flex items-center gap-2 rounded-full border border-black px-7 py-3 text-sm font-bold text-black transition hover:bg-black hover:text-white">
+            Try Findora Search
+            <ArrowUpRight size={16} />
+          </button>
         </motion.div>
 
       </div>
