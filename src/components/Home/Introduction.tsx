@@ -5,10 +5,10 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#FAFBFC] py-24 pb-40 md:py-36 md:pb-36">
+    <section className="relative overflow-hidden  py-20 pb-40 md:py-30 md:pb-36">
 
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#FAFBFC] to-[#F3F4F6]" />
+      <div className="absolute inset-0  from-white via-[#FAFBFC] to-[#F3F4F6]" />
 
       {/* Rectangles */}
       <div
@@ -92,7 +92,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-4xl font-semibold tracking-tight text-black sm:text-5xl md:text-6xl"
+          className="text-4xl font-semibold tracking-tight text-black sm:text-5xl md:text-6xl dark:text-white"
         >
           Trusted AI Infrastructure
         </motion.h1>
@@ -101,7 +101,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1 }}
-          className="mx-auto mt-6 max-w-2xl text-base text-black/70 md:text-lg font-semibold"
+          className="mx-auto mt-6 max-w-2xl text-base text-black/70 md:text-lg font-semibold dark:text-white"
         >
           Verification and governance layer for enterprise AI systems.
         </motion.p>
@@ -116,7 +116,7 @@ export default function Hero() {
             Book Demo
           </button>
 
-          <button className="flex items-center gap-2 rounded-full border border-black px-7 py-3 text-sm font-bold text-black transition hover:bg-black hover:text-white">
+          <button className="flex items-center gap-2 rounded-full border border-black px-7 py-3 text-sm font-bold text-black transition hover:bg-black hover:text-white dark:text-white dark:border-white">
             Try Findora Search
             <ArrowUpRight size={16} />
           </button>

@@ -18,7 +18,7 @@ import Trust from "@/components/Home/Trust";
 import Deployment from "@/components/Home/Deployment";
 import Traction from "@/components/Home/Traction";
 import Introduction from "@/components/Home/Introduction";
-
+import Diagram from "@/components/Home/Diagram"
 export default function Home() {
 
   useEffect(() => {
@@ -33,10 +33,11 @@ export default function Home() {
       <div className=" bg-[#f0f0fc] dark:bg-[#111828]">
        
         <Introduction />
-        <WhatIsFindora />
+        <Diagram />
+        {/* <WhatIsFindora /> */}
         {/* <DanaArta /> */}
         {/* <Capabilities /> */}
-        <WorksAcross />
+        {/* <WorksAcross /> */}
         {/* <Deployment />
         <Trust /> */}
         {/* <Traction />
