@@ -23,7 +23,7 @@ const data = {
 
 const Differentiation = () => {
   return (
-    <section className="w-full bg-white text-gray-900 py-28 px-4 md:px-20">
+    <section className="w-full bg-white text-gray-900 py-10 px-4 md:px-20">
       {/* HEADER */}
       <motion.h2
         initial={{ opacity: 0, y: 10 }}
@@ -45,7 +45,7 @@ const Differentiation = () => {
           {data.traditional.map((item, idx) => (
             <div key={idx} className="flex gap-3 items-start">
               <X className="text-[#c31069] mt-1" size={18} />
-              <p className="text-lg text-gray-600 font-medium">
+              <p className="text-lg text-gray-600 font-semibold">
                 {item}
               </p>
             </div>
@@ -92,7 +92,7 @@ const Differentiation = () => {
               {/* Traditional */}
               <div className="p-4 flex gap-2 items-start border-r border-gray-100">
                 <X className="text-[#c31069] mt-1" size={14} />
-                <span className="text-sm text-gray-500">
+                <span className="text-m text-gray-500">
                   {item}
                 </span>
               </div>
@@ -100,7 +100,7 @@ const Differentiation = () => {
               {/* Findora */}
               <div className="p-4 flex gap-2 items-start">
                 <Check className="text-[#008f7a] mt-1" size={14} />
-                <span className="text-sm font-semibold text-gray-900">
+                <span className="text-m font-semibold text-gray-900">
                   {data.findora[idx]}
                 </span>
               </div>
@@ -114,10 +114,10 @@ const Differentiation = () => {
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mt-20 text-center"
+        className="mt-10 text-center"
       >
         <p className="text-xl md:text-2xl font-semibold max-w-2xl mx-auto">
-          <span className="text-[#0b87b6]">
+          <span className="text-black/80">
             {data.statement}
           </span>
         </p>
