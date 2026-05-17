@@ -144,7 +144,7 @@ function StepCard({
       style={{ borderColor }}
       className="relative z-10 w-full max-w-sm rounded-2xl border-2 bg-white px-6 py-6 shadow-sm transition-colors duration-300"
     >
-      <p className="text-s font-bold uppercase tracking-[0.2em] text-black/60">
+      <p className="text-s font-bold uppercase text-black/60">
         {label}
       </p>
 

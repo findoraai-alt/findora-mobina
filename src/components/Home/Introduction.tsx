@@ -31,7 +31,7 @@ export default function Hero() {
   const pinkX = useTransform(scrollYProgress, [0, 1], [0, -580]);
 
   const yellowY = useTransform(scrollYProgress, [0, 1], [0, 30]);
-  const blueY = useTransform(scrollYProgress, [0, 1], [0, -15]);
+  const blueY = useTransform(scrollYProgress, [0, 1], [0, 35]);
   const pinkY = useTransform(scrollYProgress, [0, 1], [0, 50]);
 
   const borderRadius = useTransform(
