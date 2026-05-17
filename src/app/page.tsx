@@ -38,6 +38,7 @@ export default function Home() {
         <Diagram />
         <Problem />
         <Solution />
+        <Deployment />
         {/* <WhatIsFindora /> */}
         {/* <DanaArta /> */}
         {/* <Capabilities /> */}
