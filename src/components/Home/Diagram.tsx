@@ -1,221 +1,194 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  SearchCheck,
+  Scale,
+  ShieldCheck,
+  AlertTriangle,
+} from "lucide-react";
 
-const labels = [
+const checks = [
   {
-    text: "Verified",
-    color: "#008f7a",
-  },
-  {
-    text: "Reliability Score",
-    color: "#eaba33",
-  },
-  {
-    text: "Policy Enforced",
+    title: "Fact Verification",
+    icon: SearchCheck,
     color: "#0b87b6",
   },
   {
-    text: "Low Hallucination Risk",
+    title: "Reliability Analysis",
+    icon: Scale,
+    color: "#eaba33",
+  },
+  {
+    title: "Policy Enforcement",
+    icon: ShieldCheck,
     color: "#7332a1",
+  },
+  {
+    title: "Hallucination Detection",
+    icon: AlertTriangle,
+    color: "#008f7a",
   },
 ];
 
 export default function FindoraDiagram() {
   return (
-    <section className="relative overflow-hidden bg-white py-24 dark:bg-black sm:py-32">
-      {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.04)_0%,rgba(255,255,255,1)_70%)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06)_0%,rgba(0,0,0,1)_70%)]" />
+    <section className="bg-white py-20">
+      <div className="mx-auto max-w-7xl px-6">
 
-      {/* Ambient Blur */}
-      <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/5 blur-3xl dark:bg-white/5" />
+        {/* TITLE */}
+        <h2 className="text-center text-4xl font-bold tracking-tight text-black mb-14">
+          How Findora Verifies AI Answers
+        </h2>
 
-      <div className="relative mx-auto flex max-w-6xl items-center justify-center px-4 sm:px-6">
-        <div className="relative flex flex-col items-center">
-          <PipelineNode title="User Query" />
+        {/* PIPELINE */}
+        <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-stretch lg:justify-between">
 
-          <Beam />
+          {/* USER QUESTION */}
+          <StepCard
+            label="User Query"
+            content="Where is Canada's capital city?"
+          />
 
-          <PipelineNode title="AI Model" />
+          <Arrow />
 
-          <Beam />
+          {/* AI MODEL RESPONSE */}
+          <StepCard
+            label="AI Raw Response"
+            warning
+            content={`"The capital of Canada is Toronto."`}
+          />
 
-          {/* Verification Layer */}
-          <div className="relative flex flex-col items-center py-16">
-            {/* Floating Labels */}
+          <Arrow />
 
-            <FloatingLabel
-              text={labels[0].text}
-              color={labels[0].color}
-              className="
-                left-2 top-[-30]
-                sm:-left-44
-              "
-            />
+          {/* FINDORA ENGINE */}
+          <div className="flex flex-col items-center rounded-3xl border border-[#008f7a]/30 bg-[#008f7a]/5 px-6 py-6 shadow-sm w-full max-w-sm">
 
-            <FloatingLabel
-              text={labels[1].text}
-              color={labels[1].color}
-              className="
-                right-[-30] top-1
-                sm:-right-52
-              "
-            />
+            <p className="text-xs font-bold tracking-[0.25em] text-[#008f7a] uppercase">
+              Findora Engine
+            </p>
 
-            <FloatingLabel
-              text={labels[2].text}
-              color={labels[2].color}
-              className="
-                left-[-30] bottom-2
-                sm:-left-56
-                sm:bottom-10
-              "
-            />
+            <h3 className="text-xl font-bold text-black mt-2">
+              Verification Layer
+            </h3>
 
-            {/* 👇 فقط این یکی پایین‌تر در موبایل */}
-            <FloatingLabel
-              text={labels[3].text}
-              color={labels[3].color}
-              className="
-                right-[-30] bottom-[-60]
-                sm:-right-48
+            <div className="grid grid-cols-2 gap-3 mt-5 w-full">
+              {checks.map((item) => {
+                const Icon = item.icon;
 
+                return (
+                  <motion.div
+                    key={item.title}
+                    whileHover={{ scale: 1.03 }}
+                    className="flex items-center gap-2 rounded-xl border border-black/10 bg-white px-3 py-2"
+                  >
+                    <Icon
+                      size={18}
+                      strokeWidth={2.5}
+                      style={{ color: item.color }}
+                    />
 
-                translate-y-2
-                sm:translate-y-0
-              "
-            />
+                    <span className="text-sm font-semibold text-black">
+                      {item.title}
+                    </span>
+                  </motion.div>
+                );
+              })}
+            </div>
 
-            {/* Orb */}
             <motion.div
-              animate={{
-                y: [-8, 8],
-                boxShadow: [
-                  "0 0 20px rgba(0,0,0,0.08)",
-                  "0 0 40px rgba(0,0,0,0.14)",
-                  "0 0 20px rgba(0,0,0,0.08)",
-                ],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                repeatType: "mirror",
-                ease: "easeInOut",
-              }}
-              className="relative flex h-32 w-32 items-center justify-center rounded-full sm:h-40 sm:w-40"
+              animate={{ opacity: [0.4, 1, 0.4] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="mt-4 text-xs font-semibold text-black/40"
             >
-              <div className="absolute inset-0 rounded-full bg-black/10 blur-3xl dark:bg-white/10" />
-
-              <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-black/10 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.12)] dark:border-white/10 dark:bg-black sm:h-32 sm:w-32">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{
-                    duration: 18,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                  className="absolute inset-3 rounded-full border border-black/20 dark:border-white/20"
-                />
-
-                <div className="absolute inset-6 rounded-full border border-black/10 bg-gradient-to-br from-white to-black/5 dark:from-neutral-900 dark:to-white/5" />
-
-                <div className="relative z-10 h-8 w-8 rounded-full bg-black shadow-[0_0_25px_rgba(0,0,0,0.25)] dark:bg-white sm:h-10 sm:w-10" />
-              </div>
+              Validating response...
             </motion.div>
-
-            <motion.h3
-              animate={{ opacity: [0.7, 1, 0.7] }}
-              transition={{ duration: 5, repeat: Infinity }}
-              className="
-                mt-8 text-center text-2xl font-bold tracking-tight
-                bg-gradient-to-r from-black via-neutral-700 to-black
-                dark:from-white dark:via-neutral-300 dark:to-white
-                bg-clip-text text-transparent
-                sm:text-3xl
-              "
-            >
-              Findora Verification Layer
-            </motion.h3>
           </div>
 
-          <Beam />
+          <Arrow />
 
-          <PipelineNode title="Trusted Output" />
+          {/* TRUSTED OUTPUT */}
+          <StepCard
+            label="Trusted Output"
+            success
+            content={`"The capital of Canada is Ottawa."`}
+          />
         </div>
+
       </div>
     </section>
   );
 }
 
-function PipelineNode({ title }: { title: string }) {
-  return (
-    <motion.div whileHover={{ scale: 1.03 }} className="flex justify-center">
-      <div className="rounded-2xl border border-black/5 bg-white/80 px-5 py-4 shadow-md backdrop-blur-xl dark:border-white/10 dark:bg-white/5 sm:px-8">
-        <p className="text-base font-semibold text-black/80 dark:text-white/90 sm:text-lg">
-          {title}
-        </p>
-      </div>
-    </motion.div>
-  );
-}
-
-function Beam() {
-  return (
-    <div className="relative flex h-20 w-[2px] items-center justify-center overflow-hidden sm:h-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-transparent dark:via-white/60" />
-
-      <motion.div
-        animate={{ y: ["-120%", "120%"] }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute h-12 w-3 rounded-full bg-black blur-xl dark:bg-white"
-      />
-    </div>
-  );
-}
-
-function FloatingLabel({
-  text,
-  color,
-  className,
+function StepCard({
+  label,
+  content,
+  warning,
+  success,
 }: {
-  text: string;
-  color: string;
-  className?: string;
+  label: string;
+  content: string;
+  warning?: boolean;
+  success?: boolean;
 }) {
   return (
     <motion.div
-      animate={{ y: [-5, 5] }}
-      transition={{
-        duration: 4,
-        repeat: Infinity,
-        repeatType: "mirror",
-      }}
-      className={`absolute z-20 ${className}`}
+      whileHover={{ scale: 1.02 }}
+      className={`w-full max-w-sm rounded-2xl border px-5 py-5 shadow-sm
+      ${warning ? "border-red-200 bg-red-50" : ""}
+      ${success ? "border-[#008f7a]/30 bg-[#008f7a]/5" : ""}
+      ${!warning && !success ? "border-black/10 bg-white" : ""}
+      `}
     >
-      <div
-        className="
-          rounded-full px-4 py-2 shadow-xl
-          sm:px-6 sm:py-3
-        "
-        style={{
-          backgroundColor: color, 
-          boxShadow: `0 12px 30px ${color}35`,
-        }}
+      <p
+        className={`text-xs font-bold uppercase tracking-[0.2em]
+        ${warning ? "text-red-500" : ""}
+        ${success ? "text-[#008f7a]" : ""}
+        ${!warning && !success ? "text-black/40" : ""}
+        `}
       >
-        <p
-          className="
-            whitespace-nowrap font-bold tracking-tight
-            text-xl text-white
-            sm:text-base md:text-lg
-          "
-        >
-          {text}
+        {label}
+      </p>
+
+      <p className="mt-2 text-lg font-semibold leading-relaxed text-black">
+        {content}
+      </p>
+
+      {warning && (
+        <p className="mt-3 text-xs font-semibold text-red-500">
+          Potential factual error
         </p>
-      </div>
+      )}
+
+      {success && (
+        <p className="mt-3 text-xs font-semibold text-black/50">
+          Verified • Reliability Score: 98%
+        </p>
+      )}
     </motion.div>
+  );
+}
+
+function Arrow() {
+  return (
+    <div className="flex items-center justify-center">
+      <motion.div
+        animate={{ x: [0, 6, 0] }}
+        transition={{ duration: 1.4, repeat: Infinity }}
+        className="text-black/40"
+      >
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+        >
+          <path d="M5 12h14" />
+          <path d="M13 5l7 7-7 7" />
+        </svg>
+      </motion.div>
+    </div>
   );
 }

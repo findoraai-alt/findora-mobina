@@ -38,7 +38,7 @@ const Differentiation = () => {
       <div className="hidden md:grid grid-cols-2 gap-28">
         {/* Traditional */}
         <div className="space-y-6">
-          <h3 className="text-sm uppercase tracking-widest text-[#c31069]">
+          <h3 className="text-xl uppercase tracking-widest text-[#c31069] font-bold">
             Traditional System
           </h3>
 
@@ -54,7 +54,7 @@ const Differentiation = () => {
 
         {/* Findora */}
         <div className="space-y-6">
-          <h3 className="text-sm uppercase tracking-widest text-[#008f7a]">
+          <h3 className="text-2xl uppercase tracking-widest text-[#008f7a] font-bold">
             Findora
           </h3>
 
@@ -74,7 +74,7 @@ const Differentiation = () => {
         <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
 
           {/* HEADER */}
-          <div className="grid grid-cols-2 bg-gray-50 text-xs uppercase tracking-wider">
+          <div className="grid grid-cols-2 bg-gray-50 text-l uppercase tracking-wider font-bold">
             <div className="p-3 border-r border-gray-200 text-[#c31069]">
               Traditional
             </div>
