@@ -1,7 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
 
-const markerWidths = [50, 50, 50, 50, 50, 50];
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 const deployments = [
   {
@@ -42,116 +42,97 @@ const deployments = [
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.12 },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
-  },
-};
-
 export default function DeploymentSection() {
+  const [active, setActive] = useState<number | null>(null);
+
   return (
-    <section className="relative overflow-hidden bg-white py-12 lg:py-14">
-      {/* subtle background accents */}
+    <section className="relative overflow-hidden bg-white py-10 lg:py-28">
+      {/* BACKGROUND */}
       <div className="pointer-events-none absolute inset-0">
-        <div
-          className="absolute left-[12%] top-[14%] h-44 w-44 rounded-full blur-3xl opacity-10"
-          style={{ backgroundColor: "#008f7a" }}
-        />
-        <div
-          className="absolute right-[10%] top-[8%] h-52 w-52 rounded-full blur-3xl opacity-10"
-          style={{ backgroundColor: "#7332a1" }}
-        />
-        <div
-          className="absolute left-[45%] bottom-[2%] h-60 w-60 rounded-full blur-3xl opacity-10"
-          style={{ backgroundColor: "#0b87b6" }}
-        />
+        <div className="absolute left-[10%] top-[15%] h-56 w-56 rounded-full blur-3xl opacity-10 bg-[#008f7a]" />
+        <div className="absolute right-[12%] top-[10%] h-64 w-64 rounded-full blur-3xl opacity-10 bg-[#7332a1]" />
+        <div className="absolute left-[45%] bottom-[0%] h-72 w-72 rounded-full blur-3xl opacity-10 bg-[#0b87b6]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 26 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-4xl"
-        >
-         
-
-          <h2 className="max-w-5xl text-3xl font-semibold tracking-[-0.04em] text-neutral-950 sm:text-4xl lg:text-5xl">
-            Built for&nbsp;
-            <span
-              className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage:
-                  "linear-gradient(90deg, #008f7a 0%, #0b87b6 25%, #7332a1 50%, #c31069 75%, #c67f48 100%)",
-              }}
-            >
+        {/* HEADER */}
+        <div className="max-w-4xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-950">
+            Built for{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#008f7a] via-[#0b87b6] to-[#7332a1]">
               Enterprise
             </span>
             , Government, and Edge AI
           </h2>
 
-          <p className="mt-4 max-w-2xl text-[1.18rem] sm:text-[1.26rem] leading-8 font-semibold text-black">
+          <p className="mt-5 max-w-2xl text-lg sm:text-xl text-black/70 font-medium">
             Deploy across cloud, local, on-device, or air-gapped environments
             with no retraining required.
           </p>
-        </motion.div>
+        </div>
 
-        {/* Cards */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {deployments.map((item, i) => (
-            <motion.div
-              key={item.title}
-              variants={itemVariants}
-              className="group relative overflow-hidden rounded-xl border border-neutral-200 bg-white px-6 py-5 min-h-[160px] transition-all duration-500 hover:-translate-y-[2px] hover:border-neutral-300 hover:shadow-[0_12px_40px_-16px_rgba(0,0,0,0.12)]"
-            >
-              {/* top marker line */}
-              <div className="absolute left-0 top-0 h-[2px] w-full bg-neutral-100 flex items-center">
+        {/* CARDS */}
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {deployments.map((item, i) => {
+            const isActive = active === i;
+
+            return (
+              <motion.div
+                key={item.title}
+                layout
+                onClick={() => setActive(isActive ? null : i)}
+                onMouseEnter={() => setActive(i)}
+                onMouseLeave={() => setActive(null)}
+                className={`group relative cursor-pointer overflow-hidden rounded-2xl border border-black/10 bg-white/70 backdrop-blur-xl p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${
+                  isActive ? "min-h-[190px]" : "min-h-[100px]"
+                }`}
+              >
+                {/* TOP BAR */}
+                <div className="absolute left-0 top-0 h-[2px] w-full bg-black/5">
+                  <div
+                    className="h-full transition-all duration-500"
+                    style={{
+                      width: isActive ? "100%" : "45%",
+                      backgroundColor: item.color,
+                    }}
+                  />
+                </div>
+
+                {/* GLOW */}
                 <div
-                  className="h-full rounded-full transition-all duration-500 group-hover:w-full opacity-70"
+                  className={`absolute inset-0 transition-opacity duration-500 ${
+                    isActive ? "opacity-100" : "opacity-0"
+                  }`}
                   style={{
-                    width: `${markerWidths[i]}px`,
-                    backgroundColor: item.color,
+                    background: `radial-gradient(circle at top left, ${item.color}18, transparent 60%)`,
                   }}
                 />
-              </div>
 
-              {/* Card content */}
-              <div className="relative z-10 pt-2">
-                {/* Title */}
-                <h3 className="max-w-[18ch] text-xl font-semibold tracking-[-0.02em] text-neutral-900 sm:text-2xl">
-                  {item.title}
-                </h3>
+                {/* CONTENT */}
+                <div className="relative z-10">
+                  <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-black">
+                    {item.title}
+                  </h3>
 
-                {/* Description */}
-                <div className="grid grid-rows-[0fr] transition-all duration-500 ease-out group-hover:grid-rows-[1fr]">
-                  <div className="overflow-hidden">
-                    <p className="pt-3 text-[14px] leading-6 text-black font-medium opacity-0 translate-y-1 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:translate-y-0">
+                  {/* DESCRIPTION (reveal on active) */}
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      opacity: isActive ? 1 : 0,
+                      height: isActive ? "auto" : 0,
+                    }}
+                    transition={{ duration: 0.35 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="mt-4 text-m sm:text-[15px] leading-6 text-black/80 font-semibold">
                       {item.description}
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

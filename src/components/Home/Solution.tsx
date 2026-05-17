@@ -26,7 +26,7 @@ export default function SolutionSection() {
   const ref = useRef(null);
 
   return (
-    <section className="relative overflow-hidden bg-white py-24 md:py-36">
+    <section className="relative overflow-hidden bg-white py-10 md:py-36">
       {/* BACKGROUND */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-black/[0.03] blur-[120px]" />
