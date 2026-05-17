@@ -39,7 +39,7 @@ export default function FindoraDiagram() {
   );
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-5">
       <div className="mx-auto max-w-7xl px-6">
 
         <h2 className="mb-16 text-center text-4xl font-bold text-black">
