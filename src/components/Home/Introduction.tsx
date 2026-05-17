@@ -2,17 +2,15 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function Hero() {
   const ref = useRef(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const [isDesktop, setIsDesktop] = useState(false);
 
+  // ✅ Detect desktop without extra library
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
     const mediaQuery = window.matchMedia("(min-width: 1024px)");
 
     const handleChange = () => setIsDesktop(mediaQuery.matches);
@@ -25,10 +23,13 @@ export default function Hero() {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end center"],
+    offset: ["start start", "end start"],
   });
 
-  // فقط حرکت عمودی
+  const yellowX = useTransform(scrollYProgress, [0, 1], [0, -260]);
+  const blueX = useTransform(scrollYProgress, [0, 1], [0, -420]);
+  const pinkX = useTransform(scrollYProgress, [0, 1], [0, -580]);
+
   const yellowY = useTransform(scrollYProgress, [0, 1], [0, 30]);
   const blueY = useTransform(scrollYProgress, [0, 1], [0, -15]);
   const pinkY = useTransform(scrollYProgress, [0, 1], [0, 50]);
@@ -39,14 +40,17 @@ export default function Hero() {
     ["9999px 0 0 9999px", "9999px"]
   );
 
+  // ✅ Neon button state
+  const [position, setPosition] = useState({ x: 50, y: 50 });
+  const [hovered, setHovered] = useState(false);
+
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
 
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    buttonRef.current?.style.setProperty("--x", `${x}px`);
-    buttonRef.current?.style.setProperty("--y", `${y}px`);
+    setPosition({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
   };
 
   return (
@@ -81,19 +85,21 @@ export default function Hero() {
           transition={{ delay: 0.55, duration: 0.8 }}
           className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
         >
-          {/* Neon Button */}
+          {/* ✅ Neon Demo Button */}
           <button
-            ref={buttonRef}
             onMouseMove={handleMouseMove}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
             className="relative overflow-hidden rounded-full bg-black px-8 py-3.5 text-lg font-semibold text-white transition duration-300"
           >
             <span className="absolute inset-0 rounded-full shadow-[0_10px_35px_rgba(0,0,0,0.18)]" />
 
             <span
-              className="pointer-events-none absolute inset-0 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300"
+              className="pointer-events-none absolute inset-0 rounded-full transition-opacity duration-300"
               style={{
+                opacity: hovered ? 1 : 0,
                 background: `radial-gradient(
-                  140px circle at var(--x,50%) var(--y,50%),
+                  140px circle at ${position.x}px ${position.y}px,
                   rgba(255,255,255,0.35),
                   rgba(255,255,255,0.18) 25%,
                   rgba(255,255,255,0.08) 45%,
@@ -113,7 +119,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* SHAPES */}
+      {/* ✅ SHAPES */}
       <div
         className="
         pointer-events-none
@@ -129,30 +135,33 @@ export default function Hero() {
         lg:-translate-y-1/2
         lg:mt-0
         lg:z-0
-      "
+        "
       >
         <motion.div
           style={{
+            x: isDesktop ? 0 : yellowX,
             y: isDesktop ? 0 : yellowY,
             borderRadius,
           }}
-          className="origin-right h-10 w-32 md:h-12 md:w-40 bg-[#DDBB00] will-change-transform"
+          className="origin-right h-10 w-32 md:h-12 md:w-40 bg-[#DDBB00]"
         />
 
         <motion.div
           style={{
+            x: isDesktop ? 0 : blueX,
             y: isDesktop ? 0 : blueY,
             borderRadius,
           }}
-          className="origin-right h-10 w-56 md:h-12 md:w-72 bg-[#0078D4] will-change-transform"
+          className="origin-right h-10 w-56 md:h-12 md:w-72 bg-[#0078D4]"
         />
 
         <motion.div
           style={{
+            x: isDesktop ? 0 : pinkX,
             y: isDesktop ? 0 : pinkY,
             borderRadius,
           }}
-          className="origin-right h-10 w-44 md:h-12 md:w-60 bg-[#D6006C] will-change-transform"
+          className="origin-right h-10 w-44 md:h-12 md:w-60 bg-[#D6006C]"
         />
       </div>
     </section>

@@ -1,152 +1,150 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
-  SearchCheck,
-  Scale,
-  ShieldCheck,
-  AlertTriangle,
-} from "lucide-react";
+  motion,
+  useMotionValue,
+  useTransform,
+  animate,
+  MotionValue,
+} from "framer-motion";
+import { useEffect } from "react";
 
-const checks = [
-  {
-    title: "Fact Verification",
-    icon: SearchCheck,
-    color: "#0b87b6",
-  },
-  {
-    title: "Reliability Analysis",
-    icon: Scale,
-    color: "#eaba33",
-  },
-  {
-    title: "Policy Enforcement",
-    icon: ShieldCheck,
-    color: "#7332a1",
-  },
-  {
-    title: "Hallucination Detection",
-    icon: AlertTriangle,
-    color: "#008f7a",
-  },
-];
+const FLOW_COLOR = "#eaba33";
 
 export default function FindoraDiagram() {
+  const progress = useMotionValue(0);
+
+  useEffect(() => {
+    const controls = animate(progress, 1, {
+      duration: 6,
+      repeat: Infinity,
+      ease: "linear",
+    });
+
+    return () => controls.stop();
+  }, [progress]);
+
+  /* MOBILE FLOW */
+  const mobileY = useTransform(
+    progress,
+    [0, 1],
+    ["0%", "100%"]
+  );
+
+  /* DESKTOP FLOW */
+  const desktopX = useTransform(
+    progress,
+    [0, 1],
+    ["0%", "100%"]
+  );
+
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* TITLE */}
-        <h2 className="text-center text-4xl font-bold tracking-tight text-black mb-14">
+        <h2 className="mb-16 text-center text-4xl font-bold text-black">
           How Findora Verifies AI Answers
         </h2>
 
-        {/* PIPELINE */}
-        <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-stretch lg:justify-between">
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-14 lg:flex-row lg:justify-between lg:gap-8">
 
-          {/* USER QUESTION */}
+          {/* MOBILE FLOW */}
+          <div className="absolute left-1/2 top-0 h-full w-[6px] -translate-x-1/2 rounded-full bg-[#eaba33]/20 lg:hidden">
+
+            {/* STATIC LINE */}
+            <div className="absolute inset-0 rounded-full bg-[#eaba33]" />
+
+            {/* PULSE */}
+            <motion.div
+              style={{ top: mobileY }}
+              className="absolute left-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#eaba33] blur-[2px]"
+            />
+          </div>
+
+          {/* DESKTOP FLOW */}
+          <div className="absolute left-0 top-1/2 hidden h-[6px] w-full -translate-y-1/2 rounded-full bg-[#eaba33]/20 lg:block">
+
+            {/* STATIC LINE */}
+            <div className="absolute inset-0 rounded-full bg-[#eaba33]" />
+
+            {/* PULSE */}
+            <motion.div
+              style={{ left: desktopX }}
+              className="absolute top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#eaba33] blur-[2px]"
+            />
+          </div>
+
+          {/* CARDS */}
+
           <StepCard
+            progress={progress}
+            trigger={0.1}
             label="User Query"
             content="Where is Canada's capital city?"
           />
 
-          <Arrow />
-
-          {/* AI MODEL RESPONSE */}
           <StepCard
+            progress={progress}
+            trigger={0.35}
             label="AI Raw Response"
             warning
             content={`"The capital of Canada is Toronto."`}
           />
 
-          <Arrow />
-
-          {/* FINDORA ENGINE */}
-          <div className="flex flex-col items-center rounded-3xl border border-[#008f7a]/30 bg-[#008f7a]/5 px-6 py-6 shadow-sm w-full max-w-sm">
-
-            <p className="text-xs font-bold tracking-[0.25em] text-[#008f7a] uppercase">
-              Findora Engine
-            </p>
-
-            <h3 className="text-xl font-bold text-black mt-2">
-              Verification Layer
-            </h3>
-
-            <div className="grid grid-cols-2 gap-3 mt-5 w-full">
-              {checks.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <motion.div
-                    key={item.title}
-                    whileHover={{ scale: 1.03 }}
-                    className="flex items-center gap-2 rounded-xl border border-black/10 bg-white px-3 py-2"
-                  >
-                    <Icon
-                      size={18}
-                      strokeWidth={2.5}
-                      style={{ color: item.color }}
-                    />
-
-                    <span className="text-sm font-semibold text-black">
-                      {item.title}
-                    </span>
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            <motion.div
-              animate={{ opacity: [0.4, 1, 0.4] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="mt-4 text-xs font-semibold text-black/40"
-            >
-              Validating response...
-            </motion.div>
-          </div>
-
-          <Arrow />
-
-          {/* TRUSTED OUTPUT */}
           <StepCard
+            progress={progress}
+            trigger={0.6}
+            label="Findora Verification"
+            content="Fact checking • Reliability scoring 
+          • Policy enforcement"
+          />
+
+          <StepCard
+            progress={progress}
+            trigger={0.85}
             label="Trusted Output"
             success
             content={`"The capital of Canada is Ottawa."`}
           />
-        </div>
 
+        </div>
       </div>
     </section>
   );
 }
+
+type StepProps = {
+  label: string;
+  content: string;
+  warning?: boolean;
+  success?: boolean;
+  progress: MotionValue<number>;
+  trigger: number;
+};
 
 function StepCard({
   label,
   content,
   warning,
   success,
-}: {
-  label: string;
-  content: string;
-  warning?: boolean;
-  success?: boolean;
-}) {
+  progress,
+  trigger,
+}: StepProps) {
+
+  const borderColor = useTransform(
+    progress,
+    (v: number) =>
+      Math.abs(v - trigger) < 0.1
+        ? FLOW_COLOR
+        : "rgba(0,0,0,0.08)"
+  );
+
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
-      className={`w-full max-w-sm rounded-2xl border px-5 py-5 shadow-sm
-      ${warning ? "border-red-200 bg-red-50" : ""}
-      ${success ? "border-[#008f7a]/30 bg-[#008f7a]/5" : ""}
-      ${!warning && !success ? "border-black/10 bg-white" : ""}
-      `}
+      style={{ borderColor }}
+      className="relative z-10 w-full max-w-sm rounded-2xl border-2 bg-white px-6 py-6 shadow-sm transition-colors duration-300"
     >
-      <p
-        className={`text-xs font-bold uppercase tracking-[0.2em]
-        ${warning ? "text-red-500" : ""}
-        ${success ? "text-[#008f7a]" : ""}
-        ${!warning && !success ? "text-black/40" : ""}
-        `}
-      >
+      <p className="text-s font-bold uppercase tracking-[0.2em] text-black/60">
         {label}
       </p>
 
@@ -155,40 +153,16 @@ function StepCard({
       </p>
 
       {warning && (
-        <p className="mt-3 text-xs font-semibold text-red-500">
+        <p className="mt-3 text-s font-semibold text-red-500">
           Potential factual error
         </p>
       )}
 
       {success && (
-        <p className="mt-3 text-xs font-semibold text-black/50">
+        <p className="mt-3 text-s font-semibold text-black/80">
           Verified • Reliability Score: 98%
         </p>
       )}
     </motion.div>
-  );
-}
-
-function Arrow() {
-  return (
-    <div className="flex items-center justify-center">
-      <motion.div
-        animate={{ x: [0, 6, 0] }}
-        transition={{ duration: 1.4, repeat: Infinity }}
-        className="text-black/40"
-      >
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-        >
-          <path d="M5 12h14" />
-          <path d="M13 5l7 7-7 7" />
-        </svg>
-      </motion.div>
-    </div>
   );
 }
