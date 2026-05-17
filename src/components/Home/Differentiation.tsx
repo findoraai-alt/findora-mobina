@@ -1,91 +1,127 @@
+"use client";
+
 import React from "react";
-
-
 import { motion } from "framer-motion";
+import { Check, X } from "lucide-react";
 
-const differentiationData = {
+const data = {
   traditional: [
     "Block prompts",
     "Rule-based moderation",
     "Limited verification",
-    "Cloud dependent"
+    "Cloud dependent",
   ],
   findora: [
     "Verifies outputs",
     "Reliability scoring",
     "Post-inference architecture",
     "Local and edge-ready",
-    "Model-agnostic"
+    "Model-agnostic",
   ],
-  statement: "Findora verifies what AI says before it reaches the user."
+  statement: "Findora verifies what AI says before it reaches the user.",
 };
 
 const Differentiation = () => {
   return (
-    <section
-      aria-labelledby="differentiation-headline"
-      className="w-full max-w-7xl mx-auto px-6 py-20 bg-white text-gray-900"
-    >
-      <h2
-        id="differentiation-headline"
-        className="text-4xl font-extrabold mb-10 tracking-tight leading-tight"
-        style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}
+    <section className="w-full bg-white text-gray-900 py-28 px-4 md:px-20">
+      {/* HEADER */}
+      <motion.h2
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-4xl md:text-5xl font-bold text-center mb-16 tracking-tight"
       >
         Why Guardrails Are Not Enough
-      </h2>
+      </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-8 mb-14">
-        {/* Traditional Systems */}
-        <div>
-          <h3 className="text-xl font-semibold mb-6 border-b border-gray-300 pb-2">
-            Traditional Systems
+      {/* DESKTOP */}
+      <div className="hidden md:grid grid-cols-2 gap-28">
+        {/* Traditional */}
+        <div className="space-y-6">
+          <h3 className="text-sm uppercase tracking-widest text-[#c31069]">
+            Traditional System
           </h3>
-          <ul className="list-disc list-inside space-y-3 text-gray-700 text-lg">
-            {differentiationData.traditional.map((item, idx) => (
-              <motion.li
-                key={idx}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-              >
+
+          {data.traditional.map((item, idx) => (
+            <div key={idx} className="flex gap-3 items-start">
+              <X className="text-[#c31069] mt-1" size={18} />
+              <p className="text-lg text-gray-600 font-medium">
                 {item}
-              </motion.li>
-            ))}
-          </ul>
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Findora */}
-        <div>
-          <h3 className="text-xl font-semibold mb-6 border-b border-gray-300 pb-2 text-gradient">
+        <div className="space-y-6">
+          <h3 className="text-sm uppercase tracking-widest text-[#008f7a]">
             Findora
           </h3>
-          <ul className="list-disc list-inside space-y-3 text-gray-700 text-lg">
-            {differentiationData.findora.map((item, idx) => (
-              <motion.li
-                key={idx}
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-              >
+
+          {data.findora.map((item, idx) => (
+            <div key={idx} className="flex gap-3 items-start">
+              <Check className="text-[#008f7a] mt-1" size={18} />
+              <p className="text-lg font-semibold text-gray-900">
                 {item}
-              </motion.li>
-            ))}
-          </ul>
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
-      <p className="text-lg font-semibold text-gray-800 max-w-3xl mx-auto text-center select-none">
-        {differentiationData.statement}
-      </p>
+      {/* MOBILE (TRUE COMPARISON TABLE) */}
+      <div className="md:hidden">
+        <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
 
-      
-      <style jsx>{`
-        .text-gradient {
-          background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      `}</style>
+          {/* HEADER */}
+          <div className="grid grid-cols-2 bg-gray-50 text-xs uppercase tracking-wider">
+            <div className="p-3 border-r border-gray-200 text-[#c31069]">
+              Traditional
+            </div>
+            <div className="p-3 text-[#008f7a]">
+              Findora
+            </div>
+          </div>
+
+          {/* ROWS */}
+          {data.traditional.map((item, idx) => (
+            <div
+              key={idx}
+              className="grid grid-cols-2 border-t border-gray-100"
+            >
+              {/* Traditional */}
+              <div className="p-4 flex gap-2 items-start border-r border-gray-100">
+                <X className="text-[#c31069] mt-1" size={14} />
+                <span className="text-sm text-gray-500">
+                  {item}
+                </span>
+              </div>
+
+              {/* Findora */}
+              <div className="p-4 flex gap-2 items-start">
+                <Check className="text-[#008f7a] mt-1" size={14} />
+                <span className="text-sm font-semibold text-gray-900">
+                  {data.findora[idx]}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* STATEMENT */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mt-20 text-center"
+      >
+        <p className="text-xl md:text-2xl font-semibold max-w-2xl mx-auto">
+          <span className="text-[#0b87b6]">
+            {data.statement}
+          </span>
+        </p>
+      </motion.div>
     </section>
   );
 };
