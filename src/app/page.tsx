@@ -21,6 +21,7 @@ import Introduction from "@/components/Home/Introduction";
 import Diagram from "@/components/Home/Diagram"
 import Problem from "@/components/Home/Problem";
 import Solution from "@/components/Home/Solution";
+import Differentiation from "@/components/Home/Differentiation";
 export default function Home() {
 
   useEffect(() => {
@@ -39,6 +40,7 @@ export default function Home() {
         <Problem />
         <Solution />
         <Deployment />
+        <Differentiation />
         {/* <WhatIsFindora /> */}
         {/* <DanaArta /> */}
         {/* <Capabilities /> */}

@@ -1,6 +1,7 @@
 "use client";
-
 import { motion } from "framer-motion";
+
+const markerWidths = [50, 50, 50, 50, 50, 50];
 
 const deployments = [
   {
@@ -44,9 +45,7 @@ const deployments = [
 const containerVariants = {
   hidden: {},
   show: {
-    transition: {
-      staggerChildren: 0.08,
-    },
+    transition: { staggerChildren: 0.12 },
   },
 };
 
@@ -55,28 +54,25 @@ const itemVariants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.65,
-      ease: [0.22, 1, 0.36, 1] as const,
-    },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
 export default function DeploymentSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-16 lg:py-20">
-      {/* Background accents */}
+    <section className="relative overflow-hidden bg-white py-12 lg:py-14">
+      {/* subtle background accents */}
       <div className="pointer-events-none absolute inset-0">
         <div
-          className="absolute left-[12%] top-[18%] h-56 w-56 rounded-full blur-3xl opacity-10"
+          className="absolute left-[12%] top-[14%] h-44 w-44 rounded-full blur-3xl opacity-10"
           style={{ backgroundColor: "#008f7a" }}
         />
         <div
-          className="absolute right-[10%] top-[10%] h-64 w-64 rounded-full blur-3xl opacity-10"
+          className="absolute right-[10%] top-[8%] h-52 w-52 rounded-full blur-3xl opacity-10"
           style={{ backgroundColor: "#7332a1" }}
         />
         <div
-          className="absolute left-[45%] bottom-[5%] h-72 w-72 rounded-full blur-3xl opacity-10"
+          className="absolute left-[45%] bottom-[2%] h-60 w-60 rounded-full blur-3xl opacity-10"
           style={{ backgroundColor: "#0b87b6" }}
         />
       </div>
@@ -90,12 +86,10 @@ export default function DeploymentSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-4xl"
         >
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-neutral-400">
-            Deployment
-          </p>
+         
 
           <h2 className="max-w-5xl text-3xl font-semibold tracking-[-0.04em] text-neutral-950 sm:text-4xl lg:text-5xl">
-            Built for{" "}
+            Built for&nbsp;
             <span
               className="bg-clip-text text-transparent"
               style={{
@@ -108,63 +102,51 @@ export default function DeploymentSection() {
             , Government, and Edge AI
           </h2>
 
-          <p className="mt-4 max-w-2xl text-sm leading-6 text-neutral-500 sm:text-base">
+          <p className="mt-4 max-w-2xl text-[1.18rem] sm:text-[1.26rem] leading-8 font-semibold text-black">
             Deploy across cloud, local, on-device, or air-gapped environments
             with no retraining required.
           </p>
         </motion.div>
 
-        {/* Grid */}
+        {/* Cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {deployments.map((item, index) => (
+          {deployments.map((item, i) => (
             <motion.div
               key={item.title}
               variants={itemVariants}
-              className="group relative overflow-hidden rounded-2xl border border-neutral-200 bg-white p-5 transition-all duration-500 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-[0_20px_60px_-24px_rgba(0,0,0,0.18)]"
+              className="group relative overflow-hidden rounded-xl border border-neutral-200 bg-white px-6 py-5 min-h-[160px] transition-all duration-500 hover:-translate-y-[2px] hover:border-neutral-300 hover:shadow-[0_12px_40px_-16px_rgba(0,0,0,0.12)]"
             >
-              {/* subtle gradient overlay */}
-              <div
-                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-[0.10]"
-                style={{
-                  background: `linear-gradient(135deg, ${item.color} 0%, transparent 70%)`,
-                }}
-              />
+              {/* top marker line */}
+              <div className="absolute left-0 top-0 h-[2px] w-full bg-neutral-100 flex items-center">
+                <div
+                  className="h-full rounded-full transition-all duration-500 group-hover:w-full opacity-70"
+                  style={{
+                    width: `${markerWidths[i]}px`,
+                    backgroundColor: item.color,
+                  }}
+                />
+              </div>
 
-              {/* top accent line */}
-              <div
-                className="absolute left-5 top-0 h-[2px] w-10 transition-all duration-500 group-hover:w-16"
-                style={{ backgroundColor: item.color }}
-              />
+              {/* Card content */}
+              <div className="relative z-10 pt-2">
+                {/* Title */}
+                <h3 className="max-w-[18ch] text-xl font-semibold tracking-[-0.02em] text-neutral-900 sm:text-2xl">
+                  {item.title}
+                </h3>
 
-              {/* corner glow */}
-              <div
-                className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-20"
-                style={{ backgroundColor: item.color }}
-              />
-
-              <div className="relative z-10 flex min-h-[150px] flex-col justify-between">
-                <div>
-                  <div
-                    className="mb-4 h-1.5 w-1.5 rounded-full"
-                    style={{ backgroundColor: item.color }}
-                  />
-
-                  <h3 className="max-w-[14ch] text-lg font-semibold tracking-[-0.03em] text-neutral-950">
-                    {item.title}
-                  </h3>
-                </div>
-
-                {/* Hidden by default, visible on hover */}
-                <div className="mt-5 overflow-hidden">
-                  <p className="translate-y-3 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 text-sm leading-6 text-neutral-600">
-                    {item.description}
-                  </p>
+                {/* Description */}
+                <div className="grid grid-rows-[0fr] transition-all duration-500 ease-out group-hover:grid-rows-[1fr]">
+                  <div className="overflow-hidden">
+                    <p className="pt-3 text-[14px] leading-6 text-black font-medium opacity-0 translate-y-1 transition-all duration-500 ease-out group-hover:opacity-100 group-hover:translate-y-0">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>

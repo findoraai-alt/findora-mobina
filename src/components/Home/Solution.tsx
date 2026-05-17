@@ -79,7 +79,7 @@ export default function SolutionSection() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-white py-24 md:py-32"
+      className="relative overflow-hidden bg-white py-20 md:py-32"
     >
       {/* Bars */}
       <div className="absolute inset-0 z-0 pointer-events-none">
