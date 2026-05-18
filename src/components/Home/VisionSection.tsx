@@ -54,7 +54,7 @@ export default function VisionSection() {
           for the Age of Autonomous AI
         </h2>
 
-        <p className="max-w-2xl mx-auto text-base md:text-lg text-gray-400 leading-relaxed mb-8">
+        <p className="max-w-2xl mx-auto text-l md:text-lg text-gray-400 leading-relaxed mb-8 font-semibold">
           AI systems must become verifiable, governed, and trustworthy before
           they can scale safely across enterprise and society.
         </p>
