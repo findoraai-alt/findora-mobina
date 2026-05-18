@@ -23,6 +23,7 @@ import Problem from "@/components/Home/Problem";
 import Solution from "@/components/Home/Solution";
 import Differentiation from "@/components/Home/Differentiation";
 import VisionSection from "@/components/Home/VisionSection";
+import FinalCTA from "@/components/Home/FinalCTA";
 export default function Home() {
 
   useEffect(() => {
@@ -43,6 +44,7 @@ export default function Home() {
         <Deployment />
         <Differentiation />
         <VisionSection />
+        <FinalCTA />
         {/* <WhatIsFindora /> */}
         {/* <DanaArta /> */}
         {/* <Capabilities /> */}
