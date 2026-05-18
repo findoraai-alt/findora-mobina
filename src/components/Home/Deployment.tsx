@@ -40,18 +40,18 @@ export default function DeploymentSection() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="relative overflow-hidden bg-white py-5 lg:py-20">
+    <section className="relative overflow-hidden bg-[#111828] py-5 lg:py-20">
       {/* BACKGROUND */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[10%] top-[15%] h-56 w-56 rounded-full blur-3xl opacity-10 bg-[#008f7a]" />
-        <div className="absolute right-[12%] top-[10%] h-64 w-64 rounded-full blur-3xl opacity-10 bg-[#7332a1]" />
-        <div className="absolute left-[45%] bottom-[0%] h-72 w-72 rounded-full blur-3xl opacity-10 bg-[#0b87b6]" />
+        <div className="absolute left-[10%] top-[15%] h-56 w-56 rounded-full blur-3xl opacity-20 bg-[#008f7a]" />
+        <div className="absolute right-[12%] top-[10%] h-64 w-64 rounded-full blur-3xl opacity-20 bg-[#7332a1]" />
+        <div className="absolute left-[45%] bottom-[0%] h-72 w-72 rounded-full blur-3xl opacity-20 bg-[#0b87b6]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         {/* HEADER */}
         <div className="max-w-4xl">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-950">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white">
             Built for{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#008f7a] via-[#0b87b6] to-[#7332a1]">
               Enterprise
@@ -59,7 +59,7 @@ export default function DeploymentSection() {
             , Government, and Edge AI
           </h2>
 
-          <p className="mt-5 max-w-2xl text-lg sm:text-xl text-black/70 font-medium">
+          <p className="mt-5 max-w-2xl text-lg sm:text-xl text-white/70 font-medium">
             Deploy across cloud, local, on-device, or air-gapped environments
             with no retraining required.
           </p>
@@ -75,10 +75,10 @@ export default function DeploymentSection() {
                 key={item.title}
                 onMouseEnter={() => setActive(i)}
                 onMouseLeave={() => setActive(null)}
-                className="group relative cursor-pointer overflow-hidden rounded-2xl border border-black/10 bg-white/70 backdrop-blur-xl p-6 h-[170px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group relative cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 h-[170px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 {/* TOP BAR */}
-                <div className="absolute left-0 top-0 h-[2px] w-full bg-black/5">
+                <div className="absolute left-0 top-0 h-[2px] w-full bg-white/10">
                   <div
                     className="h-full transition-all duration-500"
                     style={{
@@ -94,17 +94,17 @@ export default function DeploymentSection() {
                     isActive ? "opacity-100" : "opacity-0"
                   }`}
                   style={{
-                    background: `radial-gradient(circle at top left, ${item.color}18, transparent 60%)`,
+                    background: `radial-gradient(circle at top left, ${item.color}25, transparent 60%)`,
                   }}
                 />
 
                 {/* CONTENT */}
                 <div className="relative z-10">
-                  <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-black">
+                  <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-white">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-m sm:text-[16px] leading-6 text-black/70 font-semibold">
+                  <p className="mt-3 text-sm sm:text-[15px] leading-6 text-white/70 font-medium">
                     {item.tagline}
                   </p>
                 </div>

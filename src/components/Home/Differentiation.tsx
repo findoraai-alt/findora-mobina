@@ -28,7 +28,8 @@ const Differentiation = () => {
   );
 
   return (
-    <section className="w-full bg-white text-gray-900 py-10 px-4 md:px-20">
+    <section className="w-full bg-white dark:bg-[#111828] text-gray-900 dark:text-gray-100 py-10 px-4 md:px-20">
+      
       {/* HEADER */}
       <motion.h2
         initial={{ opacity: 0, y: 10 }}
@@ -41,6 +42,7 @@ const Differentiation = () => {
 
       {/* DESKTOP */}
       <div className="hidden md:grid grid-cols-2 gap-28">
+        
         {/* Traditional */}
         <div className="space-y-6 text-left">
           <h3 className="text-xl uppercase tracking-widest text-[#c31069] font-bold">
@@ -50,7 +52,7 @@ const Differentiation = () => {
           {data.traditional.map((item, idx) => (
             <div key={idx} className="flex gap-3 items-start">
               <X className="text-[#c31069] mt-1" size={18} />
-              <p className="text-lg text-gray-600 font-semibold">
+              <p className="text-lg text-gray-600 dark:text-gray-300 font-semibold">
                 {item}
               </p>
             </div>
@@ -66,7 +68,7 @@ const Differentiation = () => {
           {data.findora.map((item, idx) => (
             <div key={idx} className="flex gap-3 items-start">
               <Check className="text-[#008f7a] mt-1" size={18} />
-              <p className="text-lg font-semibold text-gray-900">
+              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                 {item}
               </p>
             </div>
@@ -76,11 +78,11 @@ const Differentiation = () => {
 
       {/* MOBILE */}
       <div className="md:hidden">
-        <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
-
+        <div className="rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm">
+          
           {/* HEADER */}
-          <div className="grid grid-cols-2 bg-gray-50 uppercase tracking-wider font-bold">
-            <div className="p-3 border-r border-gray-200 text-[#c31069]">
+          <div className="grid grid-cols-2 bg-gray-50 dark:bg-gray-800 uppercase tracking-wider font-bold">
+            <div className="p-3 border-r border-gray-200 dark:border-gray-700 text-[#c31069]">
               Traditional
             </div>
             <div className="p-3 text-[#008f7a]">
@@ -92,19 +94,19 @@ const Differentiation = () => {
           {Array.from({ length: maxLen }).map((_, idx) => (
             <div
               key={idx}
-              className="grid grid-cols-2 border-t border-gray-100"
+              className="grid grid-cols-2 border-t border-gray-100 dark:border-gray-700"
             >
               {/* Traditional */}
-              <div className="p-4 flex gap-2 items-start border-r border-gray-100">
+              <div className="p-4 flex gap-2 items-start border-r border-gray-100 dark:border-gray-700">
                 {data.traditional[idx] ? (
                   <>
                     <X className="text-[#c31069] mt-1" size={14} />
-                    <span className="text-m text-gray-500">
+                    <span className="text-gray-500 dark:text-gray-300">
                       {data.traditional[idx]}
                     </span>
                   </>
                 ) : (
-                  <span className="text-gray-300">—</span>
+                  <span className="text-gray-300 dark:text-gray-600">—</span>
                 )}
               </div>
 
@@ -113,12 +115,12 @@ const Differentiation = () => {
                 {data.findora[idx] ? (
                   <>
                     <Check className="text-[#008f7a] mt-1" size={14} />
-                    <span className="text-m font-semibold text-gray-900">
+                    <span className="font-semibold text-gray-900 dark:text-gray-100">
                       {data.findora[idx]}
                     </span>
                   </>
                 ) : (
-                  <span className="text-gray-300">—</span>
+                  <span className="text-gray-300 dark:text-gray-600">—</span>
                 )}
               </div>
             </div>
@@ -134,7 +136,7 @@ const Differentiation = () => {
         className="mt-10 text-center md:text-left"
       >
         <p className="text-xl md:text-2xl font-semibold max-w-2xl md:mx-0 mx-auto">
-          <span className="text-black/80">
+          <span className="text-black/80 dark:text-white/90">
             {data.statement}
           </span>
         </p>

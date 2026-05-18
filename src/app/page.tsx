@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div>
       <PreLoader />
-      <div className=" bg-[#f0f0fc] dark:bg-[#111828]">
+      <div className=" bg-white dark:bg-[#111828]">
        
         <Introduction />
         <Diagram />
