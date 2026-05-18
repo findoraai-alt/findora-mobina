@@ -22,6 +22,11 @@ const data = {
 };
 
 const Differentiation = () => {
+  const maxLen = Math.max(
+    data.traditional.length,
+    data.findora.length
+  );
+
   return (
     <section className="w-full bg-white text-gray-900 py-10 px-4 md:px-20">
       {/* HEADER */}
@@ -29,7 +34,7 @@ const Differentiation = () => {
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-4xl md:text-5xl font-bold text-center mb-16 tracking-tight"
+        className="text-4xl md:text-5xl font-bold text-center md:text-left mb-16 tracking-tight"
       >
         Why Guardrails Are Not Enough
       </motion.h2>
@@ -37,7 +42,7 @@ const Differentiation = () => {
       {/* DESKTOP */}
       <div className="hidden md:grid grid-cols-2 gap-28">
         {/* Traditional */}
-        <div className="space-y-6">
+        <div className="space-y-6 text-left">
           <h3 className="text-xl uppercase tracking-widest text-[#c31069] font-bold">
             Traditional System
           </h3>
@@ -53,7 +58,7 @@ const Differentiation = () => {
         </div>
 
         {/* Findora */}
-        <div className="space-y-6">
+        <div className="space-y-6 text-left">
           <h3 className="text-2xl uppercase tracking-widest text-[#008f7a] font-bold">
             Findora
           </h3>
@@ -69,12 +74,12 @@ const Differentiation = () => {
         </div>
       </div>
 
-      {/* MOBILE (TRUE COMPARISON TABLE) */}
+      {/* MOBILE */}
       <div className="md:hidden">
         <div className="rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
 
           {/* HEADER */}
-          <div className="grid grid-cols-2 bg-gray-50 text-l uppercase tracking-wider font-bold">
+          <div className="grid grid-cols-2 bg-gray-50 uppercase tracking-wider font-bold">
             <div className="p-3 border-r border-gray-200 text-[#c31069]">
               Traditional
             </div>
@@ -84,25 +89,37 @@ const Differentiation = () => {
           </div>
 
           {/* ROWS */}
-          {data.traditional.map((item, idx) => (
+          {Array.from({ length: maxLen }).map((_, idx) => (
             <div
               key={idx}
               className="grid grid-cols-2 border-t border-gray-100"
             >
               {/* Traditional */}
               <div className="p-4 flex gap-2 items-start border-r border-gray-100">
-                <X className="text-[#c31069] mt-1" size={14} />
-                <span className="text-m text-gray-500">
-                  {item}
-                </span>
+                {data.traditional[idx] ? (
+                  <>
+                    <X className="text-[#c31069] mt-1" size={14} />
+                    <span className="text-m text-gray-500">
+                      {data.traditional[idx]}
+                    </span>
+                  </>
+                ) : (
+                  <span className="text-gray-300">—</span>
+                )}
               </div>
 
               {/* Findora */}
               <div className="p-4 flex gap-2 items-start">
-                <Check className="text-[#008f7a] mt-1" size={14} />
-                <span className="text-m font-semibold text-gray-900">
-                  {data.findora[idx]}
-                </span>
+                {data.findora[idx] ? (
+                  <>
+                    <Check className="text-[#008f7a] mt-1" size={14} />
+                    <span className="text-m font-semibold text-gray-900">
+                      {data.findora[idx]}
+                    </span>
+                  </>
+                ) : (
+                  <span className="text-gray-300">—</span>
+                )}
               </div>
             </div>
           ))}
@@ -114,9 +131,9 @@ const Differentiation = () => {
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mt-10 text-center"
+        className="mt-10 text-center md:text-left"
       >
-        <p className="text-xl md:text-2xl font-semibold max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl font-semibold max-w-2xl md:mx-0 mx-auto">
           <span className="text-black/80">
             {data.statement}
           </span>
