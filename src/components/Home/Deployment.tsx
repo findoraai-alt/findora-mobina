@@ -104,7 +104,7 @@ export default function DeploymentSection() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-sm sm:text-[16px] leading-6 text-black/70 font-semibold">
+                  <p className="mt-3 text-m sm:text-[16px] leading-6 text-black/70 font-semibold">
                     {item.tagline}
                   </p>
                 </div>
