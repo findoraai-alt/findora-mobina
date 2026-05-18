@@ -6,38 +6,32 @@ import { motion } from "framer-motion";
 const deployments = [
   {
     title: "Enterprise AI",
-    description:
-      "Lorem ipsum dolor sit amet, enterprise AI infrastructure verification and reliability scoring for production systems.",
+    tagline: "Trusted AI deployment for internal systems and workflows.",
     color: "#008f7a",
   },
   {
     title: "Government Systems",
-    description:
-      "Lorem ipsum dolor sit amet, secure AI verification pipelines designed for regulated and public sector environments.",
+    tagline: "Secure and sovereign AI verification infrastructure.",
     color: "#eaba33",
   },
   {
     title: "AI PCs & OEM Deployment",
-    description:
-      "Lorem ipsum dolor sit amet, on-device verification architecture embedded directly into AI-native hardware.",
+    tagline: "Optimized for local and edge AI environments.",
     color: "#0b87b6",
   },
   {
     title: "Edge AI",
-    description:
-      "Lorem ipsum dolor sit amet, distributed verification running locally across edge and low-latency systems.",
+    tagline: "Low-latency verification for on-device AI systems.",
     color: "#7332a1",
   },
   {
     title: "Multimodal AI",
-    description:
-      "Lorem ipsum dolor sit amet, verifying text, vision and multimodal outputs across complex AI pipelines.",
+    tagline: "Unified verification across text, vision, and multimodal systems.",
     color: "#c31069",
   },
   {
     title: "Air-Gapped Deployment",
-    description:
-      "Lorem ipsum dolor sit amet, trusted verification layers for highly secure isolated environments.",
+    tagline: "Fully isolated verification for high-security environments.",
     color: "#c67f48",
   },
 ];
@@ -46,7 +40,7 @@ export default function DeploymentSection() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="relative overflow-hidden bg-white py-10 lg:py-28">
+    <section className="relative overflow-hidden bg-white py-5 lg:py-20">
       {/* BACKGROUND */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-[10%] top-[15%] h-56 w-56 rounded-full blur-3xl opacity-10 bg-[#008f7a]" />
@@ -79,13 +73,9 @@ export default function DeploymentSection() {
             return (
               <motion.div
                 key={item.title}
-                layout
-                onClick={() => setActive(isActive ? null : i)}
                 onMouseEnter={() => setActive(i)}
                 onMouseLeave={() => setActive(null)}
-                className={`group relative cursor-pointer overflow-hidden rounded-2xl border border-black/10 bg-white/70 backdrop-blur-xl p-6 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${
-                  isActive ? "min-h-[190px]" : "min-h-[100px]"
-                }`}
+                className="group relative cursor-pointer overflow-hidden rounded-2xl border border-black/10 bg-white/70 backdrop-blur-xl p-6 h-[170px] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 {/* TOP BAR */}
                 <div className="absolute left-0 top-0 h-[2px] w-full bg-black/5">
@@ -114,20 +104,9 @@ export default function DeploymentSection() {
                     {item.title}
                   </h3>
 
-                  {/* DESCRIPTION (reveal on active) */}
-                  <motion.div
-                    initial={false}
-                    animate={{
-                      opacity: isActive ? 1 : 0,
-                      height: isActive ? "auto" : 0,
-                    }}
-                    transition={{ duration: 0.35 }}
-                    className="overflow-hidden"
-                  >
-                    <p className="mt-4 text-m sm:text-[15px] leading-6 text-black/80 font-semibold">
-                      {item.description}
-                    </p>
-                  </motion.div>
+                  <p className="mt-3 text-sm sm:text-[16px] leading-6 text-black/70 font-semibold">
+                    {item.tagline}
+                  </p>
                 </div>
               </motion.div>
             );

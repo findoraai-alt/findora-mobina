@@ -66,7 +66,7 @@ export default function FindoraDiagram() {
   const desktopX = useTransform(progress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section className="relative overflow-hidden bg-white py-28">
+    <section className="relative overflow-hidden bg-white py-15 pb-10">
       <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
         <div className="mx-auto mb-24 max-w-4xl text-center">
@@ -74,7 +74,7 @@ export default function FindoraDiagram() {
             How Trusted AI Outputs Are Generated
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-black/50">
+          <p className="mx-auto mt-6 max-w-2xl text-l font-semibold leading-8 text-black/70">
             Enterprise-grade verification infrastructure designed for reliable
             AI deployment across critical systems.
           </p>
@@ -281,7 +281,7 @@ function StepCard({
         }}
       />
 
-      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-black/80">
+      <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-black/80">
         {label}
       </p>
 

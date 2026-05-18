@@ -60,9 +60,9 @@ export default function Hero() {
         relative
         overflow-hidden
         bg-white
-        pt-28
+        pt-20
         pb-24
-        md:pt-36
+        md:pt-30
         md:pb-32
       "
     >
