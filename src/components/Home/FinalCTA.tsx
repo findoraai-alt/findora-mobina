@@ -59,7 +59,7 @@ export default function FinalCTA() {
             className="
               relative overflow-hidden
               rounded-full px-10 py-4
-              text-[15px] font-medium
+               font-medium
               text-white dark:text-black/80
               transition-all duration-300
               hover:scale-[1.03]
@@ -79,7 +79,7 @@ export default function FinalCTA() {
             className="
               relative overflow-hidden
               rounded-xl px-10 py-4
-              text-[15px] font-medium
+               font-medium
               text-black/80 dark:text-white/80
               border border-black/10 dark:border-white/10
               bg-white/60 dark:bg-white/5

@@ -173,7 +173,7 @@ export default function Hero() {
       {/* SIGNAL LINES */}
       <div
         className="
-          pointer-events-none relative z-10 mt-20
+          pointer-events-none relative z-10 mt-10
           flex flex-col items-end gap-3
           lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2
         "
