@@ -137,18 +137,18 @@ export default function Hero() {
               }}
             />
 
-            <span className="relative z-10">Book Demo</span>
+            <span className="relative z-10 text-[1.3rem]">Book Demo</span>
           </button>
 
           {/* SECONDARY */}
           <button
             className="
               group flex items-center gap-2
-              rounded-full border
-              border-black/10 dark:border-white/10
+              rounded-[15px] border-[2px]
+              border-black/20 dark:border-white/10
               bg-white/70 dark:bg-white/5
               px-7 py-3.5
-              text-[15px] font-medium tracking-[-0.01em]
+              text-[1.3rem] font-medium tracking-[-0.01em]
               text-black/80 dark:text-white/80
               backdrop-blur-md
               transition-all duration-300
@@ -185,7 +185,7 @@ export default function Hero() {
             y: isDesktop ? 0 : yellowY,
             borderRadius,
           }}
-          className="relative h-[8px] w-36 md:w-44 bg-[#eaba33]/90"
+          className="relative h-[30px] w-36 md:w-44 bg-[#eaba33]/90"
         >
           <div className="absolute inset-0 bg-[#eaba33] blur-[10px] opacity-50" />
         </motion.div>
@@ -197,7 +197,7 @@ export default function Hero() {
             y: isDesktop ? 0 : blueY,
             borderRadius,
           }}
-          className="relative h-[8px] w-64 md:w-80 bg-[#0b87b6]/90"
+          className="relative h-[30px] w-64 md:w-80 bg-[#0b87b6]/90"
         >
           <div className="absolute inset-0 bg-[#0b87b6] blur-[12px] opacity-40" />
         </motion.div>
@@ -209,7 +209,7 @@ export default function Hero() {
             y: isDesktop ? 0 : pinkY,
             borderRadius,
           }}
-          className="relative h-[8px] w-48 md:w-64 bg-[#c31069]/90"
+          className="relative h-[30px] w-48 md:w-64 bg-[#c31069]/90"
         >
           <div className="absolute inset-0 bg-[#c31069] blur-[12px] opacity-40" />
         </motion.div>
