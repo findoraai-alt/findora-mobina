@@ -21,7 +21,7 @@ export default function FinalCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="
-            text-3xl sm:text-4xl md:text-5xl
+            text-[2rem] sm:text-4xl md:text-5xl
             font-semibold tracking-[-0.03em]
             text-black dark:text-white
           "
@@ -65,6 +65,7 @@ export default function FinalCTA() {
               hover:scale-[1.03]
               bg-black/90
               dark:bg-white
+              text-[1.2rem]
               
               
             "
@@ -84,7 +85,7 @@ export default function FinalCTA() {
               bg-white/60 dark:bg-white/5
               backdrop-blur-md
               transition-all duration-300
-
+              text-[1.2rem]
               hover:border-[#0b87b6]/40
               hover:text-[#0b87b6]
               hover:scale-[1.02]
