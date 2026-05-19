@@ -55,7 +55,7 @@ export default function Hero() {
       className="
         relative overflow-hidden
         bg-white dark:bg-[#111828]
-        pt-20 pb-24 md:pt-30 md:pb-32
+        pt-10 pb-24 md:pt-10 md:pb-30
       "
     >
       {/* ambient gradient */}
@@ -89,9 +89,9 @@ export default function Hero() {
           transition={{ delay: 0.25, duration: 0.9 }}
           className="
             mx-auto mt-10 max-w-3xl
-            text-[1.05rem] md:text-[1.15rem]
-            leading-[1.8] font-medium
-            text-black/55 dark:text-white/60
+            text-[1.4rem] md:text-[1.8rem]
+            leading-[1.3] font-medium
+            text-black/70 dark:text-white/70
           "
         >
           Findora verifies AI outputs before they reach users, enabling trusted deployment across enterprise, government, and edge systems.

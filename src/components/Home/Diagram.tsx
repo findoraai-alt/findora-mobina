@@ -27,7 +27,7 @@ type StepCardProps = Step & {
 /* ================= SIGNAL GRADIENT ================= */
 
 const SIGNAL_GRADIENT =
-  "linear-gradient(to right, #008f7a 0%, #eaba33 30%, #eaba33 20%, #8a3bd1 100%)";
+  "linear-gradient(to right, #008f7a 30%, #eaba33 30%, #eaba33 20%, #8a3bd1 100%)";
 
 const SIGNAL_GRADIENT_MOBILE =
   "linear-gradient(to bottom, #008f7a 30%, #eaba33 30%, #eaba33 20%, #8a3bd1 100%)";
