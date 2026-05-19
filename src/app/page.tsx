@@ -38,7 +38,7 @@ export default function Home() {
       <div className=" bg-white dark:bg-[#111828]">
        
         <Introduction />
-        <Diagram />
+        <Diagram findoraLogoUrl="images/logo.png" />
         <Problem />
         <Solution />
         <Deployment />

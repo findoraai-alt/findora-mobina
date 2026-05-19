@@ -1,268 +1,267 @@
 "use client";
 
-import {
-  motion,
-  useMotionValue,
-  useTransform,
-  animate,
-  MotionValue,
-} from "framer-motion";
-import { useEffect } from "react";
+import React from "react";
 
-/* ================= TYPES ================= */
+/* ----------------------------- Sub-components ----------------------------- */
 
-type Step = {
-  trigger: number;
-  label: string;
-  content: string;
-  warning?: boolean;
-  success?: boolean;
+interface FeatureItemProps {
+  title: string;
+  desc: string;
   color: string;
-};
-
-type StepCardProps = Step & {
-  progress: MotionValue<number>;
-};
-
-/* ================= SIGNAL GRADIENT ================= */
-
-const SIGNAL_GRADIENT =
-  "linear-gradient(to right, #008f7a 30%, #eaba33 30%, #eaba33 20%, #8a3bd1 100%)";
-
-const SIGNAL_GRADIENT_MOBILE =
-  "linear-gradient(to bottom, #008f7a 30%, #eaba33 30%, #eaba33 20%, #8a3bd1 100%)";
-
-/* ================= DATA ================= */
-
-const STEPS: Step[] = [
-  {
-    trigger: 0.08,
-    label: "AI System Output",
-    content: "Response generated for enterprise workflow.",
-    color: "#c31069",
-  },
-  {
-    trigger: 0.32,
-    label: "Findora Verification Layer",
-    content: "AI-generated response.",
-    warning: true,
-    color: "#008f7a",
-  },
-  {
-    trigger: 0.58,
-    label: "Verification Pipeline",
-    content: `Hallucination Detection
-• Reliability Scoring
-• Policy Enforcement`,
-    color: "#eaba33",
-  },
-  {
-    trigger: 0.84,
-    label: "Trusted Output",
-    content: "Verified response delivered.",
-    success: true,
-    color: "#7332a1",
-  },
-];
-
-/* ================= MAIN ================= */
-
-export default function FindoraDiagram() {
-  const progress = useMotionValue(0);
-
-  useEffect(() => {
-    const controls = animate(progress, 1, {
-      duration: 8,
-      repeat: Infinity,
-      ease: "linear",
-    });
-
-    return () => controls.stop();
-  }, [progress]);
-
-  const mobileY = useTransform(progress, [0, 1], ["0%", "100%"]);
-  const desktopX = useTransform(progress, [0, 1], ["0%", "100%"]);
-
-  return (
-    <section className="relative overflow-hidden bg-white dark:bg-[#111828] py-1 pb-10">
-      <div className="mx-auto max-w-7xl px-6">
-
-        {/* HEADER */}
-        <div className="mx-auto mb-10 max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-[-0.05em] text-black dark:text-white">
-            How Trusted AI Outputs Are Generated
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-8 text-black/70 dark:text-white/70 text-[1.5rem] md:text-[1.7rem]">
-            Enterprise-grade verification infrastructure designed for reliable AI deployment across critical systems.
-          </p>
-        </div>
-
-        {/* FLOW */}
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-12 lg:flex-row lg:justify-between lg:gap-6">
-
-          {/* MOBILE SIGNAL */}
-          <SignalLine mobile progressStyle={{ top: mobileY }} />
-
-          {/* DESKTOP SIGNAL */}
-          <SignalLine progressStyle={{ left: desktopX }} />
-
-          {/* STEPS */}
-          {STEPS.map((step) => (
-            <StepCard key={step.label} progress={progress} {...step} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  icon: React.ReactNode;
 }
 
-/* ================= SIGNAL LINE ================= */
-
-function SignalLine({
-  mobile,
-  progressStyle,
-}: {
-  mobile?: boolean;
-  progressStyle: any;
-}) {
+function FeatureItem({ title, desc, color, icon }: FeatureItemProps) {
   return (
-    <div
-      className={`
-        absolute overflow-hidden rounded-full
-        ${
-          mobile
-            ? "left-1/2 top-0 h-full w-[5px] -translate-x-1/2 lg:hidden"
-            : "left-0 top-1/2 hidden h-[5px] w-full -translate-y-1/2 lg:block"
-        }
-      `}
-    >
-      {/* MAIN LINE */}
+    <div className="flex items-start gap-4 w-full">
       <div
-        className="absolute inset-0"
-        style={{
-          background: mobile
-            ? SIGNAL_GRADIENT_MOBILE
-            : SIGNAL_GRADIENT,
-        }}
-      />
-
-      {/* SOFT GLOW */}
-      <div
-        className="absolute inset-0 blur-[14px] opacity-40"
-        style={{
-          background: mobile
-            ? SIGNAL_GRADIENT_MOBILE
-            : SIGNAL_GRADIENT,
-        }}
-      />
-
-      {/* CORE SIGNAL (FIXED — NO GLOW LEAK) */}
-      <motion.div
-        style={progressStyle}
-        animate={{ scale: [1, 1.08, 1] }}
-        transition={{ duration: 3.2, repeat: Infinity }}
-        className={`absolute ${
-          mobile
-            ? "left-1/2 -translate-x-1/2 -translate-y-1/2"
-            : "top-1/2 -translate-x-1/2 -translate-y-1/2"
-        }`}
+        className="w-12 h-12 flex items-center justify-center rounded-lg shrink-0"
+        style={{ backgroundColor: `${color}15` }}
       >
-        {/* controlled glow layers (no overflow artifacts) */}
-        <div className="absolute h-20 w-20 rounded-full bg-[#7332a1]/20 blur-[28px]" />
-        <div className="absolute h-14 w-14 rounded-full bg-[#eaba33]/20 blur-[16px]" />
-        <div className="absolute h-8 w-8 rounded-full bg-[#008f7a]/20 blur-[8px]" />
+        {icon}
+      </div>
 
-        
-       
-      </motion.div>
+      <div className="flex-1 min-w-0">
+        <p
+          className="font-semibold leading-tight tracking-[-0.02em] text-[#111827] dark:text-white"
+          style={{
+            fontSize: "clamp(1.05rem, 1vw + 0.9rem, 1.45rem)",
+          }}
+        >
+          {title}
+        </p>
+
+        <p
+          className="font-medium leading-relaxed tracking-[-0.01em] text-[#4B5563] dark:text-white/60"
+          style={{
+            fontSize: "1.1rem",
+            marginTop: "0.25rem",
+          }}
+        >
+          {desc}
+        </p>
+      </div>
     </div>
   );
 }
 
-/* ================= CARD ================= */
+/* ----------------------------- Icons ----------------------------- */
 
-function StepCard({
-  label,
-  content,
-  warning,
-  success,
-  progress,
-  trigger,
-  color,
-}: StepCardProps) {
-  const active = useTransform(progress, (v) => v >= trigger && v < trigger + 0.18);
+const BrainIcon = ({ color }: { color: string }) => (
+  <svg width="24" height="24" fill="none" stroke={color} strokeWidth="1.7" viewBox="0 0 24 24">
+    <path d="M12 3c-3.5 0-6 2.5-6 6v1c0 1.4.6 2.6 1.5 3.5" />
+    <path d="M12 3c3.5 0 6 2.5 6 6v1c0 1.4-.6 2.6-1.5 3.5" />
+    <path d="M9 12h6" />
+    <path d="M12 9v6" />
+    <circle cx="8" cy="16" r="1.5" />
+    <circle cx="16" cy="16" r="1.5" />
+    <path d="M9.5 17.5 11 19" />
+    <path d="M14.5 17.5 13 19" />
+  </svg>
+);
 
-  const smoothActive = useTransform(active, (v) => (v ? 1 : 0));
+const GaugeIcon = ({ color }: { color: string }) => (
+  <svg width="24" height="24" fill="none" stroke={color} strokeWidth="1.7" viewBox="0 0 24 24">
+    <path d="M5 18a9 9 0 1 1 14 0" />
+    <path d="M12 13l4-4" />
+    <circle cx="12" cy="13" r="1.5" fill={color} stroke="none" />
+    <path d="M7.5 15.5h.01" />
+    <path d="M16.5 15.5h.01" />
+    <path d="M12 6v1.5" />
+  </svg>
+);
 
-  const borderColor = useTransform(smoothActive, (v) =>
-    v > 0 ? color : "rgba(255,255,255,0.08)"
-  );
+const ShieldIcon = ({ color }: { color: string }) => (
+  <svg width="24" height="24" fill="none" stroke={color} strokeWidth="1.7" viewBox="0 0 24 24">
+    <path d="M12 3 5 6v6c0 5 3.5 8 7 9 3.5-1 7-4 7-9V6l-7-3Z" />
+    <path d="M9 12h6" />
+    <path d="M12 9v6" />
+    <circle cx="12" cy="12" r="3.5" opacity="0.25" />
+  </svg>
+);
 
-  const shadow = useTransform(smoothActive, (v) =>
-    v > 0
-      ? `0 0 0 1px ${color}60, 0 18px 50px ${color}18`
-      : "0 10px 30px rgba(0,0,0,0.18)"
-  );
+const CheckListIcon = ({ color }: { color: string }) => (
+  <svg width="24" height="24" fill="none" stroke={color} strokeWidth="1.7" viewBox="0 0 24 24">
+    <path d="M5 6h14" />
+    <path d="M5 12h14" />
+    <path d="M5 18h14" />
+    <path d="M3 6l1 1 2-2" />
+    <path d="M3 12l1 1 2-2" />
+    <path d="M3 18l1 1 2-2" />
+  </svg>
+);
 
+/* ----------------------------- Main Component ----------------------------- */
+
+interface DiagramProps {
+  findoraLogoUrl?: string;
+}
+
+export default function Diagram({
+  findoraLogoUrl = "YOUR_FINDORA_LOGO_URL",
+}: DiagramProps) {
   return (
-    <motion.div
-      style={{ borderColor, boxShadow: shadow }}
-      className="
-        relative z-10 w-full max-w-[290px]
-        rounded-[28px]
-        border-[3.5px]
-        bg-white/70 dark:bg-[#0b1220]/60
-        px-7 py-4
-        backdrop-blur-2xl
-        transition-colors duration-700
-      "
-    >
-      {/* ACCENT */}
-      <div
-        className="mb-5 h-[5px] w-14 rounded-full"
-        style={{ backgroundColor: color }}
-      />
+    <div className="w-full flex flex-col items-center px-6 py-16 font-sans bg-white dark:bg-[#111828] transition-colors duration-300">
 
-      {/* LABEL */}
-      <p className="text-[1.3rem] font-semibold uppercase  text-black/ dark:text-white/">
-        {label}
-      </p>
+      <style>{`
+        .card {
+          border: 3.5px solid transparent;
+          border-radius: 16px;
+          background: white;
+          box-shadow: 0px 10px 100px rgba(0,0,0,0.08);
+          transition: border-color 600ms ease, box-shadow 600ms ease;
+        }
 
-      {/* CONTENT */}
-      <p className="mt-4 whitespace-pre-line text-[1.25rem] font-medium leading-8 text-black/80 dark:text-white/90">
-        {content}
-      </p>
+        .dark .card {
+          background: rgba(255,255,255,0.03);
+          box-shadow: 0px 20px 120px rgba(0,0,0,0.45);
+        }
 
-      {/* WARNING (always visible) */}
-      {warning && (
-        <div
-          className="mt-5 inline-flex rounded-[1rem] border px-7 py-3 text-[1.1rem] font-semibold"
-          style={{
-            borderColor: `${color}60`,
-            backgroundColor: `${color}18`,
-            color,
-            opacity: 0.95,
-          }}
-        >
-          Potential reliability issue
+        @keyframes card1Border {
+          0% { border-color: rgba(195,16,105,0); }
+          25% { border-color: rgba(195,16,105,1); }
+          100% { border-color: rgba(195,16,105,0); }
+        }
+
+        @keyframes card2Border {
+          0% { border-color: rgba(0,143,122,0); }
+          40% { border-color: rgba(0,143,122,1); }
+          100% { border-color: rgba(0,143,122,0); }
+        }
+
+        @keyframes card3Border {
+          0% { border-color: rgba(115,50,161,0); }
+          60% { border-color: rgba(115,50,161,1); }
+          100% { border-color: rgba(115,50,161,0); }
+        }
+
+        .card1-anim { animation: card1Border 6s infinite ease-in-out; }
+        .card2-anim { animation: card2Border 6s infinite ease-in-out; }
+        .card3-anim { animation: card3Border 6s infinite ease-in-out; }
+      `}</style>
+
+      {/* TITLE */}
+      <h2
+        className="font-bold text-center mb-16 tracking-[-0.03em] text-[#111827] dark:text-white"
+        style={{
+          fontSize: "clamp(1.8rem, 2vw + 1rem, 3rem)",
+          lineHeight: 1.1,
+        }}
+      >
+        How Findora Verifies AI Answers?
+      </h2>
+
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl">
+
+        {/* CARD 1 */}
+        <div className="card card1-anim p-4 lg:p-5 w-full lg:w-[350px] shrink-0">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-lg bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center shrink-0">
+              <svg width="26" height="26" fill="none" stroke="#c31069" strokeWidth="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M7 9h10" />
+                <path d="M7 13h6" />
+              </svg>
+            </div>
+
+            <div>
+              <div className="h-[7px] w-[30px] rounded-full mb-2 bg-[#c31069]" />
+              <p className="font-bold text-[#111827] dark:text-white">
+                AI SYSTEM OUTPUT
+              </p>
+              <p className="text-[1.1rem] text-gray-600 dark:text-white/60">
+                Response generated for enterprise workflow.
+              </p>
+            </div>
+          </div>
         </div>
-      )}
 
-      {/* SUCCESS (always visible) */}
-      {success && (
-        <div
-          className="mt-5 inline-flex rounded-[1rem] border px-7 py-3 text-[1.1rem] font-semibold"
-          style={{
-            borderColor: `${color}50`,
-            backgroundColor: `${color}14`,
-            color,
-            opacity: 0.95,
-          }}
-        >
-          Verified • Enterprise-grade reliability
+        <div className="w-[7px] h-[60px] lg:h-[3px] lg:w-[60px] bg-[#008f7a] dark:bg-white/10 shrink-0" />
+
+        {/* CARD 2 */}
+        <div className="card card2-anim p-5 lg:p-6 w-full lg:w-[500px] shrink-0 z-10">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-14 h-14 rounded-lg flex items-center justify-center shrink-0">
+              <img
+                src={findoraLogoUrl}
+                alt="Findora"
+                className="w-9 h-9 object-contain"
+              />
+            </div>
+
+            <div>
+              <div className="h-[7px] w-[30px] rounded-full mb-2 bg-[#008f7a]" />
+              <p className="font-bold text-[#008f7a]">
+                FINDORA VERIFICATION LAYER
+              </p>
+              <p className="text-[1.1rem] text-gray-600 dark:text-white/60">
+                AI-generated response verification.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <FeatureItem
+              title="Hallucination Detection"
+              desc="Detects factual inconsistencies and hallucinations."
+              color="#008f7a"
+              icon={<BrainIcon color="#008f7a" />}
+            />
+
+            <FeatureItem
+              title="Reliability Scoring"
+              desc="Scores responses based on multiple reliability signals."
+              color="#008f7a"
+              icon={<GaugeIcon color="#008f7a" />}
+            />
+
+            <FeatureItem
+              title="Policy Enforcement"
+              desc="Ensures alignment with enterprise policies and rules."
+              color="#008f7a"
+              icon={<ShieldIcon color="#008f7a" />}
+            />
+
+            <FeatureItem
+              title="Post-generation Verification"
+              desc="Validates final response before delivery."
+              color="#008f7a"
+              icon={<CheckListIcon color="#008f7a" />}
+            />
+          </div>
         </div>
-      )}
-    </motion.div>
+
+        <div className="w-[7px] h-[60px] lg:h-[3px] lg:w-[60px] bg-[#7332a1] dark:bg-white/10 shrink-0" />
+
+        {/* CARD 3 */}
+        <div className="card card3-anim p-4 lg:p-5 w-full lg:w-[350px] shrink-0">
+          <div className="flex items-center gap-4 items-start">
+            <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-500/10 flex items-center justify-center shrink-0 self-start mt-1">
+              <svg width="26" height="26" fill="none" stroke="#7332a1" strokeWidth="1.5" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path d="m8.5 12.5 2.5 2.5 4.5-5" />
+              </svg>
+            </div>
+
+            <div>
+              <div className="h-[7px] w-[30px] rounded-full mb-2 bg-[#7332a1]" />
+
+              <p className="font-bold text-[#111827] dark:text-white">
+                TRUSTED RESPONSE DELIVERED
+              </p>
+
+              <p className="font-semibold text-[1.1rem] text-[#7332a1] dark:text-purple-300">
+                Verified, Enterprise-grade reliability
+              </p>
+
+              <p className="text-[1.1rem] text-gray-600 dark:text-white/60">
+                policy-compliant output.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   );
 }
