@@ -230,14 +230,14 @@ function StepCard({
       </p>
 
       {/* CONTENT */}
-      <p className="mt-4 whitespace-pre-line text-[1.2rem] font-medium leading-8 text-black/80 dark:text-white/90">
+      <p className="mt-4 whitespace-pre-line text-[1.25rem] font-medium leading-8 text-black/80 dark:text-white/90">
         {content}
       </p>
 
       {/* WARNING (always visible) */}
       {warning && (
         <div
-          className="mt-5 inline-flex rounded-full border px-3 py-1 text-[16px] font-semibold"
+          className="mt-5 inline-flex rounded-[1rem] border px-7 py-3 text-[1.1rem] font-semibold"
           style={{
             borderColor: `${color}60`,
             backgroundColor: `${color}18`,
@@ -252,7 +252,7 @@ function StepCard({
       {/* SUCCESS (always visible) */}
       {success && (
         <div
-          className="mt-5 inline-flex rounded-full border px-6 py-1 text-[16px] font-semibold"
+          className="mt-5 inline-flex rounded-[1rem] border px-7 py-3 text-[1.1rem] font-semibold"
           style={{
             borderColor: `${color}50`,
             backgroundColor: `${color}14`,

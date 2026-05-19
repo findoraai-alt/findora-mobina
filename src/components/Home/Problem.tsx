@@ -25,7 +25,7 @@ export default function Problem() {
       ref={ref}
       className="relative overflow-hidden bg-[#07070A] py-16 md:py-20"
     >
-      {/* BACKGROUND GLOW (subtle + premium) */}
+      {/* BACKGROUND GLOW */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute left-1/2 top-[-240px] h-[650px] w-[650px] -translate-x-1/2 rounded-full bg-[#7332a1]/10 blur-[160px]" />
         <div className="absolute bottom-[-160px] right-[-120px] h-[520px] w-[520px] rounded-full bg-[#0b87b6]/10 blur-[160px]" />
@@ -38,9 +38,11 @@ export default function Problem() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9 }}
-          className="max-w-4xl text-3xl font-semibold tracking-[-0.05em] text-white md:text-6xl"
+          className="text-3xl font-semibold tracking-[-0.05em] md:text-6xl"
         >
-          AI Has a Trust Problem
+          <span style={{ color: "#ffffff" }}>AI Has a</span>{" "}
+          <span style={{ color: "#0b87b6" }}>Trust</span>{" "}
+          <span style={{ color: "#7332a1" }}>Problem</span>
         </motion.h2>
 
         {/* SUBHEAD */}
@@ -55,7 +57,7 @@ export default function Problem() {
         </motion.p>
 
         {/* CARDS */}
-        <div className="mt-10 md:mt-10 grid gap-6 md:grid-cols-2 md:gap-8">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 md:gap-8">
           {cards.map((text, i) => (
             <motion.div
               key={i}
@@ -67,52 +69,27 @@ export default function Problem() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               whileHover={{ y: -6 }}
-              className="
-                group
-                relative
-                overflow-hidden
-                rounded-[26px]
-                border
-                border-white/[0.06]
-                bg-white/5
-                p-6
-                md:p-9
-                backdrop-blur-2xl
-                transition-all
-                duration-500
-              "
+              className="group relative overflow-hidden rounded-[26px] border border-white/[0.06] bg-white/5 p-6 md:p-9 backdrop-blur-2xl transition-all duration-500"
             >
-              {/* ultra subtle glass gradient */}
               <div
-                className="
-                  absolute inset-0 opacity-0 transition-opacity duration-500
-                  group-hover:opacity-100
-                "
+                className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 style={{
-                  background: `radial-gradient(circle at top left, ${COLORS[i]}12, transparent 70%)`,
+                  background: `radial-gradient(circle at top left, ${COLORS[i]}12, transparent 100%)`,
                 }}
               />
 
-              {/* soft top line */}
               <div
-                className="absolute left-0 top-0 h-px w-full opacity-40"
+                className="absolute left-0 top-0 h-px w-full opacity-100"
                 style={{
                   background: `linear-gradient(to right, ${COLORS[i]}80, transparent 70%)`,
                 }}
               />
 
               <div className="relative z-10 flex flex-col gap-4 md:gap-7">
-                {/* index */}
-                <div className="text-[10px] tracking-[0.28em] text-white/70 md:text-xs">
-                  
-                </div>
-
-                {/* text */}
                 <p className="text-[1.5rem] font-semibold leading-snug tracking-tight text-white/90 md:text-2xl">
                   {text}
                 </p>
 
-                {/* bottom micro line */}
                 <div className="mt-2 overflow-hidden md:mt-6">
                   <motion.div
                     initial={{ width: 0 }}
@@ -121,7 +98,7 @@ export default function Problem() {
                       duration: 1,
                       delay: 0.25 + i * 0.12,
                     }}
-                    className="h-px opacity-80"
+                    className="h-px opacity-100"
                     style={{
                       background: `linear-gradient(to right, ${COLORS[i]}90, transparent)`,
                     }}
