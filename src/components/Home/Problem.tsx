@@ -23,7 +23,7 @@ export default function Problem() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[#07070A] py-28 md:py-44"
+      className="relative overflow-hidden bg-[#07070A] py-16 md:py-20"
     >
       {/* BACKGROUND GLOW (subtle + premium) */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -48,14 +48,14 @@ export default function Problem() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="mt-6 max-w-2xl text-[1.3rem] font-medium leading-relaxed text-white/45 md:text-[1.8rem]"
+          className="mt-6 max-w-2xl text-[1.3rem] font-medium leading-relaxed text-white/80 md:text-[1.8rem]"
         >
           As AI systems become more autonomous, verification becomes a
           mission-critical infrastructure requirement.
         </motion.p>
 
         {/* CARDS */}
-        <div className="mt-10 md:mt-28 grid gap-6 md:grid-cols-2 md:gap-8">
+        <div className="mt-10 md:mt-10 grid gap-6 md:grid-cols-2 md:gap-8">
           {cards.map((text, i) => (
             <motion.div
               key={i}
@@ -74,7 +74,7 @@ export default function Problem() {
                 rounded-[26px]
                 border
                 border-white/[0.06]
-                bg-white/[0.02]
+                bg-white/5
                 p-6
                 md:p-9
                 backdrop-blur-2xl
@@ -103,12 +103,12 @@ export default function Problem() {
 
               <div className="relative z-10 flex flex-col gap-4 md:gap-7">
                 {/* index */}
-                <div className="text-[10px] tracking-[0.28em] text-white/25 md:text-xs">
+                <div className="text-[10px] tracking-[0.28em] text-white/70 md:text-xs">
                   
                 </div>
 
                 {/* text */}
-                <p className="text-lg font-semibold leading-snug tracking-tight text-white/90 md:text-2xl">
+                <p className="text-[1.5rem] font-semibold leading-snug tracking-tight text-white/90 md:text-2xl">
                   {text}
                 </p>
 
@@ -121,7 +121,7 @@ export default function Problem() {
                       duration: 1,
                       delay: 0.25 + i * 0.12,
                     }}
-                    className="h-px opacity-60"
+                    className="h-px opacity-80"
                     style={{
                       background: `linear-gradient(to right, ${COLORS[i]}90, transparent)`,
                     }}

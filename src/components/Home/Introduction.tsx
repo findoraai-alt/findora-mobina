@@ -89,8 +89,8 @@ export default function Hero() {
           transition={{ delay: 0.25, duration: 0.9 }}
           className="
             mx-auto mt-10 max-w-3xl
-            text-[1.4rem] md:text-[1.8rem]
-            leading-[1.3] font-medium
+            text-[1.3rem] md:text-[1.8rem]
+            leading-[1.6] font-medium
             text-black/70 dark:text-white/70
           "
         >
@@ -187,7 +187,7 @@ export default function Hero() {
           }}
           className="relative h-[30px] w-36 md:w-44 bg-[#eaba33]/90"
         >
-          <div className="absolute inset-0 bg-[#eaba33] blur-[10px] opacity-50" />
+          <div className="absolute inset-0 bg-[#eaba33] blur-[15px] opacity-20" />
         </motion.div>
 
         {/* BLUE */}
@@ -199,7 +199,7 @@ export default function Hero() {
           }}
           className="relative h-[30px] w-64 md:w-80 bg-[#0b87b6]/90"
         >
-          <div className="absolute inset-0 bg-[#0b87b6] blur-[12px] opacity-40" />
+          <div className="absolute inset-0 bg-[#0b87b6] blur-[15px] opacity-20" />
         </motion.div>
 
         {/* MAGENTA */}
@@ -211,7 +211,7 @@ export default function Hero() {
           }}
           className="relative h-[30px] w-48 md:w-64 bg-[#c31069]/90"
         >
-          <div className="absolute inset-0 bg-[#c31069] blur-[12px] opacity-40" />
+          <div className="absolute inset-0 bg-[#c31069] blur-[15px] opacity-20" />
         </motion.div>
       </div>
 

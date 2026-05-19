@@ -93,7 +93,7 @@ export default function FindoraDiagram() {
             How Trusted AI Outputs Are Generated
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-8 text-black/70 dark:text-white/70 text-[1.3rem] md:text-[1.7rem]">
+          <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-8 text-black/70 dark:text-white/70 text-[1.5rem] md:text-[1.7rem]">
             Enterprise-grade verification infrastructure designed for reliable AI deployment across critical systems.
           </p>
         </div>
@@ -225,7 +225,7 @@ function StepCard({
       />
 
       {/* LABEL */}
-      <p className="text-[16px] font-semibold uppercase  text-black/60 dark:text-white/80">
+      <p className="text-[1.3rem] font-semibold uppercase  text-black/ dark:text-white/">
         {label}
       </p>
 
