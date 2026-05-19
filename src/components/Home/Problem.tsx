@@ -48,14 +48,14 @@ export default function Problem() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="mt-6 max-w-2xl text-base font-medium leading-relaxed text-white/45 md:text-xl"
+          className="mt-6 max-w-2xl text-[1.3rem] font-medium leading-relaxed text-white/45 md:text-[1.8rem]"
         >
           As AI systems become more autonomous, verification becomes a
           mission-critical infrastructure requirement.
         </motion.p>
 
         {/* CARDS */}
-        <div className="mt-16 md:mt-28 grid gap-6 md:grid-cols-2 md:gap-8">
+        <div className="mt-10 md:mt-28 grid gap-6 md:grid-cols-2 md:gap-8">
           {cards.map((text, i) => (
             <motion.div
               key={i}
@@ -104,7 +104,7 @@ export default function Problem() {
               <div className="relative z-10 flex flex-col gap-4 md:gap-7">
                 {/* index */}
                 <div className="text-[10px] tracking-[0.28em] text-white/25 md:text-xs">
-                  0{i + 1}
+                  
                 </div>
 
                 {/* text */}

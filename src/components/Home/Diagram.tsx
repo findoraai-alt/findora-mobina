@@ -93,7 +93,7 @@ export default function FindoraDiagram() {
             How Trusted AI Outputs Are Generated
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-8 text-black/70 dark:text-white/70 text-[1.4rem]">
+          <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-8 text-black/70 dark:text-white/70 text-[1.3rem] md:text-[1.7rem]">
             Enterprise-grade verification infrastructure designed for reliable AI deployment across critical systems.
           </p>
         </div>
