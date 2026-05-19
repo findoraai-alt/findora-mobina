@@ -27,10 +27,10 @@ type StepCardProps = Step & {
 /* ================= SIGNAL GRADIENT ================= */
 
 const SIGNAL_GRADIENT =
-  "linear-gradient(to right, #008f7a 0%, #009b84 30%, #eaba33 55%, #8a3bd1 100%)";
+  "linear-gradient(to right, #008f7a 0%, #eaba33 30%, #eaba33 20%, #8a3bd1 100%)";
 
 const SIGNAL_GRADIENT_MOBILE =
-  "linear-gradient(to bottom, #008f7a 0%, #009b84 30%, #eaba33 55%, #8a3bd1 100%)";
+  "linear-gradient(to bottom, #008f7a 30%, #eaba33 30%, #eaba33 20%, #8a3bd1 100%)";
 
 /* ================= DATA ================= */
 
@@ -88,12 +88,12 @@ export default function FindoraDiagram() {
       <div className="mx-auto max-w-7xl px-6">
 
         {/* HEADER */}
-        <div className="mx-auto mb-24 max-w-4xl text-center">
+        <div className="mx-auto mb-10 max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-semibold tracking-[-0.05em] text-black dark:text-white">
             How Trusted AI Outputs Are Generated
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-8 text-black/70 dark:text-white/70">
+          <p className="mx-auto mt-6 max-w-2xl text-lg font-semibold leading-8 text-black/70 dark:text-white/70 text-[1.4rem]">
             Enterprise-grade verification infrastructure designed for reliable AI deployment across critical systems.
           </p>
         </div>
@@ -252,7 +252,7 @@ function StepCard({
       {/* SUCCESS (always visible) */}
       {success && (
         <div
-          className="mt-5 inline-flex rounded-full border px-3 py-1 text-[16px] font-semibold"
+          className="mt-5 inline-flex rounded-full border px-6 py-1 text-[16px] font-semibold"
           style={{
             borderColor: `${color}50`,
             backgroundColor: `${color}14`,
