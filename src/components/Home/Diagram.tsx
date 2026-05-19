@@ -213,7 +213,7 @@ function StepCard({
         rounded-[28px]
         border-[3.5px]
         bg-white/70 dark:bg-[#0b1220]/60
-        px-7 py-7
+        px-7 py-4
         backdrop-blur-2xl
         transition-colors duration-700
       "

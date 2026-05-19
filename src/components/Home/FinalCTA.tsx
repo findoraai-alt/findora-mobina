@@ -63,8 +63,8 @@ export default function FinalCTA() {
               text-white dark:text-black/80
               transition-all duration-300
               hover:scale-[1.03]
-              bg-black/
-              dark: bg-white
+              bg-black/90
+              dark:bg-white
               
               
             "

@@ -18,7 +18,7 @@ export default function VisionSection() {
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative w-full bg-black text-white py-28 overflow-hidden"
+      className="relative w-full bg-black text-white py-20 overflow-hidden"
     >
 
       {/* softer cinematic glow layer */}
@@ -33,7 +33,7 @@ export default function VisionSection() {
 
       </div>
 
-      {/* interactive spotlight (more subtle) */}
+      {/* interactive spotlight */}
       <div
         ref={spotlightRef}
         className="pointer-events-none absolute inset-0 transition duration-300"
@@ -42,30 +42,39 @@ export default function VisionSection() {
       {/* content */}
       <div className="relative max-w-3xl mx-auto px-6 text-center">
 
-        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight mb-6">
-          Foundational Infrastructure
-          <br />
-          for the Age of Autonomous AI
+        <h2 className="text-[2rem] md:text-5xl font-semibold tracking-tight leading-tight mb-6">
+          Foundational Infrastructur for the Age of Autonomous AI
         </h2>
 
-        <p className="mx-auto max-w-xl text-base md:text-lg text-gray-400 leading-relaxed mb-10 font-medium">
+        <p
+          className="
+            mx-auto
+            max-w-xl
+            text-[1.3rem]
+            md:text-[1.7rem]
+            text-white/70
+            leading-relaxed
+            mb-10
+            font-medium
+          "
+        >
           AI systems must become verifiable, governed, and trustworthy before
           they can scale safely across enterprise and society.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="px-7 py-3 text-sm font-medium bg-white text-black rounded-lg hover:bg-gray-200 transition-all duration-300">
+          <button className="px-7 py-3 text-[1.3rem] font-medium bg-white text-black rounded-lg hover:bg-gray-200 transition-all duration-300">
             Request Investor Brief
           </button>
 
-          <button className="px-7 py-3 text-sm font-medium border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
+          <button className="px-7 py-3 text-[1.3rem] font-medium border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
             Contact Enterprise Team
           </button>
         </div>
 
       </div>
 
-      {/* softer bottom fade */}
+      {/* bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-t from-black to-transparent" />
 
     </section>

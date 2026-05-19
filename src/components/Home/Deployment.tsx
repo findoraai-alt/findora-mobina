@@ -53,7 +53,7 @@ export default function DeploymentSection() {
         
         {/* HEADER */}
         <div className="max-w-4xl">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-950 dark:text-white">
+          <h2 className="text-[2rem] sm:text-[2rem] lg:text-[3.5rem] font-semibold tracking-tight text-neutral-950 dark:text-white">
             Built for{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#008f7a] via-[#0b87b6] to-[#7332a1]">
               Enterprise
@@ -61,7 +61,7 @@ export default function DeploymentSection() {
             , Government, and Edge AI
           </h2>
 
-          <p className="mt-5 max-w-2xl text-lg sm:text-xl text-black/70 dark:text-white/70 font-medium">
+          <p className="mt-5 max-w-2xl text-[1.3rem] sm:text-[1.7rem] text-black/80 dark:text-white/80 font-medium">
             Deploy across cloud, local, on-device, or air-gapped environments
             with no retraining required.
           </p>
@@ -87,7 +87,7 @@ export default function DeploymentSection() {
                 "
               >
                 {/* TOP BAR */}
-                <div className="absolute left-0 top-0 h-[2px] w-full bg-black/5 dark:bg-white/10">
+                <div className="absolute left-0 top-0 h-[3px] w-full bg-black/5 dark:bg-white/10">
                   <div
                     className="h-full transition-all duration-500"
                     style={{
@@ -109,11 +109,11 @@ export default function DeploymentSection() {
 
                 {/* CONTENT */}
                 <div className="relative z-10">
-                  <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-black dark:text-white">
+                  <h3 className="text-[1.4rem] sm:text-[1.5rem] font-bold tracking-tight text-black dark:text-white">
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-[15px] sm:text-[16px] leading-6 text-black/70 dark:text-white/70 font-semibold">
+                  <p className="mt-3 text-[1.3rem] sm:text-[1.4rem] leading-7 text-black/70 dark:text-white/70 font-semibold">
                     {item.tagline}
                   </p>
                 </div>

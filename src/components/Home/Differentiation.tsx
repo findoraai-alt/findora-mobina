@@ -51,8 +51,8 @@ const Differentiation = () => {
 
           {data.traditional.map((item, idx) => (
             <div key={idx} className="flex gap-3 items-start">
-              <X className="text-[#c31069] mt-1" size={18} />
-              <p className="text-lg text-gray-600 dark:text-gray-300 font-semibold">
+              <X className="text-[#c31069] mt-1 shrink-0" size={23} />
+              <p className="text-[1.3rem] text-gray-600 dark:text-gray-300 font-semibold">
                 {item}
               </p>
             </div>
@@ -67,8 +67,8 @@ const Differentiation = () => {
 
           {data.findora.map((item, idx) => (
             <div key={idx} className="flex gap-3 items-start">
-              <Check className="text-[#008f7a] mt-1" size={18} />
-              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              <Check className="text-[#008f7a] mt-1 shrink-0" size={23} />
+              <p className="text-[1.3rem] font-semibold text-gray-900 dark:text-gray-100">
                 {item}
               </p>
             </div>
@@ -82,10 +82,10 @@ const Differentiation = () => {
           
           {/* HEADER */}
           <div className="grid grid-cols-2 bg-gray-50 dark:bg-gray-800 uppercase tracking-wider font-bold">
-            <div className="p-3 border-r border-gray-200 dark:border-gray-700 text-[#c31069]">
+            <div className="p-3 border-r border-gray-200 dark:border-gray-700 text-[#c31069] text-[1.3rem]">
               Traditional
             </div>
-            <div className="p-3 text-[#008f7a]">
+            <div className="p-3 text-[#008f7a] text-[1.3rem]">
               Findora
             </div>
           </div>
@@ -100,13 +100,15 @@ const Differentiation = () => {
               <div className="p-4 flex gap-2 items-start border-r border-gray-100 dark:border-gray-700">
                 {data.traditional[idx] ? (
                   <>
-                    <X className="text-[#c31069] mt-1" size={14} />
-                    <span className="text-gray-500 dark:text-gray-300">
+                    <X className="text-[#c31069] mt-1 shrink-0" size={23} />
+                    <span className="text-[1.3rem] text-gray-500 dark:text-gray-300 font-semibold">
                       {data.traditional[idx]}
                     </span>
                   </>
                 ) : (
-                  <span className="text-gray-300 dark:text-gray-600">—</span>
+                  <span className="text-[1.3rem] text-gray-300 dark:text-gray-600">
+                    —
+                  </span>
                 )}
               </div>
 
@@ -114,13 +116,15 @@ const Differentiation = () => {
               <div className="p-4 flex gap-2 items-start">
                 {data.findora[idx] ? (
                   <>
-                    <Check className="text-[#008f7a] mt-1" size={14} />
-                    <span className="font-semibold text-gray-900 dark:text-gray-100">
+                    <Check className="text-[#008f7a] mt-1 shrink-0" size={23} />
+                    <span className="text-[1.3rem] font-semibold text-gray-900 dark:text-gray-100">
                       {data.findora[idx]}
                     </span>
                   </>
                 ) : (
-                  <span className="text-gray-300 dark:text-gray-600">—</span>
+                  <span className="text-[1.3rem] text-gray-300 dark:text-gray-600">
+                    —
+                  </span>
                 )}
               </div>
             </div>
@@ -135,7 +139,7 @@ const Differentiation = () => {
         viewport={{ once: true }}
         className="mt-10 text-center md:text-left"
       >
-        <p className="text-xl md:text-2xl font-semibold max-w-2xl md:mx-0 mx-auto">
+        <p className="text-[1.5rem] md:text-2xl font-semibold max-w-2xl md:mx-0 mx-auto">
           <span className="text-black/80 dark:text-white/90">
             {data.statement}
           </span>
