@@ -55,7 +55,7 @@ export default function Hero() {
       className="
         relative overflow-hidden
         bg-white dark:bg-[#111828]
-        pt-10 pb-2 md:pt-10 md:pb-28
+        pt-10 pb-6 md:pt-10 md:pb-18
       "
     >
       {/* ambient gradient */}
