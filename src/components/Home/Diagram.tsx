@@ -266,11 +266,11 @@ export default function Diagram({
           }}
         >
           <div className="flex items-top gap-4 mb-6">
-            <div className="mt-5 w-14 h-14 rounded-lg flex items-top justify-center shrink-0">
+            <div className=" w-14 h-14 rounded-lg flex items-top justify-center shrink-0">
               <img
                 src={findoraLogoUrl}
                 alt="Findora"
-                className="w-9 h-9 object-contain"
+                className="w-14 h-14 object-contain self-start mt-5"
               />
             </div>
 
