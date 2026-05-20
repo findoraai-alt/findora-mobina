@@ -244,7 +244,7 @@ export default function VerificationLayerDiagram() {
             {["Secure", "Reliable", "Governed", "Auditable"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-semibold"
+                className="px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-[1rem] font-semibold"
               >
                 ✓ {item}
               </span>

@@ -101,7 +101,7 @@ export default function Diagram({
   findoraLogoUrl = "YOUR_FINDORA_LOGO_URL",
 }: DiagramProps) {
   return (
-    <div className="w-full flex flex-col items-center px-6 py-16 font-sans bg-white dark:bg-[#111828] transition-colors duration-300">
+    <div className="w-full flex flex-col items-center px-6 py-10  font-sans bg-white dark:bg-[#111828] transition-colors duration-300">
 
       <style>{`
         .card {
@@ -117,27 +117,18 @@ export default function Diagram({
           box-shadow: 0px 20px 120px rgba(0,0,0,0.45);
         }
 
-        @keyframes card1Border {
-          0% { border-color: rgba(195,16,105,0); }
-          25% { border-color: rgba(195,16,105,1); }
-          100% { border-color: rgba(195,16,105,0); }
+        /* ✔️ NEW: unified animation */
+        @keyframes borderPulse {
+          0% { border-color: transparent; }
+          20% { border-color: var(--clr); }
+          45% { border-color: var(--clr); }
+          70% { border-color: transparent; }
+          100% { border-color: transparent; }
         }
 
-        @keyframes card2Border {
-          0% { border-color: rgba(0,143,122,0); }
-          40% { border-color: rgba(0,143,122,1); }
-          100% { border-color: rgba(0,143,122,0); }
+        .anim {
+          animation: borderPulse 6s infinite ease-in-out;
         }
-
-        @keyframes card3Border {
-          0% { border-color: rgba(115,50,161,0); }
-          60% { border-color: rgba(115,50,161,1); }
-          100% { border-color: rgba(115,50,161,0); }
-        }
-
-        .card1-anim { animation: card1Border 6s infinite ease-in-out; }
-        .card2-anim { animation: card2Border 6s infinite ease-in-out; }
-        .card3-anim { animation: card3Border 6s infinite ease-in-out; }
       `}</style>
 
       {/* TITLE */}
@@ -154,7 +145,13 @@ export default function Diagram({
       <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl">
 
         {/* CARD 1 */}
-        <div className="card card1-anim p-4 lg:p-5 w-full lg:w-[350px] shrink-0">
+        <div
+          className="card anim card1-anim p-4 lg:p-5 w-full lg:w-[350px] shrink-0"
+          style={{
+            ["--clr" as any]: "#c31069",
+            animationDelay: "0s"
+          }}
+        >
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-lg bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center shrink-0">
               <svg width="26" height="26" fill="none" stroke="#c31069" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -179,7 +176,13 @@ export default function Diagram({
         <div className="w-[7px] h-[60px] lg:h-[3px] lg:w-[60px] bg-[#008f7a] dark:bg-white/10 shrink-0" />
 
         {/* CARD 2 */}
-        <div className="card card2-anim p-5 lg:p-6 w-full lg:w-[500px] shrink-0 z-10">
+        <div
+          className="card anim card2-anim p-5 lg:p-6 w-full lg:w-[500px] shrink-0 z-10"
+          style={{
+            ["--clr" as any]: "#008f7a",
+            animationDelay: "2s"
+          }}
+        >
           <div className="flex items-center gap-4 mb-6">
             <div className="w-14 h-14 rounded-lg flex items-center justify-center shrink-0">
               <img
@@ -234,7 +237,13 @@ export default function Diagram({
         <div className="w-[7px] h-[60px] lg:h-[3px] lg:w-[60px] bg-[#7332a1] dark:bg-white/10 shrink-0" />
 
         {/* CARD 3 */}
-        <div className="card card3-anim p-4 lg:p-5 w-full lg:w-[350px] shrink-0">
+        <div
+          className="card anim card3-anim p-4 lg:p-5 w-full lg:w-[350px] shrink-0"
+          style={{
+            ["--clr" as any]: "#7332a1",
+            animationDelay: "4s"
+          }}
+        >
           <div className="flex items-center gap-4 items-start">
             <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-500/10 flex items-center justify-center shrink-0 self-start mt-1">
               <svg width="26" height="26" fill="none" stroke="#7332a1" strokeWidth="1.5" viewBox="0 0 24 24">

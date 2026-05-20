@@ -55,7 +55,7 @@ export default function Hero() {
       className="
         relative overflow-hidden
         bg-white dark:bg-[#111828]
-        pt-10 pb-10 md:pt-10 md:pb-28
+        pt-10 pb-2 md:pt-10 md:pb-28
       "
     >
       {/* ambient gradient */}
@@ -68,7 +68,7 @@ export default function Hero() {
       />
 
       {/* CONTENT */}
-      <div className="relative z-20 mx-auto max-w-6xl px-6 text-center">
+      <div className="relative z-20 mx-auto max-w-6xl px-7 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export default function Hero() {
           className="
             mx-auto mt-10 max-w-3xl
             text-[1.3rem] md:text-[1.8rem]
-            leading-[1.6] font-medium
+            font-medium
             text-black/70 dark:text-white/70
           "
         >
@@ -102,8 +102,39 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.8 }}
-          className="mt-14 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+          className="mt-10 flex flex-col items-center gap-6"
         >
+          {/* SECONDARY */}
+          <a
+            href="https://search.findora.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group flex items-center gap-2
+              rounded-[15px] border-[2px]
+              border-black/20 dark:border-white/10
+              bg-white/70 dark:bg-white/5
+              px-7 py-3.5
+              text-[1.3rem] font-medium tracking-[-0.01em]
+              text-black/80 dark:text-white/80
+              backdrop-blur-md
+              transition-all duration-300
+              hover:bg-black hover:text-white
+              dark:hover:bg-white dark:hover:text-black
+            "
+          >
+            Try Findora Search
+
+            <ArrowUpRight
+              size={17}
+              className="
+                transition-transform duration-300
+                group-hover:-translate-y-[1px]
+                group-hover:translate-x-[1px]
+              "
+            />
+          </a>
+
           {/* PRIMARY */}
           <button
             onMouseMove={handleMouseMove}
@@ -138,34 +169,6 @@ export default function Hero() {
             />
 
             <span className="relative z-10 text-[1.3rem]">Book Demo</span>
-          </button>
-
-          {/* SECONDARY */}
-          <button
-            className="
-              group flex items-center gap-2
-              rounded-[15px] border-[2px]
-              border-black/20 dark:border-white/10
-              bg-white/70 dark:bg-white/5
-              px-7 py-3.5
-              text-[1.3rem] font-medium tracking-[-0.01em]
-              text-black/80 dark:text-white/80
-              backdrop-blur-md
-              transition-all duration-300
-              hover:bg-black hover:text-white
-              dark:hover:bg-white dark:hover:text-black
-            "
-          >
-            Try Findora Search
-
-            <ArrowUpRight
-              size={17}
-              className="
-                transition-transform duration-300
-                group-hover:-translate-y-[1px]
-                group-hover:translate-x-[1px]
-              "
-            />
           </button>
         </motion.div>
       </div>
