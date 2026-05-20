@@ -48,7 +48,7 @@ function FeatureItem({ title, desc, color, icon }: FeatureItemProps) {
 /* ----------------------------- Icons ----------------------------- */
 
 const BrainIcon = ({ color }: { color: string }) => (
-  <svg width="24" height="24" fill="none" stroke={color} strokeWidth="1.7" viewBox="0 0 24 24">
+  <svg width="40" height="40" fill="none" stroke={color} strokeWidth="1.3" viewBox="0 0 24 24">
     <path d="M12 3c-3.5 0-6 2.5-6 6v1c0 1.4.6 2.6 1.5 3.5" />
     <path d="M12 3c3.5 0 6 2.5 6 6v1c0 1.4-.6 2.6-1.5 3.5" />
     <path d="M9 12h6" />
@@ -61,7 +61,7 @@ const BrainIcon = ({ color }: { color: string }) => (
 );
 
 const GaugeIcon = ({ color }: { color: string }) => (
-  <svg width="24" height="24" fill="none" stroke={color} strokeWidth="1.7" viewBox="0 0 24 24">
+  <svg width="40" height="40" fill="none" stroke={color} strokeWidth="1.3" viewBox="0 0 24 24">
     <path d="M5 18a9 9 0 1 1 14 0" />
     <path d="M12 13l4-4" />
     <circle cx="12" cy="13" r="1.5" fill={color} stroke="none" />
@@ -72,7 +72,7 @@ const GaugeIcon = ({ color }: { color: string }) => (
 );
 
 const ShieldIcon = ({ color }: { color: string }) => (
-  <svg width="24" height="24" fill="none" stroke={color} strokeWidth="1.7" viewBox="0 0 24 24">
+  <svg width="40" height="40" fill="none" stroke={color} strokeWidth="1.3" viewBox="0 0 24 24">
     <path d="M12 3 5 6v6c0 5 3.5 8 7 9 3.5-1 7-4 7-9V6l-7-3Z" />
     <path d="M9 12h6" />
     <path d="M12 9v6" />
@@ -81,7 +81,7 @@ const ShieldIcon = ({ color }: { color: string }) => (
 );
 
 const CheckListIcon = ({ color }: { color: string }) => (
-  <svg width="24" height="24" fill="none" stroke={color} strokeWidth="1.7" viewBox="0 0 24 24">
+  <svg width="40" height="40" fill="none" stroke={color} strokeWidth="1.3" viewBox="0 0 24 24">
     <path d="M5 6h14" />
     <path d="M5 12h14" />
     <path d="M5 18h14" />
@@ -152,9 +152,9 @@ export default function Diagram({
             animationDelay: "0s"
           }}
         >
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-lg bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center shrink-0">
-              <svg width="26" height="26" fill="none" stroke="#c31069" strokeWidth="1.5" viewBox="0 0 24 24">
+          <div className="flex items-top gap-4">
+            <div className=" mt-4 w-12 h-12 rounded-lg bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center shrink-0">
+              <svg width="40" height="40" fill="none" stroke="#c31069" strokeWidth="1.3" viewBox="0 0 24 24">
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <path d="M7 9h10" />
                 <path d="M7 13h6" />
@@ -166,7 +166,7 @@ export default function Diagram({
               <p className="font-bold text-[#111827] dark:text-white">
                 AI SYSTEM OUTPUT
               </p>
-              <p className="text-[1.1rem] text-gray-600 dark:text-white/60">
+              <p className="text-[1.1rem] text-gray-600 dark:text-white/80 font-semibold">
                 Response generated for enterprise workflow.
               </p>
             </div>
@@ -183,8 +183,8 @@ export default function Diagram({
             animationDelay: "2s"
           }}
         >
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 h-14 rounded-lg flex items-center justify-center shrink-0">
+          <div className="flex items-top gap-4 mb-6 ">
+            <div className="mt-5 w-14 h-14 rounded-lg flex items-top justify-center shrink-0">
               <img
                 src={findoraLogoUrl}
                 alt="Findora"
@@ -194,10 +194,10 @@ export default function Diagram({
 
             <div>
               <div className="h-[7px] w-[30px] rounded-full mb-2 bg-[#008f7a]" />
-              <p className="font-bold text-[#008f7a]">
+              <p className="font-bold text-[#008f7a] text-[1.1rem]">
                 FINDORA VERIFICATION LAYER
               </p>
-              <p className="text-[1.1rem] text-gray-600 dark:text-white/60">
+              <p className="text-[1.1rem] text-gray-600 dark:text-white/80 font-semibold">
                 AI-generated response verification.
               </p>
             </div>
@@ -244,9 +244,9 @@ export default function Diagram({
             animationDelay: "4s"
           }}
         >
-          <div className="flex items-center gap-4 items-start">
-            <div className="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-500/10 flex items-center justify-center shrink-0 self-start mt-1">
-              <svg width="26" height="26" fill="none" stroke="#7332a1" strokeWidth="1.5" viewBox="0 0 24 24">
+          <div className="flex items-center  gap-4 items-top">
+            <div className="mt-5 w-12 h-12  rounded-lg bg-purple-100 dark:bg-purple-500/10 flex items-center justify-center shrink-0 self-start mt-1">
+              <svg  width="40" height="40" fill="none" stroke="#7332a1" strokeWidth="1.3" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="9" />
                 <path d="m8.5 12.5 2.5 2.5 4.5-5" />
               </svg>
@@ -259,11 +259,11 @@ export default function Diagram({
                 TRUSTED RESPONSE DELIVERED
               </p>
 
-              <p className="font-semibold text-[1.1rem] text-[#7332a1] dark:text-purple-300">
+              <p className="font-semibold text-[1.1rem] text-[#7332a1] dark:text-[#7332a1]">
                 Verified, Enterprise-grade reliability
               </p>
 
-              <p className="text-[1.1rem] text-gray-600 dark:text-white/60">
+              <p className="text-[1.1rem] text-gray-600 dark:text-white/80">
                 policy-compliant output.
               </p>
             </div>
