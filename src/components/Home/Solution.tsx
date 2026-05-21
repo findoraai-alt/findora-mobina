@@ -14,9 +14,19 @@ import {
 
 /* ================= Fade In ================= */
 
-function FadeInSection({ children }: any) {
+function FadeInSection({ children, glowColor }: any) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,7 +46,12 @@ function FadeInSection({ children }: any) {
   return (
     <div
       ref={ref}
-      className={`relative transition-all duration-700 ease-out ${
+      style={
+        isMobile && visible && glowColor
+          ? { boxShadow: `0 0 18px ${glowColor}40` }
+          : {}
+      }
+      className={`relative rounded-2xl overflow-hidden transition-all duration-700 ease-out ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
@@ -121,8 +136,8 @@ export default function VerificationLayerDiagram() {
       <div className="w-full max-w-4xl flex flex-col gap-8">
 
         {/* STEP 1 */}
-        <FadeInSection>
-          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/60">
+        <FadeInSection glowColor="#8b5cf6">
+          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/80">
 
             <div className="absolute top-4 left-4 sm:static">
               <StepNumber color="#8b5cf6" num="01" />
@@ -142,8 +157,8 @@ export default function VerificationLayerDiagram() {
         </FadeInSection>
 
         {/* STEP 2 */}
-        <FadeInSection>
-          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/60">
+        <FadeInSection glowColor="#3b82f6">
+          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/80">
 
             <div className="absolute top-4 left-4 sm:static">
               <StepNumber color="#3b82f6" num="02" />
@@ -165,8 +180,8 @@ export default function VerificationLayerDiagram() {
         </FadeInSection>
 
         {/* STEP 3 */}
-        <FadeInSection>
-          <div className="group relative border border-[#2fa58d]/40 dark:border-[#2fa58d]/40 rounded-2xl p-8 bg-[#2fa58d08] dark:bg-white/60">
+        <FadeInSection glowColor="#2fa58d">
+          <div className="group relative border border-[#2fa58d]/40 dark:border-[#2fa58d]/40 rounded-2xl p-8 bg-[#2fa58d08] dark:bg-white/80">
 
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
 
@@ -193,7 +208,7 @@ export default function VerificationLayerDiagram() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 border border-gray-300 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-white/60">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 border border-gray-300 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-white/80">
 
               <Feature title="Hallucination Detection" icon={<ScanSearch size={24} />} />
               <Feature title="Reliability Scoring" icon={<BookOpenCheck size={24} />} />
@@ -205,8 +220,8 @@ export default function VerificationLayerDiagram() {
         </FadeInSection>
 
         {/* STEP 4 */}
-        <FadeInSection>
-          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/60">
+        <FadeInSection glowColor="#4f46e5">
+          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/80">
 
             <div className="absolute top-4 left-4 sm:static">
               <StepNumber color="#4f46e5" num="04" />
@@ -231,7 +246,7 @@ export default function VerificationLayerDiagram() {
 
       {/* FOOTER */}
       <FadeInSection>
-        <div className="mt-10 border border-gray-300 dark:border-gray-700 rounded-2xl p-4 max-w-3xl text-center bg-white dark:bg-white/60">
+        <div className="mt-10 border border-gray-300 dark:border-gray-700 rounded-2xl p-4 max-w-3xl text-center bg-white dark:bg-white/80">
           <p className="font-semibold text-lg text-gray-900 dark:text-black mb-4">
             Enterprise-grade verification infrastructure
           </p>
@@ -244,7 +259,7 @@ export default function VerificationLayerDiagram() {
             {["Secure", "Reliable", "Governed", "Auditable"].map((item) => (
               <span
                 key={item}
-                className="px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 text-[1rem] font-semibold"
+                className="px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-white text-[1rem] font-semibold"
               >
                 ✓ {item}
               </span>
