@@ -105,12 +105,16 @@ export default function Hero() {
           className="mt-10 flex flex-col items-center gap-6"
         >
           {/* SECONDARY */}
-          <a
-            href="https://search.findora.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              group flex items-center gap-2
+           
+          
+          <motion.a
+          href="https://search.findora.ai/"
+          className="
+            inline-flex
+            items-center
+            gap-2
+            font-semibold
+            group flex items-center gap-2
               rounded-[15px] border-[2px]
               border-black/20 dark:border-white/10
               bg-white/70 dark:bg-white/5
@@ -118,25 +122,52 @@ export default function Hero() {
               text-[1.3rem] font-medium tracking-[-0.01em]
               text-black/80 dark:text-white/80
               backdrop-blur-md
-              transition-all duration-300
+               transition-all duration-300
               hover:bg-black hover:text-white
               dark:hover:bg-white dark:hover:text-black
+          "
+        >
+          <motion.span
+            className="
+              text-transparent
+              bg-clip-text
+              bg-gradient-to-r
+              from-black
+              via-gray-300
+              to-black
+              bg-[length:300%_100%]
+              drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
             "
+            animate={{
+              backgroundPosition: ["200% center", "-200% center"],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "linear",
+            }}
           >
             Try Findora Search
+          </motion.span>
 
-            <ArrowUpRight
-              size={17}
+          <span className="hover:text-black/90">
+           <ArrowUpRight
+              size={20}
               className="
                 transition-transform duration-300
                 group-hover:-translate-y-[1px]
                 group-hover:translate-x-[1px]
+                dark:text-white
+                dark:group-hover:text-black
+                
               "
             />
-          </a>
+          </span>
+        </motion.a>
+         
 
           {/* PRIMARY */}
-          <button
+         {/* <button
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
@@ -169,7 +200,7 @@ export default function Hero() {
             />
 
             <span className="relative z-10 text-[1.3rem]">Book Demo</span>
-          </button>
+          </button>*/}
         </motion.div>
       </div>
 

@@ -16,6 +16,16 @@ import {
 function FadeInSection({ children }: any) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,10 +45,16 @@ function FadeInSection({ children }: any) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
+      className={`relative transition-all duration-700 ease-out ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
     >
+      {isMobile && visible && (
+        <div className="pointer-events-none absolute inset-0 rounded-2xl overflow-hidden z-10">
+          <div className="absolute inset-0 rounded-2xl shadow-[0_0_40px_rgba(47,165,141,0.25)]" />
+          <div className="absolute -inset-x-20 top-0 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent rotate-6 animate-[shine_1.4s_ease-out]" />
+        </div>
+      )}
       {children}
     </div>
   );
@@ -160,13 +176,12 @@ export default function VerificationLayerDiagram() {
           </div>
         </FadeInSection>
 
-        {/* STEP 3 FIXED (IMPORTANT) */}
+        {/* STEP 3 */}
         <FadeInSection>
           <div className="group relative border border-[#2fa58d]/40 rounded-2xl p-8 bg-[#2fa58d08]">
 
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
 
-              {/* FIXED POSITION */}
               <div className="absolute top-4 left-4 sm:static">
                 <StepNumber color="#2fa58d" num="03" />
               </div>
@@ -175,12 +190,12 @@ export default function VerificationLayerDiagram() {
                 <img
                   src="/images/logo.png"
                   alt="Findora Logo"
-                  className="w-[4rem] h-[4rem] object-contain"
+                  className="w-14 h-14 object-contain"
                 />
               </div>
 
               <div>
-                <h3 className="font-bold text-lg text-[#2fa58d]">
+                <h3 className="font-bold text-lg text-[#2fa58d] align-center">
                   FINDORA LAYER
                 </h3>
 

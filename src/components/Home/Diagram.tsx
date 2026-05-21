@@ -270,7 +270,7 @@ export default function Diagram({
               <img
                 src={findoraLogoUrl}
                 alt="Findora"
-                className="w-14 h-14 object-contain self-start mt-5"
+                className="w-14 h-14 object-contain self-start mt-4"
               />
             </div>
 
