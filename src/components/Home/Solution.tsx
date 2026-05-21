@@ -73,7 +73,7 @@ function Feature({ icon, title, className }: any) {
   return (
     <div className={`flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1 ${className}`}>
       <div className="text-[#2fa58d]">{icon}</div>
-      <p className="text-[1rem] font-medium text-gray-700 dark:text-gray-200">{title}</p>
+      <p className="text-[1rem] font-medium text-gray-700 dark:text-black">{title}</p>
     </div>
   );
 }
@@ -133,8 +133,8 @@ export default function VerificationLayerDiagram() {
             </StepIcon>
 
             <div className="text-center sm:text-left w-full">
-              <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">INPUT</h3>
-              <p className="text-gray-600 dark:text-gray-200 text-[1.2rem] font-semibold">
+              <h3 className="font-bold text-lg text-gray-900 dark:text-black">INPUT</h3>
+              <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold">
                 Prompt, data, or request
               </p>
             </div>
@@ -154,10 +154,10 @@ export default function VerificationLayerDiagram() {
             </StepIcon>
 
             <div className="text-center sm:text-left w-full">
-              <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">
+              <h3 className="font-bold text-lg text-gray-900 dark:text-black">
                 LLM / VLM / AI AGENT
               </h3>
-              <p className="text-gray-600 dark:text-gray-200 text-[1.2rem] font-semibold">
+              <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold">
                 Model generates response
               </p>
             </div>
@@ -183,11 +183,11 @@ export default function VerificationLayerDiagram() {
               </div>
 
               <div>
-                <h3 className="font-bold text-lg text-[#2fa58d] align-center">
+                <h3 className="font-bold text-lg text-[#2fa58d] align-center dark:text-black">
                   FINDORA LAYER
                 </h3>
 
-                <p className="text-gray-600 dark:text-gray-200 text-[1.2rem] font-semibold">
+                <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold">
                   Enterprise-grade verification and governance of AI outputs
                 </p>
               </div>
@@ -217,10 +217,10 @@ export default function VerificationLayerDiagram() {
             </StepIcon>
 
             <div className="text-center sm:text-left w-full">
-              <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100">
+              <h3 className="font-bold text-lg text-gray-900 dark:text-black">
                 TRUSTED OUTPUT
               </h3>
-              <p className="text-gray-600 dark:text-gray-200 text-[1.2rem] font-semibold">
+              <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold">
                 Verified, reliable, and policy-compliant response
               </p>
             </div>
@@ -232,11 +232,11 @@ export default function VerificationLayerDiagram() {
       {/* FOOTER */}
       <FadeInSection>
         <div className="mt-10 border border-gray-300 dark:border-gray-700 rounded-2xl p-4 max-w-3xl text-center bg-white dark:bg-white/60">
-          <p className="font-semibold text-lg text-gray-900 dark:text-gray-100 mb-4">
+          <p className="font-semibold text-lg text-gray-900 dark:text-black mb-4">
             Enterprise-grade verification infrastructure
           </p>
 
-          <p className="text-gray-600 dark:text-gray-200 text-[1.2rem] font-semibold mb-6">
+          <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold mb-6">
             for reliable AI deployment.
           </p>
 

@@ -27,18 +27,29 @@ export default function FinalCTA() {
           "
         >
           Build{" "}
-          <span
+          <motion.span
             className="
-              bg-gradient-to-r
-              from-[#008f7a]
-              via-[#0b87b6]
-              to-[#7332a1]
-              bg-clip-text
               text-transparent
+              bg-clip-text
+              bg-gradient-to-r
+              from-[#8b5cf6]
+              via-[#c31069]
+              to-[#8b5cf6]
+              
+              bg-[length:300%_100%]
+              drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
             "
+            animate={{
+              backgroundPosition: ["200% center", "-200% center"],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }}
           >
-            Trusted AI
-          </span>{" "}
+            Trusted AI {""}
+          </motion.span>
           Systems
         </motion.h2>
 
@@ -71,28 +82,10 @@ export default function FinalCTA() {
             "
             
           >
-            Book Demo
-          </button>
-
-          {/* SECONDARY (MORE SQUARE / INSTITUTIONAL) */}
-          <button
-            className="
-              relative overflow-hidden
-              rounded-xl px-10 py-4
-               font-medium
-              text-black/80 dark:text-white/80
-              border border-black/10 dark:border-white/10
-              bg-white/60 dark:bg-white/5
-              backdrop-blur-md
-              transition-all duration-300
-              text-[1.2rem]
-              hover:border-[#0b87b6]/40
-              hover:text-[#0b87b6]
-              hover:scale-[1.02]
-            "
-          >
             Contact Us
           </button>
+
+          
         </motion.div>
 
         {/* FOOTNOTE
