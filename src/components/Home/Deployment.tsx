@@ -55,9 +55,30 @@ export default function DeploymentSection() {
         <div className="max-w-4xl">
           <h2 className="text-[2rem] sm:text-[2rem] lg:text-[3.5rem] font-semibold tracking-tight text-neutral-950 dark:text-white">
             Built for{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#008f7a] via-[#0b87b6] to-[#7332a1]">
-              Enterprise
-            </span>
+            <motion.span
+            className="
+              text-transparent
+              bg-clip-text
+              bg-gradient-to-r
+              from-[#8b5cf6]
+              via-gray-300
+              to-[#8b5cf6,#c31069]
+              
+              bg-[length:300%_100%]
+              drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
+            "
+            animate={{
+              backgroundPosition: ["200% center", "-200% center"],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            Enterprise
+          </motion.span>
+
             , Government, and Edge AI
           </h2>
 
