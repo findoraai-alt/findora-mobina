@@ -271,7 +271,7 @@ export default function Diagram({
                     <MessageSquareQuote className="w-9 h-9 text-[#c31069]" strokeWidth={1.5}/>
 
                     <div
-                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
                       style={{
                         animation: "sweep 2.5s linear infinite",
                       }}
@@ -315,7 +315,7 @@ export default function Diagram({
               />
 
               <div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none"
+                className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none"
                 style={{
                   transform: "translateX(-120%) rotate(25deg)",
                   animation: "shine 4s linear infinite",
@@ -344,7 +344,8 @@ export default function Diagram({
                     <PackageSearch className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
 
                     <div
-                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none
+                      dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent"
                       style={{
                         animation: "sweep 5s linear infinite",
                       }}
@@ -360,7 +361,8 @@ export default function Diagram({
                     <BookCheck className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5} />
 
                     <div
-                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent
+                      absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
                       style={{
                         animation: "sweep 5s linear infinite",
                       }}
@@ -377,7 +379,8 @@ export default function Diagram({
                     <Siren className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
 
                     <div
-                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent
+                      absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
                       style={{
                         animation: "sweep 5s linear infinite",
                       }}
@@ -393,7 +396,8 @@ export default function Diagram({
                     <BadgeCheck className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
 
                     <div
-                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent
+                      absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
                       style={{
                         animation: "sweep 5s linear infinite",
                       }}
@@ -425,7 +429,7 @@ export default function Diagram({
                     <FileBadge className="w-9 h-9 text-[#7332a1]" strokeWidth={1.5}/>
 
                     <div
-                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
                       style={{
                         animation: "sweep 5s linear infinite",
                       }}

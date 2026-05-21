@@ -72,7 +72,7 @@ export default function Problem() {
               className="group relative overflow-hidden rounded-[26px] border border-white/[0.06] bg-white/5 p-6 md:p-9 backdrop-blur-2xl transition-all duration-500"
             >
               <div
-                className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                className="absolute inset-0 opacity-70 transition-opacity duration-500 group-hover:opacity-100"
                 style={{
                   background: `radial-gradient(circle at top left, ${COLORS[i]}12, transparent 100%)`,
                 }}
