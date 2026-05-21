@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import {PackageSearch, BookCheck, Siren, BadgeCheck, FileBadge, MessageSquareQuote} from "lucide-react"
 
 /* ----------------------------- Sub-components ----------------------------- */
 
@@ -45,51 +46,6 @@ function FeatureItem({ title, desc, color, icon }: FeatureItemProps) {
   );
 }
 
-/* ----------------------------- Icons ----------------------------- */
-
-const BrainIcon = ({ color }: { color: string }) => (
-  <svg width="40" height="40" fill="none" stroke={color} strokeWidth="1.3" viewBox="0 0 24 24">
-    <path d="M12 3c-3.5 0-6 2.5-6 6v1c0 1.4.6 2.6 1.5 3.5" />
-    <path d="M12 3c3.5 0 6 2.5 6 6v1c0 1.4-.6 2.6-1.5 3.5" />
-    <path d="M9 12h6" />
-    <path d="M12 9v6" />
-    <circle cx="8" cy="16" r="1.5" />
-    <circle cx="16" cy="16" r="1.5" />
-    <path d="M9.5 17.5 11 19" />
-    <path d="M14.5 17.5 13 19" />
-  </svg>
-);
-
-const GaugeIcon = ({ color }: { color: string }) => (
-  <svg width="40" height="40" fill="none" stroke={color} strokeWidth="1.3" viewBox="0 0 24 24">
-    <path d="M5 18a9 9 0 1 1 14 0" />
-    <path d="M12 13l4-4" />
-    <circle cx="12" cy="13" r="1.5" fill={color} stroke="none" />
-    <path d="M7.5 15.5h.01" />
-    <path d="M16.5 15.5h.01" />
-    <path d="M12 6v1.5" />
-  </svg>
-);
-
-const ShieldIcon = ({ color }: { color: string }) => (
-  <svg width="40" height="40" fill="none" stroke={color} strokeWidth="1.3" viewBox="0 0 24 24">
-    <path d="M12 3 5 6v6c0 5 3.5 8 7 9 3.5-1 7-4 7-9V6l-7-3Z" />
-    <path d="M9 12h6" />
-    <path d="M12 9v6" />
-    <circle cx="12" cy="12" r="3.5" opacity="0.25" />
-  </svg>
-);
-
-const CheckListIcon = ({ color }: { color: string }) => (
-  <svg width="40" height="40" fill="none" stroke={color} strokeWidth="1.3" viewBox="0 0 24 24">
-    <path d="M5 6h14" />
-    <path d="M5 12h14" />
-    <path d="M5 18h14" />
-    <path d="M3 6l1 1 2-2" />
-    <path d="M3 12l1 1 2-2" />
-    <path d="M3 18l1 1 2-2" />
-  </svg>
-);
 
 /* ----------------------------- Main Component ----------------------------- */
 
@@ -202,6 +158,14 @@ export default function Diagram({
             animation: none !important;
           }
         }
+                @keyframes sweep {
+        0% {
+          transform: translateX(-120%);
+        }
+        100% {
+          transform: translateX(120%);
+        }
+      }
       `}</style>
 
       {/* TITLE */}
@@ -231,11 +195,16 @@ export default function Diagram({
         >
           <div className="flex items-top gap-4">
             <div className="mt-4 w-12 h-12 rounded-lg bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center shrink-0">
-              <svg width="40" height="40" fill="none" stroke="#c31069" strokeWidth="1.3" viewBox="0 0 24 24">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="M7 9h10" />
-                <path d="M7 13h6" />
-              </svg>
+              <div className="relative w-9 h-9 overflow-hidden">
+                    <MessageSquareQuote className="w-9 h-9 text-[#c31069]" strokeWidth={1.5}/>
+
+                    <div
+                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      style={{
+                        animation: "sweep 2.5s linear infinite",
+                      }}
+                    />
+                  </div>
             </div>
 
             <div>
@@ -267,10 +236,11 @@ export default function Diagram({
         >
           <div className="flex items-top gap-4 mb-6">
             <div className=" w-14 h-14 rounded-lg flex items-top justify-center shrink-0">
+              
               <img
                 src={findoraLogoUrl}
                 alt="Findora"
-                className="w-14 h-14 object-contain self-start mt-4"
+                className="w-12 h-12 object-contain self-start mt-4"
               />
             </div>
 
@@ -290,28 +260,65 @@ export default function Diagram({
               title="Hallucination Detection"
               desc="Detects factual inconsistencies and hallucinations."
               color="#008f7a"
-              icon={<BrainIcon color="#008f7a" />}
+              icon={<div className="relative w-9 h-9 overflow-hidden">
+                    <PackageSearch className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
+
+                    <div
+                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      style={{
+                        animation: "sweep 2.5s linear infinite",
+                      }}
+                    />
+                  </div>}
             />
 
             <FeatureItem
               title="Reliability Scoring"
               desc="Scores responses based on multiple reliability signals."
               color="#008f7a"
-              icon={<GaugeIcon color="#008f7a" />}
+              icon={<div className="relative w-9 h-9 overflow-hidden">
+                    <BookCheck className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5} />
+
+                    <div
+                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      style={{
+                        animation: "sweep 2.5s linear infinite",
+                      }}
+                    />
+                  </div>
+         }
             />
 
             <FeatureItem
               title="Policy Enforcement"
               desc="Ensures alignment with enterprise policies and rules."
               color="#008f7a"
-              icon={<ShieldIcon color="#008f7a" />}
+              icon={<div className="relative w-9 h-9 overflow-hidden">
+                    <Siren className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
+
+                    <div
+                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      style={{
+                        animation: "sweep 2.5s linear infinite",
+                      }}
+                    />
+                  </div>}
             />
 
             <FeatureItem
               title="Post-generation Verification"
               desc="Validates final response before delivery."
               color="#008f7a"
-              icon={<CheckListIcon color="#008f7a" />}
+              icon={<div className="relative w-9 h-9 overflow-hidden">
+                    <BadgeCheck className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
+
+                    <div
+                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      style={{
+                        animation: "sweep 2.5s linear infinite",
+                      }}
+                    />
+                  </div>}
             />
           </div>
         </div>
@@ -333,10 +340,17 @@ export default function Diagram({
         >
           <div className="flex items-center gap-4 items-top">
             <div className="mt-5 w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-500/10 flex items-center justify-center shrink-0 self-start mt-1">
-              <svg width="40" height="40" fill="none" stroke="#7332a1" strokeWidth="1.3" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9" />
-                <path d="m8.5 12.5 2.5 2.5 4.5-5" />
-              </svg>
+              
+              <div className="relative w-9 h-9 overflow-hidden">
+                    <FileBadge className="w-9 h-9 text-[#7332a1]" strokeWidth={1.5}/>
+
+                    <div
+                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
+                      style={{
+                        animation: "sweep 2.5s linear infinite",
+                      }}
+                    />
+                  </div>
             </div>
 
             <div>
