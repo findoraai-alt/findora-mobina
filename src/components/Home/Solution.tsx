@@ -101,26 +101,19 @@ export default function VerificationLayerDiagram() {
 
       {/* TITLE */}
       <div className="text-center max-w-2xl mb-16">
-        <h2 className="font-bold text-gray-900 dark:text-gray-100 leading-tight text-[2rem] md:text-[2.3rem]">
+        <h2 className="font-bold text-gray-900 dark:text-gray-100  text-[2rem] md:text-[2.3rem]">
           <motion.span
             className="
               text-transparent
               bg-clip-text
               bg-gradient-to-r
-              from-[#2fa58d]
-              via-white
+              from-[#0b87b6]
+              via-[#7332a1]
               to-[#2fa58d]
               bg-[length:300%_100%]
               drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
             "
-            animate={{
-              backgroundPosition: ["200% center", "-200% center"],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-            }}
+            
           >
             Varification { }
           </motion.span>

@@ -69,7 +69,7 @@ export default function Problem() {
                 ease: [0.16, 1, 0.3, 1],
               }}
               whileHover={{ y: -6 }}
-              className="group relative overflow-hidden rounded-[26px] border border-white/[0.06] bg-white/5 p-6 md:p-9 backdrop-blur-2xl transition-all duration-500"
+              className="group relative overflow-hidden rounded-[26px] border border-white/[0.07] bg-white/10 p-6 md:p-9 backdrop-blur-2xl transition-all duration-500"
             >
               <div
                 className="absolute inset-0 opacity-80 transition-opacity duration-500 group-hover:opacity-100"
@@ -81,12 +81,12 @@ export default function Problem() {
               <div
                 className="absolute left-0 top-0 h-px w-full opacity-100"
                 style={{
-                  background: `linear-gradient(to right, ${COLORS[i]}80, transparent 70%)`,
+                  background: `linear-gradient(to right, ${COLORS[i]}80, transparent 50%)`,
                 }}
               />
 
               <div className="relative z-10 flex flex-col gap-4 md:gap-7">
-                <p className="text-[1.5rem] font-semibold leading-snug tracking-tight text-white/90 md:text-2xl">
+                <p className="text-[1.26rem] font-semibold leading-snug tracking-tight text-white/90 md:text-2xl">
                   {text}
                 </p>
 
@@ -98,7 +98,7 @@ export default function Problem() {
                       duration: 1,
                       delay: 0.25 + i * 0.12,
                     }}
-                    className="h-px opacity-100"
+                    className="h-[1.8px] opacity-100 rounded-full"
                     style={{
                       background: `linear-gradient(to right, ${COLORS[i]}90, transparent)`,
                     }}

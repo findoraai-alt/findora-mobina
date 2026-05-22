@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import {PackageSearch, BookCheck, Siren, BadgeCheck, FileBadge, MessageSquareQuote} from "lucide-react"
 
 /* ----------------------------- Sub-components ----------------------------- */
 
@@ -50,11 +49,27 @@ function FeatureItem({ title, desc, color, icon }: FeatureItemProps) {
 /* ----------------------------- Main Component ----------------------------- */
 
 interface DiagramProps {
-  findoraLogoUrl?: string;
+  findoraLogoUrl?: string
+  iconUrls?: {
+    messageSquare: string;
+    packageSearch: string;
+    bookCheck: string;
+    siren: string;
+    badgeCheck: string;
+    fileBadge: string;
+  };
 }
 
 export default function Diagram({
   findoraLogoUrl = "YOUR_FINDORA_LOGO_URL",
+  iconUrls = {
+    messageSquare: "images/icons/message.png",
+    packageSearch: "images/icons/detection.png",
+    bookCheck: "images/icons/scoring.png",
+    siren: "images/icons/policy.png",
+    badgeCheck: "images/icons/validation.png",
+    fileBadge: "images/icons/verification.png",
+  }
 }: DiagramProps) {
   const [activatedCards, setActivatedCards] = useState<boolean[]>([false, false, false]);
   const [isMobile, setIsMobile] = useState(false);
@@ -123,26 +138,6 @@ export default function Diagram({
             return copy;
           });
         });
-      
-    
-      //   useEffect(() => {
-      //   if (isMobile) return;
-
-      //   const delays = [0, 1800, 3600];
-
-      //   delays.forEach((delay, index) => {
-      //     setTimeout(() => {
-      //       setActivatedCards((prev) => {
-      //         if (prev[index]) return prev; // جلوگیری از rerun
-      //         const copy = [...prev];
-      //         copy[index] = true;
-      //         return copy;
-      //       });
-      //     }, delay);
-      //   });
-      // }, [isMobile]);
-
-        
       },
       {
         threshold: [0.35, 0.5, 0.65, 0.8],
@@ -161,8 +156,8 @@ export default function Diagram({
   return (
     <div className="w-full flex flex-col items-center px-6 py-10 font-sans bg-white dark:bg-[#111828] transition-colors duration-300">
       <style>{`
-        .card {
-          border: 3.5px solid transparent;
+      .card {
+          border: 3px solid transparent;
           border-radius: 16px;
           background: white;
           box-shadow: 0px 10px 100px rgba(0,0,0,0.08);
@@ -170,19 +165,19 @@ export default function Diagram({
         }
 
         .dark .card {
-          background: rgba(255,255,255,0.03);
+          background: rgba(255, 255, 255, 0.06);
           box-shadow: 0px 20px 120px rgba(0,0,0,0.45);
         }
           /* استایل پایه برای حالت فعال */
         .active-mobile {
           
-          box-shadow: inset 0px 0px 60px 10px color-mix(in srgb, var(--clr), transparent 95%) !important;
+          box-shadow: inset 0px 0px 60px 10px color-mix(in srgb, var(--clr), transparent 98%) !important;
           
           
           border-color: color-mix(in srgb, var(--clr), transparent 50%) !important;
           
           
-          background: color-mix(in srgb, var(--clr), white 98%) !important;
+          background: white/100 !important;
           
           transform: scale(1.01);
           transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1) !important;
@@ -190,8 +185,8 @@ export default function Diagram({
 
         
         .dark .active-mobile {
-          background: color-mix(in srgb, var(--clr), #111828 92%) !important;
-          box-shadow: inset 0px 0px 80px 20px color-mix(in srgb, var(--clr), transparent 85%) !important;
+          background: white/50 !important;
+          box-shadow: inset 0px 0px 80px 20px color-mix(in srgb, var(--clr), transparent 98%) !important;
           border-color: color-mix(in srgb, var(--clr), transparent 50%) !important;
         }
 
@@ -204,7 +199,7 @@ export default function Diagram({
           100% { border-color: transparent; }
         }
         .anim {
-          animation: borderPulse 6s infinite ease-in-out;
+          animation: borderPulse 8s infinite ease-in-out;
         }
         .active-mobile {
           border-color: var(--clr) !important;
@@ -265,14 +260,12 @@ export default function Diagram({
           <div className="flex items-top gap-4">
             <div className="mt-4 w-12 h-12 rounded-lg bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center shrink-0">
               <div className="relative w-9 h-9 overflow-hidden">
-                    <MessageSquareQuote className="w-9 h-9 text-[#c31069]" strokeWidth={1.5}/>
-
-                   
+                    <img src={iconUrls.messageSquare} alt="icon" className="w-9 h-9 object-contain" />
                   </div>
             </div>
 
             <div>
-              <div className="h-[7px] w-[30px] rounded-full mb-2 bg-[#c31069]" />
+              <div className="h-[5px] w-[30px] rounded-full mb-2 bg-[#c31069]" />
               <p className="font-bold text-[1.2rem] text-[#111827] dark:text-white">
                 AI SYSTEM OUTPUT
               </p>
@@ -283,7 +276,7 @@ export default function Diagram({
           </div>
         </div>
 
-        <div className="w-[7px] h-[60px] lg:h-[3px] lg:w-[60px] bg-[#008f7a] dark:bg-white/10 shrink-0" />
+        <div className="w-[3px] h-[60px] lg:h-[3px] lg:w-[60px] bg-[#008f7a] dark:bg-white/10 shrink-0" />
 
         {/* CARD 2 */}
         <div
@@ -305,13 +298,11 @@ export default function Diagram({
                 alt="Findora"
                 className="w-full h-full object-contain"
               />
-
-          
             </div>
           
 
             <div className="mx-1">
-              <div className="h-[7px] w-[30px] rounded-full mb-2 bg-[#008f7a]" />
+              <div className="h-[5px] w-[30px] rounded-full mb-2 bg-[#008f7a]" />
               <p className="font-bold text-[#008f7a] text-[1.2rem]">
                 FINDORA VERIFICATION LAYER
               </p>
@@ -327,9 +318,7 @@ export default function Diagram({
               desc="Detects factual inconsistencies and hallucinations."
               color="#008f7a"
               icon={<div className="relative w-9 h-9 overflow-hidden">
-                    <PackageSearch className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
-
-                  
+                    <img src={iconUrls.packageSearch} alt="icon" className="w-9 h-9 object-contain" />
                   </div>}
             />
 
@@ -338,9 +327,7 @@ export default function Diagram({
               desc="Scores responses based on multiple reliability signals."
               color="#008f7a"
               icon={<div className="relative w-9 h-9 overflow-hidden">
-                    <BookCheck className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5} />
-
-                    
+                    <img src={iconUrls.bookCheck} alt="icon" className="w-9 h-9 object-contain" />
                   </div>
          }
             />
@@ -350,8 +337,7 @@ export default function Diagram({
               desc="Ensures alignment with enterprise policies and rules."
               color="#008f7a"
               icon={<div className="relative w-9 h-9 overflow-hidden">
-                    <Siren className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
-
+                    <img src={iconUrls.siren} alt="icon" className="w-9 h-9 object-contain" />
                   </div>}
             />
 
@@ -360,15 +346,13 @@ export default function Diagram({
               desc="Validates final response before delivery."
               color="#008f7a"
               icon={<div className="relative w-9 h-9 overflow-hidden">
-                    <BadgeCheck className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
-
-                    
+                    <img src={iconUrls.badgeCheck} alt="icon" className="w-9 h-9 object-contain" />
                   </div>}
             />
           </div>
         </div>
 
-        <div className="w-[7px] h-[60px] lg:h-[3px] lg:w-[60px] bg-[#7332a1] dark:bg-white/10 shrink-0" />
+        <div className="w-[3px] h-[60px] lg:h-[3px] lg:w-[60px] bg-[#7332a1] dark:bg-white/10 shrink-0" />
 
         {/* CARD 3 */}
         <div
@@ -387,14 +371,12 @@ export default function Diagram({
             <div className="mt-5 w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-500/10 flex items-center justify-center shrink-0 self-start mt-1">
               
               <div className="relative w-9 h-9 overflow-hidden">
-                    <FileBadge className="w-9 h-9 text-[#7332a1]" strokeWidth={1.5}/>
-
-              
+                    <img src={iconUrls.fileBadge} alt="icon" className="w-9 h-9 object-contain" />
                   </div>
             </div>
 
             <div>
-              <div className="h-[7px] w-[30px] rounded-full mb-2 bg-[#7332a1]" />
+              <div className="h-[5px] w-[30px] rounded-full mb-2 bg-[#7332a1]" />
 
               <p className="font-bold text-[#111827] dark:text-white">
                 TRUSTED RESPONSE DELIVERED
@@ -404,7 +386,7 @@ export default function Diagram({
                 Verified, Enterprise-grade reliability
               </p>
 
-              <p className="text-[1.1rem] text-gray-600 dark:text-white/80">
+              <p className="text-[1.1rem] text-gray-600dark:text-white/80">
                 policy-compliant output.
               </p>
             </div>

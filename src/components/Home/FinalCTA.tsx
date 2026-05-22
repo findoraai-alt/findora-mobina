@@ -27,7 +27,7 @@ export default function FinalCTA() {
           "
         >
           Build{" "}
-          <motion.span
+          <span
             className="
               text-transparent
               bg-clip-text
@@ -39,17 +39,10 @@ export default function FinalCTA() {
               bg-[length:300%_100%]
               drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
             "
-            animate={{
-              backgroundPosition: ["200% center", "-200% center"],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-            }}
+            
           >
             Trusted AI {""}
-          </motion.span>
+          </span>
           Systems
         </motion.h2>
 
@@ -66,7 +59,7 @@ export default function FinalCTA() {
         >
           
           {/* PRIMARY */}
-          <button
+           <button
             className="
               relative overflow-hidden
               rounded-full px-10 py-4
@@ -82,11 +75,36 @@ export default function FinalCTA() {
             "
             
           >
+            Book Demo
+          </button>
+          <button
+            className="
+              mt-2
+              relative overflow-hidden
+              rounded-[0.7rem] px-10 py-4
+              font-medium
+              text-[#8b5cf6] dark:text-[#8b5cf6/80]
+              transition-all duration-300
+              hover:scale-[1.03]
+              border-[1.5px]
+              border-[#8b5cf6]
+              dark:border-[#8b5cf6]
+              
+              text-[1.2rem]
+              
+              
+            "
+            
+          >
             Contact Us
           </button>
 
           
+          
         </motion.div>
+
+        
+        
 
         {/* FOOTNOTE
         <div className="mt-16 text-sm text-black/40 dark:text-white/40">

@@ -60,21 +60,14 @@ export default function DeploymentSection() {
               text-transparent
               bg-clip-text
               bg-gradient-to-r
-              from-[#8b5cf6]
-              via-gray-300
-              to-[#8b5cf6,#c31069]
+              from-[#008f7a]
+              via-[#8b5cf6]
+              to-[#008f7a]
               
               bg-[length:300%_100%]
               drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
             "
-            animate={{
-              backgroundPosition: ["200% center", "-200% center"],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              ease: "linear",
-            }}
+          
           >
             Enterprise
           </motion.span>
