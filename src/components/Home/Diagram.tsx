@@ -242,11 +242,8 @@ export default function Diagram({
 
       {/* TITLE */}
       <h2
-        className="font-bold text-center mb-16 tracking-[-0.03em] text-[#111827] dark:text-white"
-        style={{
-          fontSize: "clamp(1.8rem, 2vw + 1rem, 3rem)",
-          lineHeight: 1.1,
-        }}
+        className="text-3xl md:text-5xl font-bold text-center mb-16 md:mt-5  text-[#111827] dark:text-white"
+        
       >
         How Findora Verifies AI Answers?
       </h2>
@@ -270,18 +267,13 @@ export default function Diagram({
               <div className="relative w-9 h-9 overflow-hidden">
                     <MessageSquareQuote className="w-9 h-9 text-[#c31069]" strokeWidth={1.5}/>
 
-                    <div
-                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
-                      style={{
-                        animation: "sweep 2.5s linear infinite",
-                      }}
-                    />
+                   
                   </div>
             </div>
 
             <div>
               <div className="h-[7px] w-[30px] rounded-full mb-2 bg-[#c31069]" />
-              <p className="font-bold text-[#111827] dark:text-white">
+              <p className="font-bold text-[1.2rem] text-[#111827] dark:text-white">
                 AI SYSTEM OUTPUT
               </p>
               <p className="text-[1.1rem] text-gray-600 dark:text-white/80 font-semibold">
@@ -307,26 +299,20 @@ export default function Diagram({
           }}
         >
           <div className="flex items-top gap-4 mb-6">
-            <div className="relative w-12 h-12 overflow-hidden">
+            <div className="relative w-12 h-12 overflow-hidden mt-5">
               <img
                 src={findoraLogoUrl}
                 alt="Findora"
                 className="w-full h-full object-contain"
               />
 
-              <div
-                className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none"
-                style={{
-                  transform: "translateX(-120%) rotate(25deg)",
-                  animation: "shine 4s linear infinite",
-                }}
-              />
+          
             </div>
           
 
-            <div>
+            <div className="mx-1">
               <div className="h-[7px] w-[30px] rounded-full mb-2 bg-[#008f7a]" />
-              <p className="font-bold text-[#008f7a] text-[1.1rem]">
+              <p className="font-bold text-[#008f7a] text-[1.2rem]">
                 FINDORA VERIFICATION LAYER
               </p>
               <p className="text-[1.1rem] text-gray-600 dark:text-white/80 font-semibold">
@@ -343,13 +329,7 @@ export default function Diagram({
               icon={<div className="relative w-9 h-9 overflow-hidden">
                     <PackageSearch className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
 
-                    <div
-                      className="absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none
-                      dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent"
-                      style={{
-                        animation: "sweep 5s linear infinite",
-                      }}
-                    />
+                  
                   </div>}
             />
 
@@ -360,13 +340,7 @@ export default function Diagram({
               icon={<div className="relative w-9 h-9 overflow-hidden">
                     <BookCheck className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5} />
 
-                    <div
-                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent
-                      absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
-                      style={{
-                        animation: "sweep 5s linear infinite",
-                      }}
-                    />
+                    
                   </div>
          }
             />
@@ -378,13 +352,6 @@ export default function Diagram({
               icon={<div className="relative w-9 h-9 overflow-hidden">
                     <Siren className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
 
-                    <div
-                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent
-                      absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
-                      style={{
-                        animation: "sweep 5s linear infinite",
-                      }}
-                    />
                   </div>}
             />
 
@@ -395,13 +362,7 @@ export default function Diagram({
               icon={<div className="relative w-9 h-9 overflow-hidden">
                     <BadgeCheck className="w-9 h-9 text-[#008f7a]" strokeWidth={1.5}/>
 
-                    <div
-                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent
-                      absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
-                      style={{
-                        animation: "sweep 5s linear infinite",
-                      }}
-                    />
+                    
                   </div>}
             />
           </div>
@@ -428,12 +389,7 @@ export default function Diagram({
               <div className="relative w-9 h-9 overflow-hidden">
                     <FileBadge className="w-9 h-9 text-[#7332a1]" strokeWidth={1.5}/>
 
-                    <div
-                      className="dark:bg-gradient-to-r dark:from-transparent dark:via-white/10 dark:to-transparent absolute top-0 left-0 h-full w-4 bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"
-                      style={{
-                        animation: "sweep 5s linear infinite",
-                      }}
-                    />
+              
                   </div>
             </div>
 

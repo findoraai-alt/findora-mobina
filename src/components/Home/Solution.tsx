@@ -247,7 +247,7 @@ export default function VerificationLayerDiagram() {
       {/* FOOTER */}
       <FadeInSection>
         <div className="mt-10 border border-gray-300 dark:border-gray-700 rounded-2xl p-4 max-w-3xl text-center bg-white dark:bg-white/80">
-          <p className="font-semibold text-lg text-gray-900 dark:text-black mb-4">
+          <p className="font-semibold text-[1.3rem] text-gray-900 dark:text-black mb-4">
             Enterprise-grade verification infrastructure
           </p>
 
