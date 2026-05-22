@@ -18,20 +18,14 @@ function Card({ text, color, index }: { text: string; color: string; index: numb
   const isInView = useInView(cardRef, { once: true, margin: "-20% 0px" });
 
   return (
-    <motion.div
+    <div
       ref={cardRef}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{
-        duration: 0.8,
-        delay: index * 0.12,
-        ease: [0.16, 1, 0.3, 1],
-      }}
-      whileHover={{ y: -6 }}
-      className="group relative overflow-hidden rounded-[26px] border border-white/[0.07] bg-white/10 p-6 md:p-9 backdrop-blur-2xl transition-all duration-500"
+      className="group relative overflow-hidden rounded-[26px] border border-white/[0.07] bg-white/10 p-6 md:p-9 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1.5"
     >
-      <div
-        className="absolute inset-0 opacity-40 transition-opacity duration-500 group-hover:opacity-80 group-active:opacity-80"
+      <motion.div
+        animate={isInView ? { opacity: 0.8 } : { opacity: 0.4 }}
+        transition={{ duration: 0.8, delay: index * 0.12 }}
+        className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-80 group-active:opacity-80"
         style={{
           background: `radial-gradient(circle at top left, ${color}40, transparent 70%)`,
         }}
@@ -50,14 +44,8 @@ function Card({ text, color, index }: { text: string; color: string; index: numb
         </p>
 
         <div className="mt-2 overflow-hidden md:mt-6">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={isInView ? { width: "100%" } : {}}
-            transition={{
-              duration: 1,
-              delay: 0.25 + index * 0.12,
-            }}
-            className="h-[1.8px] rounded-full transition-opacity duration-300 group-hover:opacity-150 group-active:opacity-150"
+          <div
+            className="h-[1.8px] w-full rounded-full opacity-100 transition-opacity duration-300 group-hover:opacity-150 group-active:opacity-150"
             style={{
               background: `linear-gradient(to right, ${color}90, transparent)`,
               boxShadow: `0 0 8px ${color}`,
@@ -65,13 +53,12 @@ function Card({ text, color, index }: { text: string; color: string; index: numb
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export default function Problem() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-20% 0px" });
 
   return (
     <section
@@ -87,27 +74,21 @@ export default function Problem() {
 
       <div className="relative mx-auto max-w-6xl px-6">
         {/* HEADLINE */}
-        <motion.h2
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.9 }}
+        <h2
           className="text-3xl font-semibold tracking-[-0.05em] md:text-6xl"
         >
           <span style={{ color: "#ffffff" }}>AI Has a</span>{" "}
           <span style={{ color: "#0b87b6" }}>Trust</span>{" "}
           <span style={{ color: "#7332a1" }}>Problem</span>
-        </motion.h2>
+        </h2>
 
         {/* SUBHEAD */}
-        <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.9, delay: 0.1 }}
+        <p
           className="mt-6 max-w-2xl text-[1.3rem] font-medium leading-relaxed text-white/80 md:text-[1.8rem]"
         >
           As AI systems become more autonomous, verification becomes a
           mission-critical infrastructure requirement.
-        </motion.p>
+        </p>
 
         {/* CARDS */}
         <div className="mt-10 grid gap-6 md:grid-cols-2 md:gap-8">

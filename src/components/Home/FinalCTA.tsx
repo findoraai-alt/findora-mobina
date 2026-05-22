@@ -32,9 +32,9 @@ export default function FinalCTA() {
               text-transparent
               bg-clip-text
               bg-gradient-to-r
-              from-[#8b5cf6]
-              via-[#c31069]
-              to-[#8b5cf6]
+              from-[#438cd5]
+              via-[#008f7a]
+              
               
               bg-[length:300%_100%]
               drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
@@ -81,15 +81,16 @@ export default function FinalCTA() {
             
             className="
               mt-2
+              md:mt-0
               relative overflow-hidden
               rounded-[0.7rem] px-10 py-4
               font-medium
-              text-[#8b5cf6] dark:text-[#8b5cf6/80]
+              text-[#438cd5] dark:text-[#438cd5/80]
               transition-all duration-300
               hover:scale-[1.03]
               border-[1.5px]
-              border-[#8b5cf6]/50
-              dark:border-[#8b5cf6]
+              border-[#438cd5]/50
+              dark:border-[#438cd5]
               
               text-[1.2rem]
               

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const deployments = [
@@ -38,6 +38,29 @@ const deployments = [
 
 export default function DeploymentSection() {
   const [active, setActive] = useState<number | null>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = cardRefs.current.indexOf(entry.target as HTMLDivElement);
+          if (entry.isIntersecting) {
+            setActive(index);
+          } else if (active === index) {
+            setActive(null);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
+  }, [active]);
 
   return (
     <section className="relative overflow-hidden bg-white dark:bg-[#111828] py-5 lg:py-20">
@@ -89,6 +112,7 @@ export default function DeploymentSection() {
             return (
               <motion.div
                 key={item.title}
+                ref={(el) => { cardRefs.current[i] = el; }}
                 onMouseEnter={() => setActive(i)}
                 onMouseLeave={() => setActive(null)}
                 className="
@@ -103,7 +127,7 @@ export default function DeploymentSection() {
                 {/* TOP BAR */}
                 <div className="absolute left-0 top-0 h-[3px] w-full bg-black/5 dark:bg-white/10">
                   <div
-                    className="h-full transition-all duration-500"
+                    className="h-full transition-all duration-1000 ease-out"
                     style={{
                       width: isActive ? "100%" : "45%",
                       backgroundColor: item.color,
