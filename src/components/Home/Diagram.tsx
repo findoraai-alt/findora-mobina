@@ -15,7 +15,7 @@ function FeatureItem({ title, desc, color, icon }: FeatureItemProps) {
   return (
     <div className="flex items-start gap-4 w-full">
       <div
-        className="w-12 h-12 flex items-center justify-center rounded-lg shrink-0"
+        className="w-12 h-12 mt-1 flex items-center justify-center rounded-lg shrink-0"
         style={{ backgroundColor: `${color}15` }}
       >
         {icon}
@@ -314,10 +314,11 @@ export default function Diagram({
 
           <div className="space-y-6">
             <FeatureItem
+              mt-6
               title="Hallucination Detection"
               desc="Detects factual inconsistencies and hallucinations."
               color="#008f7a"
-              icon={<div className="relative w-9 h-9 overflow-hidden">
+              icon={<div className="relative w-9 h-9 overflow-hidden ">
                     <img src={iconUrls.packageSearch} alt="icon" className="w-9 h-9 object-contain" />
                   </div>}
             />
@@ -326,8 +327,8 @@ export default function Diagram({
               title="Reliability Scoring"
               desc="Scores responses based on multiple reliability signals."
               color="#008f7a"
-              icon={<div className="relative w-9 h-9 overflow-hidden">
-                    <img src={iconUrls.bookCheck} alt="icon" className="w-9 h-9 object-contain" />
+              icon={<div className="relative w-12 h-12 overflow-hidden">
+                    <img src={iconUrls.bookCheck} alt="icon" className="w-12 h-12 object-contain" />
                   </div>
          }
             />

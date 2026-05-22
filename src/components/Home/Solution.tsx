@@ -2,15 +2,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowBigRightDash,
-  Brain,
-  ScanSearch,
-  Gavel,
-  FileBox,
-  CircleCheck,
-  BookOpenCheck
-} from "lucide-react";
 
 /* ================= Fade In ================= */
 
@@ -48,7 +39,7 @@ function FadeInSection({ children, glowColor }: any) {
       ref={ref}
       style={
         isMobile && visible && glowColor
-          ? { boxShadow: `0 0 18px ${glowColor}40` }
+          ? { boxShadow: `0 0 10px ${glowColor}40` }
           : {}
       }
       className={`relative rounded-2xl overflow-hidden transition-all duration-700 ease-out ${
@@ -62,13 +53,13 @@ function FadeInSection({ children, glowColor }: any) {
 
 /* ================= Reusable ================= */
 
-function StepIcon({ color, children }: any) {
+function StepIcon({ color, src, alt }: any) {
   return (
     <div
       className="flex items-center justify-center rounded-xl w-14 h-14 shrink-0 transition-transform duration-300 group-hover:scale-105"
-      style={{ backgroundColor: `${color}15`, color }}
+      style={{ backgroundColor: `${color}15` }}
     >
-      {children}
+      <img src={src} alt={alt} className="w-8 h-8 object-contain" />
     </div>
   );
 }
@@ -84,14 +75,20 @@ function StepNumber({ color, num }: any) {
   );
 }
 
-function Feature({ icon, title, className }: any) {
+function Feature({ src, title, className }: any) {
   return (
     <div className={`flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1 ${className}`}>
-      <div className="text-[#2fa58d]">{icon}</div>
-      <p className="text-[1rem] font-medium text-gray-700 dark:text-black">{title}</p>
+      <img src={src} alt={title} className="w-6 h-6 object-contain" />
+      <p className="text-[0.85rem] leading-tight max-w-[100px] font-medium text-gray-700 dark:text-black">{title}</p>
     </div>
   );
 }
+  const tags = [
+    { label: "Secure", color: "#c31069" },
+    { label: "Reliable", color: "#0b87b6" },
+    { label: "Governed", color: "#008f7a" },
+    { label: "Auditable", color: "#7332a1" },
+  ];
 
 /* ================= MAIN ================= */
 
@@ -136,10 +133,8 @@ export default function VerificationLayerDiagram() {
               <StepNumber color="#8b5cf6" num="01" />
             </div>
 
-            <StepIcon color="#8b5cf6">
-              <ArrowBigRightDash size={26}/>
-            </StepIcon>
-
+            <StepIcon color="#8b5cf6" src="images/icons/input.png" alt="Input" />
+            
             <div className="text-center sm:text-left w-full">
               <h3 className="font-bold text-lg text-gray-900 dark:text-black">INPUT</h3>
               <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold">
@@ -157,9 +152,7 @@ export default function VerificationLayerDiagram() {
               <StepNumber color="#3b82f6" num="02" />
             </div>
 
-            <StepIcon color="#3b82f6">
-              <Brain size={26}/>
-            </StepIcon>
+            <StepIcon color="#3b82f6" src="images/icons/model.png" alt="model" />
 
             <div className="text-center sm:text-left w-full">
               <h3 className="font-bold text-lg text-gray-900 dark:text-black">
@@ -203,26 +196,24 @@ export default function VerificationLayerDiagram() {
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 border border-gray-300 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-white/80">
 
-              <Feature title="Hallucination Detection" icon={<ScanSearch size={24} />} />
-              <Feature title="Reliability Scoring" icon={<BookOpenCheck size={24} />} />
-              <Feature title="Policy Enforcement" icon={<Gavel size={24} />} />
-              <Feature title="Post-generation Verification" icon={<CircleCheck size={24} />} />
-              <Feature className="col-span-2 sm:col-span-1 justify-self-center" title="Model-Agnostic Validation" icon={<FileBox size={24} />} />
+              <Feature title="Hallucination Detection" src="images/icons/4.png" />
+              <Feature title="Reliability Scoring" src="images/icons/quality-assurance.png" />
+              <Feature title="Policy Enforcement" src="images/icons/policy (1).png" />
+              <Feature title="Post-generation Verification" src="images/icons/3.png" />
+              <Feature className="col-span-2 sm:col-span-1 justify-self-center" title="Model-Agnostic Validation" src="images/icons/2.png" />
             </div>
           </div>
         </FadeInSection>
 
         {/* STEP 4 */}
-        <FadeInSection glowColor="#4f46e5">
-          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/80">
+        <FadeInSection glowColor="#c31069">
+          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/80 shadow-md">
 
             <div className="absolute top-4 left-4 sm:static">
-              <StepNumber color="#4f46e5" num="04" />
+              <StepNumber color="#c31069" num="04" />
             </div>
 
-            <StepIcon color="#4f46e5">
-              <CircleCheck size={26}/>
-            </StepIcon>
+            <StepIcon color="#c31069" src="images/icons/1.png" alt="Trusted" />
 
             <div className="text-center sm:text-left w-full">
               <h3 className="font-bold text-lg text-gray-900 dark:text-black">
@@ -233,9 +224,7 @@ export default function VerificationLayerDiagram() {
               </p>
             </div>
           </div>
-        </FadeInSection>
-
-      </div>
+        </FadeInSection></div>
 
       {/* FOOTER */}
       <FadeInSection>
@@ -249,15 +238,20 @@ export default function VerificationLayerDiagram() {
           </p>
 
           <div className="flex justify-center gap-3 flex-wrap">
-            {["Secure", "Reliable", "Governed", "Auditable"].map((item) => (
-              <span
-                key={item}
-                className="px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-white text-[1rem] font-semibold"
-              >
-                ✓ {item}
-              </span>
-            ))}
-          </div>
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className="px-4 py-2 rounded-full text-[1rem] font-semibold"
+              style={{
+                backgroundColor: `${tag.color}15`, // رنگ پس‌زمینه خیلی کمرنگ
+                color: tag.color,                 // رنگ متن
+              }}
+            >
+              ✓ {tag.label}
+            </span>
+          ))}
+        </div>
+
         </div>
       </FadeInSection>
 

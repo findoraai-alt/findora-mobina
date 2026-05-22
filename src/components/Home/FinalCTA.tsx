@@ -78,6 +78,7 @@ export default function FinalCTA() {
             Book Demo
           </button>
           <button
+            
             className="
               mt-2
               relative overflow-hidden
@@ -87,7 +88,7 @@ export default function FinalCTA() {
               transition-all duration-300
               hover:scale-[1.03]
               border-[1.5px]
-              border-[#8b5cf6]
+              border-[#8b5cf6]/50
               dark:border-[#8b5cf6]
               
               text-[1.2rem]
@@ -95,8 +96,8 @@ export default function FinalCTA() {
               
             "
             
-          >
-            Contact Us
+          > <a href="https://www.findora.ai/contact">Contact Us</a>
+            
           </button>
 
           
