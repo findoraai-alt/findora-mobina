@@ -127,28 +127,9 @@ export default function Hero() {
               dark:hover:bg-white dark:hover:text-black
           "
         >
-          <motion.span
-            className="
-              text-transparent
-              bg-clip-text
-              bg-gradient-to-r
-              from-black
-              via-gray-300
-              to-black
-              bg-[length:300%_100%]
-              drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
-            "
-            animate={{
-              backgroundPosition: ["200% center", "-200% center"],
-            }}
-            transition={{
-              duration: 5,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
+        
             Try Findora Search
-          </motion.span>
+          
 
           <span className="hover:text-black/90">
            <ArrowUpRight

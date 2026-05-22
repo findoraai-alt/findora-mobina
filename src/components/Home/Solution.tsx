@@ -104,9 +104,9 @@ export default function VerificationLayerDiagram() {
               text-transparent
               bg-clip-text
               bg-gradient-to-r
-              from-[#0b87b6]
-              via-[#7332a1]
-              to-[#2fa58d]
+              from-[#ab68db]
+              via-[#0b87b6]
+              
               bg-[length:300%_100%]
               drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
             "
@@ -126,7 +126,7 @@ export default function VerificationLayerDiagram() {
       <div className="w-full max-w-4xl flex flex-col gap-8">
 
         {/* STEP 1 */}
-        <FadeInSection glowColor="#8b5cf6">
+        <FadeInSection glowColor="#c468db">
           <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/80">
 
             <div className="absolute top-4 left-4 sm:static">
@@ -184,11 +184,11 @@ export default function VerificationLayerDiagram() {
               </div>
 
               <div>
-                <h3 className="font-bold text-lg text-[#2fa58d] align-center dark:text-black">
+                <h3 className="font-bold text-lg text-[#2fa58d] align-center text-center dark:text-black">
                   FINDORA LAYER
                 </h3>
 
-                <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold">
+                <p className="text-gray-600 dark:text-black text-[1.05rem] md:text-[1.2rem] font-semibold text-center">
                   Enterprise-grade verification and governance of AI outputs
                 </p>
               </div>
