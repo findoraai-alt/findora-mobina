@@ -4,6 +4,7 @@ import { MdFactCheck, MdOutlineInsights } from "react-icons/md";
 import { RiCheckboxMultipleLine } from "react-icons/ri";
 
 const cardsData = [
+  
   {
     id: 1,
     icon: MdFactCheck,
