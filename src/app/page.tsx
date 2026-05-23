@@ -12,7 +12,6 @@ import { useEffect } from "react";
 import PreLoader from "@/components/Home/PreLoader";
 import DanaArta from "@/components/Home/DanaArta";
 import ChatbotWidget from "@/components/Global/ChatbotWidget";
-import WorksAcross from "@/components/Home/worksAcross"
 import Capabilities from "@/components/Home/Capabilities";
 import Trust from "@/components/Home/Trust";
 import Deployment from "@/components/Home/Deployment";
@@ -58,14 +57,7 @@ export default function Home() {
         <Cards />
         <FirstAI /> */}
       </div>
-      {/* <WhyFindora />
-      <BrowserSearch />
-      <UseOnPhone />
-<<<<<<< HEAD
-      <ChatbotWidget/> */}
-=======
-      {/* <ChatbotWidget/> */}
->>>>>>> 58c2920c2c13ed99d4ce5b059b6d962a2d6bc9bd
+
     </div>
   );
 }
