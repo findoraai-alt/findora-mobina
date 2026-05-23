@@ -61,7 +61,11 @@ export default function Home() {
       {/* <WhyFindora />
       <BrowserSearch />
       <UseOnPhone />
+<<<<<<< HEAD
       <ChatbotWidget/> */}
+=======
+      {/* <ChatbotWidget/> */}
+>>>>>>> 58c2920c2c13ed99d4ce5b059b6d962a2d6bc9bd
     </div>
   );
 }
