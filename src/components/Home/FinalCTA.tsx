@@ -74,8 +74,8 @@ export default function FinalCTA() {
               
             "
             
-          >
-            Book Demo
+          ><a href="https://www.findora.ai/contact">Book Demo</a>
+            
           </button>
           <button
             
