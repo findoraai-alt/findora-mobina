@@ -176,7 +176,7 @@ export default function Diagram({
       </h2>
 
       {/* کانتینر اصلی کارت‌ها */}
-      <div className="flex flex-col items-center justify-center w-full max-w-[760px] gap-0">
+      <div className="flex flex-col items-center justify-center w-full max-w-[550px] gap-0">
         {/* CARD 1 */}
         <div
           ref={(el) => {
@@ -195,7 +195,7 @@ export default function Diagram({
           }
         >
           <div className="flex items-start gap-4 md:gap-5 relative z-10">
-            <div className="mt-4 md:mt-2 w-12 h-12 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center shrink-0">
+            <div className="mt-5 md:mt-6 w-12 h-12 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center shrink-0">
               <MessageSquareQuote
                 className="w-9 h-9 md:w-11 md:h-11 text-[#c31069]"
                 strokeWidth={1.5}
@@ -330,7 +330,7 @@ export default function Diagram({
           }
         >
           <div className="flex items-start gap-4 md:gap-5 relative z-10">
-            <div className="mt-5 md:mt-2 w-12 h-12 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-purple-100 dark:bg-purple-500/10 flex items-center justify-center shrink-0">
+            <div className="mt-3 md:mt-6 w-12 h-12 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-purple-100 dark:bg-purple-500/10 flex items-center justify-center shrink-0">
               <FileBadge
                 className="w-9 h-9 md:w-11 md:h-11 text-[#7332a1]"
                 strokeWidth={1.5}
