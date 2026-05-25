@@ -14,7 +14,7 @@ const data = {
   findora: [
     "Verifies outputs",
     "Reliability scoring",
-    "Output Verification",
+    "Fact Checking",
     "Local and edge-ready",
     "Model-agnostic",
   ],
