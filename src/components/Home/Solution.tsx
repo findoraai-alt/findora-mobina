@@ -51,7 +51,7 @@ function FadeInSection({ children, glowColor }: any) {
   );
 }
 
-/* ================= Reusable ================= */
+
 
 function StepIcon({ color, src, alt }: any) {
   return (
@@ -112,7 +112,7 @@ export default function VerificationLayerDiagram() {
             "
             
           >
-            Varification { }
+            Verification { }
           </motion.span>
 
           Layer for Enterprise AI
