@@ -88,35 +88,22 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.9 }}
           className="
-            mx-auto mt-10 max-w-3xl
+            
+            mx-auto mt-10 max-w-4xl
             text-[1.6rem] md:text-[1.8rem]
-            font-medium
+            font-medium leading-[1.9rem]
             text-black/85 dark:text-white/85
           "
         >
           Findora ensures AI outputs are verified before reaching users, enabling reliable deployment across enterprise, government, and edge systems.
         </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35, duration: 0.9 }}
-          className="
-            mx-auto mt-4 max-w-3xl
-            text-[1.6rem] md:text-[1.8rem]
-            font-medium
-            text-black/85 dark:text-white/85
-          "
-        >
-          Findora detects, validates, corrects, and enhances unreliable AI responses before they are delivered.
-        </motion.p>
-
-        {/* BUTTONS */}
+        {/* BUTTON */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.8 }}
-          className="mt-10 flex flex-col items-center gap-2"
+          className="mt-14 flex flex-col items-center gap-2"
         >
           <motion.a
             href="https://search.findora.ai/"
@@ -152,26 +139,6 @@ export default function Hero() {
                 "
               />
             </span>
-          </motion.a>
-
-          <motion.a
-            href="#"
-            className="
-              inline-flex
-              items-center
-              justify-center
-              rounded-[15px]
-              border-[2px]
-              border-black/20 dark:border-white/10
-              bg-black text-white
-              dark:bg-white dark:text-black
-              px-7 py-3.5
-              text-[1.3rem] font-medium tracking-[-0.01em]
-              transition-all duration-300
-              hover:opacity-80
-            "
-          >
-            Book Enterprise Demo
           </motion.a>
         </motion.div>
       </div>
