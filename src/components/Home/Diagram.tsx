@@ -237,7 +237,7 @@ export default function Diagram({
           }
         >
           <div className="flex items-start gap-4 md:gap-5 mb-6 md:mb-10 relative z-10">
-            <div className="relative w-12 h-12 md:w-16 md:h-16 overflow-hidden mt-1 shrink-0">
+            <div className="relative w-12 h-12 md:w-16 md:h-16 overflow-hidden mt-4 shrink-0">
               <img
                 src={findoraLogoUrl}
                 alt="Findora"
@@ -348,7 +348,7 @@ export default function Diagram({
                 Verified, Enterprise-grade reliability
               </p>
 
-              <p className="text-[1.05rem] md:text-[1.18rem] leading-relaxed text-gray-600 dark:text-white/80">
+              <p className="text-[1.05rem] md:text-[1.18rem] leading-relaxed text-gray-600 dark:text-white/80 font-semibold">
                 policy-compliant output.
               </p>
             </div>
