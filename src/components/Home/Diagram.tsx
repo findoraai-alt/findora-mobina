@@ -176,7 +176,7 @@ export default function Diagram({
       </h2>
 
       {/* کانتینر اصلی کارت‌ها */}
-      <div className="flex flex-col items-center justify-center w-full max-w-[550px] gap-0">
+      <div className="flex flex-col items-center justify-center w-full max-w-[650px] gap-0">
         {/* CARD 1 */}
         <div
           ref={(el) => {
