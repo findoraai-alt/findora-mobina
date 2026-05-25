@@ -63,12 +63,14 @@ export default function VisionSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="px-7 py-3 text-[1.3rem] font-medium bg-white text-black rounded-lg hover:bg-gray-200 transition-all duration-300">
-            Request Investor Brief
+          <button  className="px-7 py-3 text-[1.3rem] font-medium bg-white text-black rounded-lg hover:bg-gray-200 transition-all duration-300">
+            
+            <a href="https://www.findora.ai/demo">Request Investor Brief</a>
           </button>
 
           <button className="px-7 py-3 text-[1.3rem] font-medium border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
-            Contact Enterprise Team
+            
+            <a href="https://www.findora.ai/contact">Contact Enterprise Team</a>
           </button>
         </div>
 
