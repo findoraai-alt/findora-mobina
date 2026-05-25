@@ -20,14 +20,14 @@ function Card({ text, color, index }: { text: string; color: string; index: numb
   return (
     <div
       ref={cardRef}
-      className="group relative overflow-hidden rounded-[26px] border border-white/[0.07] bg-white/10 p-6 md:p-9 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1.5"
+      className="group relative flex min-h-[100px] overflow-hidden rounded-[26px] border border-white/[0.07] bg-white/10 p-5 md:min-h-[150px] md:p-7 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1.5"
     >
       <motion.div
         animate={isInView ? { opacity: 0.8 } : { opacity: 0.4 }}
         transition={{ duration: 0.8, delay: index * 0.12 }}
-        className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-80 group-active:opacity-80"
+        className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-100 group-active:opacity-100"
         style={{
-          background: `radial-gradient(circle at top left, ${color}40, transparent 70%)`,
+          background: `radial-gradient(circle at top left, ${color}40, transparent 50%)`,
         }}
       />
 
@@ -38,12 +38,12 @@ function Card({ text, color, index }: { text: string; color: string; index: numb
         }}
       />
 
-      <div className="relative z-10 flex flex-col gap-4 md:gap-7">
-        <p className="text-[1.26rem] font-semibold leading-snug tracking-tight text-white/90 md:text-2xl">
+      <div className="relative z-10 flex w-full flex-col justify-between gap-3 md:gap-5">
+        <p className="text-[1.26rem] pt-2 md:pt-5 font-semibold leading-snug tracking-tight text-white md:text-2xl">
           {text}
         </p>
 
-        <div className="mt-2 overflow-hidden md:mt-6">
+        <div className="overflow-hidden">
           <div
             className="h-[1.8px] w-full rounded-full opacity-100 transition-opacity duration-300 group-hover:opacity-150 group-active:opacity-150"
             style={{
@@ -84,14 +84,14 @@ export default function Problem() {
 
         {/* SUBHEAD */}
         <p
-          className="mt-6 max-w-2xl text-[1.3rem] font-medium leading-relaxed text-white/80 md:text-[1.8rem]"
+          className="mt-4 max-w-2xl text-[1.3rem] font-medium leading-relaxed text-white/90 md:text-[1.8rem]"
         >
           As AI systems become more autonomous, verification becomes a
           mission-critical infrastructure requirement.
         </p>
 
         {/* CARDS */}
-        <div className="mt-10 grid gap-6 md:grid-cols-2 md:gap-8">
+        <div className="mt-7 grid gap-6 md:grid-cols-2 md:gap-7">
           {cards.map((text, i) => (
             <Card key={i} text={text} color={COLORS[i]} index={i} />
           ))}
