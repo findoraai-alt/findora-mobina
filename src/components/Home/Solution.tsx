@@ -239,7 +239,7 @@ export default function VerificationLayerDiagram() {
               />
 
               <Feature
-                title="Fact Checking"
+                title={"Fact\nChecking"}
                 src="images/icons/3.png"
               />
 
