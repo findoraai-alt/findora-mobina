@@ -68,7 +68,7 @@ export default function Hero() {
       />
 
       {/* CONTENT */}
-      <div className="relative z-20 mx-auto max-w-6xl px-7 text-center">
+      <div className="relative z-20 mx-auto max-w-6xl px-7 text-center mt-6">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -89,27 +89,26 @@ export default function Hero() {
           transition={{ delay: 0.25, duration: 0.9 }}
           className="
             mx-auto mt-10 max-w-3xl
-            text-[1.6rem] md:text-[2.1rem]
+            text-[1.6rem] md:text-[1.8rem]
             font-medium
-            text-black/90 dark:text-white/90
+            text-black/85 dark:text-white/85
           "
         >
-          Findora verifies AI outputs before they reach users, enabling trusted deployment across enterprise, government, and edge systems.
+          Findora ensures AI outputs are verified before reaching users, enabling reliable deployment across enterprise, government, and edge systems.
         </motion.p>
 
-        {/* NEW LINE */}
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.9 }}
           className="
             mx-auto mt-4 max-w-3xl
-            text-[1.6rem] md:text-[2rem]
+            text-[1.6rem] md:text-[1.8rem]
             font-medium
-            text-black/90 dark:text-white/90
+            text-black/85 dark:text-white/85
           "
         >
-          Findora detects, validates, corrects, and improves unreliable AI responses before delivery.
+          Findora detects, validates, corrects, and enhances unreliable AI responses before they are delivered.
         </motion.p>
 
         {/* BUTTONS */}
@@ -119,7 +118,6 @@ export default function Hero() {
           transition={{ delay: 0.45, duration: 0.8 }}
           className="mt-10 flex flex-col items-center gap-2"
         >
-          {/* SECONDARY */}
           <motion.a
             href="https://search.findora.ai/"
             className="
@@ -156,9 +154,8 @@ export default function Hero() {
             </span>
           </motion.a>
 
-          {/* NEW BUTTON */}
           <motion.a
-            href="https://www.findora.ai/demo"
+            href="#"
             className="
               inline-flex
               items-center
