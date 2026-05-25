@@ -134,7 +134,7 @@ export default function VerificationLayerDiagram() {
         {/* STEP 1 */}
 
         <FadeInSection glowColor="#c468db">
-          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 hover:-translate-y-1 transition bg-white dark:bg-white/10 min-h-[170px] md:min-h-[150px]">
+          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 hover:-translate-y-1 transition bg-white dark:bg-[#111828] min-h-[170px] md:min-h-[150px]">
 
             <div className="absolute top-4 left-4">
               <StepNumber color="#8b5cf6" num="01" />
@@ -164,7 +164,7 @@ export default function VerificationLayerDiagram() {
         {/* STEP 2 */}
 
         <FadeInSection glowColor="#3b82f6">
-          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 hover:-translate-y-1 transition bg-white dark:bg-white/10 min-h-[175px] md:min-h-[155px]">
+          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 hover:-translate-y-1 transition bg-white dark:bg-[#111828] min-h-[175px] md:min-h-[155px]">
 
             <div className="absolute top-4 left-4">
               <StepNumber color="#3b82f6" num="02" />
@@ -194,7 +194,7 @@ export default function VerificationLayerDiagram() {
         {/* STEP 3 */}
 
         <FadeInSection glowColor="#2fa58d">
-          <div className="group relative border border-[#2fa58d]/40 dark:border-[#2fa58d]/40 rounded-2xl px-6 pt-6 pb-5 md:px-8 md:pt-7 md:pb-6 bg-[#2fa58d08] dark:bg-white/10">
+          <div className="group relative border border-[#2fa58d]/40 dark:border-[#2fa58d]/40 rounded-2xl px-6 pt-6 pb-5 md:px-8 md:pt-7 md:pb-6 bg-[#2fa58d08] dark:bg-[#111828]">
 
             <div className="absolute top-4 left-4">
               <StepNumber color="#2fa58d" num="03" />
@@ -221,7 +221,7 @@ export default function VerificationLayerDiagram() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 md:gap-4 border border-gray-300 dark:border-gray-700 rounded-xl p-5 md:p-6 bg-white dark:bg-white/10">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 md:gap-4 border border-gray-300 dark:border-gray-700 rounded-xl p-5 md:p-6 bg-white dark:bg-[#111828]">
 
               <Feature
                 title="Hallucination Detection"
@@ -259,7 +259,7 @@ export default function VerificationLayerDiagram() {
         {/* STEP 4 */}
 
         <FadeInSection glowColor="#c31069">
-          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 hover:-translate-y-1 transition bg-white dark:bg-white/10 shadow-md min-h-[175px] md:min-h-[150px]">
+          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 hover:-translate-y-1 transition bg-white dark:bg-[#111828] shadow-md min-h-[175px] md:min-h-[150px]">
 
             <div className="absolute top-4 left-4">
               <StepNumber color="#c31069" num="04" />
@@ -291,7 +291,7 @@ export default function VerificationLayerDiagram() {
       {/* FOOTER */}
 
       <FadeInSection>
-        <div className="mt-9 border border-gray-300 dark:border-gray-700 rounded-2xl p-4 md:p-5 max-w-3xl text-center bg-white dark:bg-white/10">
+        <div className="mt-9 border border-gray-300 dark:border-gray-700 rounded-2xl p-4 md:p-5 max-w-3xl text-center bg-white dark:bg-[#111828]">
 
           <p className="font-semibold text-[1.2rem] md:text-[1.3rem] text-gray-900 dark:text-white mb-3">
             Enterprise-grade verification infrastructure
