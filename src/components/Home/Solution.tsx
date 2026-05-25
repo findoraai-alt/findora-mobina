@@ -223,7 +223,7 @@ export default function VerificationLayerDiagram() {
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 md:gap-4 border border-gray-300 dark:border-gray-700 rounded-xl p-5 md:p-6 bg-white dark:bg-[#111828]">
 
-              <Feature title="Hallucination Detection" src="images/icons/4.png" />
+              <Feature title="Hallucination Detection" src="images/icons/motion-sensor.png" />
               <Feature title="Reliability Scoring" src="images/icons/quality-assurance.png" />
               <Feature title="Policy Enforcement" src="images/icons/policy (1).png" />
               <Feature title={"Fact\nChecking"} src="images/icons/3.png" />
