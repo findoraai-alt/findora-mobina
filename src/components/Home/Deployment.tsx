@@ -40,11 +40,29 @@ export default function DeploymentSection() {
   const [active, setActive] = useState<number | null>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+  const [isDesktop, setIsDesktop] = useState(false);
+
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    setIsDesktop(mediaQuery.matches);
+
+    const handler = (e: MediaQueryListEvent) => {
+      setIsDesktop(e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, []);
+
+  useEffect(() => {
+    if (isDesktop) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const index = cardRefs.current.indexOf(entry.target as HTMLDivElement);
+
           if (entry.isIntersecting) {
             setActive(index);
           } else if (active === index) {
@@ -60,7 +78,7 @@ export default function DeploymentSection() {
     });
 
     return () => observer.disconnect();
-  }, [active]);
+  }, [active, isDesktop]);
 
   return (
     <section className="relative overflow-hidden bg-white dark:bg-[#111828] py-5 lg:py-20">
@@ -79,21 +97,19 @@ export default function DeploymentSection() {
           <h2 className="text-[2rem] sm:text-[2rem] lg:text-[3.5rem] font-semibold tracking-tight text-neutral-950 dark:text-white">
             Built for{" "}
             <motion.span
-            className="
-              text-transparent
-              bg-clip-text
-              bg-gradient-to-r
-              from-[#008f7a]
-              via-[#8b5cf6]
-              to-[#008f7a]
-              
-              bg-[length:300%_100%]
-              drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
-            "
-          
-          >
-            Enterprise
-          </motion.span>
+              className="
+                text-transparent
+                bg-clip-text
+                bg-gradient-to-r
+                from-[#008f7a]
+                via-[#8b5cf6]
+                to-[#008f7a]
+                bg-[length:300%_100%]
+                drop-shadow-[0_0_8px_rgba(180,180,180,0.35)]
+              "
+            >
+              Enterprise
+            </motion.span>
 
             , Government, and Edge AI
           </h2>
@@ -105,9 +121,9 @@ export default function DeploymentSection() {
         </div>
 
         {/* CARDS */}
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {deployments.map((item, i) => {
-            const isActive = active === i;
+            const isHovered = active === i;
 
             return (
               <motion.div
@@ -119,7 +135,7 @@ export default function DeploymentSection() {
                   group relative cursor-pointer overflow-hidden
                   rounded-2xl border border-black/10 dark:border-white/10
                   bg-white/70 dark:bg-[#0f172a]/70
-                  backdrop-blur-xl p-6 h-[170px]
+                  backdrop-blur-xl p-4 h-[140px]
                   transition-all duration-300
                   hover:-translate-y-1 hover:shadow-xl
                 "
@@ -127,9 +143,9 @@ export default function DeploymentSection() {
                 {/* TOP BAR */}
                 <div className="absolute left-0 top-0 h-[3px] w-full bg-black/5 dark:bg-white/10">
                   <div
-                    className="h-full transition-all duration-1000 ease-out"
+                    className="h-full transition-all duration-700 ease-out"
                     style={{
-                      width: isActive ? "100%" : "45%",
+                      width: isHovered ? "100%" : "45%",
                       backgroundColor: item.color,
                     }}
                   />
@@ -138,7 +154,7 @@ export default function DeploymentSection() {
                 {/* GLOW */}
                 <div
                   className={`absolute inset-0 transition-opacity duration-500 ${
-                    isActive ? "opacity-100" : "opacity-0"
+                    isHovered ? "opacity-100" : "opacity-0"
                   }`}
                   style={{
                     background: `radial-gradient(circle at top left, ${item.color}18, transparent 60%)`,
@@ -151,7 +167,7 @@ export default function DeploymentSection() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-[1.3rem] sm:text-[1.4rem] leading-7 text-black/70 dark:text-white/70 font-semibold">
+                  <p className="mt-1.5 text-[1.2rem] sm:text-[1.3rem] leading-6 text-black/70 dark:text-white/70 font-semibold">
                     {item.tagline}
                   </p>
                 </div>
