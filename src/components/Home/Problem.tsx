@@ -20,7 +20,7 @@ function Card({ text, color, index }: { text: string; color: string; index: numb
   return (
     <div
       ref={cardRef}
-      className="group relative flex min-h-[100px] overflow-hidden rounded-[26px] border border-white/[0.07] bg-white/10 p-5 md:min-h-[150px] md:p-7 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1.5"
+      className="group relative flex min-h-[100px] overflow-hidden rounded-[26px] border border-white/[0.07] bg-white/10 p-5 md:min-h-[100px] md:p-7 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1.5"
     >
       <motion.div
         animate={isInView ? { opacity: 0.8 } : { opacity: 0.4 }}
@@ -39,7 +39,7 @@ function Card({ text, color, index }: { text: string; color: string; index: numb
       />
 
       <div className="relative z-10 flex w-full flex-col justify-between gap-3 md:gap-5">
-        <p className="text-[1.26rem] pt-2 md:pt-5 font-semibold leading-snug tracking-tight text-white md:text-2xl">
+        <p className="text-[1.26rem] pt-2 md:pt-2 font-semibold leading-snug tracking-tight text-white md:text-2xl">
           {text}
         </p>
 
