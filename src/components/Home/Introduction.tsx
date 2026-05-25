@@ -92,6 +92,7 @@ export default function Hero() {
             mx-auto mt-10 max-w-4xl
             text-[1.6rem] md:text-[1.8rem]
             font-medium leading-[1.9rem]
+            md:leading-[2.2rem]
             text-black/85 dark:text-white/85
           "
         >
