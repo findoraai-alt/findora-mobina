@@ -149,7 +149,7 @@ export default function Diagram({
           transform: scale(1.02);
           box-shadow:
             inset 0 0 0 1px var(--border-clr),
-            inset 0 0 30px var(--shadow-clr),
+            inset 0 0 100px var(--shadow-clr),
             inset 0 0 30px var(--glow-clr);
         }
 
@@ -188,8 +188,8 @@ export default function Diagram({
           style={
             {
               ["--border-clr" as any]: "#c31069",
-              ["--shadow-clr" as any]: "rgba(195, 16, 106, 0.08)",
-              ["--glow-clr" as any]: "rgba(195, 16, 105, 0.04)",
+              ["--shadow-clr" as any]: "rgba(195, 16, 106, 0.03)",
+              ["--glow-clr" as any]: "rgba(195, 16, 105, 0.03)",
               ["--overlay-clr" as any]: "rgba(195, 16, 105, 0.03)",
             } as React.CSSProperties
           }
@@ -230,9 +230,9 @@ export default function Diagram({
           style={
             {
               ["--border-clr" as any]: "#008f7a",
-              ["--shadow-clr" as any]: "rgba(0, 143, 122, 0.08)",
-              ["--glow-clr" as any]: "rgba(0, 143, 122, 0.04)",
-              ["--overlay-clr" as any]: "rgba(0, 143, 122, 0.03)",
+              ["--shadow-clr" as any]: "rgba(0, 143, 122, 0.02)",
+              ["--glow-clr" as any]: "rgba(0, 143, 122, 0.02)",
+              ["--overlay-clr" as any]: "rgba(0, 143, 122, 0.02)",
             } as React.CSSProperties
           }
         >
@@ -323,9 +323,9 @@ export default function Diagram({
           style={
             {
               ["--border-clr" as any]: "#7332a1",
-              ["--shadow-clr" as any]: "rgba(115, 50, 161, 0.08)",
-              ["--glow-clr" as any]: "rgba(98, 43, 137, 0.12)",
-              ["--overlay-clr" as any]: "rgba(115, 50, 161, 0.03)",
+              ["--shadow-clr" as any]: "rgba(115, 50, 161, 0.04)",
+              ["--glow-clr" as any]: "rgba(98, 43, 137, 0.04)",
+              ["--overlay-clr" as any]: "rgba(115, 50, 161, 0.04)",
             } as React.CSSProperties
           }
         >
