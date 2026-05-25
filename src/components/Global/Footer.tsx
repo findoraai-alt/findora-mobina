@@ -119,7 +119,7 @@ export const Footer = () => {
                     </Link>
                   ))}
                 </div>
-                <div className=" text-sm">© 2025 findora</div>
+                <div className=" text-sm">© 2026 findora</div>
               </div>
             </div>
           </div>
