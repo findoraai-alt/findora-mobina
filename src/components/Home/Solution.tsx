@@ -51,12 +51,12 @@ function FadeInSection({ children, glowColor }: any) {
   );
 }
 
-
+/* ================= Reusable ================= */
 
 function StepIcon({ color, src, alt }: any) {
   return (
     <div
-      className="flex items-center justify-center rounded-xl w-14 h-14 shrink-0 transition-transform duration-300 group-hover:scale-105"
+      className="flex items-center justify-center rounded-xl w-14 h-14 shrink-0 transition-transform duration-300 group-hover:scale-105 dark:bg-[#111828]"
       style={{ backgroundColor: `${color}15` }}
     >
       <img src={src} alt={alt} className="w-8 h-8 object-contain" />
@@ -67,7 +67,7 @@ function StepIcon({ color, src, alt }: any) {
 function StepNumber({ color, num }: any) {
   return (
     <div
-      className="w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm shrink-0"
+      className="w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm shrink-0 dark:bg-[#111828]"
       style={{ backgroundColor: `${color}25`, color }}
     >
       {num}
@@ -77,9 +77,9 @@ function StepNumber({ color, num }: any) {
 
 function Feature({ src, title, className }: any) {
   return (
-    <div className={`flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1 ${className}`}>
-      <img src={src} alt={title} className="w-6 h-6 object-contain" />
-      <p className="text-[0.85rem] leading-tight max-w-[100px] font-medium text-gray-700 dark:text-black">{title}</p>
+    <div className={`flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:-translate-y-1 ${className}`}>
+      <img src={src} alt={title} className="w-10 h-10 object-contain" />
+      <p className="text-[1rem] leading-tight max-w-[140px] font-medium text-gray-700 dark:text-white/90 whitespace-pre-line">{title}</p>
     </div>
   );
 }
@@ -127,7 +127,7 @@ export default function VerificationLayerDiagram() {
 
         {/* STEP 1 */}
         <FadeInSection glowColor="#c468db">
-          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/80">
+          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/10">
 
             <div className="absolute top-4 left-4 sm:static">
               <StepNumber color="#8b5cf6" num="01" />
@@ -136,8 +136,8 @@ export default function VerificationLayerDiagram() {
             <StepIcon color="#8b5cf6" src="images/icons/input.png" alt="Input" />
             
             <div className="text-center sm:text-left w-full">
-              <h3 className="font-bold text-lg text-gray-900 dark:text-black">INPUT</h3>
-              <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold">
+              <h3 className="font-bold text-lg text-gray-900 dark:text-white">INPUT</h3>
+              <p className="text-gray-600 dark:text-white/90 text-[1.2rem] font-semibold">
                 Prompt, data, or request
               </p>
             </div>
@@ -146,7 +146,7 @@ export default function VerificationLayerDiagram() {
 
         {/* STEP 2 */}
         <FadeInSection glowColor="#3b82f6">
-          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/80">
+          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/10">
 
             <div className="absolute top-4 left-4 sm:static">
               <StepNumber color="#3b82f6" num="02" />
@@ -155,10 +155,10 @@ export default function VerificationLayerDiagram() {
             <StepIcon color="#3b82f6" src="images/icons/model.png" alt="model" />
 
             <div className="text-center sm:text-left w-full">
-              <h3 className="font-bold text-lg text-gray-900 dark:text-black">
+              <h3 className="font-bold text-lg text-gray-900 dark:text-white whitespace-nowrap">
                 LLM / VLM / AI AGENT
               </h3>
-              <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold">
+              <p className="text-gray-600 dark:text-white/90 text-[1.2rem] font-semibold">
                 Model generates response
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function VerificationLayerDiagram() {
 
         {/* STEP 3 */}
         <FadeInSection glowColor="#2fa58d">
-          <div className="group relative border border-[#2fa58d]/40 dark:border-[#2fa58d]/40 rounded-2xl p-8 bg-[#2fa58d08] dark:bg-white/80">
+          <div className="group relative border border-[#2fa58d]/40 dark:border-[#2fa58d]/40 rounded-2xl p-8 bg-[#2fa58d08] dark:bg-white/10">
 
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
 
@@ -184,30 +184,30 @@ export default function VerificationLayerDiagram() {
               </div>
 
               <div>
-                <h3 className="font-bold text-lg text-[#2fa58d] align-center text-center dark:text-black">
+                <h3 className="font-bold text-lg text-[#2fa58d] align-center text-center dark:text-white">
                   FINDORA LAYER
                 </h3>
 
-                <p className="text-gray-600 dark:text-black text-[1.05rem] md:text-[1.2rem] font-semibold text-center">
+                <p className="text-gray-600 dark:text-white/90 text-[1.05rem] md:text-[1.2rem] font-semibold text-center">
                   Enterprise-grade verification and governance of AI outputs
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 border border-gray-300 dark:border-gray-700 rounded-xl p-6 bg-white dark:bg-white/80">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 border border-gray-300 dark:border-gray-700 rounded-xl p-8 bg-white dark:bg-white/10">
 
               <Feature title="Hallucination Detection" src="images/icons/4.png" />
               <Feature title="Reliability Scoring" src="images/icons/quality-assurance.png" />
               <Feature title="Policy Enforcement" src="images/icons/policy (1).png" />
               <Feature title="Output Verification" src="images/icons/3.png" />
-              <Feature className="col-span-2 sm:col-span-1 justify-self-center" title="Model Validation" src="images/icons/2.png" />
+              <Feature className="col-span-2 sm:col-span-1 justify-self-center" title={"Model\nValidation"} src="images/icons/2.png" />
             </div>
           </div>
         </FadeInSection>
 
         {/* STEP 4 */}
         <FadeInSection glowColor="#c31069">
-          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/80 shadow-md">
+          <div className="group relative flex flex-col sm:flex-row items-center sm:items-start gap-6 border border-gray-300 dark:border-gray-700 rounded-2xl p-6 hover:-translate-y-1 transition bg-white dark:bg-white/10 shadow-md">
 
             <div className="absolute top-4 left-4 sm:static">
               <StepNumber color="#c31069" num="04" />
@@ -216,10 +216,10 @@ export default function VerificationLayerDiagram() {
             <StepIcon color="#c31069" src="images/icons/1.png" alt="Trusted" />
 
             <div className="text-center sm:text-left w-full">
-              <h3 className="font-bold text-lg text-gray-900 dark:text-black">
+              <h3 className="font-bold text-lg text-gray-900 dark:text-white">
                 TRUSTED OUTPUT
               </h3>
-              <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold">
+              <p className="text-gray-600 dark:text-white/90 text-[1.2rem] font-semibold">
                 Verified, reliable, and policy-compliant response
               </p>
             </div>
@@ -228,12 +228,12 @@ export default function VerificationLayerDiagram() {
 
       {/* FOOTER */}
       <FadeInSection>
-        <div className="mt-10 border border-gray-300 dark:border-gray-700 rounded-2xl p-4 max-w-3xl text-center bg-white dark:bg-white/80">
-          <p className="font-semibold text-[1.3rem] text-gray-900 dark:text-black mb-4">
+        <div className="mt-10 border border-gray-300 dark:border-gray-700 rounded-2xl p-4 max-w-3xl text-center bg-white dark:bg-white/10">
+          <p className="font-semibold text-[1.3rem] text-gray-900 dark:text-white mb-4">
             Enterprise-grade verification infrastructure
           </p>
 
-          <p className="text-gray-600 dark:text-black text-[1.2rem] font-semibold mb-6">
+          <p className="text-gray-600 dark:text-white/90 text-[1.2rem] font-semibold mb-6">
             for reliable AI deployment.
           </p>
 
@@ -243,8 +243,8 @@ export default function VerificationLayerDiagram() {
               key={index}
               className="px-4 py-2 rounded-full text-[1rem] font-semibold"
               style={{
-                backgroundColor: `${tag.color}15`, // رنگ پس‌زمینه خیلی کمرنگ
-                color: tag.color,                 // رنگ متن
+                backgroundColor: `${tag.color}15`,
+                color: tag.color,
               }}
             >
               ✓ {tag.label}
