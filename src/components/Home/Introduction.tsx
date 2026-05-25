@@ -55,7 +55,7 @@ export default function Hero() {
       className="
         relative overflow-hidden
         bg-white dark:bg-[#111828]
-        pt-10 pb-6 md:pt-10 md:pb-18
+        pt-6 pb-6 md:pt-6 md:pb-18
       "
     >
       {/* ambient gradient */}
@@ -89,12 +89,27 @@ export default function Hero() {
           transition={{ delay: 0.25, duration: 0.9 }}
           className="
             mx-auto mt-10 max-w-3xl
-            text-[1.3rem] md:text-[1.8rem]
+            text-[1.6rem] md:text-[2.1rem]
             font-medium
-            text-black/70 dark:text-white/70
+            text-black/90 dark:text-white/90
           "
         >
           Findora verifies AI outputs before they reach users, enabling trusted deployment across enterprise, government, and edge systems.
+        </motion.p>
+
+        {/* NEW LINE */}
+        <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35, duration: 0.9 }}
+          className="
+            mx-auto mt-4 max-w-3xl
+            text-[1.6rem] md:text-[2rem]
+            font-medium
+            text-black/90 dark:text-white/90
+          "
+        >
+          Findora detects, validates, corrects, and improves unreliable AI responses before delivery.
         </motion.p>
 
         {/* BUTTONS */}
@@ -102,19 +117,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.8 }}
-          className="mt-10 flex flex-col items-center gap-6"
+          className="mt-10 flex flex-col items-center gap-2"
         >
           {/* SECONDARY */}
-           
-          
           <motion.a
-          href="https://search.findora.ai/"
-          className="
-            inline-flex
-            items-center
-            gap-2
-            font-semibold
-            group flex items-center gap-2
+            href="https://search.findora.ai/"
+            className="
+              inline-flex
+              items-center
+              gap-2
+              font-semibold
+              group flex items-center gap-2
               rounded-[15px] border-[2px]
               border-black/20 dark:border-white/10
               bg-white/70 dark:bg-white/5
@@ -122,66 +135,47 @@ export default function Hero() {
               text-[1.3rem] font-medium tracking-[-0.01em]
               text-black/80 dark:text-white/80
               backdrop-blur-md
-               transition-all duration-300
+              transition-all duration-300
               hover:bg-black hover:text-white
               dark:hover:bg-white dark:hover:text-black
-          "
-        >
-        
-            Try Findora Search
-          
-
-          <span className="hover:text-black/90">
-           <ArrowUpRight
-              size={20}
-              className="
-                transition-transform duration-300
-                group-hover:-translate-y-[1px]
-                group-hover:translate-x-[1px]
-                dark:text-white
-                dark:group-hover:text-black
-                
-              "
-            />
-          </span>
-        </motion.a>
-         
-
-          {/* PRIMARY */}
-         {/* <button
-            onMouseMove={handleMouseMove}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            className="
-              relative overflow-hidden rounded-full
-              bg-black dark:bg-white
-              px-8 py-3.5
-              text-[15px] font-medium tracking-[-0.01em]
-              text-white dark:text-black
-              transition-all duration-300
             "
           >
-            <span
-              className="absolute inset-0 rounded-full shadow-[0_12px_40px_rgba(0,0,0,0.16)] dark:shadow-[0_12px_40px_rgba(255,255,255,0.08)]"
-            />
+            Try Findora Search
 
-            <span
-              className="pointer-events-none absolute inset-0 rounded-full transition-opacity duration-300"
-              style={{
-                opacity: hovered ? 1 : 0,
-                background: `radial-gradient(
-                  140px circle at ${position.x}px ${position.y}px,
-                  rgba(255,255,255,0.25),
-                  rgba(255,255,255,0.10) 28%,
-                  rgba(255,255,255,0.04) 48%,
-                  transparent 72%
-                )`,
-                filter: "blur(14px)",
-              }}
-            />
+            <span className="hover:text-black/90">
+              <ArrowUpRight
+                size={20}
+                className="
+                  transition-transform duration-300
+                  group-hover:-translate-y-[1px]
+                  group-hover:translate-x-[1px]
+                  dark:text-white
+                  dark:group-hover:text-black
+                "
+              />
+            </span>
+          </motion.a>
 
-            <span className="relative z-10 text-[1.3rem]">Book Demo</span>
-          </button>*/}
+          {/* NEW BUTTON */}
+          <motion.a
+            href="https://www.findora.ai/demo"
+            className="
+              inline-flex
+              items-center
+              justify-center
+              rounded-[15px]
+              border-[2px]
+              border-black/20 dark:border-white/10
+              bg-black text-white
+              dark:bg-white dark:text-black
+              px-7 py-3.5
+              text-[1.3rem] font-medium tracking-[-0.01em]
+              transition-all duration-300
+              hover:opacity-80
+            "
+          >
+            Book Enterprise Demo
+          </motion.a>
         </motion.div>
       </div>
 
@@ -193,7 +187,6 @@ export default function Hero() {
           lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2
         "
       >
-        {/* YELLOW */}
         <motion.div
           style={{
             x: isDesktop ? 0 : yellowX,
@@ -205,7 +198,6 @@ export default function Hero() {
           <div className="absolute inset-0 bg-[#eaba33] blur-[15px] opacity-20" />
         </motion.div>
 
-        {/* BLUE */}
         <motion.div
           style={{
             x: isDesktop ? 0 : blueX,
@@ -217,7 +209,6 @@ export default function Hero() {
           <div className="absolute inset-0 bg-[#0b87b6] blur-[15px] opacity-20" />
         </motion.div>
 
-        {/* MAGENTA */}
         <motion.div
           style={{
             x: isDesktop ? 0 : pinkX,
