@@ -30,17 +30,13 @@ function FeatureItem({ title, desc, color, icon }: FeatureItemProps) {
       </div>
 
       <div className="flex-1 min-w-0">
-        <p
-          className="font-semibold leading-tight tracking-[-0.02em] text-[#111827] dark:text-white"
-          style={{ fontSize: "clamp(1.05rem, 1vw + 0.9rem, 1.6rem)" }}
-        >
+        <p className="font-semibold leading-tight tracking-[-0.02em] text-[#111827] dark:text-white text-base md:text-xl lg:text-xl">
           {title}
         </p>
 
         <p
-          className="font-medium leading-relaxed tracking-[-0.01em] text-[#4B5563] dark:text-white/60"
+          className="font-medium leading-relaxed tracking-[-0.01em] text-[#4B5563] dark:text-white/60 text-sm md:text-lg lg:text-lg"
           style={{
-            fontSize: "clamp(1rem, 0.6vw + 0.85rem, 1.18rem)",
             marginTop: "0.25rem",
           }}
         >
@@ -80,25 +76,16 @@ export default function Diagram({
 
           if (index === -1) return;
 
-          /* -------------------- وقتی کارت وارد دید شد -------------------- */
-
           if (entry.isIntersecting) {
             setActivatedCards((prev) => {
               const copy = [...prev];
-
               copy[index] = true;
-
               return copy;
             });
-          }
-
-          /* -------------------- وقتی کارت از دید خارج شد -------------------- */
-          else {
+          } else {
             setActivatedCards((prev) => {
               const copy = [...prev];
-
               copy[index] = false;
-
               return copy;
             });
           }
@@ -143,7 +130,6 @@ export default function Diagram({
           border-color: rgba(255,255,255,0.08);
         }
 
-        /* هاله فعال بدون سایه بیرونی */
         .active-card {
           border-color: var(--border-clr) !important;
           transform: scale(1.02);
@@ -153,7 +139,6 @@ export default function Diagram({
             inset 0 0 30px var(--glow-clr);
         }
 
-        /* لایه هاله داخلی */
         .active-card::before {
           content: "";
           position: absolute;
@@ -176,11 +161,10 @@ export default function Diagram({
         }
       `}</style>
 
-      <h2 className="text-3xl md:text-[3.7rem] leading-[1.05] font-bold text-center mb-16 md:mb-20 text-[#111827] dark:text-white tracking-[-0.04em] max-w-5xl">
+      <h2 className="text-2xl md:text-4xl lg:text-4xl leading-[1.05] font-bold text-center mb-16 md:mb-20 text-[#111827] dark:text-white tracking-[-0.04em] max-w-5xl">
         How Findora Verifies AI Answers?
       </h2>
 
-      {/* کانتینر اصلی کارت‌ها */}
       <div className="flex flex-col items-center justify-center w-full max-w-[650px] gap-0">
         {/* CARD 1 */}
         <div
@@ -210,19 +194,18 @@ export default function Diagram({
             <div className="flex-1">
               <div className="h-[5px] md:h-[6px] w-[30px] md:w-[38px] rounded-full mb-2 md:mb-3 bg-[#c31069]" />
 
-              <p className="font-bold text-[1.2rem] md:text-[1.7rem] tracking-[-0.03em] text-[#111827] dark:text-white">
+              <p className="font-bold text-[1.1rem] md:text-[1.6rem] lg:text-[1.6rem] tracking-[-0.03em] text-[#111827] dark:text-white">
                 AI SYSTEM OUTPUT
               </p>
 
-              <p className="text-[1.1rem] md:text-[1.25rem] leading-relaxed text-gray-600 dark:text-white/80 font-semibold">
+              <p className="text-[1rem] md:text-[1.2rem] lg:text-[1.2rem] leading-relaxed text-gray-600 dark:text-white/80 font-semibold">
                 Response generated for enterprise workflow.
               </p>
             </div>
           </div>
         </div>
 
-        {/* کانکتور بین کارت ۱ و ۲ */}
-        <div className="w-[2.5px] md:w-[2.5px] h-[40px] md:h-[40px] bg-[#008f7a] dark:bg-[#008f7a] shrink-0 rounded-full" />
+        <div className="w-[2.5px] h-[40px] bg-[#008f7a] dark:bg-[#008f7a] shrink-0 rounded-full" />
 
         {/* CARD 2 */}
         <div
@@ -242,7 +225,7 @@ export default function Diagram({
           }
         >
           <div className="flex items-start gap-4 md:gap-5 mb-6 md:mb-10 relative z-10">
-            <div className="relative w-12 h-12 md:w-16 md:h-16 overflow-hidden mt-4 shrink-0">
+            <div className="relative w-12 h-12 md:w-16 md:h-16 overflow-hidden mt-4 shrink-0 mt-5">
               <img
                 src={findoraLogoUrl}
                 alt="Findora"
@@ -253,11 +236,11 @@ export default function Diagram({
             <div className="flex-1 min-w-0">
               <div className="h-[5px] md:h-[6px] w-[30px] md:w-[38px] rounded-full mb-2 md:mb-3 bg-[#008f7a]" />
 
-              <p className="font-bold text-[#008f7a] text-[1.2rem] md:text-[1.75rem] tracking-[-0.03em] ">
+              <p className="font-bold text-[#008f7a] text-[1.1rem] md:text-[1.7rem] lg:text-[1.7rem] tracking-[-0.03em] ">
                 FINDORA VERIFICATION LAYER
               </p>
 
-              <p className="text-[1.1rem] md:text-[1.25rem] leading-relaxed text-gray-600 dark:text-white/80 font-semibold">
+              <p className="text-[1rem] md:text-[1.2rem] lg:text-[1.2rem] leading-relaxed text-gray-600 dark:text-white/80 font-semibold">
                 AI-generated response verification.
               </p>
             </div>
@@ -314,8 +297,7 @@ export default function Diagram({
           </div>
         </div>
 
-        {/* کانکتور بین کارت ۲ و ۳ */}
-        <div className="w-[2.5px] md:w-[2.5px] h-[40px] md:h-[40px] bg-[#7332a1] dark:bg-[#7332a1] shrink-0 rounded-full" />
+        <div className="w-[2.5px] h-[40px] bg-[#7332a1] dark:bg-[#7332a1] shrink-0 rounded-full" />
 
         {/* CARD 3 */}
         <div
@@ -345,15 +327,15 @@ export default function Diagram({
             <div className="flex-1">
               <div className="h-[5px] md:h-[6px] w-[30px] md:w-[38px] rounded-full mb-2 md:mb-3 bg-[#7332a1]" />
 
-              <p className="font-bold text-[1.1rem] md:text-[1.6rem] tracking-[-0.03em] text-[#111827] dark:text-white leading-tight">
+              <p className="font-bold text-[1rem] md:text-[1.5rem] lg:text-[1.5rem] tracking-[-0.03em] text-[#111827] dark:text-white leading-tight">
                 TRUSTED RESPONSE DELIVERED
               </p>
 
-              <p className="font-semibold text-[1.1rem] md:text-[1.22rem] text-[#7332a1] dark:text-[#b784ff] mt-1">
+              <p className="font-semibold text-[1rem] md:text-[1.15rem] lg:text-[1.15rem] text-[#7332a1] dark:text-[#b784ff] mt-1">
                 Verified, Enterprise-grade reliability
               </p>
 
-              <p className="text-[1.05rem] md:text-[1.18rem] leading-relaxed text-gray-600 dark:text-white/80 font-semibold">
+              <p className="text-[0.95rem] md:text-[1.1rem] lg:text-[1.1rem] leading-relaxed text-gray-600 dark:text-white/80 font-semibold">
                 policy-compliant output.
               </p>
             </div>
