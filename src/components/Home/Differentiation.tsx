@@ -53,7 +53,7 @@ const Differentiation = () => {
               </span>
 
               {/* DESKTOP */}
-              <span className="hidden md:block text-[1.2rem] min-w-[340px]">
+              <span className="hidden md:block text-[1.6rem] min-w-[340px] ">
                 Traditional AI Systems
               </span>
             </div>
@@ -67,8 +67,8 @@ const Differentiation = () => {
               </span>
 
               {/* DESKTOP */}
-              <span className="hidden md:block text-[1.2rem] min-w-[340px]">
-                Findora Verification Layer
+              <span className="hidden md:block text-[1.6rem] min-w-[340px]">
+                Findora
               </span>
             </div>
           </div>
@@ -88,12 +88,12 @@ const Differentiation = () => {
                       size={20}
                     />
 
-                    <span className="text-[1rem] md:text-[1.12rem] text-gray-500 dark:text-gray-300 font-semibold leading-snug">
+                    <span className="text-[1.1rem] md:text-[1.5rem] text-gray-500 dark:text-gray-300 font-semibold leading-snug">
                       {data.traditional[idx]}
                     </span>
                   </>
                 ) : (
-                  <span className="text-[1rem] md:text-[1.12rem] text-gray-300 dark:text-gray-600">
+                  <span className="text-[1.1rem] md:text-[1.5rem] text-gray-300 dark:text-gray-600">
                     —
                   </span>
                 )}
@@ -108,7 +108,7 @@ const Differentiation = () => {
                       size={20}
                     />
 
-                    <span className="text-[1rem] md:text-[1.12rem] font-semibold text-gray-900 dark:text-gray-100 leading-snug">
+                    <span className="text-[1.1rem] md:text-[1.5rem] font-semibold text-gray-900 dark:text-gray-100 leading-snug">
                       {data.findora[idx]}
                     </span>
                   </>
@@ -130,7 +130,7 @@ const Differentiation = () => {
         viewport={{ once: true }}
         className="mt-10 text-center"
       >
-        <p className="text-[1.5rem] md:text-2xl font-semibold max-w-2xl mx-auto">
+        <p className="text-[1.5rem] md:text-[1.9rem]font-semibold max-w-2xl mx-auto">
           <span className="text-black/80 dark:text-white/90">
             {data.statement}
           </span>

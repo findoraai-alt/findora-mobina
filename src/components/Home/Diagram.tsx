@@ -170,8 +170,8 @@ export default function Diagram({
         }
       `}</style>
 
-      <h2 className="text-2xl md:text-4xl lg:text-[3rem] leading-[1.05] md:leading-[1.5] lg:font-semibold font-bold text-center mb-16 md:mb-20 text-[#111827] dark:text-white tracking-[-0.04em] max-w-5xl">
-        How Findora Verifies AI Answers?
+      <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] leading-[1.25] md:leading-[1.5] lg:font-bold font-bold text-center mb-10 md:mb-16 text-[#111827] dark:text-white tracking-[-0.04em] max-w-5xl">
+        How Findora Verifies <br /> AI Answers?
       </h2>
 
       <div className="flex flex-col items-center justify-center w-full max-w-[650px] gap-0">
