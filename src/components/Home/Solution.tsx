@@ -202,7 +202,7 @@ export default function VerificationLayerDiagram() {
 
             <div className="flex flex-col items-center text-center gap-4 mb-5">
 
-              <div className="w-20 h-20 flex items-center justify-center">
+              <div className="w-20 h-20 flex items-center justify-center -mb-2">
                 <img
                   src="/images/logo.png"
                   alt="Findora Logo"
