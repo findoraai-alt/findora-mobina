@@ -2,22 +2,10 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
 export default function Hero() {
   const ref = useRef(null);
-
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024px)");
-    const handleChange = () => setIsDesktop(mediaQuery.matches);
-
-    handleChange();
-    mediaQuery.addEventListener("change", handleChange);
-
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -35,7 +23,7 @@ export default function Hero() {
   const borderRadius = useTransform(
     scrollYProgress,
     [0, 0.08],
-    ["9999px 0 0 9999px", "9999px"]
+    ["9999px 0px 0px 9999px", "9999px 9999px 9999px 9999px"]
   );
 
   const [position, setPosition] = useState({ x: 50, y: 50 });
@@ -43,6 +31,7 @@ export default function Hero() {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
+
     setPosition({
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
@@ -55,7 +44,7 @@ export default function Hero() {
       className="
         relative overflow-hidden
         bg-white dark:bg-[#111828]
-        pt-6 pb-6 md:pt-6 md:pb-18
+        pt-6 pb-24 md:pt-6 md:pb-32
       "
     >
       {/* ambient gradient */}
@@ -75,12 +64,12 @@ export default function Hero() {
           transition={{ duration: 0.9 }}
           className="
             mx-auto max-w-5xl
-            text-5xl sm:text-6xl md:text-7xl lg:text-[7.5rem]
+            text-5xl sm:text-6xl md:text-[4rem] lg:text-[5rem]
             font-semibold tracking-[-0.06em] leading-[1]
             text-black dark:text-white
           "
         >
-          Trusted AI Infrastructure
+          Trusted AI <br /> Infrastructure
         </motion.h1>
 
         <motion.p
@@ -88,7 +77,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.25, duration: 0.9 }}
           className="
-            
             mx-auto mt-10 max-w-4xl
             text-[1.4rem] md:text-[1.8rem]
             font-semibold leading-[1.9rem]
@@ -96,7 +84,8 @@ export default function Hero() {
             text-black/85 dark:text-white/85
           "
         >
-         Findora provides trusted AI infrastructure for reliable deployment across enterprise, government, and edge systems.
+          Findora provides trusted AI infrastructure for reliable deployment
+          across enterprise, government, and edge systems.
         </motion.p>
 
         {/* BUTTON */}
@@ -113,7 +102,7 @@ export default function Hero() {
               items-center
               gap-2
               font-semibold
-              group flex items-center gap-2
+              group
               rounded-[15px] border-[2px]
               border-black/20 dark:border-white/10
               bg-white/70 dark:bg-white/5
@@ -147,42 +136,58 @@ export default function Hero() {
       {/* SIGNAL LINES */}
       <div
         className="
-          pointer-events-none relative z-10 mt-10
+          pointer-events-none
+          relative z-10
+          mt-5 md:mt-2
           flex flex-col items-end gap-3
-          lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2
         "
       >
         <motion.div
           style={{
-            x: isDesktop ? 0 : yellowX,
-            y: isDesktop ? 0 : yellowY,
+            x: yellowX,
+            y: yellowY,
             borderRadius,
           }}
-          className="relative h-[30px] w-36 md:w-44 bg-[#eaba33]/90"
+          className="
+            relative
+            h-[30px]
+            w-36 md:w-44 lg:w-52
+            bg-[#eaba33]/90
+          "
         >
-          <div className="absolute inset-0 bg-[#eaba33] blur-[15px] opacity-20" />
+          <div className="absolute inset-0 bg-[#eaba33] blur-[15px] opacity-20 rounded-inherit" />
         </motion.div>
 
         <motion.div
           style={{
-            x: isDesktop ? 0 : blueX,
-            y: isDesktop ? 0 : blueY,
+            x: blueX,
+            y: blueY,
             borderRadius,
           }}
-          className="relative h-[30px] w-64 md:w-80 bg-[#0b87b6]/90"
+          className="
+            relative
+            h-[30px]
+            w-64 md:w-80 lg:w-[26rem]
+            bg-[#0b87b6]/90
+          "
         >
-          <div className="absolute inset-0 bg-[#0b87b6] blur-[15px] opacity-20" />
+          <div className="absolute inset-0 bg-[#0b87b6] blur-[15px] opacity-20 rounded-inherit" />
         </motion.div>
 
         <motion.div
           style={{
-            x: isDesktop ? 0 : pinkX,
-            y: isDesktop ? 0 : pinkY,
+            x: pinkX,
+            y: pinkY,
             borderRadius,
           }}
-          className="relative h-[30px] w-48 md:w-64 bg-[#c31069]/90"
+          className="
+            relative
+            h-[30px]
+            w-48 md:w-64 lg:w-80
+            bg-[#c31069]/90
+          "
         >
-          <div className="absolute inset-0 bg-[#c31069] blur-[15px] opacity-20" />
+          <div className="absolute inset-0 bg-[#c31069] blur-[15px] opacity-20 rounded-inherit" />
         </motion.div>
       </div>
 

@@ -23,7 +23,7 @@ function FeatureItem({ title, desc, color, icon }: FeatureItemProps) {
   return (
     <div className="flex items-start gap-4 md:gap-5 w-full">
       <div
-        className="w-12 h-12 md:w-14 md:h-14 mt-1 flex items-center justify-center rounded-lg md:rounded-xl shrink-0"
+        className="w-12 h-12 md:w-14 md:h-14 mt-1 flex items-center justify-center rounded-lg md:rounded-xl shrink-0 -mt-1"
         style={{ backgroundColor: `${color}15` }}
       >
         {icon}
@@ -258,14 +258,14 @@ export default function Diagram({
             </div>
           </div>
 
-          <div className="space-y-6 md:space-y-8 relative z-10">
+          <div className="space-y-6 md:space-y-8 relative z-10 ">
             <FeatureItem
               title="Hallucination Detection"
               desc="Detects factual inconsistencies and hallucinations."
-              color="#008f7a"
+              color="#c67f48"
               icon={
                 <PackageSearch
-                  className="w-9 h-9 md:w-10 md:h-10 text-[#008f7a]"
+                  className="w-9 h-9 md:w-10 md:h-10 text-[#c67f48]"
                   strokeWidth={1.5}
                 />
               }
@@ -274,10 +274,10 @@ export default function Diagram({
             <FeatureItem
               title="Reliability Scoring"
               desc="Scores responses based on multiple reliability signals."
-              color="#008f7a"
+              color="#c31069"
               icon={
                 <BookCheck
-                  className="w-9 h-9 md:w-10 md:h-10 text-[#008f7a]"
+                  className="w-9 h-9 md:w-10 md:h-10 text-[#c31069]"
                   strokeWidth={1.5}
                 />
               }
@@ -286,10 +286,10 @@ export default function Diagram({
             <FeatureItem
               title="Policy Enforcement"
               desc="Ensures alignment with enterprise policies and rules."
-              color="#008f7a"
+              color="#7332a1"
               icon={
                 <Siren
-                  className="w-9 h-9 md:w-10 md:h-10 text-[#008f7a]"
+                  className="w-9 h-9 md:w-10 md:h-10 text-[#7332a1]"
                   strokeWidth={1.5}
                 />
               }
