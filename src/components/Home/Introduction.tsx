@@ -96,7 +96,7 @@ export default function Hero() {
             text-black/85 dark:text-white/85
           "
         >
-          Findora ensures AI outputs are verified before reaching users, enabling reliable deployment across enterprise, government, and edge systems.
+         Findora provides trusted AI infrastructure for reliable deployment across enterprise, government, and edge systems.
         </motion.p>
 
         {/* BUTTON */}
