@@ -188,9 +188,9 @@ export default function Diagram({
           style={
             {
               ["--border-clr" as any]: "#c31069",
-              ["--shadow-clr" as any]: "rgba(195, 16, 106, 0.03)",
-              ["--glow-clr" as any]: "rgba(195, 16, 105, 0.03)",
-              ["--overlay-clr" as any]: "rgba(195, 16, 105, 0.03)",
+              ["--shadow-clr" as any]: "rgba(195, 16, 106, 0.02)",
+              ["--glow-clr" as any]: "rgba(195, 16, 105, 0.02)",
+              ["--overlay-clr" as any]: "rgba(195, 16, 105, 0.02)",
             } as React.CSSProperties
           }
         >
@@ -217,7 +217,7 @@ export default function Diagram({
         </div>
 
         {/* کانکتور بین کارت ۱ و ۲ */}
-        <div className="w-[2.5px] md:w-[2.5px] h-[50px] md:h-[60px] bg-[#008f7a] dark:bg-[#008f7a] shrink-0 rounded-full" />
+        <div className="w-[2.5px] md:w-[2.5px] h-[40px] md:h-[40px] bg-[#008f7a] dark:bg-[#008f7a] shrink-0 rounded-full" />
 
         {/* CARD 2 */}
         <div
@@ -310,7 +310,7 @@ export default function Diagram({
         </div>
 
         {/* کانکتور بین کارت ۲ و ۳ */}
-        <div className="w-[2.5px] md:w-[2.5px] h-[50px] md:h-[60px] bg-[#7332a1] dark:bg-[#7332a1] shrink-0 rounded-full" />
+        <div className="w-[2.5px] md:w-[2.5px] h-[40px] md:h-[40px] bg-[#7332a1] dark:bg-[#7332a1] shrink-0 rounded-full" />
 
         {/* CARD 3 */}
         <div
