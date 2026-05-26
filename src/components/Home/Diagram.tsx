@@ -35,7 +35,7 @@ function FeatureItem({ title, desc, color, icon }: FeatureItemProps) {
         </p>
 
         <p
-          className="font-medium leading-relaxed tracking-[-0.01em] text-[#4B5563] dark:text-white/60 text-sm md:text-lg lg:text-lg"
+          className="font-medium leading-relaxed tracking-[-0.01em] text-[#4B5563] dark:text-white/60 text-[1rem] md:text-[1rem] lg:text-lg"
           style={{
             marginTop: "0.25rem",
           }}
@@ -145,9 +145,9 @@ export default function Diagram({
           inset: 0;
           background: linear-gradient(
             90deg,
-            rgb(255, 255, 255) 0%,
+            rgba(255, 255, 255, 0.04) 0%,
             var(--gradient-clr) 50%,
-            rgb(255, 255, 255) 100%
+            rgba(255, 255, 255, 0.05) 100%
           );
           opacity: 1;
           pointer-events: none;
