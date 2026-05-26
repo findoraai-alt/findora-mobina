@@ -158,7 +158,12 @@ export default function Diagram({
           content: "";
           position: absolute;
           inset: 0;
-          background: var(--overlay-clr);
+          background: linear-gradient(
+            60deg,
+            rgba(255,255,255,0.12) 0%,
+            var(--gradient-clr) 50%,
+            rgba(255,255,255,0.12) 100%
+          );
           opacity: 1;
           pointer-events: none;
           border-radius: inherit;
@@ -187,23 +192,23 @@ export default function Diagram({
           }`}
           style={
             {
-              ["--border-clr" as any]: "#c31069",
-              ["--shadow-clr" as any]: "rgba(195, 16, 106, 0.02)",
-              ["--glow-clr" as any]: "rgba(195, 16, 105, 0.02)",
-              ["--overlay-clr" as any]: "rgba(195, 16, 105, 0.02)",
+              ["--border-clr" as any]: "#c67f48",
+              ["--shadow-clr" as any]: "rgba(195, 162, 16, 0.02)",
+              ["--glow-clr" as any]: "rgba(195, 174, 16, 0.02)",
+              ["--gradient-clr" as any]: "rgba(195, 180, 16, 0.03)",
             } as React.CSSProperties
           }
         >
           <div className="flex items-start gap-4 md:gap-5 relative z-10">
-            <div className="mt-5 md:mt-6 w-12 h-12 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-pink-100 dark:bg-pink-500/10 flex items-center justify-center shrink-0">
+            <div className="mt-5 md:mt-6 w-12 h-12 md:w-16 md:h-16 rounded-lg md:rounded-xl bg-[#c67f48]/10 dark:bg-[#c67f48]/10 flex items-center justify-center shrink-0">
               <MessageSquareQuote
-                className="w-9 h-9 md:w-11 md:h-11 text-[#c31069]"
+                className="w-9 h-9 md:w-11 md:h-11 text-[#c67f48]"
                 strokeWidth={1.5}
               />
             </div>
 
             <div className="flex-1">
-              <div className="h-[5px] md:h-[6px] w-[30px] md:w-[38px] rounded-full mb-2 md:mb-3 bg-[#c31069]" />
+              <div className="h-[5px] md:h-[6px] w-[30px] md:w-[38px] rounded-full mb-2 md:mb-3 bg-[#c67f48]" />
 
               <p className="font-bold text-[1.2rem] md:text-[1.7rem] tracking-[-0.03em] text-[#111827] dark:text-white">
                 AI SYSTEM OUTPUT
@@ -232,7 +237,7 @@ export default function Diagram({
               ["--border-clr" as any]: "#008f7a",
               ["--shadow-clr" as any]: "rgba(0, 143, 122, 0.02)",
               ["--glow-clr" as any]: "rgba(0, 143, 122, 0.02)",
-              ["--overlay-clr" as any]: "rgba(0, 143, 122, 0.02)",
+              ["--gradient-clr" as any]: "rgba(0, 143, 122, 0.03)",
             } as React.CSSProperties
           }
         >
@@ -325,7 +330,7 @@ export default function Diagram({
               ["--border-clr" as any]: "#7332a1",
               ["--shadow-clr" as any]: "rgba(115, 50, 161, 0.04)",
               ["--glow-clr" as any]: "rgba(98, 43, 137, 0.04)",
-              ["--overlay-clr" as any]: "rgba(115, 50, 161, 0.04)",
+              ["--gradient-clr" as any]: "rgba(115, 50, 161, 0.1)",
             } as React.CSSProperties
           }
         >
