@@ -105,13 +105,13 @@ export default function Hero() {
               group
               rounded-[15px] border-[2px]
               border-black/20 dark:border-white/10
-              bg-white/70 dark:bg-white/5
+              bg-black/100 dark:bg-white/5
               px-7 py-3.5
               text-[1.3rem] font-medium tracking-[-0.01em]
-              text-black/80 dark:text-white/80
+              text-white/100 dark:text-white/80
               backdrop-blur-md
               transition-all duration-300
-              hover:bg-black hover:text-white
+              hover:bg-white/100 hover:text-black
               dark:hover:bg-white dark:hover:text-black
             "
           >
