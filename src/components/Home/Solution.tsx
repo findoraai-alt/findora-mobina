@@ -87,7 +87,7 @@ function StepNumber({ color, num }: any) {
 function Feature({ src, title, className }: any) {
   return (
     <div
-      className={`flex flex-col items-center gap-2 text-center transition-transform duration-300 hover:-translate-y-1 ${className}`}
+      className={`flex flex-col items-center gap-2 text-center transition-transform duration-300 ${className}`}
     >
       <img src={src} alt={title} className="w-11 h-11 object-contain" />
 
@@ -134,7 +134,7 @@ export default function VerificationLayerDiagram() {
         {/* STEP 1 */}
 
         <FadeInSection glowColor="#c468db">
-          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 hover:-translate-y-1 transition bg-white dark:bg-[#111828] min-h-[170px] md:min-h-[150px]">
+          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 transition bg-white dark:bg-[#111828] min-h-[170px] md:min-h-[150px]">
 
             <div className="absolute top-4 left-4">
               <StepNumber color="#8b5cf6" num="01" />
@@ -164,7 +164,7 @@ export default function VerificationLayerDiagram() {
         {/* STEP 2 */}
 
         <FadeInSection glowColor="#3b82f6">
-          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 hover:-translate-y-1 transition bg-white dark:bg-[#111828] min-h-[175px] md:min-h-[150px]">
+          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 transition bg-white dark:bg-[#111828] min-h-[175px] md:min-h-[150px]">
 
             <div className="absolute top-4 left-4">
               <StepNumber color="#3b82f6" num="02" />
@@ -240,7 +240,7 @@ export default function VerificationLayerDiagram() {
         {/* STEP 4 */}
 
         <FadeInSection glowColor="#c31069">
-          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 hover:-translate-y-1 transition bg-white dark:bg-[#111828] shadow-md min-h-[175px] md:min-h-[150px]">
+          <div className="group relative flex flex-col items-center justify-center border border-gray-300 dark:border-gray-700 rounded-2xl px-6 pt-5 pb-4 md:px-8 md:pt-5 md:pb-5 transition bg-white dark:bg-[#111828] shadow-md min-h-[175px] md:min-h-[150px]">
 
             <div className="absolute top-4 left-4">
               <StepNumber color="#c31069" num="04" />
