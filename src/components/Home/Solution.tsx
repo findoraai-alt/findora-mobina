@@ -226,8 +226,8 @@ export default function VerificationLayerDiagram() {
               <Feature title="Hallucination Detection" src="images/icons/motion-sensor.png" />
               <Feature title="Reliability Scoring" src="images/icons/quality-assurance.png" />
               <Feature title="Policy Enforcement" src="images/icons/policy (1).png" />
-              <Feature title={"Fact\nChecking"} src="images/icons/3.png" />
-              <Feature className="col-span-2 sm:col-span-1 justify-self-center" title={"Model\nValidation"} src="images/icons/2.png" />
+              <Feature title={"Fact\nChecking"} src="images/icons/support.png" />
+              <Feature className="col-span-2 sm:col-span-1 justify-self-center" title={"Model\nValidation"} src="images/icons/model2.png" />
 
             </div>
 
