@@ -70,7 +70,7 @@ export default function VisionSection() {
 
           <button className="px-7 py-3 text-[1.3rem] font-medium border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
             
-            <a href="https://www.findora.ai/contact">Book Enterprise Demo</a>
+            <a href="https://www.findora.ai/demo">Book Enterprise Demo</a>
           </button>
         </div>
 
