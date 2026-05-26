@@ -93,7 +93,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.8 }}
-          className="mt-14 flex flex-col items-center gap-2"
+          className="mt-10 flex flex-col items-center gap-2"
         >
           <motion.a
             href="https://search.findora.ai/"
