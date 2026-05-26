@@ -160,7 +160,7 @@ export default function Diagram({
           inset: 0;
           background: linear-gradient(
             45deg,
-            rgba(255,255,255,0.12) 0%,
+            rgba(255,255,255,0.12) 25%,
             var(--gradient-clr) 50%,
             rgba(255,255,255,0.12) 100%
           );
