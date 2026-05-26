@@ -160,9 +160,9 @@ export default function Diagram({
           inset: 0;
           background: linear-gradient(
             45deg,
-            rgba(255,255,255,0.12) 25%,
+            rgb(255, 255, 255) 25%,
             var(--gradient-clr) 50%,
-            rgba(255,255,255,0.12) 100%
+            rgb(255, 255, 255) 100%
           );
           opacity: 1;
           pointer-events: none;
