@@ -195,7 +195,7 @@ export default function Diagram({
               ["--border-clr" as any]: "#c31069",
               ["--shadow-clr" as any]: "rgba(195, 16, 106, 0.02)",
               ["--glow-clr" as any]: "rgba(195, 16, 105, 0.02)",
-              ["--gradient-clr" as any]: "rgba(214, 134, 174, 0.13)",
+              ["--gradient-clr" as any]: "rgba(214, 134, 174, 0.09)",
             } as React.CSSProperties
           }
         >
