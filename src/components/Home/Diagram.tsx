@@ -159,8 +159,8 @@ export default function Diagram({
           position: absolute;
           inset: 0;
           background: linear-gradient(
-            45deg,
-            rgb(255, 255, 255) 25%,
+            90deg,
+            rgb(255, 255, 255) 0%,
             var(--gradient-clr) 50%,
             rgb(255, 255, 255) 100%
           );
@@ -195,7 +195,7 @@ export default function Diagram({
               ["--border-clr" as any]: "#c31069",
               ["--shadow-clr" as any]: "rgba(195, 16, 106, 0.02)",
               ["--glow-clr" as any]: "rgba(195, 16, 105, 0.02)",
-              ["--gradient-clr" as any]: "rgba(195, 16, 105, 0.05)",
+              ["--gradient-clr" as any]: "rgba(214, 134, 174, 0.13)",
             } as React.CSSProperties
           }
         >
@@ -237,7 +237,7 @@ export default function Diagram({
               ["--border-clr" as any]: "#008f7a",
               ["--shadow-clr" as any]: "rgba(0, 143, 122, 0.02)",
               ["--glow-clr" as any]: "rgba(0, 143, 122, 0.02)",
-              ["--gradient-clr" as any]: "rgba(0, 143, 122, 0.05)",
+              ["--gradient-clr" as any]: "rgba(173, 243, 233, 0.15)",
             } as React.CSSProperties
           }
         >
@@ -253,7 +253,7 @@ export default function Diagram({
             <div className="flex-1 min-w-0">
               <div className="h-[5px] md:h-[6px] w-[30px] md:w-[38px] rounded-full mb-2 md:mb-3 bg-[#008f7a]" />
 
-              <p className="font-bold text-[#008f7a] text-[1.2rem] md:text-[1.75rem] tracking-[-0.03em] leading-tight">
+              <p className="font-bold text-[#008f7a] text-[1.2rem] md:text-[1.75rem] tracking-[-0.03em] ">
                 FINDORA VERIFICATION LAYER
               </p>
 
@@ -328,9 +328,9 @@ export default function Diagram({
           style={
             {
               ["--border-clr" as any]: "#7332a1",
-              ["--shadow-clr" as any]: "rgba(115, 50, 161, 0.03)",
-              ["--glow-clr" as any]: "rgba(98, 43, 137, 0.03)",
-              ["--gradient-clr" as any]: "rgba(115, 50, 161, 0.1)",
+              ["--shadow-clr" as any]: "rgba(139, 88, 175, 0.03)",
+              ["--glow-clr" as any]: "rgba(181, 140, 210, 0.03)",
+              ["--gradient-clr" as any]: "rgba(148, 104, 180, 0.1)",
             } as React.CSSProperties
           }
         >
