@@ -145,13 +145,22 @@ export default function Diagram({
           inset: 0;
           background: linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.04) 0%,
+            rgb(255, 255, 255) 0%,
             var(--gradient-clr) 50%,
-            rgba(255, 255, 255, 0.05) 100%
+            rgb(255, 255, 255) 100%
           );
           opacity: 1;
           pointer-events: none;
           border-radius: inherit;
+        }
+
+        .dark .active-card::before {
+          background: linear-gradient(
+            90deg,
+            #111828 0%,
+            var(--gradient-clr) 50%,
+            #111828 100%
+          );
         }
 
         @media (max-width: 1023px) {
