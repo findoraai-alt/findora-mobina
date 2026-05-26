@@ -81,7 +81,7 @@ export default function FinalCTA() {
            <button
             
             className="
-              mt-2
+              
               md:mt-0
               relative overflow-hidden
               rounded-[0.8rem] px-10 py-4
@@ -103,10 +103,10 @@ export default function FinalCTA() {
             
           </button>
 
-          <button
+          {/* <button
             
             className="
-              mt-2
+              mt-0
               md:mt-0
               relative overflow-hidden
               rounded-[0.8rem] px-10 py-4
@@ -126,7 +126,7 @@ export default function FinalCTA() {
             
           > <a href="https://www.findora.ai/contact">Contact Us</a>
             
-          </button>
+          </button> */}
 
           
           
