@@ -26,12 +26,12 @@ const Links = [
     title: "Solutions",
     icon: FaRegLightbulb,
     children: [
-      {
-        id: "dana",
-        title: "DANA - AI Companion",
-        icon: TbHeartbeat,
-        url: "/dana",
-      },
+      // {
+      //   id: "dana",
+      //   title: "DANA - AI Companion",
+      //   icon: TbHeartbeat,
+      //   url: "/dana",
+      // },
       {
         id: "arta",
         title: "ARTA - Deepfake Detection",
@@ -41,7 +41,7 @@ const Links = [
     ],
   },
   { id: 3, title: "Enterprise", icon: GoGear, url: "/enterprise" },
-  { id: 4, title: "Discover", icon: BsSearch, url: "/discover" },
+  // { id: 4, title: "Discover", icon: BsSearch, url: "/discover" },
   { id: 5, title: "About", icon: GoPeople, url: "/about" },
   { id: 6, title: "Newsroom", icon: IoNewspaperOutline, url: "/newsroom" },
   { id: 7, title: "Contact", icon: FiPhone, url: "/contact" },
