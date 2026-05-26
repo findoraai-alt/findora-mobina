@@ -148,7 +148,7 @@ export default function Diagram({
           border-color: var(--border-clr) !important;
           transform: scale(1.02);
           box-shadow:
-            inset 0 0 0 1px var(--border-clr),
+            inset 0 0 0 0.5px var(--border-clr),
             inset 0 0 100px var(--shadow-clr),
             inset 0 0 30px var(--glow-clr);
         }
@@ -217,7 +217,7 @@ export default function Diagram({
         </div>
 
         {/* کانکتور بین کارت ۱ و ۲ */}
-        <div className="w-[3px] md:w-[4px] h-[60px] md:h-[90px] bg-[#008f7a] dark:bg-white/10 shrink-0 rounded-full" />
+        <div className="w-[2.5px] md:w-[2.5px] h-[50px] md:h-[60px] bg-[#008f7a] dark:bg-[#008f7a] shrink-0 rounded-full" />
 
         {/* CARD 2 */}
         <div
@@ -310,7 +310,7 @@ export default function Diagram({
         </div>
 
         {/* کانکتور بین کارت ۲ و ۳ */}
-        <div className="w-[3px] md:w-[4px] h-[60px] md:h-[90px] bg-[#7332a1] dark:bg-white/10 shrink-0 rounded-full" />
+        <div className="w-[2.5px] md:w-[2.5px] h-[50px] md:h-[60px] bg-[#7332a1] dark:bg-[#7332a1] shrink-0 rounded-full" />
 
         {/* CARD 3 */}
         <div
