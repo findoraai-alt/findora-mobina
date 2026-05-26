@@ -59,7 +59,7 @@ export default function FinalCTA() {
         >
           
           {/* PRIMARY */}
-           <button
+           {/* <button
             className="
               relative overflow-hidden
               rounded-full px-10 py-4
@@ -76,20 +76,47 @@ export default function FinalCTA() {
             
           ><a href="https://www.findora.ai/demo">Book Demo</a>
             
+
+          </button> */}
+           <button
+            
+            className="
+              mt-2
+              md:mt-0
+              relative overflow-hidden
+              rounded-[0.8rem] px-10 py-4
+              font-medium
+              text-white/100 dark:text-[#438cd5/80]
+              bg-black/100
+              transition-all duration-300
+              hover:scale-[1.03]
+              border-[1.5px]
+              border-[#438cd5]/50
+              dark:border-[#438cd5]
+              
+              text-[1.2rem]
+              
+              
+            "
+            
+          > <a href="https://www.findora.ai/demo">Book Demo</a>
+            
           </button>
+
           <button
             
             className="
               mt-2
               md:mt-0
               relative overflow-hidden
-              rounded-[0.7rem] px-10 py-4
+              rounded-[0.8rem] px-10 py-4
               font-medium
-              text-[#438cd5] dark:text-[#438cd5/80]
+              text-black/100 dark:text-[#438cd5/80]
+              
               transition-all duration-300
               hover:scale-[1.03]
               border-[1.5px]
-              border-[#438cd5]/50
+              border-black/50
               dark:border-[#438cd5]
               
               text-[1.2rem]
