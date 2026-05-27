@@ -63,10 +63,16 @@ export default function Diagram({
   ]);
 
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
+    lastScrollY.current = window.scrollY;
+
     const observer = new IntersectionObserver(
       (entries: IntersectionObserverEntry[]) => {
+        const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > lastScrollY.current;
+
         entries.forEach((entry) => {
           const target = entry.target as HTMLDivElement;
 
@@ -78,18 +84,26 @@ export default function Diagram({
 
           if (entry.isIntersecting) {
             setActivatedCards((prev) => {
+              if (prev[index]) return prev;
+
               const copy = [...prev];
               copy[index] = true;
               return copy;
             });
           } else {
-            setActivatedCards((prev) => {
-              const copy = [...prev];
-              copy[index] = false;
-              return copy;
-            });
+            if (!scrollingDown) {
+              setActivatedCards((prev) => {
+                if (!prev[index]) return prev;
+
+                const copy = [...prev];
+                copy[index] = false;
+                return copy;
+              });
+            }
           }
         });
+
+        lastScrollY.current = currentScrollY;
       },
       {
         threshold: 0.45,
@@ -117,6 +131,10 @@ export default function Diagram({
             box-shadow 0.8s cubic-bezier(0.16, 1, 0.3, 1);
           position: relative;
           overflow: hidden;
+
+          will-change: transform;
+          backface-visibility: hidden;
+          transform: translateZ(0);
         }
 
         @media (min-width: 768px) {
