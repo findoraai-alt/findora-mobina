@@ -67,22 +67,22 @@ export const Footer = () => {
 
             <div className="flex flex-col items-center gap-4 w-full">
               
-              <div className="flex flex-col gap-4 w-full lg:w-auto">
+              <div className="flex flex-col gap-4 w-full sm:w-auto">
                 
-                <div className="flex flex-col lg:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <input
                     name="firstName"
                     type="text"
                     placeholder="First Name"
                     required
-                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 lg:w-[240px]"
+                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 sm:w-[240px]"
                   />
                   <input
                     name="lastName"
                     type="text"
                     placeholder="Last Name"
                     required
-                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 lg:w-[240px]"
+                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 sm:w-[240px]"
                   />
                 </div>
 
@@ -91,11 +91,11 @@ export const Footer = () => {
                   type="email"
                   placeholder="Email"
                   required
-                  className="w-full lg:w-[496px] bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20"
+                  className="w-full sm:w-[496px] bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20"
                 />
               </div>
 
-              <button className="bg-white px-6 py-2 rounded-full w-full lg:w-auto">
+              <button className="bg-white px-6 py-2 rounded-full w-full sm:w-auto">
                 <span className="font-medium text-transparent bg-clip-text bg-[#2065ee]">
                   Send
                 </span>
