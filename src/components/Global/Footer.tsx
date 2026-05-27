@@ -75,14 +75,14 @@ export const Footer = () => {
                     type="text"
                     placeholder="First Name"
                     required
-                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 lg:w-[320px]"
+                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 lg:w-[240px]"
                   />
                   <input
                     name="lastName"
                     type="text"
                     placeholder="Last Name"
                     required
-                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 lg:w-[320px]"
+                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 lg:w-[240px]"
                   />
                 </div>
 
@@ -91,7 +91,7 @@ export const Footer = () => {
                   type="email"
                   placeholder="Email"
                   required
-                  className="w-full bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20"
+                  className="w-full lg:w-[496px] bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20"
                 />
               </div>
 
@@ -107,9 +107,9 @@ export const Footer = () => {
 
         <div className="flex flex-col justify-between gap-16 md:gap-20">
 
-          <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-8">
+          <div className="flex flex-col lg:flex-row-reverse justify-between gap-10 lg:gap-8">
 
-            <div className="flex flex-col justify-between gap-4">
+            <div className="flex flex-col justify-between gap-4 lg:text-right">
               <motion.h6
                 initial={{ color: "hsl(340, 82%, 47%)" }}
                 animate={{
