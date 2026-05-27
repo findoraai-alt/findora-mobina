@@ -98,13 +98,6 @@ function Feature({ src, title, className }: any) {
   );
 }
 
-const tags = [
-  { label: "Secure", color: "#c31069" },
-  { label: "Reliable", color: "#0b87b6" },
-  { label: "Governed", color: "#008f7a" },
-  { label: "Auditable", color: "#7332a1" },
-];
-
 /* ================= MAIN ================= */
 
 export default function VerificationLayerDiagram() {
@@ -232,7 +225,7 @@ export default function VerificationLayerDiagram() {
             </div>
 
             <p className="text-center text-[1rem] md:text-[1.2rem] font-semibold text-gray-700 dark:text-white/90 mt-5 leading-snug max-w-[720px] mx-auto">
-            Validates and improves AI responses.
+              Validates and improves AI responses.
             </p>
           </div>
         </FadeInSection>
@@ -268,38 +261,6 @@ export default function VerificationLayerDiagram() {
         </FadeInSection>
 
       </div>
-
-      {/* FOOTER */}
-
-      <FadeInSection>
-        <div className="mt-9 border border-gray-300 dark:border-gray-700 rounded-2xl p-4 md:p-5 max-w-3xl text-center bg-white dark:bg-[#111828]">
-
-          <p className="font-semibold text-[1.2rem] md:text-[1.6rem] text-gray-900 dark:text-white mb-3">
-            Enterprise-grade verification infrastructure
-          </p>
-
-          <p className="text-gray-600 dark:text-white/90 text-[1.08rem] md:text-[1.35rem] font-semibold mb-5">
-            for reliable AI deployment.
-          </p>
-
-          <div className="flex justify-center gap-3 flex-wrap">
-            {tags.map((tag, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 rounded-full text-[0.98rem] md:text-[1.15rem] font-semibold"
-                style={{
-                  backgroundColor: `${tag.color}15`,
-                  color: `${tag.color}`,
-                }}
-              >
-                ✓ {tag.label}
-              </span>
-            ))}
-          </div>
-
-        </div>
-      </FadeInSection>
-
     </section>
   );
 }
