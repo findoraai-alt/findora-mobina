@@ -25,12 +25,14 @@ export default function Home() {
        
         <Introduction />
         <Diagram findoraLogoUrl="images/logo.png" />
+        
         <Problem />
         <Solution />
         <Deployment />
         <Differentiation />
         <VisionSection />
         <FinalCTA />
+        
         {/* <WhatIsFindora /> */}
         {/* <DanaArta /> */}
         {/* <Capabilities /> */}
