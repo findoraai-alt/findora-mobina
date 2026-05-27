@@ -81,7 +81,7 @@ export default function FinalCTA() {
            <button
             
             className="
-              
+              -mt-5
               md:mt-0
               relative overflow-hidden
               rounded-[0.8rem] px-10 py-4
@@ -93,6 +93,7 @@ export default function FinalCTA() {
               border-[1.5px]
               border-[#438cd5]/50
               dark:border-[#438cd5]
+              dark:bg-[#111828]
               
               text-[1.2rem]
               
