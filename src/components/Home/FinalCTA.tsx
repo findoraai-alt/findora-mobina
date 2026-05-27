@@ -92,7 +92,7 @@ export default function FinalCTA() {
               hover:scale-[1.03]
               border-[1.5px]
               border-[#438cd5]/50
-              dark:border-[#438cd5]
+              dark:border-white/20
               dark:bg-[#111828]
               
               text-[1.2rem]
