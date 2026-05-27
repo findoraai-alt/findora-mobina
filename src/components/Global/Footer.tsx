@@ -31,28 +31,28 @@ export const Footer = () => {
       <div className="px-4 md:px-8 max-w-7xl mx-auto">
         
         <div className="-mt-[40px] mb-[40px] bg-[#2065ee] h-auto w-full rounded-2xl">
-          <form className="p-8 md:p-12 lg:p-16 flex flex-col lg:items-center gap-6 md:gap-8">
+          <form className="p-8 md:p-12 lg:p-16 flex flex-col items-center gap-6 md:gap-8">
             
             <h6 className="text-white text-2xl md:text-3xl lg:text-4xl font-medium text-center">
               Subscribe to Our Newsletter
             </h6>
 
-            <div className="flex flex-col lg:flex-row gap-4 lg:gap-2 w-full">
+            <div className="flex flex-col items-center gap-4 w-full">
               
-              <div className="flex flex-col gap-4 w-full">
+              <div className="flex flex-col gap-4 w-full lg:w-auto">
                 
-                <div className="flex flex-col lg:flex-row gap-4">
+                <div className="flex flex-col lg:flex-row gap-4 justify-center">
                   <input
                     type="text"
                     placeholder="First Name"
                     required
-                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20"
+                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 lg:w-[320px]"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
                     required
-                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20"
+                    className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 lg:w-[320px]"
                   />
                 </div>
 
@@ -64,7 +64,7 @@ export const Footer = () => {
                 />
               </div>
 
-              <button className="bg-white lg:self-end px-6 py-2 rounded-full">
+              <button className="bg-white px-6 py-2 rounded-full w-full lg:w-auto">
                 <span className="font-medium text-transparent bg-clip-text bg-[#2065ee]">
                   Send
                 </span>
