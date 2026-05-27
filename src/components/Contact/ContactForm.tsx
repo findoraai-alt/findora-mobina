@@ -30,24 +30,40 @@ const ContactForm: React.FC = () => {
   };
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!form.current) return;
+  if (!form.current) return;
 
-    emailjs
-      .sendForm("service_cll3x2m", "template_wr2o726", form.current, {
-        publicKey: "dgUsgy15jVJ5pizGs",
-      })
-      .then(
-        () => {
-          (e.target as HTMLFormElement).reset();
-          handleSuccess(); // Just show toast
-        },
-        () => {
-          handleError(); // Just show toast
-        }
-      );
-  };
+  const serviceID = "service_89iq8zq";
+  const publicKey = "BQrUDwxhUXQQBkfuE";
+
+  // const userEmailPromise = emailjs.sendForm(
+  //   serviceID,
+  //   "template_g7lze3z",
+  //   form.current,
+  //   { publicKey }
+  // );
+
+  const adminEmailPromise = emailjs.sendForm(
+    serviceID,
+    "template_ib54qri",
+    form.current,
+    { publicKey }
+  );
+
+  Promise.allSettled([ adminEmailPromise]).then((results) => {
+    console.log("EMAIL RESULTS:", results);
+
+    const hasError = results.some((r) => r.status === "rejected");
+
+    if (hasError) {
+      handleError();
+    } else {
+      (e.target as HTMLFormElement).reset();
+      handleSuccess();
+    }
+  });
+};
 
   return (
     <div className="px-4 md:px-8 py-20 md:py-24 flex justify-center items-center">
@@ -59,6 +75,7 @@ const ContactForm: React.FC = () => {
             possible.
           </p>
         </div>
+
         <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-6">
           <div className="flex flex-col lg:flex-row justify-between gap-6">
             <div className="flex flex-col w-full gap-1">
@@ -72,6 +89,7 @@ const ContactForm: React.FC = () => {
                 required
               />
             </div>
+
             <div className="flex flex-col w-full gap-1">
               <label className="self-start text-sm font-semibold">
                 Your E-mail
@@ -84,6 +102,7 @@ const ContactForm: React.FC = () => {
               />
             </div>
           </div>
+
           <div className="w-full flex flex-col gap-1">
             <label className="self-start text-sm font-semibold">Message</label>
             <textarea
@@ -94,11 +113,13 @@ const ContactForm: React.FC = () => {
               className="w-full outline-none border-2 border-[#d7d7d9] dark:bg-[#111828] rounded-lg focus:border-[#6803f5] py-1 px-2"
             ></textarea>
           </div>
+
           <div>
             <ShinySkeuButton />
           </div>
         </form>
       </div>
+
       <motion.div
         animate={{ translateX: [5, 100] }}
         transition={{
@@ -109,6 +130,7 @@ const ContactForm: React.FC = () => {
         }}
         className="w-40 h-40 md:w-52 md:h-52 lg:w-72 lg:h-72 bg-gradient-to-b from-pink-500 to-purple-500 lg:blur-2xl absolute top-40 left-5 opacity-15 rounded-full"
       />
+
       <motion.div
         animate={{ translateY: [5, 100] }}
         transition={{
