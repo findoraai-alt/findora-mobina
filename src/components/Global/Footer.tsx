@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
 const links = [
@@ -26,12 +26,40 @@ export const Footer = () => {
   const text = "findora";
   const slogan = " A Search Engine You Can Trust";
 
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const data = {
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+    };
+
+    await fetch("/api/newsletter", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    formRef.current?.reset();
+  };
+
   return (
     <div className="bg-[#f0f0fc] dark:bg-[#111828] py-6 md:py-8">
       <div className="px-4 md:px-8 max-w-7xl mx-auto">
         
         <div className="-mt-[40px] mb-[40px] bg-[#2065ee] h-auto w-full rounded-2xl">
-          <form className="p-8 md:p-12 lg:p-16 flex flex-col items-center gap-6 md:gap-8">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="p-8 md:p-12 lg:p-16 flex flex-col items-center gap-6 md:gap-8"
+          >
             
             <h6 className="text-white text-2xl md:text-3xl lg:text-4xl font-medium text-center">
               Subscribe to Our Newsletter
@@ -43,12 +71,14 @@ export const Footer = () => {
                 
                 <div className="flex flex-col lg:flex-row gap-4 justify-center">
                   <input
+                    name="firstName"
                     type="text"
                     placeholder="First Name"
                     required
                     className="bg-white/10 backdrop-blur-md outline-none py-2 px-3 rounded-full border-[1px] text-white placeholder:text-white/80 border-white shadow-inner shadow-white/20 lg:w-[320px]"
                   />
                   <input
+                    name="lastName"
                     type="text"
                     placeholder="Last Name"
                     required
@@ -57,6 +87,7 @@ export const Footer = () => {
                 </div>
 
                 <input
+                  name="email"
                   type="email"
                   placeholder="Email"
                   required
@@ -121,7 +152,7 @@ export const Footer = () => {
                     </Link>
                   ))}
                 </div>
-                <div className="text-sm md:text-[15px] dark:text-white/70 text-black/70" >
+                <div className="text-sm md:text-[15px] dark:text-white/70 text-black/70">
                   Montréal - Canada
                 </div>
               </div>
