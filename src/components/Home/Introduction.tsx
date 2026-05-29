@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -28,6 +28,15 @@ export default function Hero() {
 
   const [position, setPosition] = useState({ x: 50, y: 50 });
   const [hovered, setHovered] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -36,6 +45,34 @@ export default function Hero() {
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
     });
+  };
+
+  const titleContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.45,
+      },
+    },
+  };
+
+  const titleItem = {
+    hidden: {
+      opacity: 0,
+      y: 160,
+      scale: 0.88,
+      filter: "blur(28px)",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      filter: "blur(0px)",
+      transition: {
+        duration: 2.4,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
   };
 
   return (
@@ -59,9 +96,9 @@ export default function Hero() {
       {/* CONTENT */}
       <div className="relative z-20 mx-auto max-w-6xl px-7 text-center mt-6">
         <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
+          variants={titleContainer}
+          initial="hidden"
+          animate={loaded ? "visible" : "hidden"}
           className="
             mx-auto max-w-5xl
             text-5xl sm:text-6xl md:text-[4rem] lg:text-[5rem]
@@ -69,13 +106,80 @@ export default function Hero() {
             text-black dark:text-white
           "
         >
-          Trusted AI <br /> Infrastructure
+          <motion.span
+            variants={titleItem}
+            className="inline-block mr-3 relative overflow-hidden"
+          >
+            <span className="relative z-10">Trusted</span>
+
+            {/* SHINE SWEEP */}
+            <motion.span
+              initial={{ x: "-260%" }}
+              animate={{ x: "260%" }}
+              transition={{
+                duration: 5,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatDelay: 2,
+              }}
+              className="
+                absolute top-0 bottom-0
+                w-[220px]
+                rotate-[12deg]
+                bg-gradient-to-r
+                from-transparent
+                via-white/90
+                to-transparent
+                dark:via-white/50
+                blur-md
+                opacity-90
+                pointer-events-none
+              "
+            />
+          </motion.span>
+
+          <motion.span
+            variants={titleItem}
+            className="
+              inline-block
+              relative
+            "
+          >
+            AI
+          </motion.span>
+
+          <br />
+
+          <motion.span
+            variants={titleItem}
+            className="inline-block"
+          >
+            Infrastructure
+          </motion.span>
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25, duration: 0.9 }}
+          initial={{
+            opacity: 0,
+            y: 80,
+            scale: 0.94,
+            filter: "blur(22px)",
+          }}
+          animate={
+            loaded
+              ? {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  filter: "blur(0px)",
+                }
+              : {}
+          }
+          transition={{
+            delay: 2.2,
+            duration: 2,
+            ease: [0.22, 1, 0.36, 1],
+          }}
           className="
             mx-auto mt-10 max-w-4xl
             text-[1.4rem] md:text-[1.8rem]
@@ -90,13 +194,37 @@ export default function Hero() {
 
         {/* BUTTON */}
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.8 }}
+          initial={{
+            opacity: 0,
+            y: 100,
+            scale: 0.86,
+            filter: "blur(24px)",
+          }}
+          animate={
+            loaded
+              ? {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  filter: "blur(0px)",
+                }
+              : {}
+          }
+          transition={{
+            delay: 1.5,
+            duration: 2.2,
+            ease: [0.22, 1, 0.36, 1],
+          }}
           className="mt-10 flex flex-col items-center gap-2"
         >
           <motion.a
             href="https://search.findora.ai/"
+            whileHover={{
+              scale: 1.03,
+            }}
+            whileTap={{
+              scale: 0.98,
+            }}
             className="
               inline-flex
               items-center
