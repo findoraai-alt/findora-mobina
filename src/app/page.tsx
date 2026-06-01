@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import PreLoader from "@/components/Home/PreLoader";
 import Deployment from "@/components/Home/Deployment";
-import Traction from "@/components/Home/Traction";
 import Introduction from "@/components/Home/Introduction";
 import Diagram from "@/components/Home/Diagram"
 import Problem from "@/components/Home/Problem";

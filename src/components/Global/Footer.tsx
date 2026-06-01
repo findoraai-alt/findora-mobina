@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
+import SupportedBy from "../Home/SupportedBy";
 
 const links = [
   { id: 1, title: "Home", href: "/" },
@@ -206,6 +207,8 @@ export const Footer = () => {
 
         </div>
       </div>
+
+      <SupportedBy />
     </div>
   );
 };
