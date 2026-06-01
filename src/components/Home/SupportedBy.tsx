@@ -27,7 +27,7 @@ export default function SupportedBy() {
   ];
 
   return (
-    <section className="relative w-full pt-6 md:py-20 bg-white overflow-hidden">
+    <section className="relative w-full py-6 md:py-20 bg-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
         <div className="mb-8 md:mb-12">
           <p className="text-[1.8rem] md:text-[2.5rem] text-black/90 font-bold text-left">
