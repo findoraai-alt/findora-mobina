@@ -6,13 +6,23 @@ import Image from "next/image";
 const logos = [
   {
     id: 1,
-    src: "/images/logo1.jpg",
-    alt: "Logo 1",
+    src: "/images/nvidia-logo2.png",
+    alt: "nvidia-logo",
   },
   {
     id: 2,
-    src: "/images/logo2.jpg",
-    alt: "Logo 2",
+    src: "/images/google-logo3.png",
+    alt: "google_logo",
+  },
+  {
+    id: 3,
+    src: "/images/aws-logo2.png",
+    alt: "aws-logo",
+  },
+   {
+    id: 4,
+    src: "/images/aiforgood-logo4.png",
+    alt: "aiforgood-logo",
   },
 ];
 
@@ -27,7 +37,7 @@ export default function SupportedBy() {
   ];
 
   return (
-    <section className="relative w-full py-6 md:py-20 bg-white overflow-hidden">
+    <section className="relative w-full py-6 md:py-20  overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
         <div className="mb-8 md:mb-12">
           <p className="text-[1.8rem] md:text-[2.5rem] text-black/90 font-bold text-left">
@@ -65,7 +75,7 @@ export default function SupportedBy() {
         }
 
         .logo-item {
-          width: 180px;
+          width: 250px;
           min-width: 180px;
           height: 80px;
           margin-right: 60px;
@@ -92,7 +102,7 @@ export default function SupportedBy() {
 
         @media (max-width: 768px) {
           .logo-item {
-            width: 110px;
+            width: 200px;
             min-width: 110px;
             height: 50px;
             margin-right: 32px;
