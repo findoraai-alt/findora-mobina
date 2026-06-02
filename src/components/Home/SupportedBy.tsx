@@ -126,7 +126,7 @@ export default function SupportedBy() {
           }
 
           .supported-marquee {
-            animation: scrollLeft 18s linear infinite;
+            animation: scrollLeft 100s linear infinite;
           }
         }
       `}</style>
