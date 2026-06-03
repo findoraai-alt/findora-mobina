@@ -120,13 +120,18 @@ export default function SupportedBy() {
 
         @media (max-width: 768px) {
           .logo-item {
-            height: 120px;
-            margin-right: 28px;
+            height: 80px;
+            margin-right: 10px;
             flex-shrink: 0;
           }
 
+          .logo-item :global(img) {
+            height: 50px !important;
+            width: auto !important;
+          }
+
           .supported-marquee {
-            animation: scrollLeft 100s linear infinite;
+            animation: scrollLeft 40s linear infinite;
           }
         }
       `}</style>
