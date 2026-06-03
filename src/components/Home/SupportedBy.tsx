@@ -22,8 +22,8 @@ const logos = [
     id: 3,
     src: "/images/logoes/Amazon-Logo2.png",
     alt: "aws-logo",
-    width: 150,
-    height: 100,
+    width: 120,
+    height: 89,
   },
   {
     id: 4,

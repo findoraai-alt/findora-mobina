@@ -174,7 +174,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="overflow-hidden flex justify-center items-center text-7xl md:text-[10rem] lg:text-[16rem] xl:text-[20rem] font-bold leading-none pb-10">
+          <div className="overflow-hidden flex justify-center items-center text-7xl md:text-[10rem] lg:text-[16rem] xl:text-[20rem] font-bold leading-none">
             {text.split("").map((letter, index) => {
               const colors = [
                 "#008f7a",
