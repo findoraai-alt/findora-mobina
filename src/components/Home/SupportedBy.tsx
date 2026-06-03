@@ -8,15 +8,15 @@ const logos = [
     id: 1,
     src: "/images/logoes/Nvidia_logo.png",
     alt: "nvidia-logo",
-    width: 260,
-    height: 100,
+    width: 234,
+    height: 90,
   },
   {
     id: 2,
     src: "/images/logoes/Google_Logo.png",
     alt: "google_logo",
-    width: 220,
-    height: 80,
+    width: 165,
+    height: 60,
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ const logos = [
     id: 4,
     src: "/images/logoes/aiforgood-Copy.png",
     alt: "aiforgood-logo",
-    width: 260,
-    height: 100,
+    width: 234,
+    height: 90,
   },
   {
     id: 5,
@@ -43,8 +43,8 @@ const logos = [
     id: 6,
     src: "/images/logoes/Microsoft_logo.png",
     alt: "microsoft-logo",
-    width: 260,
-    height: 100,
+    width: 234,
+    height: 90,
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ export default function SupportedBy() {
     <section className="relative w-full py-6 md:py-20 bg-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
         <div className="mb-8 md:mb-12">
-          <p className="text-[1.8rem] md:text-[2.5rem] text-black/90 font-bold text-left">
+          <p className="text-[1.8rem] md:text-[2.5rem] text-black/90 font-semibold text-left">
             Supported By
           </p>
         </div>
