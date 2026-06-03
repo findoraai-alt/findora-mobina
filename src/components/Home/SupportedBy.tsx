@@ -6,43 +6,59 @@ import Image from "next/image";
 const logos = [
   {
     id: 1,
-    src: "/images/logoes/nvidia.png",
+    src: "/images/logoes/Nvidia_logo.png",
     alt: "nvidia-logo",
+    width: 260,
+    height: 100,
   },
   {
     id: 2,
-    src: "/images/logoes/google.png",
+    src: "/images/logoes/Google_Logo.png",
     alt: "google_logo",
+    width: 220,
+    height: 80,
   },
   {
     id: 3,
-    src: "/images/logoes/aws.png",
+    src: "/images/logoes/Amazon-Logo2.png",
     alt: "aws-logo",
+    width: 150,
+    height: 100,
   },
   {
     id: 4,
-    src: "/images/logoes/aiforgood.png",
+    src: "/images/logoes/aiforgood-Copy.png",
     alt: "aiforgood-logo",
+    width: 260,
+    height: 100,
   },
   {
     id: 5,
-    src: "/images/logoes/canada.png",
+    src: "/images/logoes/canada-funding-logo.png",
     alt: "canada-funding",
+    width: 150,
+    height: 150,
   },
   {
     id: 6,
-    src: "/images/logoes/microsoft.png",
+    src: "/images/logoes/Microsoft_logo.png",
     alt: "microsoft-logo",
+    width: 260,
+    height: 100,
   },
   {
     id: 7,
-    src: "/images/logoes/innovative2.png",
+    src: "/images/logoes/Innovative-Solutions.webp",
     alt: "innovative-solution",
+    width: 200,
+    height: 80,
   },
 ];
 
 export default function SupportedBy() {
   const duplicatedLogos = [
+    ...logos,
+    ...logos,
     ...logos,
     ...logos,
     ...logos,
@@ -70,12 +86,14 @@ export default function SupportedBy() {
                 <Image
                   src={logo.src}
                   alt={logo.alt}
-                  width={1000}
-                  height={300}
+                  width={logo.width}
+                  height={logo.height}
                   style={{
-                    height: "100px",
-                    width: "auto",
+                    width: `${logo.width}px`,
+                    height: `${logo.height}px`,
+                    objectFit: "contain",
                     maxWidth: "none",
+                    flexShrink: 0,
                   }}
                 />
               </div>
@@ -90,11 +108,10 @@ export default function SupportedBy() {
           align-items: center;
           width: max-content;
           will-change: transform;
-          animation: scrollLeft 100s linear infinite;
+          animation: scrollLeft 60s linear infinite;
         }
 
         .logo-item {
-          height: 220px;
           margin-right: 60px;
           display: flex;
           align-items: center;
@@ -120,18 +137,11 @@ export default function SupportedBy() {
 
         @media (max-width: 768px) {
           .logo-item {
-            height: 80px;
-            margin-right: 10px;
-            flex-shrink: 0;
-          }
-
-          .logo-item :global(img) {
-            height: 50px !important;
-            width: auto !important;
+            margin-right: 60px;
           }
 
           .supported-marquee {
-            animation: scrollLeft 40s linear infinite;
+            animation: scrollLeft 50s linear infinite;
           }
         }
       `}</style>
